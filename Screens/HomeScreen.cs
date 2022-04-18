@@ -100,7 +100,7 @@ namespace Hello_MultiScreen_iPhone
                 img3 = UIImage.FromFile(EmailFileRead.fileNameImage);
             }
             else
-                img3 = UIImage.FromFile("TestPic.png");
+                img3 = UIImage.FromFile("TestPic.jpg");
             imageViewPic.Image = img3;
             imageViewPic.Frame = new CGRect(20, 235, 280, 280);
 

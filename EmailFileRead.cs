@@ -106,12 +106,18 @@ namespace EmailReader //rename
 
         public static void ReadFileFromDateSuggestionExercise(String fileName="", int days = 3)
         {
-            if (fileName != null)
+            if (fileName == null || fileName=="")
                 fileName = fileName2;
-            String addSuggestion = ReadFileFromDate(fileName, days);
-            if (!addSuggestion.ToLower().Contains("exercise") && !addSuggestion.ToLower().Contains("suggestion: try being active at least twice a week!\n") && addSuggestion!=String.Empty)
+            if (File.Exists(fileName2))
+            {
+                if (File.ReadAllText(fileName) != String.Empty)
                 {
-                File.AppendAllText(fileName, "Suggestion: Try being active at least twice a week!\n");
+                    String addSuggestion = ReadFileFromDate(fileName, days);
+                    if (!addSuggestion.ToLower().Contains("exercise") && !addSuggestion.ToLower().Contains("suggestion: try being active at least twice a week!\n"))
+                    {
+                        File.AppendAllText(fileName, "Suggestion: Try being active at least twice a week!\n");
+                    }
+                }
             }
         }
 

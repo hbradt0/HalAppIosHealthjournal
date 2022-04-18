@@ -268,7 +268,6 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            booktextView.Text = EmailFileRead.ReadText();
         }
     }
 }
