@@ -90,13 +90,15 @@ namespace EmailReader //rename
             var book = NSBundle.MainBundle.PathForResource("Halbook", "txt");
             var logInfo1 = EmailFileRead.ReadAllLines(book);
             String addSuggestion = "";
+            bool istrue = false;
             foreach (var v in logInfo1)
             {
                 foreach(var e in textToSplit.Split(' '))
                 {
-                    if(e.Length>=3&&v.ToLower().Contains(e.ToLower()))
+                    if(e.Length>=3&&v.Split('-').First().ToLower().Contains(e.ToLower()) &&istrue==false)
                     {
                         addSuggestion = addSuggestion + " - " + v.Split('-').Last();
+                        istrue=true;
                     }
                 }
             }

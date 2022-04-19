@@ -14,8 +14,6 @@
 	<string>12.0</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.xamarin.hellodietmultiscreen</string>
-	<key>CFBundleDisplayName</key>
-	<string>Health Journal</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Screens/HomeScreen</string>
 	<key>UIMainNibFile</key>
@@ -27,10 +25,12 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow device to access Photo</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2</string>
+	<string>13</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>13</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>CFBundleDisplayName</key>
+	<string>Journal Your Health</string>
 </dict>
 </plist>

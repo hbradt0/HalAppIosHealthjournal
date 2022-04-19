@@ -89,7 +89,7 @@ namespace Hello_MultiScreen_iPhone
             //View Issue
             Title = "My Custom View Controller";
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(255,153,240);
+            user.View.BackgroundColor = UIColor.FromRGB(13, 97, 11);
             //View.LargeContentImage = imageView;
 
 
@@ -142,7 +142,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 200),
-                //BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 

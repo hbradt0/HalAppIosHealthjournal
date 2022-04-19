@@ -1,0 +1,7 @@
+RemoveDynamicRegistrar:true
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/mscorlib.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/System.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/System.Core.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/System.Drawing.Common.dll

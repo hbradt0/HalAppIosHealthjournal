@@ -43,7 +43,7 @@ namespace Hello_MultiScreen_iPhone
 
             //View issue
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+            user.View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
 
             //Initialize Fields
             textViewWrite = new UIImageView();
@@ -124,7 +124,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 

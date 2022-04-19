@@ -57,9 +57,9 @@ namespace Hello_MultiScreen_iPhone
         public void ViewDidLoad1()
         {
             //View Issue
-            View.BackgroundColor = UIColor.FromRGB(178,178,227);
+            View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
+            user.View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -105,7 +105,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 

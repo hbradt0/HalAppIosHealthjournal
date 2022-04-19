@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-Hello_MultiScreen_iPhone in Hello_MultiScreen_iPhone, no dependencies
-Hello_MultiScreen_iPhone in Hello_MultiScreen_iPhone, no dependencies
