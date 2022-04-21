@@ -154,7 +154,6 @@ namespace Hello_MultiScreen_iPhone
 
             //ButtonDateClick.Frame = new CGRect(25, 50, 100, 50);
             //ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
-            EmailFileRead.ReadFileFromDateSuggestionExercise();
 
             textViewWrite.Frame = new CGRect(20, 60, 280, 330);
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);

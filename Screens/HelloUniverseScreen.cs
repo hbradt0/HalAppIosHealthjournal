@@ -15,7 +15,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textView;
         public UITextView booktextView;
         public UITextView textView2;
-        public UITextView editTextWrite;
+        public UITextField editTextWrite;
         public UITextView textViewWrite;
 
         public UIButton ButtonDateClick;
@@ -64,8 +64,8 @@ namespace Hello_MultiScreen_iPhone
 
             //Initialize Fields
             textViewWrite = new UITextView();
-            editTextWrite = new UITextView();
-            editTextWrite.Editable = true;
+            editTextWrite = new UITextField();
+            //editTextWrite.Editable = true;
             Buttonbackyourstory = new UIButton(UIButtonType.System);
             ButtonyourstoryscreenUpload = new UIButton(UIButtonType.System);
             ButtonDelete = new UIButton(UIButtonType.System);
@@ -85,6 +85,7 @@ namespace Hello_MultiScreen_iPhone
 
             EditJournalButton.Frame = new CGRect(200, 600, 100, 30);
            EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
+           EmailFileRead.ReadFileFromDateSuggestionExercise(EmailFileRead.fileName1);
 
             //var textTitle = new UITextView();
             //textTitle.Editable = false;
@@ -109,6 +110,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
 
             //exit keyboard
+            /*
             var gestureToCloseKeyboard = new UITapGestureRecognizer(() => View.EndEditing(true));
             editTextWrite.ShouldChangeText = (text, range, replacementString) =>
             {
@@ -123,11 +125,12 @@ namespace Hello_MultiScreen_iPhone
                     return true;
                 }
             };
-            /*
+            */
+            
             editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
-            */
+            
 
             //Buttonbackyourstory.Frame = new CGRect(150, 25, 100, 50);
             //Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
@@ -145,9 +148,8 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.BackgroundColor = UIColor.White;
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
             editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
-
-
-            editTextWrite.Frame = new CGRect(20, 420, 280, 60);
+            
+            editTextWrite.Frame = new CGRect(20, 400, 280, 40);
 
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
@@ -159,11 +161,11 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.Mode = UIDatePickerMode.Date;
             dateTimeText.MaximumDate = currentDate;
             
-
+            
             ButtonDateClick.Frame = new CGRect(200, 560, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 280, 310);
+            textViewWrite.Frame = new CGRect(20, 60, 280, 330);
             textViewWrite.Text = EmailFileRead.ReadText();
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -336,7 +338,9 @@ namespace Hello_MultiScreen_iPhone
                 String text = editTextWrite.Text;
                 if (editTextWrite.Text == String.Empty)
                     text = "";
-                EmailFileRead.WriteText(text);
+                else
+                    text = EmailFileRead.Suggestion(text);
+                EmailFileRead.WriteText(text,EmailFileRead.fileName1,true);
                 String totalText = EmailFileRead.ReadText();
                 //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
                 textViewWrite.Text = totalText;

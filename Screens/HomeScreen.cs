@@ -58,7 +58,7 @@ namespace Hello_MultiScreen_iPhone
             this.View.BackgroundColor = UIColor.FromRGB(200,200,200);
 
 			//---- when the hello world button is clicked
-            this.btnHelloUniverse.SetTitle("Health Journal", UIControlState.Normal);
+            this.btnHelloUniverse.SetTitle("Activity/Goal Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Nutrition Guide", UIControlState.Normal);
             this.btnHelloWorld.Frame = new CGRect(20, 525, 280, 35);
             this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
@@ -100,7 +100,7 @@ namespace Hello_MultiScreen_iPhone
                 img3 = UIImage.FromFile(EmailFileRead.fileNameImage);
             }
             else
-                img3 = UIImage.FromFile("TestPic.jpg");
+                img3 = UIImage.FromFile("TestPic.jpeg");
             imageViewPic.Image = img3;
             imageViewPic.Frame = new CGRect(20, 235, 280, 280);
 
@@ -153,7 +153,7 @@ namespace Hello_MultiScreen_iPhone
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
             ButtonTodoList.Frame = new CGRect(20, 180, 280, 35);
             ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
-            ButtonTodoList.SetTitle("Food/Activity Log", UIControlState.Normal);
+            ButtonTodoList.SetTitle("Food Journal", UIControlState.Normal);
             ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
 
             ButtonTodoList.TouchUpInside += (sender, e) => {

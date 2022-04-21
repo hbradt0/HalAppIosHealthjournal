@@ -146,7 +146,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(dateTimeText);
             scrollView.Add(CameraButton);
-            scrollView.Add(BackgroundImage);
+            //scrollView.Add(BackgroundImage);
             View.AddSubview(scrollView);//ps
 
         }
@@ -313,10 +313,11 @@ namespace Hello_MultiScreen_iPhone
         {
             DateTime myDate = (DateTime)dateTimeText.Date;
             myDate = myDate.ToLocalTime();
+            String txt3 = myDate.ToString();
             var txt2 = NSData.FromFile(EmailReader.EmailFileRead.GetImageFileName(myDate));
             var item = NSObject.FromObject(txt2);
 
-            String txt3 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
+            //String txt3 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
             var item3 = NSObject.FromObject(txt3);
 
             var activityItems = new NSObject[] { item, item3 };

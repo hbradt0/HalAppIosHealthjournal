@@ -25,12 +25,16 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow device to access Photo</string>
 	<key>CFBundleShortVersionString</key>
-	<string>13</string>
+	<string>18</string>
 	<key>CFBundleVersion</key>
-	<string>13</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<string>18</string>
 	<key>CFBundleDisplayName</key>
 	<string>Journal Your Health</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+	<key>Icon Name</key>
+	<string>AppIcon</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon-2.appiconset</string>
 </dict>
 </plist>

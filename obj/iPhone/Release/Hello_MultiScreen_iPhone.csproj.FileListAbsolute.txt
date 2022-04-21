@@ -1,7 +1,3 @@
-/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.exe
-/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.Binding.iOS.dll
-/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.dll
-/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.iOS.dll
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/actool/_PartialAppManifest.items
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/actool/_BundleResourceWithLogicalName.items
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/actool/_ProcessedImageAssetsPath.items
@@ -30,6 +26,11 @@
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/MainTitlePic.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/TestPic.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.Binding.iOS.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.iOS.dll
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe

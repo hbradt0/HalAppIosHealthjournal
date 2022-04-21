@@ -159,14 +159,50 @@
     <BundleResource Include="Resources\MainTitlePic.png" />
     <BundleResource Include="Resources\TestPic.png" />
     <BundleResource Include="Resources\TestPic.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ITunesArtwork Include="Resources\iTunesArtwork.png" />
-    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <BundleResource Include="Resources\TestPic.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />
     <Folder Include="Assets.xcassets\AppIcon.appiconset\" />
+    <Folder Include="Assets.xcassets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\100.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\114.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\144.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\172.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\196.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\216.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\48.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\50.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\55.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\57.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\64.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\72.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-2.appiconset\88.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+    <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

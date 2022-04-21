@@ -6,37 +6,45 @@
 	<dict>
 		<key>output-files</key>
 		<array>
-			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/bundle/AppIcon60x60@2x.png</string>
-			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/bundle/AppIcon76x76@2x~ipad.png</string>
+			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/bundle/AppIcon-260x60@2x.png</string>
+			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/bundle/AppIcon-276x76@2x~ipad.png</string>
 			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/bundle/Assets.car</string>
 			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/partial-info.plist</string>
 		</array>
 	</dict>
-	<key>com.apple.actool.document.notices</key>
+	<key>com.apple.actool.document.warnings</key>
 	<array>
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./AppIcon.appiconset/[][iphone][57x57][][][1x][][][]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][114.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][144.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][50.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][57.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][72.png]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
-			<string>57x57 app icons only apply to iPhone apps targeting releases of iOS prior to 7.0</string>
+			<string>The app icon set "AppIcon-2" has 5 unassigned children.</string>
 			<key>type</key>
-			<string>Inapplicable Content</string>
+			<string>Ambiguous Content</string>
 		</dict>
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./AppIcon.appiconset/[][iphone][57x57][][][2x][][][]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][114.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][144.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][50.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][57.png]</string>
+				<string>./AppIcon-2.appiconset/(null)[2d][72.png]</string>
 			</array>
 			<key>catalog</key>
 			<string>/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
-			<string>57x57@2x app icons only apply to iPhone apps targeting releases of iOS prior to 7.0</string>
+			<string>The app icon set "AppIcon-2" has 5 unassigned children.</string>
 			<key>type</key>
-			<string>Inapplicable Content</string>
+			<string>Ambiguous Content</string>
 		</dict>
 	</array>
 </dict>

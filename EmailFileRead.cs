@@ -115,10 +115,14 @@ namespace EmailReader //rename
                 if (File.ReadAllText(fileName) != String.Empty)
                 {
                     String addSuggestion = ReadFileFromDate(fileName, days);
-                    if (!addSuggestion.ToLower().Contains("exercise") && !addSuggestion.ToLower().Contains("suggestion: try being active at least twice a week!\n"))
-                    {
-                        File.AppendAllText(fileName, "Suggestion: Try being active at least twice a week!\n");
+                    if ((DateTime.Now.DayOfWeek == DayOfWeek.Monday && DateTime.Now.Day <= 7) || (DateTime.Now.DayOfWeek == DayOfWeek.Thursday && DateTime.Now.Day <= 7))
+                    { 
+                        if (!addSuggestion.ToLower().Contains("exercise") && !addSuggestion.ToLower().Contains("\nsuggestion: try being active at least twice a week!\n"))
+                        {
+                            File.AppendAllText(fileName, "\nSuggestion: Try being active at least twice a week!\n");
+                        }
                     }
+                    
                 }
             }
         }

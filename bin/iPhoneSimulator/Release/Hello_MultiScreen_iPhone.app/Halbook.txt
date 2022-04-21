@@ -1,18 +1,14 @@
-Strawberry-fruit 🍓
-Strawberries-fruit 🍓
-Chicken-meat 🍖
-Run-exercise
-Walk-exercise
-Swim-exercise
-Dance-exercise
-lift-exercise
+Strawberry-fruit 🍓 (4 kcal/strawberry)
+Strawberries-fruit 🍓 (4 kcal/strawberry)
+Chicken-meat 🍖 (grilled around 100 kcal)
 fruit-fruit
-berries-fruit
+berries-fruit (1 cup = 20 calories)
 berries-fruit
 green bean-vegetable
 fried-oil, maybe try to use coconut oil instead
 nuts-protein/nut
-peanut butter-oil
+butter-oil
+peanut-protein/nut 
 Grapes-fruit 🍇 
 Melon-fruit 🍈
 Watermelon-fruit 🍉
@@ -69,6 +65,7 @@ Pancakes-carbohydrates 🥞
 Waffles-carbohydrates 🧇
 Cheese-dairy 🧀
 meats-meat 🍖
+syrup-sugar around 100kcal/teaspoon
 steaks-meat 🥩 
 bacon-meat 🥓
 Falafel-carbs,beans 🧆 
@@ -140,7 +137,9 @@ fencing-exercise🤺
 riding-exercise🏇
 skiing-exercise⛷️ 
 snowboarding-exercise🏂
-golf-exercise, light🏌️ 
+golf-exercise, light🏌️
+ran-exercise
+swam-exercise
 surf-exercise🏄 
 rowing-exercise🚣 
 row-exercise🚣‍♂️ 
@@ -205,4 +204,8 @@ dance-exercise
 gym-exercise
 pilates-exercise
 hot yoga-exercise
-
+Run-exercise
+Walk-exercise
+Swim-exercise
+Dance-exercise
+lift-exercise
