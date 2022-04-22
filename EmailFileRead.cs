@@ -82,7 +82,7 @@ namespace EmailReader //rename
             }
         }
 
-        public static String Suggestion(String textToSplit, String fileName = "HalBook")
+        public static String Suggestion(String textToSplit, String fileName = "Halbook")
         {
             //File info is format
             //Strawberr - fruit 🍓

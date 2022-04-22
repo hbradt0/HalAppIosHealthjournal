@@ -1,11 +1,11 @@
-objc[90317]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/FB23B0B0-5FE7-40F3-B279-AF5FE4404E54/data/Containers/Bundle/Application/7DDB8033-330A-481A-933D-1FD184227C76/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x10310f438). One of the two will be used. Which one is undefined.
+objc[90926]: Class NSURLSessionDelegate is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/NetworkServiceProxy.framework/NetworkServiceProxy (0x7fff87c202d8) and /Users/psargent/Library/Developer/CoreSimulator/Devices/FB23B0B0-5FE7-40F3-B279-AF5FE4404E54/data/Containers/Bundle/Application/61397BD2-42FE-4DA0-8D2A-5C34A8CE5726/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone (0x104ffa438). One of the two will be used. Which one is undefined.
 MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
-2022-04-22 07:37:07.713836-0700 Hello_MultiScreen_iPhone[90317:3758142] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=90317
-2022-04-22 07:37:07.714142-0700 Hello_MultiScreen_iPhone[90317:3758142] SecTaskCopyDebugDescription: Hello_MultiScree[90317]/0#-1 LF=0
-2022-04-22 07:37:07.722733-0700 Hello_MultiScreen_iPhone[90317:3758142] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=90317
-2022-04-22 07:37:07.723114-0700 Hello_MultiScreen_iPhone[90317:3758142] SecTaskCopyDebugDescription: Hello_MultiScree[90317]/0#-1 LF=0
-2022-04-22 07:37:07.852734-0700 Hello_MultiScreen_iPhone[90317:3758142] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=90317
-2022-04-22 07:37:07.853040-0700 Hello_MultiScreen_iPhone[90317:3758142] SecTaskCopyDebugDescription: Hello_MultiScree[90317]/0#-1 LF=0
-2022-04-22 07:37:11.450232-0700 Hello_MultiScreen_iPhone[90317:3758142] [unspecified] container_system_group_path_for_identifier: error = ((container_error_t)98) NOT_CODESIGNED
-2022-04-22 07:37:11.450361-0700 Hello_MultiScreen_iPhone[90317:3758142] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 98
-2022-04-22 07:37:11.450685-0700 Hello_MultiScreen_iPhone[90317:3758142] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/psargent/Library/Developer/CoreSimulator/Devices/FB23B0B0-5FE7-40F3-B279-AF5FE4404E54/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2022-04-22 07:53:40.229655-0700 Hello_MultiScreen_iPhone[90926:3783797] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=90926
+2022-04-22 07:53:40.229987-0700 Hello_MultiScreen_iPhone[90926:3783797] SecTaskCopyDebugDescription: Hello_MultiScree[90926]/0#-1 LF=0
+2022-04-22 07:53:40.236346-0700 Hello_MultiScreen_iPhone[90926:3783797] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=90926
+2022-04-22 07:53:40.236591-0700 Hello_MultiScreen_iPhone[90926:3783797] SecTaskCopyDebugDescription: Hello_MultiScree[90926]/0#-1 LF=0
+2022-04-22 07:53:40.325701-0700 Hello_MultiScreen_iPhone[90926:3783797] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=90926
+2022-04-22 07:53:40.325929-0700 Hello_MultiScreen_iPhone[90926:3783797] SecTaskCopyDebugDescription: Hello_MultiScree[90926]/0#-1 LF=0
+2022-04-22 07:53:45.557627-0700 Hello_MultiScreen_iPhone[90926:3783797] [unspecified] container_system_group_path_for_identifier: error = ((container_error_t)98) NOT_CODESIGNED
+2022-04-22 07:53:45.557765-0700 Hello_MultiScreen_iPhone[90926:3783797] [MC] Error getting system group container for systemgroup.com.apple.configurationprofiles: 98
+2022-04-22 07:53:45.558089-0700 Hello_MultiScreen_iPhone[90926:3783797] [MC] Failed to get profile system group container path. Overriding with expected path: /Users/psargent/Library/Developer/CoreSimulator/Devices/FB23B0B0-5FE7-40F3-B279-AF5FE4404E54/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
