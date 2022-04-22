@@ -15,6 +15,7 @@ namespace Hello_MultiScreen_iPhone
 		HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
         ImageScreen imageScreen;
+        ListScreen listscreen;
 
         //Variables
         public UITextView textView;
@@ -127,7 +128,7 @@ namespace Hello_MultiScreen_iPhone
             };
 
             ButtonShare.Frame = new CGRect(20, 580, 280, 35);
-            ButtonShare.SetTitle("Share Health Journal",UIControlState.Normal);
+            ButtonShare.SetTitle("Grocery List",UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             UIButton ButtonImageClick = new UIButton(UIButtonType.System);
@@ -147,8 +148,10 @@ namespace Hello_MultiScreen_iPhone
             };
 
             //Add button targets
-            ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
-
+            ButtonShare.TouchUpInside += (sender, e) => {
+                if (this.listscreen == null) { this.listscreen = new ListScreen(); }
+                this.NavigationController.PushViewController(this.listscreen, true);
+            };
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
             ButtonTodoList.Frame = new CGRect(20, 180, 280, 35);

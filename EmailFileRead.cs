@@ -26,6 +26,7 @@ namespace EmailReader //rename
 
         public static string fileName1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes.txt");
         public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo.txt");
+        public static string fileName3 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo2.txt");
         public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string fileNameImage = "";
 
@@ -81,13 +82,13 @@ namespace EmailReader //rename
             }
         }
 
-        public static String Suggestion(String textToSplit)
+        public static String Suggestion(String textToSplit, String fileName = "HalBook")
         {
             //File info is format
             //Strawberr - fruit 🍓
             //Chicken - meat 🍖
             //...
-            var book = NSBundle.MainBundle.PathForResource("Halbook", "txt");
+            var book = NSBundle.MainBundle.PathForResource(fileName, "txt");
             var logInfo1 = EmailFileRead.ReadAllLines(book);
             String addSuggestion = "";
             bool istrue = false;

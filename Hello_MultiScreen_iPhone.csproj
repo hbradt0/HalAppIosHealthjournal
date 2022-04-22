@@ -91,6 +91,7 @@
     <InterfaceDefinition Include="Screens\EditJournalScreen.xib" />
     <InterfaceDefinition Include="Screens\ImageScreen.xib" />
     <None Include="packages.config" />
+    <InterfaceDefinition Include="Screens\ListScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -118,6 +119,8 @@
     </Compile>
     <Compile Include="Screens\ImageScreen.cs" />
     <Compile Include="Screens\ImageScreen.designer.cs" />
+    <Compile Include="Screens\ListScreen.cs" />
+    <Compile Include="Screens\ListScreen.designer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -160,6 +163,7 @@
     <BundleResource Include="Resources\TestPic.png" />
     <BundleResource Include="Resources\TestPic.jpg" />
     <BundleResource Include="Resources\TestPic.jpeg" />
+    <BundleResource Include="Resources\Halbook2.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />
