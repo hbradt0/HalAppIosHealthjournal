@@ -27,7 +27,6 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
         public UIButton ButtonDelete1Line;
-        public UIButton EditJournalButton;
 
         public UIImage imageView;
         public UIView View1;
@@ -37,7 +36,6 @@ namespace Hello_MultiScreen_iPhone
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
-        EditJournalScreen editJournalScreen;
 
 
         private NSObject keyBoardWillShow;
@@ -78,13 +76,7 @@ namespace Hello_MultiScreen_iPhone
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
-            EditJournalButton = new UIButton(UIButtonType.System);
 
-            EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            EditJournalButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
-
-            EditJournalButton.Frame = new CGRect(200, 600, 100, 30);
-           EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
            EmailFileRead.ReadFileFromDateSuggestionExercise(EmailFileRead.fileName1);
 
             //var textTitle = new UITextView();
@@ -193,7 +185,6 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
-            EditJournalButton.AddTarget(ButtonEditJournalClick, UIControlEvent.TouchUpInside);
 
             //Add to view
             scrollView.Add(ButtonDateClick);
@@ -206,7 +197,6 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(ButtonDelete);
             scrollView.Add(dateTimeText);
             scrollView.AddSubview(editTextWrite);
-            scrollView.Add(EditJournalButton);
             View.AddSubview(scrollView);//ps
             //View.Add(textViewWrite);
             keyboardOpen = false;
@@ -285,14 +275,6 @@ namespace Hello_MultiScreen_iPhone
                 
             View.Frame = frame;
             UIView.CommitAnimations();
-        }
-
-
-        private void ButtonEditJournalClick(object sender, EventArgs eventArgs)
-        {
-            //back to home screen
-            if (this.editJournalScreen == null) { this.editJournalScreen = new EditJournalScreen(); }
-            this.NavigationController.PushViewController(this.editJournalScreen, true);
         }
 
         //Share at click upon date

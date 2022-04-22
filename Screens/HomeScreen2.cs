@@ -55,6 +55,8 @@ namespace Hello_MultiScreen_iPhone
         private UIViewAnimationCurve animCurve;
         private bool keyboardShowing;
         private bool keyboardOpen = false;
+        public UIButton EditJournalButton;
+        EditJournalScreen editJournalScreen;
 
 
         //loads the HomeScreen.xib file and connects it to this object
@@ -182,6 +184,14 @@ namespace Hello_MultiScreen_iPhone
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
+            EditJournalButton = new UIButton(UIButtonType.System);
+
+            EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            EditJournalButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+
+            EditJournalButton.Frame = new CGRect(200, 600, 100, 30);
+            EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
+
             //On click Events
             //ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
 
@@ -189,6 +199,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
+            EditJournalButton.AddTarget(ButtonEditJournalClick, UIControlEvent.TouchUpInside);
 
 
             //Add to view
@@ -199,6 +210,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(ButtonDelete);
             scrollView.Add(editTextDate);
             scrollView.Add(ShareTodo);
+            scrollView.Add(EditJournalButton);
             View.AddSubview(scrollView);//ps
             //View.Add(dateTimeText);
             scrollView.AddSubview(editTextWrite);
@@ -210,6 +222,14 @@ namespace Hello_MultiScreen_iPhone
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        
+        private void ButtonEditJournalClick(object sender, EventArgs eventArgs)
+        {
+            //back to home screen
+            if (this.editJournalScreen == null) { this.editJournalScreen = new EditJournalScreen(); }
+            this.NavigationController.PushViewController(this.editJournalScreen, true);
         }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)

@@ -69,7 +69,7 @@ namespace Hello_MultiScreen_iPhone
             };
 
             booktextView.Frame = new CGRect(20, 90, 280, 440); 
-            booktextView.Text = EmailFileRead.ReadText();
+            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
             booktextView.BackgroundColor = UIColor.White;
             booktextView.TextColor = UIColor.Purple;
             booktextView.UserInteractionEnabled = true;
@@ -94,10 +94,11 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(20, 60, 100, 30);
+            Button3.Frame = new CGRect(180,540, 100, 30);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            Button3.SetTitleColor(UIColor.White,UIControlState.Normal);
 
 
             //ScrollView
@@ -197,7 +198,7 @@ namespace Hello_MultiScreen_iPhone
         {
             //textViewWrite = new UITextView();
             //editTextWrite = new UITextField();
-            if (EmailFileRead.FileSizeWarning())
+            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName2))
             {
                 var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
                 Confirm.Show();
@@ -205,11 +206,9 @@ namespace Hello_MultiScreen_iPhone
                 {
                     if (es.ButtonIndex == 0)
                     {
-                        //Do nothing
                     }
                     else
                     {
-                        //Do nothing
                     }
                 };
 
@@ -222,18 +221,15 @@ namespace Hello_MultiScreen_iPhone
                 {
                     if (es.ButtonIndex == 0)
                     {
-                        //Do nothing
-      			}
+      			    }
                     else
                     {
-                String text = booktextView.Text;
-                if (booktextView.Text == String.Empty)
-                    text = "";
-                EmailFileRead.WriteAllText(text);
-                String totalText = EmailFileRead.ReadText();
-		booktextView.Text=totalText;
- 
-                        //Do nothing
+                        String text = booktextView.Text;
+                        if (booktextView.Text == String.Empty)
+                            text = "";
+                        EmailFileRead.WriteAllText(text,EmailFileRead.fileName2);
+                        String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
+		                booktextView.Text=totalText;
                     }
                 };
                
