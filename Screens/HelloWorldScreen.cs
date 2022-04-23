@@ -24,6 +24,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton Buttonyourstoryscreen;
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
+        public UIButton Button4;
 
         public UIImage imageView;
         public UIView View1;
@@ -31,7 +32,6 @@ namespace Hello_MultiScreen_iPhone
         public UIView View3;
         public UIScrollView scrollView;//ps
 
-        public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
 
         public UITextView readInfo;
@@ -70,13 +70,13 @@ namespace Hello_MultiScreen_iPhone
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
+            Button4 = new UIButton(UIButtonType.System);
             //UIScrollView scrollView = new UIScrollView();
             booktextView = new UITextView()
             {
                 Editable = false
             };
             hiddenbutton = new UIButton(UIButtonType.System);
-            hiddenbuttoncode = new UITextField();
 
             booktextView.Frame = new CGRect(20, 100, 280, 410);
             //scrollView.BackgroundColor = UIColor.SystemPink;
@@ -91,7 +91,7 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
             booktextView.BackgroundColor = UIColor.White;
-            booktextView.TextColor = UIColor.SystemPurple;
+            booktextView.TextColor = UIColor.SystemIndigo;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
@@ -101,20 +101,16 @@ namespace Hello_MultiScreen_iPhone
             //Button3.SetTitle("Back", UIControlState.Normal);
 
             hiddenbutton.Frame = new CGRect(20, 540, 100, 30);
-            hiddenbutton.SetTitle("Code", UIControlState.Normal);
-            hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            hiddenbutton.SetTitle("Calories in Food", UIControlState.Normal);
+            hiddenbutton.BackgroundColor = UIColor.White;
+            hiddenbutton.SetTitleColor(UIColor.Black, UIControlState.Normal);
 
-            hiddenbuttoncode.Frame = new CGRect(20, 590, 280, 50);
-            hiddenbuttoncode.AccessibilityHint = "type 'hint'";
-            hiddenbuttoncode.BackgroundColor = UIColor.White;
-            hiddenbuttoncode.TextColor = UIColor.SystemPurple;
+            Button4.Frame = new CGRect(140, 540, 100, 30);
+            Button4.SetTitle("Nutrition Info", UIControlState.Normal);
+            Button4.BackgroundColor = UIColor.White;
+            Button4.SetTitleColor(UIColor.Black, UIControlState.Normal);
 
-            //exit keyboard 
-            hiddenbuttoncode.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
-            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
-            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g)
-
-            var v = NSBundle.MainBundle.PathForResource("Reflections2", "txt");
+            var v = NSBundle.MainBundle.PathForResource("Halbook3", "txt");
             var text1 = EmailFileRead.ReadText(v);
             booktextView.Text = text1;
             //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
@@ -132,91 +128,17 @@ namespace Hello_MultiScreen_iPhone
             //Add targets
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
+            Button4.AddTarget(SecondClick, UIControlEvent.TouchUpInside);
 
             //Add to view
             //scrollView.AddSubview(booktextView);
             scrollView.AddSubview(booktextView);
             scrollView.Add(hiddenbutton);
-            scrollView.Add(hiddenbuttoncode);
+            scrollView.Add(Button4);
             scrollView.Add(Button3);
             View.AddSubview(scrollView);//ps
             //View.AddSubview(booktextView);
-            keyboardOpen = false;
-            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
 
-            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
-
-
-        }
-
-        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
-        {
-            keyboardShowing = hiddenbuttoncode.Focused;
-            if (!keyboardOpen)
-            {
-                keyboardShowing = true;
-                animDuration = args.AnimationDuration;
-                animCurve = args.AnimationCurve;
-
-                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
-                if (r.Top >= hiddenbuttoncode.Frame.Bottom)
-                {
-
-                }
-                else
-                {
-                    scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(true);
-                    keyboardOpen = true;
-                }
-            }
-        }
-
-        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
-        {
-            if (keyboardOpen)
-            {
-                keyboardShowing = false;
-                animDuration = args.AnimationDuration;
-                animCurve = args.AnimationCurve;
-
-                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
-                if(r.Top>=hiddenbuttoncode.Frame.Bottom)
-                {
-
-                }
-                else
-                {
-                    scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(false);
-                    keyboardOpen = false;
-                }
-            }
-
-        }
-
-        private void ScrollTheView(bool scale)
-        {
-            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
-            UIView.SetAnimationDuration(animDuration);
-            UIView.SetAnimationCurve(animCurve);
-
-            var frame = View.Frame;
-
-            if (scale)
-            {
-                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                frame.Y -= scrollAmout;
-            }
-            else
-            {
-                frame.Y += scrollAmout;
-            }
-
-            View.Frame = frame;
-            UIView.CommitAnimations();
         }
 
         //Back to home view
@@ -227,37 +149,21 @@ namespace Hello_MultiScreen_iPhone
             this.NavigationController.PushViewController(this.homeScreen, true);
         }
 
-        //Hint
         public void HiddenClick(object sender, EventArgs eventArgs)
         {
-
-            String str = hiddenbuttoncode.Text;
-   /*
-                NSRange r = booktextView.text;
-                if (r.location == NSNotFound)
-                {
-                    // The term to be searched couldn't be found...
-                }
-                else
-                {
-                // The string to be searched for is in the text view, r.location contains where exactly it is.
-                booktextView.ScrollRangeToVisible(r);}
-   */
-
-            
-
+                var v = NSBundle.MainBundle.PathForResource("Halbook3", "txt");
+                var text1 = EmailFileRead.ReadText(v);
+                booktextView.Text = text1;
+                booktextView.TextColor = UIColor.SystemIndigo;
         }
 
-        /*
-        private void Button3Click(object sender, EventArgs eventArgs)
+        public void SecondClick(object sender, EventArgs eventArgs)
         {
-            SecondController secondController = this.Storyboard.InstantiateViewController("SecondController ") as SecondController;
-            if (secondController != null)
-            {
-                this.PushViewController(secondController, true);
-            }
+            var v = NSBundle.MainBundle.PathForResource("Reflections2", "txt");
+            var text1 = EmailFileRead.ReadText(v);
+            booktextView.Text = text1;
+            booktextView.TextColor = UIColor.Blue;
         }
-        */
 
         public override void DidReceiveMemoryWarning()
         {

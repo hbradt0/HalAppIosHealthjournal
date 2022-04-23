@@ -96,7 +96,7 @@ namespace EmailReader //rename
             {
                 foreach(var e in textToSplit.Split(' '))
                 {
-                    if(e.Length>=3&&v.Split('-').First().ToLower().Contains(e.ToLower()) &&istrue==false)
+                    if(e.Length>=3&&v.Split('-').First().ToLower().Contains(e.ToLower())&&istrue==false)
                     {
                         addSuggestion = addSuggestion + " - " + v.Split('-').Last();
                         istrue=true;
@@ -313,13 +313,22 @@ namespace EmailReader //rename
             if (fileName == "")
                 fileName = fileName1;
             var v = File.ReadAllLines(fileName).ToList<String>();
-            if (v.Count > 0)
+            try
             {
-                v.Remove(v.Last());
-                if(v.Last()==String.Empty)
-                    v.RemoveAt(v.Count-1);
+                if (v.Count > 1)
+                {
+                    v.Remove(v.Last());
+                    if (v.Last() == String.Empty)
+                        v.RemoveAt(v.Count - 1);
+                }
+                if(v.Count>=1)
+                {
+                    v.Remove(v.Last());
+                }
+                File.WriteAllLines(fileName, v);
             }
-            File.WriteAllLines(fileName, v);
+            catch(Exception e)
+            { }
         }
 
         public static bool ValidateEmail(String email = "")

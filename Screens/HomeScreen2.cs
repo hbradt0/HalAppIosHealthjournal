@@ -343,7 +343,7 @@ namespace Hello_MultiScreen_iPhone
                 if (editTextWrite.Text == String.Empty)
                     text = "";
                 else
-                    text = EmailFileRead.Suggestion(text);
+                    text = EmailFileRead.Suggestion(text,"Halbook2");
                 EmailFileRead.WriteText(text,EmailFileRead.fileName2,true);
                 String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
                 //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
@@ -400,7 +400,8 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-
+            String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
+            textViewWrite.Text = totalText;
         }
 
         public override void DidReceiveMemoryWarning()

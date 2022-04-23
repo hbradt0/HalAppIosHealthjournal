@@ -164,6 +164,7 @@
     <BundleResource Include="Resources\TestPic.jpg" />
     <BundleResource Include="Resources\TestPic.jpeg" />
     <BundleResource Include="Resources\Halbook2.txt" />
+    <BundleResource Include="Resources\Halbook3.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />

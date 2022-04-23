@@ -128,7 +128,7 @@ namespace Hello_MultiScreen_iPhone
             };
 
             ButtonShare.Frame = new CGRect(20, 580, 280, 35);
-            ButtonShare.SetTitle("Grocery List",UIControlState.Normal);
+            ButtonShare.SetTitle("Grocery List", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             UIButton ButtonImageClick = new UIButton(UIButtonType.System);

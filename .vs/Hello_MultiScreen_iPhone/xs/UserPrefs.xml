@@ -1,36 +1,32 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/HelloUniverseScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmailFileRead.cs">
     <Files>
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="53" Column="19" IsPinned="True" />
-      <File FileName="Screens/HelloWorldScreen.cs" />
+      <File FileName="Screens/HelloUniverseScreen.cs" Line="401" Column="1" />
+      <File FileName="Screens/HelloWorldScreen.cs" Line="157" Column="62" />
       <File FileName="Screens/ImageScreen.cs" Line="149" Column="15" />
-      <File FileName="Screens/EditJournalScreen.cs" Line="98" Column="1" />
+      <File FileName="Screens/EditJournalScreen.cs" Line="244" Column="1" />
       <File FileName="Screens/HomeScreen.cs" Line="131" Column="47" />
-      <File FileName="Screens/HomeScreen2.cs" Line="70" Column="1" />
-      <File FileName="EmailFileRead.cs" Line="94" Column="33" />
-      <File FileName="AppDelegate.cs" />
-      <File FileName="Screens/HomeScreen.designer.cs" />
-      <File FileName="Resources/Halbook.txt" />
-      <File FileName="Resources/Reflections2.txt" />
-      <File FileName="Hello_MultiScreen_iPhone.csproj" />
-      <File FileName="../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
-      <File FileName="Assets.xcassets/AppIcon-2.appiconset/Contents.json" />
-      <File FileName="Hello_MultiScreen_iPhone.sln" />
+      <File FileName="Screens/HomeScreen2.cs" Line="404" Column="44" />
       <File FileName="Info.plist" />
-      <File FileName="Screens/ListScreen.cs" Line="325" Column="63" />
-      <File FileName="Screens/ListScreen.designer.cs" Line="16" Column="2" />
-      <File FileName="Screens/HelloUniverseScreen.designer.cs" Line="1" Column="1" />
+      <File FileName="Screens/ListScreen.cs" Line="80" Column="1" />
+      <File FileName="EmailFileRead.cs" Line="313" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
           <Node name="Hello_MultiScreen_iPhone" expanded="True">
+            <Node name="Screens" expanded="True" />
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
+              <Node name="Assets.xcassets" expanded="True">
+                <Node name="AppIcon-2.appiconset" expanded="True" />
+              </Node>
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
-                <Node name="HelloUniverseScreen.cs" expanded="True" selected="True" />
+                <Node name="HelloUniverseScreen.cs" expanded="True" />
+                <Node name="HomeScreen.cs" expanded="True" />
               </Node>
+              <Node name="EmailFileRead.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -43,5 +39,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.FB23B0B0-5FE7-40F3-B279-AF5FE4404E54" />
+  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8EB279F7-546E-41A6-ACD1-8FC8F265E84A" />
 </Properties>

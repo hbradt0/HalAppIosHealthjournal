@@ -78,8 +78,6 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
 
-            EmailFileRead.ReadFileFromDateSuggestionExercise(EmailFileRead.fileName3);
-
             //var textTitle = new UITextView();
             //textTitle.Editable = false;
             //textTitle.BackgroundColor = UIColor.FromRGB(203, 161, 212);

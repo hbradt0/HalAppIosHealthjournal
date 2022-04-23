@@ -241,5 +241,11 @@ namespace Hello_MultiScreen_iPhone
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
-	}
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
+        }
+    }
 }

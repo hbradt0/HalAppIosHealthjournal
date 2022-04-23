@@ -77,7 +77,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
 
-            EmailFileRead.ReadFileFromDateSuggestionExercise(EmailFileRead.fileName1);
+            //EmailFileRead.ReadFileFromDateSuggestionExercise(EmailFileRead.fileName1);
 
             //var textTitle = new UITextView();
             //textTitle.Editable = false;
@@ -405,4 +405,3 @@ namespace Hello_MultiScreen_iPhone
         }
     }
 }
-
