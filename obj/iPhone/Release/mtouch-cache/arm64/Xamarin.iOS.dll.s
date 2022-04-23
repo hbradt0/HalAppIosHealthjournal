@@ -92399,7 +92399,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 141,122,54,124,50,121,64,41,203,53,179,168,179,224,250,250
+	.byte 18,83,98,134,55,58,247,94,235,85,33,137,93,84,54,6
 	.globl _mono_aot_module_Xamarin_iOS_info
 	.align 3
 _mono_aot_module_Xamarin_iOS_info:

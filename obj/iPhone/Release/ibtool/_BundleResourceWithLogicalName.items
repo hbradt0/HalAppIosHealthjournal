@@ -17,6 +17,10 @@
       <Optimize>false</Optimize>
       <LogicalName>HomeScreen2.nib</LogicalName>
     </_BundleResourceWithLogicalName>
+    <_BundleResourceWithLogicalName Include="obj/iPhone/Release/ibtool/ListScreen.nib">
+      <Optimize>false</Optimize>
+      <LogicalName>ListScreen.nib</LogicalName>
+    </_BundleResourceWithLogicalName>
     <_BundleResourceWithLogicalName Include="obj/iPhone/Release/ibtool/HomeScreen.nib">
       <Optimize>false</Optimize>
       <LogicalName>HomeScreen.nib</LogicalName>
