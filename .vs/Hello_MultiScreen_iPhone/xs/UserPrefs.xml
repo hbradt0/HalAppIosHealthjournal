@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Info.plist">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EmailFileRead.cs">
     <Files>
       <File FileName="Screens/HelloUniverseScreen.cs" Line="401" Column="1" />
       <File FileName="Screens/HelloWorldScreen.cs" />
       <File FileName="Screens/ImageScreen.cs" />
       <File FileName="Screens/EditJournalScreen.cs" />
       <File FileName="Screens/HomeScreen.cs" />
-      <File FileName="Screens/HomeScreen2.cs" />
+      <File FileName="Screens/HomeScreen2.cs" Line="1" Column="1" />
       <File FileName="Info.plist" />
       <File FileName="Screens/ListScreen.cs" />
-      <File FileName="EmailFileRead.cs" Line="325" Column="1" />
+      <File FileName="EmailFileRead.cs" Line="265" Column="72" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +26,7 @@
                 <Node name="HelloUniverseScreen.cs" expanded="True" />
                 <Node name="HomeScreen.cs" expanded="True" />
               </Node>
-              <Node name="Info.plist" selected="True" />
+              <Node name="EmailFileRead.cs" selected="True" />
             </Node>
           </Node>
         </State>
