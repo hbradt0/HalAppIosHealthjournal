@@ -321,7 +321,7 @@ namespace EmailReader //rename
                     if (v.Last() == String.Empty)
                         v.RemoveAt(v.Count - 1);
                 }
-                if(v.Count>=1)
+                else if (v.Count >= 0)
                 {
                     v.Remove(v.Last());
                 }

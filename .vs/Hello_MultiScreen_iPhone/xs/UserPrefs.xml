@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="EmailFileRead.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Info.plist">
     <Files>
       <File FileName="Screens/HelloUniverseScreen.cs" Line="401" Column="1" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="157" Column="62" />
-      <File FileName="Screens/ImageScreen.cs" Line="149" Column="15" />
-      <File FileName="Screens/EditJournalScreen.cs" Line="244" Column="1" />
-      <File FileName="Screens/HomeScreen.cs" Line="131" Column="47" />
-      <File FileName="Screens/HomeScreen2.cs" Line="404" Column="44" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
+      <File FileName="Screens/ImageScreen.cs" />
+      <File FileName="Screens/EditJournalScreen.cs" />
+      <File FileName="Screens/HomeScreen.cs" />
+      <File FileName="Screens/HomeScreen2.cs" />
       <File FileName="Info.plist" />
-      <File FileName="Screens/ListScreen.cs" Line="80" Column="1" />
-      <File FileName="EmailFileRead.cs" Line="313" Column="32" />
+      <File FileName="Screens/ListScreen.cs" />
+      <File FileName="EmailFileRead.cs" Line="325" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +26,7 @@
                 <Node name="HelloUniverseScreen.cs" expanded="True" />
                 <Node name="HomeScreen.cs" expanded="True" />
               </Node>
-              <Node name="EmailFileRead.cs" selected="True" />
+              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>
@@ -39,5 +39,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8EB279F7-546E-41A6-ACD1-8FC8F265E84A" />
+  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BE6AE2BE-A355-48F8-870C-D99FC72AFEC0" />
 </Properties>
