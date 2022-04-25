@@ -1,14 +1,16 @@
-Strawberry-fruit 🍓 (4 kcal/strawberry)
-Strawberries-fruit 🍓 (4 kcal/strawberry)
-Chicken-meat 🍖 (grilled around 100 kcal)
+Strawberry-fruit 🍓 
+Strawberries-fruit 🍓
+Chicken-meat 🍖 
 fruit-fruit
-berries-fruit (1 cup = 20 calories)
+berries-fruit 
 berries-fruit
 green bean-vegetable
 fried-oil, maybe try to use coconut oil instead
 nuts-protein/nut
 butter-oil
-peanut-protein/nut 
+peas-vegetable 
+peanut-protein/nut
+plantain-fruit 
 Grapes-fruit 🍇 
 Melon-fruit 🍈
 Watermelon-fruit 🍉
@@ -31,10 +33,8 @@ greens-vegetable
 cherry-fruit 🍒
 Blueberries-fruit 🫐 
 avocado-vegetable 🥑
-potato-vegetable 🥔
-corn-vegetable 🌽
+corn-vegetable 🌽 
 peanuts-vegetable 🥜
-beans-vegetable 🫘 
 bread-carbohydrates 🍞
 Pancakes-carbohydrates 🥞 
 pears-fruit 🍐
@@ -53,7 +53,7 @@ garlics-vegetable 🧄
 onions-vegetable 🧅
 mushrooms-vegetable 🍄
 peanuts-vegetable 🥜
-beans-vegetable 🫘 
+beans-vegetable 🧆 
 chestnuts-vegetable 🌰
 bread-carbohydrates 🍞
 croissants-carboyhydrates 🥐
@@ -65,7 +65,7 @@ Pancakes-carbohydrates 🥞
 Waffles-carbohydrates 🧇
 Cheese-dairy 🧀
 meats-meat 🍖
-syrup-sugar around 100kcal/teaspoon
+syrup-sugar 
 steaks-meat 🥩 
 bacon-meat 🥓
 Falafel-carbs,beans 🧆 
@@ -90,12 +90,11 @@ Salt-seasoning🧂, recommend less salt
 cans-mix🥫 
 bento-meat,carbohydrates,vegetables 🍱
 crackers-carbohydrates🍘 
-rice-carbohydrates🍚
+rice-carbohydrates🍚 
 curry-carbohydrates,maybe mix🍛 
 steam-veggies,carbohydrates🍜
 Spaghetti-carbohydrates🍝 
-potato-vegetables, carbohydrates🍠
-potatoes-vegetables, carbohydrates🍠
+potatoes-vegetables, carbohydrates 🍠
 pastas-carbohydrates
 Sushi-meat,carbohydrates🍣 
 Shrimp-fish(poultry)🍤
@@ -130,82 +129,6 @@ wine-in moderation, fruit, carbohydrates, alcohol
 shot-in moderation, fruit,carbohydrates, alcohol 
 juice-fruit,sugar🍹 
 beer-carbohydrates,alcohol, moderation🍺 
-boba-sugar,dairy🧋 
-climbing-exercise🧗‍♂️ 
-climb-exercise🧗‍♀️ 
-fencing-exercise🤺 
-riding-exercise🏇
-skiing-exercise⛷️ 
-snowboarding-exercise🏂
-golf-exercise, light🏌️
-ran-exercise
-swam-exercise
-surf-exercise🏄 
-rowing-exercise🚣 
-row-exercise🚣‍♂️ 
-swimming-exercise🏊‍♂️ 
-swim-exercise🏊‍♀️ 
-ball-exercise⛹️‍♀️ 
-weights-exercise🏋️‍♂️ 
-weight-exercise🏋️‍♀️
-bike-exercise🚵 
-biking-exercise🚵‍♂️ 
-gymnastics-exercise🤸
-cheer-exercise🤸 
-wrestle-exercise🤼
-wrestling-exercise🤼 
-polo-exercise🤽
-handball-exercise🤾
-juggle-exercise🤹
-juggling-exercise🤹‍♂️ 
-yoga-exercise🧘‍♀️ 
-circus-exercise🎪 
-skateboard-exercise🛹
-skateboarding-exercise🛹
-skating-exercise🛼
-canoe-exercise🛶
-camp-exercise🎖️
-soccer-exercise⚽ 
-baseball-exercise⚾ 
-softball-exercise🥎
-basketball-exercise🏀 
-volleyball-exercise🏐 
-football-exercise🏈 
-rugby-exercise🏉 
-tennis-exercise🎾 
-disc-exercise🥏 
-bowling-exercise🎳
-cricket-exercise🏏
-hockey-exercise🏑 
-lacrosse-exercise🥍 Lacrosse
-ping-exercise🏓
-Badminton-exercise🏸 
-boxing-exercise🥊
-martial-exercise🥋
-karate-exercise🥋
-ju-exercise🥋
-tae-exercise🥋
-golf-light,not as active⛳
-golfing-light,not as active⛳
-skating-exercise⛸️
-skate-exercise⛸️
-ice skate-exercise⛸️
-ice skating-exercise⛸️
-marathon-exercise🎽
-run-exericse🎽
-Ski-exercise🎿
-sled-exercise🛷
-archery-exercise🎯 
-pool-exercise🎱 
-video game-unless it's active...🎮
-gaming-unless it's active...🎮
-barre-exercise
-dance-exercise
-gym-exercise
-pilates-exercise
-hot yoga-exercise
-Run-exercise
-Walk-exercise
-Swim-exercise
-Dance-exercise
-lift-exercise
+boba-sugar,dairy🧋
+oatmeal-carbohydrates
+cereals-carbohydrates

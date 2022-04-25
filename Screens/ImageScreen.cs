@@ -222,6 +222,8 @@ namespace Hello_MultiScreen_iPhone
                 }
                 DateTime myDate = (DateTime)dateTimeText.Date;
                 myDate = myDate.ToLocalTime();
+                EmailFileRead.DeleteImageFileName(myDate);
+
                 String file = myDate.ToString("MMddyyyy");
                 String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file+ args.ReferenceUrl.PathExtension);
                 NSError err = null;
@@ -360,12 +362,14 @@ namespace Hello_MultiScreen_iPhone
            var image = e.Info[UIImagePickerController.OriginalImage] as UIImage;
             if (image != null)
             {
+                DateTime myDate = (DateTime)dateTimeText.Date;
+                myDate = myDate.ToLocalTime();
+                EmailFileRead.DeleteImageFileName(myDate);
+
                 // Convert UIImage to .NET Stream object
                 NSData data;
                 data = image.AsJPEG();
 
-                DateTime myDate = (DateTime)dateTimeText.Date;
-                myDate = myDate.ToLocalTime();
                 String file = myDate.ToString("MMddyyyy");
                 String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + ".jpg");
                 NSError err = null;
