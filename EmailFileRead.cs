@@ -298,6 +298,8 @@ namespace EmailReader //rename
         {
             if (fileName == "")
                 fileName = fileName1;
+            if (!text.StartsWith('\n'))
+                text = "\n" + text;
             File.WriteAllText(fileName, text);
         }
 

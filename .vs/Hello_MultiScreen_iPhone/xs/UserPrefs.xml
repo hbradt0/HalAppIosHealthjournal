@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Screens/HelloUniverseScreen.cs" Line="401" Column="1" />
       <File FileName="Screens/HelloWorldScreen.cs" />
-      <File FileName="Screens/ImageScreen.cs" Line="225" Column="59" />
+      <File FileName="Screens/ImageScreen.cs" />
       <File FileName="Screens/EditJournalScreen.cs" />
       <File FileName="Screens/HomeScreen.cs" />
       <File FileName="Screens/HomeScreen2.cs" />
@@ -16,11 +16,7 @@
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
           <Node name="Hello_MultiScreen_iPhone" expanded="True">
-            <Node name="Screens" expanded="True" />
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
-              <Node name="Assets.xcassets" expanded="True">
-                <Node name="AppIcon-2.appiconset" expanded="True" />
-              </Node>
               <Node name="Resources" expanded="True" />
               <Node name="Screens" expanded="True">
                 <Node name="HelloUniverseScreen.cs" expanded="True" />
