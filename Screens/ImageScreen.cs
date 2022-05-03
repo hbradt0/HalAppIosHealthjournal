@@ -28,7 +28,9 @@ namespace Hello_MultiScreen_iPhone
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
-   
+
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
 
         //loads the HelloUniverseScreen.xib file and connects it to this object
         public ImageScreen() : base("ImageScreen", null)
@@ -40,10 +42,11 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
-
+            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveSizeX = View.Frame.Width - 40;
             //View issue
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
+            user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
 
             //Initialize Fields
             textViewWrite = new UIImageView();
@@ -58,7 +61,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText = new UIDatePicker(new CGRect(10, 520, 100, 30
 
              ));
-            dateTimeText.Frame = new CGRect(20, 540, 100, 30
+            dateTimeText.Frame = new CGRect(20, 440, 100, 30
              );
             ButtonDateClick = new UIButton(UIButtonType.System);
 
@@ -88,16 +91,16 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
-            ButtonDelete.Frame = new CGRect(20, 600, 100, 30);
-            ButtonDelete1Line.Frame = new CGRect(160, 600, 150, 30);
+            ButtonDelete.Frame = new CGRect(20, 500, 100, 30);
+            ButtonDelete1Line.Frame = new CGRect(160, 500, 150, 30);
             ButtonDelete1Line.SetTitle("Delete by Date", UIControlState.Normal);
 
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
-            ButtonDateClick.Frame = new CGRect(200, 540, 100, 30);
+            ButtonDateClick.Frame = new CGRect(200, 440, 100, 30);
             ButtonDateClick.SetTitle("Send Date", UIControlState.Normal);
 
-            textViewWrite.Frame = new CGRect(20, 100, 300, 300);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 350);
             UIImage img2 = new UIImage();
 
             DateTime myDate = (DateTime)dateTimeText.Date;
@@ -107,16 +110,16 @@ namespace Hello_MultiScreen_iPhone
 
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
-            textViewWrite.Frame = new CGRect(20, 100, 280, 240);
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, ResponsiveSizeX, 350);
 
             CameraButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             CameraButton.BackgroundColor = UIColor.SystemTeal;
-            CameraButton.Frame = new CGRect(20, 660, 100, 30);
+            CameraButton.Frame = new CGRect(20, 560, 100, 30);
             CameraButton.SetTitle("Camera", UIControlState.Normal);
 
             BackgroundImage.SetTitleColor(UIColor.White, UIControlState.Normal);
             BackgroundImage.BackgroundColor = UIColor.SystemTeal;
-            BackgroundImage.Frame = new CGRect(150, 660, 100, 30);
+            BackgroundImage.Frame = new CGRect(150, 560, 100, 30);
             BackgroundImage.SetTitle("Home Image", UIControlState.Normal);
 
             //ScrollView
@@ -124,7 +127,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(128, 222, 237),
+                BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 
@@ -135,7 +138,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.AddTarget(ButtonDateClickEnd, UIControlEvent.EditingDidEnd);
             ImagePickerButton.AddTarget(ButtonPickImageClick, UIControlEvent.TouchUpInside);
             CameraButton.AddTarget(openCamera, UIControlEvent.TouchUpInside);
-            BackgroundImage.AddTarget(BackgroundImageShow, UIControlEvent.TouchUpInside);
+            //BackgroundImage.AddTarget(BackgroundImageShow, UIControlEvent.TouchUpInside);
             //disable this doesn't crash
 
             //Add to View
@@ -146,7 +149,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(dateTimeText);
             scrollView.Add(CameraButton);
-            //scrollView.Add(BackgroundImage);
+            // scrollView.Add(BackgroundImage);
             View.AddSubview(scrollView);//ps
 
         }
@@ -171,7 +174,7 @@ namespace Hello_MultiScreen_iPhone
                     EmailFileRead.FileCopyToImageName(fileName);
                 }
             };
-                
+
         }
 
         public void ButtonDateClickEnd(object sender, EventArgs eventArgs)
@@ -185,7 +188,7 @@ namespace Hello_MultiScreen_iPhone
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
         }
-        
+
         void ButtonPickImageClick(object sender, EventArgs eventArgs)
         {
 
@@ -196,13 +199,13 @@ namespace Hello_MultiScreen_iPhone
             };
 
             // Set event handlers
-            imagePicker.FinishedPickingMedia +=  OnImagePickerFinishedPickingMediaAsync;
+            imagePicker.FinishedPickingMedia += OnImagePickerFinishedPickingMediaAsync;
             imagePicker.Canceled += OnImagePickerCancelled;
 
             this.PresentViewController(imagePicker, true, null);
 
         }
-        
+
         void OnImagePickerFinishedPickingMediaAsync(object sender, UIImagePickerMediaPickedEventArgs args)
         {
             UIImage image = args.EditedImage ?? args.OriginalImage;
@@ -210,6 +213,10 @@ namespace Hello_MultiScreen_iPhone
             if (image != null)
             {
                 // Convert UIImage to .NET Stream object
+                DateTime myDate = (DateTime)dateTimeText.Date;
+                myDate = myDate.ToLocalTime();
+                EmailFileRead.DeleteImageFileName(myDate);
+
                 NSData data;
 
                 if (args.ReferenceUrl.PathExtension.Equals("PNG") || args.ReferenceUrl.PathExtension.Equals("png"))
@@ -220,21 +227,18 @@ namespace Hello_MultiScreen_iPhone
                 {
                     data = image.AsJPEG(1);
                 }
-                DateTime myDate = (DateTime)dateTimeText.Date;
-                myDate = myDate.ToLocalTime();
-                EmailFileRead.DeleteImageFileName(myDate);
 
                 String file = myDate.ToString("MMddyyyy");
-                String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file+ args.ReferenceUrl.PathExtension);
+                String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + args.ReferenceUrl.PathExtension);
                 NSError err = null;
                 data.Save(fileName, false, out err);
 
-                textViewWrite.Frame = new CGRect(20, 60, 300, 300);
+                textViewWrite.Frame = new CGRect(20, 60, image.Size.Height, image.Size.Width);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
 
-               // await  voider(fileName); 
+                // await  voider(fileName); 
             }
             else
             {
@@ -260,7 +264,7 @@ namespace Hello_MultiScreen_iPhone
             imagePicker.DismissModalViewController(true);
         }
 
-        
+
         //Delete everything your story
         private void ButtonDeleteClick(object sender, EventArgs eventArgs)
         {
@@ -315,11 +319,10 @@ namespace Hello_MultiScreen_iPhone
         {
             DateTime myDate = (DateTime)dateTimeText.Date;
             myDate = myDate.ToLocalTime();
-            String txt3 = myDate.ToString();
             var txt2 = NSData.FromFile(EmailReader.EmailFileRead.GetImageFileName(myDate));
             var item = NSObject.FromObject(txt2);
 
-            //String txt3 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
+            String txt3 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
             var item3 = NSObject.FromObject(txt3);
 
             var activityItems = new NSObject[] { item, item3 };
@@ -328,8 +331,7 @@ namespace Hello_MultiScreen_iPhone
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
             this.PresentViewController(activityController, true, null);
-
-            }
+        }
 
         private void openCamera(object sender, EventArgs eventArgs)
         {
@@ -345,7 +347,7 @@ namespace Hello_MultiScreen_iPhone
 
                 this.PresentViewController(pickerView, true, null);
 
-   
+
             }
             else
             {
@@ -357,25 +359,25 @@ namespace Hello_MultiScreen_iPhone
 
         protected void Handle_FinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs e)
         {
-    
-           // get the original image
-           var image = e.Info[UIImagePickerController.OriginalImage] as UIImage;
+
+            // get the original image
+            var image = e.Info[UIImagePickerController.OriginalImage] as UIImage;
             if (image != null)
             {
                 DateTime myDate = (DateTime)dateTimeText.Date;
                 myDate = myDate.ToLocalTime();
                 EmailFileRead.DeleteImageFileName(myDate);
-
                 // Convert UIImage to .NET Stream object
                 NSData data;
                 data = image.AsJPEG();
+
 
                 String file = myDate.ToString("MMddyyyy");
                 String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + ".jpg");
                 NSError err = null;
 
                 data.Save(fileName, false, out err);
-                textViewWrite.Frame = new CGRect(20, 60, 300, 300);
+                textViewWrite.Frame = new CGRect(20, 60, image.Size.Height, image.Size.Width);
                 UIImage img2 = new UIImage();
                 img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = img2;
@@ -420,6 +422,7 @@ namespace Hello_MultiScreen_iPhone
 
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
+
         }
 
     }

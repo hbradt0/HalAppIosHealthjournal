@@ -5,6 +5,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using EmailReader;
+using CoreAnimation;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -71,10 +72,246 @@ namespace Hello_MultiScreen_iPhone
 			ViewDidLoad1();
 		}
 
-        //Todo list 
+
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
+
 
         //Create your journal page
         public void ViewDidLoad1()
+        {
+            //View issue
+            var user = new UIViewController();
+            user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+
+            ResponsiveWidthLeft = 0 + 20;
+            ResponsiveSizeX = View.Frame.Width - 40;
+
+            //Initialize Fields
+            textViewWrite = new UITextView();
+            editTextWrite = new UITextField();
+            Buttonbackyourstory = new UIButton(UIButtonType.System);
+            ButtonyourstoryscreenUpload = new UIButton(UIButtonType.System);
+            ButtonDelete = new UIButton(UIButtonType.System);
+            ButtonDelete1Line = new UIButton(UIButtonType.System);
+            scrollView = new UIScrollView();
+
+            editTextDate = new UITextField();
+            editTextDate.BackgroundColor = UIColor.White;
+            editTextDate.TextColor = UIColor.SystemTeal;
+            editTextDate.AccessibilityHint = "0 (days)";
+            editTextDate.Text = "0";
+
+            UIScrollView scrollView2 = new UIScrollView();
+
+            //Buttons and edit properties
+            textViewWrite.TextColor = UIColor.Purple;
+            textViewWrite.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            textViewWrite.Editable = false;
+            editTextWrite.TextColor = UIColor.Black;
+            Buttonbackyourstory.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            Buttonbackyourstory.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonyourstoryscreenUpload.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonyourstoryscreenUpload.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonDelete.BackgroundColor = UIColor.FromRGB(240, 137, 171);
+            ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
+            ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
+
+            //exit keyboard
+            editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false;
+
+
+            editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 420, ResponsiveSizeX, 60);
+
+            ButtonyourstoryscreenUpload.Frame = new CGRect(20, 490, 100, 30);
+            ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
+
+            ButtonDelete.Frame = new CGRect(20, 570, 100, 30);
+            ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
+
+            ButtonDelete1Line.Frame = new CGRect(150, 490, 150, 30);
+            ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
+
+            editTextWrite.AccessibilityHint = "Write Here";
+            editTextWrite.BackgroundColor = UIColor.White;
+            editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
+            editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
+
+
+            EditJournalButton = new UIButton(UIButtonType.System);
+
+            EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            EditJournalButton.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+
+            EditJournalButton.Frame = new CGRect(200, 600, 100, 30);
+            EditJournalButton.SetTitle("Edit Journal", UIControlState.Normal);
+
+            EditJournalButton.AddTarget(ButtonEditJournalClick, UIControlEvent.TouchUpInside);
+
+            scrollView.Add(EditJournalButton);
+
+            textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 100, ResponsiveSizeX, 310);
+
+            textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
+            textViewWrite.UserInteractionEnabled = true;
+            textViewWrite.ScrollEnabled = true;
+            if (this.textViewWrite.Text.Length > 0)
+            {
+                NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                this.textViewWrite.ScrollRangeToVisible(range);
+            }
+            //textViewWrite.ScrollRangeToVisible()
+
+            //ScrollView
+            scrollView = new UIScrollView
+            {
+                Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 370),
+                BackgroundColor = UIColor.FromRGB(178, 178, 227),
+                AutoresizingMask = UIViewAutoresizing.FlexibleHeight
+            };
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
+
+            borderFunction();
+  
+            ShareTodo = new UIButton(UIButtonType.System);
+            ShareTodo.BackgroundColor = UIColor.SystemTeal;
+            ShareTodo.SetTitle("Share", UIControlState.Normal);
+            ShareTodo.Frame = new CGRect(200, 560, 100, 30);
+
+            ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
+            ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
+            ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
+            ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
+            EditJournalButton.AddTarget(ButtonEditJournalClick, UIControlEvent.TouchUpInside);
+
+
+            //Add to view
+            //View.Add(ButtonDateClick);
+            scrollView.AddSubview(textViewWrite);
+            scrollView.Add(ButtonyourstoryscreenUpload);
+            scrollView.Add(ButtonDelete1Line);
+            scrollView.Add(ButtonDelete);
+            scrollView.Add(editTextDate);
+            scrollView.Add(ShareTodo);
+            scrollView.Add(EditJournalButton);
+            View.AddSubview(scrollView);//ps
+            //View.Add(dateTimeText);
+            scrollView.AddSubview(editTextWrite);
+            //View.Add(textViewWrite);
+
+
+
+
+            keyboardOpen = false;
+            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
+
+            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
+
+
+        }
+
+        public void borderFunction()
+        {
+            List<CALayer> li = new List<CALayer>();
+            for (int index = 0; index < 1; index++)
+                li.Add(new CALayer());
+            nfloat width = 2;
+            for (int index = 0; index < 1; index++)
+            {
+                li[index].BorderColor = UIColor.Purple.CGColor;
+                li[index].BorderWidth = width;
+                scrollView.Layer.AddSublayer(li[index]);
+                li[index].CornerRadius = 0.8f;
+            }
+            nfloat height = View.Frame.Top + 60;
+            scrollView.Layer.MasksToBounds = true;
+            //li[0].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Y - width, textViewWrite.Frame.Width, 1);
+            //li[1].Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Bottom + width, textViewWrite.Frame.Width, 1);
+
+            //li[2].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Y - width, editTextWrite.Frame.Width, 1);
+            li[0].Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + width, editTextWrite.Frame.Width, 1);
+        }
+
+        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
+        {
+            keyboardShowing = editTextWrite.Focused;
+            if (!keyboardOpen)
+            {
+                keyboardShowing = true;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                if (r.Top >= editTextWrite.Frame.Bottom)
+                {
+
+                }
+                else
+                {
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
+                    ScrollTheView(true);
+                    keyboardOpen = true;
+                }
+            }
+        }
+
+        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
+        {
+            if (keyboardOpen)
+            {
+                keyboardShowing = false;
+                animDuration = args.AnimationDuration;
+                animCurve = args.AnimationCurve;
+
+                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
+                //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
+                if (r.Top >= editTextWrite.Frame.Bottom)
+                {
+
+                }
+                else
+                {
+
+                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
+                    ScrollTheView(false);
+                    keyboardOpen = false;
+
+                }
+            }
+
+        }
+
+        private void ScrollTheView(bool scale)
+        {
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (scale)
+            {
+                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
+                if (frame.Y - scrollAmout <= 0)
+                    frame.Y -= scrollAmout;
+            }
+            else
+            {
+                if (frame.Y + scrollAmout <= 0)
+                    frame.Y += scrollAmout;
+            }
+
+            View.Frame = frame;
+            UIView.CommitAnimations();
+        }
+
+        //Create your journal page
+        public void ViewDidLoadbackup()
         {
             //View issue
             var user = new UIViewController();
@@ -232,76 +469,6 @@ namespace Hello_MultiScreen_iPhone
             this.NavigationController.PushViewController(this.editJournalScreen, true);
         }
 
-        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
-        {
-            keyboardShowing = editTextWrite.Focused;
-            if (!keyboardOpen)
-            {
-                keyboardShowing = true;
-                animDuration = args.AnimationDuration;
-                animCurve = args.AnimationCurve;
-
-                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
-                if (r.Top >= editTextWrite.Frame.Bottom)
-                {
-
-                }
-                else
-                {
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(true);
-                    keyboardOpen = true;
-                }
-            }
-        }
-
-        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
-        {
-            if (keyboardOpen)
-            {
-                keyboardShowing = false;
-                animDuration = args.AnimationDuration;
-                animCurve = args.AnimationCurve;
-
-                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                //if (r.Left >= editTextWrite.Frame.Right || r.Top >= editTextWrite.Frame.Bottom || r.Right <= editTextWrite.Frame.Left || r.Bottom <= editTextWrite.Frame.Top)
-                if (r.Top >= editTextWrite.Frame.Bottom)
-                {
-
-                }
-                else
-                {
-                    scrollAmout = -1 * (r.Top - editTextWrite.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(false);
-                    keyboardOpen = false;
-                }
-            }
-
-        }
-
-        private void ScrollTheView(bool scale)
-        {
-            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
-            UIView.SetAnimationDuration(animDuration);
-            UIView.SetAnimationCurve(animCurve);
-
-            var frame = View.Frame;
-
-            if (scale)
-            {
-                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                frame.Y -= scrollAmout;
-            }
-            else
-            {
-                frame.Y += scrollAmout;
-            }
-
-            View.Frame = frame;
-            UIView.CommitAnimations();
-        }
-
         //Share past # of days
         private void ButtonShareClick(object sender, EventArgs eventArgs)
         {
@@ -402,6 +569,9 @@ namespace Hello_MultiScreen_iPhone
             base.ViewDidAppear(animated);
             String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
             textViewWrite.Text = totalText;
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
+            scrollView.ScrollRectToVisible(textViewWrite.Frame, true);
         }
 
         public override void DidReceiveMemoryWarning()
