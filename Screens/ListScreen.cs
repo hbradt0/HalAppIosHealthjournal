@@ -97,9 +97,8 @@ namespace Hello_MultiScreen_iPhone
             //textTitle.Text = "Journal";
             //textTitle.Frame = new CGRect(25, 25, 250, 50);
 
-            //Buttons and edit properties
-            textViewWrite.TextColor = UIColor.Purple;
-            textViewWrite.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            textViewWrite.BackgroundColor = UIColor.White;
+            textViewWrite.TextColor = UIColor.Black;
             textViewWrite.Editable = false;
             editTextWrite.TextColor = UIColor.Black;
             Buttonbackyourstory.BackgroundColor = UIColor.FromRGB(100, 149, 237);
@@ -168,7 +167,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height / 3 + 300),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
             scrollView.ScrollRectToVisible(textViewWrite.Frame, true);

@@ -87,7 +87,7 @@ namespace Hello_MultiScreen_iPhone
 
             //View issue
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.Purple;
+            user.View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
 
             //Initialize Fields
             textViewWrite = new UITextView();
@@ -104,8 +104,8 @@ namespace Hello_MultiScreen_iPhone
             UIScrollView scrollView2 = new UIScrollView();
 
             //Buttons and edit properties
-            textViewWrite.TextColor = UIColor.Purple;
-            textViewWrite.BackgroundColor = UIColor.FromRGB(230, 230, 250);
+            textViewWrite.BackgroundColor = UIColor.White;
+            textViewWrite.TextColor = UIColor.Black;
             textViewWrite.Editable = false;
             editTextWrite.TextColor = UIColor.Black;
             //ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
@@ -188,7 +188,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
 

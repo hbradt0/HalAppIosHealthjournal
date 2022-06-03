@@ -120,11 +120,6 @@ namespace Hello_MultiScreen_iPhone
             editTextDate.Text = "0";
             //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
 
-            codes = new UITextView();
-            codes.Editable = false;
-            codes.TextColor = UIColor.Blue;
-            codes.Text = "";
-            codes.BackgroundColor = UIColor.White;
             //exit keyboard
             editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
 
@@ -136,8 +131,8 @@ namespace Hello_MultiScreen_iPhone
 
             //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
-            booktextView.BackgroundColor = UIColor.FromRGB(230, 230, 250);
-            booktextView.TextColor = UIColor.SystemPurple;
+            booktextView.BackgroundColor = UIColor.White;
+            booktextView.TextColor = UIColor.Black;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
@@ -163,27 +158,26 @@ namespace Hello_MultiScreen_iPhone
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
             g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g)
 
-            var text1 = EmailFileRead.ReadText();
+            var text1 = EmailFileRead.ReadText(EmailFileRead.fileName4);
             booktextView.Text = text1;
             //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
-            codes.Frame = new CGRect(ResponsiveWidthLeft, hiddenbuttoncode.Frame.Bottom + 20, 100, 50);
 
-            editTextDate.Frame = new CGRect(ResponsiveWidthRight - 60, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
+            editTextDate.Frame = new CGRect(ResponsiveWidthRight - 60, booktextView.Frame.Bottom + 10, 35, 35);
             //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             var sta = new UITextView();
             sta.Editable = false;
             sta.TextColor = UIColor.Purple;
-            sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, 35);
+            sta.Frame = new CGRect(editTextDate.Frame.Right, booktextView.Frame.Bottom + 10, 75, 35);
             sta.Text = "Days Prior";
             sta.BackgroundColor = UIColor.White;
 
-            ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, hiddenbuttoncode.Frame.Bottom + 20, 35, 35);
+            ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, booktextView.Frame.Bottom + 10, 35, 35);
             //ScrollView
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height / 3 + 300),
-                BackgroundColor = UIColor.FromRGB(204, 204, 255),
+                BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 //BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -194,7 +188,6 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
 
-            scrollView.Add(codes);
             scrollView.Add(ShareTodo);
             scrollView.Add(editTextDate);
             scrollView.Add(sta);
@@ -221,7 +214,7 @@ namespace Hello_MultiScreen_iPhone
             keyboardOpen = false;
             int i = 0;
             Int32.TryParse(editTextDate.Text, out i);
-            String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName1, i);
+            String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName4, i);
             var item = NSObject.FromObject(txt2);
             var activityItems = new NSObject[] { item };
             UIActivity[] applicationActivities = null;
@@ -238,7 +231,7 @@ namespace Hello_MultiScreen_iPhone
 
         void ShareButtonClick(object sender, EventArgs eventArgs)
         {
-            String txt2 = "\n Your story: \n" + EmailFileRead.ReadText();
+            String txt2 = "\n Your story: \n" + EmailFileRead.ReadText(EmailFileRead.fileName4);
             var item = NSObject.FromObject(txt2);
             var activityItems = new NSObject[] { item };
             UIActivity[] applicationActivities = null;
@@ -343,6 +336,9 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
+
+            var text1 = EmailFileRead.ReadText(EmailFileRead.fileName4);
+            booktextView.Text = text1;
         }
     }
 }

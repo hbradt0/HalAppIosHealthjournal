@@ -27,6 +27,7 @@ namespace EmailReader //rename
         public static string fileName1 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "notes.txt");
         public static string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo.txt");
         public static string fileName3 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo2.txt");
+        public static string fileName4 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "workout.txt");
         public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string fileNameImage = "";
 

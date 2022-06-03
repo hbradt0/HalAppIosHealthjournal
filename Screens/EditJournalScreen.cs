@@ -8,8 +8,8 @@ using EmailReader;
 
 namespace Hello_MultiScreen_iPhone
 {
-	public partial class EditJournalScreen : UIViewController
-	{
+    public partial class EditJournalScreen : UIViewController
+    {
         public UITextField editText;
         public UITextView textView;
         public UITextView booktextView;
@@ -37,7 +37,9 @@ namespace Hello_MultiScreen_iPhone
         public UITextView readInfo;
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
-
+        public nfloat ResponsiveWidthLeft = 300;
+        public nfloat ResponsiveSizeX = 300;
+        public nfloat ResponsiveWidthRight = 300;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -47,19 +49,26 @@ namespace Hello_MultiScreen_iPhone
         private bool keyboardShowing;
         private bool keyboardOpen = false;
         //loads the HelloWorldScreen.xib file and connects it to this object
-        public EditJournalScreen() : base ("EditJournalScreen", null)
-	{
-		//this.Title = "Read Journal!";
-		ViewDidLoad1();
-	}
+        public EditJournalScreen() : base("EditJournalScreen", null)
+        {
+            //this.Title = "Read Journal!";
+            ViewDidLoad1();
+        }
 
         //Read your journal page
         public void ViewDidLoad1()
         {
+            ResponsiveWidthLeft = View.Frame.Width / 8;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 90;
+
             //View Issue
-            View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
+            View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(128, 222, 237);
+            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -68,8 +77,8 @@ namespace Hello_MultiScreen_iPhone
                 Editable = true
             };
 
-            booktextView.Frame = new CGRect(20, 90, 280, 440); 
-            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, 90, ResponsiveSizeX, 440);
+            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName4);
             booktextView.BackgroundColor = UIColor.White;
             booktextView.TextColor = UIColor.Purple;
             booktextView.UserInteractionEnabled = true;
@@ -94,18 +103,18 @@ namespace Hello_MultiScreen_iPhone
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            Button3.Frame = new CGRect(180,540, 100, 30);
+            Button3.Frame = new CGRect(ResponsiveWidthRight, 540, 100, 30);
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
-            Button3.SetTitleColor(UIColor.White,UIControlState.Normal);
-
+            Button3.SetTitleColor(UIColor.White, UIControlState.Normal);
+            Button3.Layer.CornerRadius = 10;
 
             //ScrollView
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 400),
                 BackgroundColor = UIColor.FromRGB(128, 222, 237),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
@@ -182,23 +191,26 @@ namespace Hello_MultiScreen_iPhone
             if (scale)
             {
                 //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                frame.Y -= scrollAmout;
+                if (frame.Y - scrollAmout <= 0)
+                    frame.Y -= scrollAmout;
             }
             else
             {
-                frame.Y += scrollAmout;
+                if (frame.Y + scrollAmout <= 0)
+                    frame.Y += scrollAmout;
             }
 
             View.Frame = frame;
             UIView.CommitAnimations();
         }
 
+
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
         {
             //textViewWrite = new UITextView();
             //editTextWrite = new UITextField();
-            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName2))
+            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
             {
                 var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
                 Confirm.Show();
@@ -206,9 +218,11 @@ namespace Hello_MultiScreen_iPhone
                 {
                     if (es.ButtonIndex == 0)
                     {
+                        //Do nothing
                     }
                     else
                     {
+                        //Do nothing
                     }
                 };
 
@@ -221,21 +235,25 @@ namespace Hello_MultiScreen_iPhone
                 {
                     if (es.ButtonIndex == 0)
                     {
-      			    }
+                        //Do nothing
+                    }
                     else
                     {
                         String text = booktextView.Text;
                         if (booktextView.Text == String.Empty)
                             text = "";
-                        EmailFileRead.WriteAllText(text,EmailFileRead.fileName2);
-                        String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
-		                booktextView.Text=totalText;
+                        EmailFileRead.WriteAllText(text,EmailFileRead.fileName4);
+                        String totalText = EmailFileRead.ReadText(EmailFileRead.fileName4);
+                        booktextView.Text = totalText;
+                        UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                        keyboardOpen = false;
+                        //Do nothing
                     }
                 };
-               
+
             }
         }
-		
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -245,7 +263,9 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
+            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName4);
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
         }
     }
 }
