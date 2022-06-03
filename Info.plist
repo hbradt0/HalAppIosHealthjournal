@@ -36,5 +36,7 @@
 	<string>AppIcon</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon-2.appiconset</string>
+	<key></key>
+	<string></string>
 </dict>
 </plist>

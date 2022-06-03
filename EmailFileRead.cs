@@ -30,6 +30,7 @@ namespace EmailReader //rename
         public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public static string fileNameImage = "";
 
+        public static ICloudFileRead doc;
 
         public static String ReadText(String fileName = "")
         {
@@ -182,6 +183,15 @@ namespace EmailReader //rename
                     file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
                     File.Delete(file);
                 }
+            }
+        }
+
+
+        public static void DeleteFile(String fileName = "")
+        {
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
             }
         }
 

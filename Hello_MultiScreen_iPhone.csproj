@@ -121,6 +121,7 @@
     <Compile Include="Screens\ImageScreen.designer.cs" />
     <Compile Include="Screens\ListScreen.cs" />
     <Compile Include="Screens\ListScreen.designer.cs" />
+    <Compile Include="ICloudFileRead.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
