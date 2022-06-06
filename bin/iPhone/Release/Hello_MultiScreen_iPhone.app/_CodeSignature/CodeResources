@@ -54,7 +54,7 @@
 		</data>
 		<key>Halbook2.txt</key>
 		<data>
-		k6PNwI9wE/gsGOUn7/h9BdqSA18=
+		KTx39T4ERklzFyVIvK7uOi/EnHY=
 		</data>
 		<key>Halbook3.txt</key>
 		<data>
@@ -70,11 +70,11 @@
 		</data>
 		<key>Hello_MultiScreen_iPhone.aotdata.arm64</key>
 		<data>
-		bFXkX70luO9cnw25zO+FJC5k0kE=
+		0qcTHADoYu6MuLY3j32CebMp+bs=
 		</data>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<data>
-		FyqHr+zFnYVaqWm0AMOz09B3qXI=
+		/wwZzD6HwNx6p3sPvaNwVgx96Tg=
 		</data>
 		<key>HomeScreen.nib</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FE9SeUQxGbeJwzCljsVnqhSRYWQ=
+		pi57OIsoAbouYlVZUb+VgK5G7j8=
 		</data>
 		<key>ListScreen.nib</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>System.Core.aotdata.arm64</key>
 		<data>
-		iZ7KwhHW08xG6IRzlCUDZmWLqqU=
+		M+cEXRAcQkMEeqY7JpGgNomQZAI=
 		</data>
 		<key>System.Core.dll</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>System.Drawing.Common.aotdata.arm64</key>
 		<data>
-		r/BQJywlHaD19vHgafVKKZc8PSE=
+		YYX69YCiXtmoZ0IXWiRXOvWo7O8=
 		</data>
 		<key>System.Drawing.Common.dll</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>System.aotdata.arm64</key>
 		<data>
-		FLv43Stp/5b72sPXa4gix5eDAVk=
+		iZshjVKCxV4xqeJxM83CgpcAIfA=
 		</data>
 		<key>System.dll</key>
 		<data>
@@ -150,11 +150,11 @@
 		</data>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<data>
-		AfpD9GdtaEyH66kWHAgdV7GKvHs=
+		fyvq/Nn2Nhf91q2Qtd0RrLc+/QQ=
 		</data>
 		<key>Xamarin.iOS.dll</key>
 		<data>
-		Hpr1POc445DcAeyQulZW/+g9zk8=
+		GRe5Y4XGszOBifYEIaKLOuDgh7Y=
 		</data>
 		<key>alert.jpg</key>
 		<data>
@@ -164,9 +164,17 @@
 		<data>
 		nQwMg4CO3x0vaXO6vjmFYVkbvk4=
 		</data>
+		<key>camera.png</key>
+		<data>
+		TKGnnR2NIvC9HMHgBCz1i2urK7Q=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		lLECrQjEonpvqreBOR2COEnl0nM=
+		</data>
+		<key>gallery.png</key>
+		<data>
+		oGHk6CjLYKle+dEZHXo5HizVl2E=
 		</data>
 		<key>iTunesArtwork@2x.png</key>
 		<data>
@@ -200,13 +208,17 @@
 		<data>
 		Ce9PBai/QxNOh9ETcPHrDO0UY24=
 		</data>
+		<key>mailicon.png</key>
+		<data>
+		wOCe1HZnB7vqWJS6rP3/u3YUITk=
+		</data>
 		<key>mscorlib.aotdata.arm64</key>
 		<data>
-		tHSzxWliQ5O/m30K9Q7VNKglxPk=
+		6eJosQ0zF/0qxs2lhteDQe6lI00=
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		w/z7HJVrZ42MnZPqXwk0Hv5ISEg=
+		ltQXv+OT1WKjrgxBNjKvzqWuqhw=
 		</data>
 		<key>pic5.jpg</key>
 		<data>
@@ -307,7 +319,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bfhcMSgXDrStubVhbqL46q4QeoUwjARVWrVIB4KvlPg=
+			NAKUQYNvt5l7YTXlbEQ9DLmWNk0KhzoHCGGLfScc+8M=
 			</data>
 		</dict>
 		<key>Halbook3.txt</key>
@@ -335,14 +347,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			p0wW7l9G6yPvs+wT7AEVlaZxxGsAJQqBscPoPECthPE=
+			lAybXHvJ5tQWLFDml5/xsrn45VE7kCoJryAAoTnI31o=
 			</data>
 		</dict>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JIDeUrTGUbq27J6hlhl79KyS0zxQckW/2URJ9akC4zM=
+			hDb0OTBaZkFmoM9wHirxUy1ZG5iJC0Ufjeu6m6Q4oYE=
 			</data>
 		</dict>
 		<key>HomeScreen.nib</key>
@@ -398,7 +410,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zWyZTnBZVUMN7sF66+8W2XI2TZCsfYcBr1CRw4oZn2U=
+			jljIiX199j9OF2oL64Om5godIgXvVwp93/QqmNMQtpU=
 			</data>
 		</dict>
 		<key>System.Core.dll</key>
@@ -412,7 +424,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PhbLDXBpl3HjxsXnrgUzZztNBdqGKYmFAYd+NhioKFQ=
+			j90BlkkCz2W4OsSDtDgfcBsL2VxzMoxXyBWkZWV9sHI=
 			</data>
 		</dict>
 		<key>System.Drawing.Common.dll</key>
@@ -426,7 +438,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aFblwnOmyowD0LR1xQ9dHWcaTvAd/nwrI+xnnNKV4fo=
+			JmrteLYZn9Ei3jt78mUVwT3U6mrxKHZISIfwsgTYLdY=
 			</data>
 		</dict>
 		<key>System.dll</key>
@@ -461,14 +473,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jaXaOIQ0c1PLBrZt3GRTH+YkfasyXDxKKL2YGjTtexQ=
+			dd5eg98s2ILyxoYyV6nXLAa2/Uc45J+Oxvb5owdaA48=
 			</data>
 		</dict>
 		<key>Xamarin.iOS.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2kWL54F5KsYb4lmo6IgqFLNG8YFr+7bUC1lALTdNoEo=
+			aVLoZvst8sQLHSiQM8s1x9/v7P2p2nMnQAAdF2wzJls=
 			</data>
 		</dict>
 		<key>alert.jpg</key>
@@ -485,11 +497,25 @@
 			zRX1/H3u1q/kfWYLM4nMgFsaNzprO01zdh+bnB+Ckqs=
 			</data>
 		</dict>
+		<key>camera.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UWaN8MQa6o/ZpyAZ7F8VyrmgU27dLbjKRdS4oJkfVOs=
+			</data>
+		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			FoGObVy8GWXrL4uIvKPEXV2sNeimigVGATtRnvt4n40=
+			</data>
+		</dict>
+		<key>gallery.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sxCd3RN78KQW3GsFwDfqyYyODes5cqPLYCmiCFJdqBI=
 			</data>
 		</dict>
 		<key>iTunesArtwork@2x.png</key>
@@ -548,18 +574,25 @@
 			6w7IZlytHSPVxfTx+huNGK2v7IMowoT2yFLaQJZZ7jM=
 			</data>
 		</dict>
+		<key>mailicon.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XU3K7iS8fWIN13RlYD1u0NGQUEBUN1vcgrgWGfievm4=
+			</data>
+		</dict>
 		<key>mscorlib.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vC6RUd6r7cpVJ1elitFc1nxdbhZ8us2DTPjP6lg/afk=
+			pGWbUgq4Fk8lnanXWK5FYYjgOdjXg/m2n0Wme9XiIqU=
 			</data>
 		</dict>
 		<key>mscorlib.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2y7s/NwhYCiEVYQlduYegzC7T0FbCo1V2UpRbq1S+Z8=
+			Z2vW5ERfxzALPi2ITQNESmTblfuksoeNEe0ET1Nlw50=
 			</data>
 		</dict>
 		<key>pic5.jpg</key>

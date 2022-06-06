@@ -8,13 +8,15 @@
 #include <objc/message.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
 
 @class UIApplicationDelegate;
 @class AppDelegate;
 @class HomeScreen;
-@class HelloWorldScreen;
+@class EmailReader_ICloudFileRead;
 @class EditJournalScreen;
+@class HelloWorldScreen;
 @class HelloUniverseScreen;
 @class HomeScreen2;
 @class ImageScreen;
@@ -75,7 +77,7 @@
 	-(id) init;
 @end
 
-@interface HelloWorldScreen : UIViewController {
+@interface EmailReader_ICloudFileRead : UIDocument {
 }
 	-(void) release;
 	-(id) retain;
@@ -83,11 +85,9 @@
 	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
 	-(enum XamarinGCHandleFlags) xamarinGetFlags;
 	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
-	-(void) viewDidLoad;
-	-(void) didReceiveMemoryWarning;
-	-(void) viewDidAppear:(BOOL)p0;
+	-(BOOL) loadFromContents:(NSObject *)p0 ofType:(NSString *)p1 error:(NSError **)p2;
+	-(NSObject *) contentsForType:(NSString *)p0 error:(NSError **)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
-	-(id) init;
 @end
 
 @interface EditJournalScreen : UIViewController {
@@ -98,6 +98,21 @@
 	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
 	-(enum XamarinGCHandleFlags) xamarinGetFlags;
 	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) didReceiveMemoryWarning;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface HelloWorldScreen : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) viewDidLoad;
 	-(void) didReceiveMemoryWarning;
 	-(void) viewDidAppear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;

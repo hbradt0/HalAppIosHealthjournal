@@ -1,3 +1,6 @@
+teas-water🫖
+Cream-sugar,dairy🍦 
+soda-sugar
 Strawberry-fruit 🍓 
 Strawberries-fruit 🍓
 Chicken-meat 🍖 
@@ -16,7 +19,6 @@ Melon-fruit 🍈
 Watermelon-fruit 🍉
 Tangerine-fruit 🍊
 Oranges-fruit 🍊
-green apple-fruit 🍏
 cherry-fruit 🍒
 Blueberries-fruit 🫐 
 coconuts-fruit 🥥
@@ -48,11 +50,14 @@ coconuts-fruit 🥥
 avocadoes-vegetable 🥑
 carrots-vegetable 🥕
 peppers-vegetable 🌶️
-cucumbers-vegetable 🥒 
+cucumbers-vegetable 🥒
+lettuce-vegetable 🥒 
+spinach-vegetable 🥒
+broccoli-vegetable 🥒 
 garlics-vegetable 🧄
 onions-vegetable 🧅
 mushrooms-vegetable 🍄
-peanuts-vegetable 🥜
+peanuts-protein 🥜
 beans-vegetable 🧆 
 chestnuts-vegetable 🌰
 bread-carbohydrates 🍞
@@ -84,7 +89,7 @@ eggplants-vegetable 🍆
 Stir-fry- mix🍲
 fondues-sugar🫕 Fondue-sugar
 Salads-vegetables🥗
-Popcorns-corn,fat,oil🍿 
+Popcorns-corn,fatf,oil🍿 
 Butters-oils,fats🧈 
 Salt-seasoning🧂, recommend less salt 
 cans-mix🥫 
@@ -106,15 +111,13 @@ kabobs-poultry,vegetables🍡
 Dumplings-carbohydrates🥟
 Takeout-sugar,carbohydrates,meat,vegetables🥡 
 Oysters-meat(poultry)🦪 
-Cream-sugar,dairy🍦 
 shaved-sugar🍧
-Sundaes 🍨 Sundae-sugar,dairy
-Doughnuts🍩 
-Donuts🍩 
+Sundaes-🍨 Sundae-sugar,dairy
+Doughnuts-sugar 🍩 
+Donuts-sugar 🍩 
 Cookie-sugar🍪 
 cakes-sugar🎂
 shortcakes-sugar 
-Cupcakes-sugar🧁 
 Pies-sugar, carbohydrates🥧 
 Chocolates-sugar🍫 
 Candy-sugar🍬
@@ -123,7 +126,6 @@ Lollipops-sugar🍭
 Custard-fat 🍮
 Honey-sugar 🍯 
 milk-dairy🥛
-teas-water🫖
 sake-in moderation, carbohydrates, alcohol🍶 
 wine-in moderation, fruit, carbohydrates, alcohol 
 shot-in moderation, fruit,carbohydrates, alcohol 
@@ -132,3 +134,4 @@ beer-carbohydrates,alcohol, moderation🍺
 boba-sugar,dairy🧋
 oatmeal-carbohydrates
 cereals-carbohydrates
+muffin-carbohydrates

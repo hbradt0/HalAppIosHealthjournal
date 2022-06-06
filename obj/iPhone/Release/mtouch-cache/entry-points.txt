@@ -40,6 +40,9 @@ Function=xamarin_timezone_get_data
 	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/mscorlib.dll
 Function=xamarin_GetFolderPath
 	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/mscorlib.dll
+	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
 Function=xamarin_release_managed_ref
 	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
 Function=xamarin_set_gchandle_with_flags_safe
@@ -47,8 +50,6 @@ Function=xamarin_set_gchandle_with_flags_safe
 Function=UIApplicationMain
 	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
 Function=xamarin_find_protocol_wrapper_type
-	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
-Function=xamarin_log
 	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
 Function=xamarin_release_block_on_main_thread
 	/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.iOS.dll

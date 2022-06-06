@@ -34,3 +34,6 @@
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/camera.png
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/gallery.png
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/mailicon.png

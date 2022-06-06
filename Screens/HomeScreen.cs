@@ -56,7 +56,7 @@ namespace Hello_MultiScreen_iPhone
 		{
 		}
 
-		public override void ViewDidLoad()
+        public override void ViewDidLoad()
 		{
 			base.ViewDidLoad ();
 
@@ -73,8 +73,8 @@ namespace Hello_MultiScreen_iPhone
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Activity/Goal Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Nutrition Guide", UIControlState.Normal);
-            this.btnHelloWorld.Frame = new CGRect(ResponsiveWidthLeft, 525, ResponsiveSizeX, 35);
-            this.btnHelloUniverse.Frame = new CGRect(ResponsiveWidthLeft, 120, ResponsiveSizeX, 35);
+            this.btnHelloWorld.Frame = new CGRect(ResponsiveWidthLeft, 540 + 10, ResponsiveSizeX, 35);
+            this.btnHelloUniverse.Frame = new CGRect(ResponsiveWidthLeft, 125, ResponsiveSizeX, 35);
             this.btnHelloUniverse.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.btnHelloWorld.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             this.Title = "Home";
@@ -94,15 +94,17 @@ namespace Hello_MultiScreen_iPhone
 				if(this.helloUniverseScreen == null) { this.helloUniverseScreen = new HelloUniverseScreen(); }
 				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
 			};
-
-
-
         }
 		
         public void ViewDidLoad1()
         {
+            ResponsiveWidthLeft = View.Frame.Width / 8;
+            nfloat size = 30;
+            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
+                size = View.Frame.Width / 8;
+            ResponsiveSizeX = View.Frame.Width - size;
+            ResponsiveWidthRight = View.Frame.Width - 140;
 
-            //View Issue
             Title = "My Custom View Controller";
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(13, 97, 11);
@@ -118,21 +120,11 @@ namespace Hello_MultiScreen_iPhone
             else
                 img3 = UIImage.FromFile("TestPic.jpeg");
             imageViewPic.Image = img3;
-            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235, ResponsiveSizeX, 280);
-
-            /*
-            imageView3 = new UIImageView();
-            UIImage img = new UIImage();
-            img = UIImage.FromFile("pic5.png");
-            imageView3.Image = img;
-            imageView3.Frame = new CGRect(20, 385, 280, 200);
-            */
 
             imageViewTitle = new UIImageView();
             UIImage img2 = new UIImage();
             img2 = UIImage.FromFile("MainTitlePic.png");
             imageViewTitle.Image = img2;
-            imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft, 50, ResponsiveSizeX, 60);
 
             textView = new UITextView();
             var ButtonShare = new UIButton(UIButtonType.RoundedRect)
@@ -142,12 +134,10 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = UIColor.FromRGB(100, 149, 240)
             };
 
-            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, 580, ResponsiveSizeX, 35);
             ButtonShare.SetTitle("Grocery List", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             UIButton ButtonImageClick = new UIButton(UIButtonType.System);
-            ButtonImageClick.Frame = new CGRect(ResponsiveWidthLeft, 630, ResponsiveSizeX, 35);
             ButtonImageClick.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonImageClick.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonImageClick.SetTitle("Before/After Calendar", UIControlState.Normal);
@@ -168,7 +158,6 @@ namespace Hello_MultiScreen_iPhone
             };
             //PLEASE COMMENT OUT BELOW IF THIS doesn't work
             UIButton ButtonTodoList = new UIButton(UIButtonType.System);
-            ButtonTodoList.Frame = new CGRect(ResponsiveWidthLeft, 180, ResponsiveSizeX, 35);
             ButtonTodoList.BackgroundColor = UIColor.FromRGB(100, 149, 240);
             ButtonTodoList.SetTitle("Food Journal", UIControlState.Normal);
             ButtonTodoList.SetTitleColor(UIColor.White,UIControlState.Normal);
@@ -176,6 +165,12 @@ namespace Hello_MultiScreen_iPhone
 
             ButtonShare.Layer.CornerRadius = 10;
             ButtonImageClick.Layer.CornerRadius = 10;
+            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235 + 20, ResponsiveSizeX, 280);
+            imageViewTitle.Frame = new CGRect(ResponsiveWidthLeft - 20, 20, ResponsiveSizeX + 60, 80);
+            imageViewPic.Frame = new CGRect(ResponsiveWidthLeft, 235 + 20, ResponsiveSizeX, 280);
+            ButtonImageClick.Frame = new CGRect(ResponsiveWidthLeft, 595 + 15, ResponsiveSizeX, 35);
+            ButtonTodoList.Frame = new CGRect(ResponsiveWidthLeft, 180 + 5, ResponsiveSizeX, 35);
+            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, 670, ResponsiveSizeX, 35);
 
             ButtonTodoList.TouchUpInside += (sender, e) => {
                 if (this.TodoScreen == null) { this.TodoScreen = new HomeScreen2(); }
