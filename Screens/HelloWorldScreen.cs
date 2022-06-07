@@ -32,7 +32,7 @@ namespace Hello_MultiScreen_iPhone
         public UIView View3;
         public UIScrollView scrollView;//ps
 
-        public UITextField hiddenbuttoncode;
+        public UIButton SecondClickButton;
         public UIButton hiddenbutton;
 
         public UITextView readInfo;
@@ -82,13 +82,13 @@ namespace Hello_MultiScreen_iPhone
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
+            SecondClickButton = new UIButton(UIButtonType.System);
             //UIScrollView scrollView = new UIScrollView();
             booktextView = new UITextView()
             {
                 Editable = false
             };
             hiddenbutton = new UIButton(UIButtonType.System);
-            hiddenbuttoncode = new UITextField();
 
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
             //scrollView.BackgroundColor = UIColor.SystemPink;
@@ -142,21 +142,15 @@ namespace Hello_MultiScreen_iPhone
             //Button3.SetTitle("Back", UIControlState.Normal);
 
             hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
-            hiddenbutton.SetTitle("Submit", UIControlState.Normal);
+            hiddenbutton.SetTitle("Calorie List", UIControlState.Normal);
             hiddenbutton.BackgroundColor = UIColor.Blue;
             hiddenbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            hiddenbuttoncode.BackgroundColor = UIColor.FromRGB(100, 149, 240);
 
-            hiddenbuttoncode.Frame = new CGRect(ResponsiveWidthLeft, 500, 170, 30);
-            hiddenbuttoncode.AccessibilityHint = "type 'help'";
-            hiddenbuttoncode.Text = "help";
-            hiddenbuttoncode.BackgroundColor = UIColor.White;
-            hiddenbuttoncode.TextColor = UIColor.SystemPurple;
-
-            //exit keyboard 
-            hiddenbuttoncode.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
-            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
-            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g)
+            SecondClickButton.Frame = new CGRect(ResponsiveWidthLeft, 500, 100, 30);
+            SecondClickButton.SetTitle("Sample Diets", UIControlState.Normal);
+            SecondClickButton.BackgroundColor = UIColor.Blue;
+            SecondClickButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            SecondClickButton.BackgroundColor = UIColor.FromRGB(100, 149, 240);
 
             var text1 = EmailFileRead.ReadText(EmailFileRead.fileName4);
             booktextView.Text = text1;
@@ -186,6 +180,7 @@ namespace Hello_MultiScreen_iPhone
             //Add targets
             hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
+            SecondClickButton.AddTarget(SecondClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
 
             scrollView.Add(ShareTodo);
@@ -196,15 +191,11 @@ namespace Hello_MultiScreen_iPhone
             scrollView.AddSubview(booktextView);
             scrollView.Add(hiddenbutton);
             scrollView.Add(ButtonShare);
-            scrollView.Add(hiddenbuttoncode);
+            scrollView.Add(SecondClickButton);
             scrollView.Add(Button3);
             View.AddSubview(scrollView);//ps
             //View.AddSubview(booktextView);
             keyboardOpen = false;
-            keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
-
-            keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
-
 
         }
 
@@ -226,6 +217,7 @@ namespace Hello_MultiScreen_iPhone
         {
             hiddenbutton.Layer.CornerRadius = 10;
             Button3.Layer.CornerRadius = 10;
+            SecondClickButton.Layer.CornerRadius = 10;
         }
 
 
@@ -237,78 +229,6 @@ namespace Hello_MultiScreen_iPhone
             UIActivity[] applicationActivities = null;
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
             PresentViewController(activityController, true, null);
-        }
-
-        void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
-        {
-            keyboardShowing = hiddenbuttoncode.Focused;
-            if (!keyboardOpen)
-            {
-                keyboardShowing = true;
-                animDuration = args.AnimationDuration;
-                animCurve = args.AnimationCurve;
-
-                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
-                if (r.Top >= hiddenbuttoncode.Frame.Bottom)
-                {
-
-                }
-                else
-                {
-                    scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(true);
-                    keyboardOpen = true;
-                }
-            }
-        }
-
-        void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
-        {
-            if (keyboardOpen)
-            {
-                keyboardShowing = false;
-                animDuration = args.AnimationDuration;
-                animCurve = args.AnimationCurve;
-
-                var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
-                //if (r.Left >= hiddenbuttoncode.Frame.Right || r.Top >= hiddenbuttoncode.Frame.Bottom || r.Right <= hiddenbuttoncode.Frame.Left || r.Bottom <= hiddenbuttoncode.Frame.Top)
-                if (r.Top >= hiddenbuttoncode.Frame.Bottom)
-                {
-
-                }
-                else
-                {
-                    scrollAmout = -1 * (r.Top - hiddenbuttoncode.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(false);
-                    keyboardOpen = false;
-                }
-            }
-
-        }
-
-        private void ScrollTheView(bool scale)
-        {
-            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
-            UIView.SetAnimationDuration(animDuration);
-            UIView.SetAnimationCurve(animCurve);
-
-            var frame = View.Frame;
-
-            if (scale)
-            {
-                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
-                if (frame.Y - scrollAmout <= 0)
-                    frame.Y -= scrollAmout;
-            }
-            else
-            {
-                if (frame.Y + scrollAmout <= 0)
-                    frame.Y += scrollAmout;
-            }
-
-            View.Frame = frame;
-            UIView.CommitAnimations();
         }
 
         public void HiddenClick(object sender, EventArgs eventArgs)

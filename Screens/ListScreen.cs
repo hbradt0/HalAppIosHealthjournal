@@ -125,7 +125,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthLeft, 488, 100, 30);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
 
-            ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, 588, 100, 30);
+            ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, 538, 100, 30);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
 
             ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthRight, 488, 100, 30);
