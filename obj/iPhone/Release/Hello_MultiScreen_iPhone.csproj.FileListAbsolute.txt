@@ -1,4 +1,6 @@
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Firebase.Core.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Google.MobileAds.dll
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.Binding.iOS.dll
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.dll
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Tesseract.iOS.dll
@@ -29,11 +31,11 @@
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/ic_launcher_round.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/MainTitlePic.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/TestPic.png
-/Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/
-/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
-/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
-/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
-/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/camera.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/gallery.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/mailicon.png
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/MainTitlePic1.png
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/optimized/
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
+/Users/psargent/phillbookAppDiet/obj/iPhone/Release/Hello_MultiScreen_iPhone.exe

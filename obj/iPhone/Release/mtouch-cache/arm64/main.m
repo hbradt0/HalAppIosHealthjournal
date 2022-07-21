@@ -13,6 +13,8 @@ extern void *mono_aot_module_Xamarin_iOS_info;
 extern void *mono_aot_module_System_info;
 extern void *mono_aot_module_System_Core_info;
 extern void *mono_aot_module_System_Drawing_Common_info;
+extern void *mono_aot_module_Google_MobileAds_info;
+extern void *mono_aot_module_Firebase_Core_info;
 
 void xamarin_register_modules_impl ()
 {
@@ -22,12 +24,18 @@ void xamarin_register_modules_impl ()
 	mono_aot_register_module (mono_aot_module_System_info);
 	mono_aot_register_module (mono_aot_module_System_Core_info);
 	mono_aot_register_module (mono_aot_module_System_Drawing_Common_info);
+	mono_aot_register_module (mono_aot_module_Google_MobileAds_info);
+	mono_aot_register_module (mono_aot_module_Firebase_Core_info);
 
 }
 
 void xamarin_register_assemblies_impl ()
 {
 	GCHandle exception_gchandle = INVALID_GCHANDLE;
+	xamarin_open_and_register ("Google.MobileAds.dll", &exception_gchandle);
+	xamarin_process_managed_exception_gchandle (exception_gchandle);
+	xamarin_open_and_register ("Firebase.Core.dll", &exception_gchandle);
+	xamarin_process_managed_exception_gchandle (exception_gchandle);
 
 }
 
@@ -47,7 +55,7 @@ void xamarin_setup_impl ()
 	xamarin_arch_name = "arm64";
 	xamarin_marshal_objectivec_exception_mode = MarshalObjectiveCExceptionModeDisable;
 	setenv ("MONO_GC_PARAMS", "nursery-size=512k,major=marksweep", 1);
-	xamarin_supports_dynamic_registration = FALSE;
+	xamarin_supports_dynamic_registration = TRUE;
 }
 
 int main (int argc, char **argv)

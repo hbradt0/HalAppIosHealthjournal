@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FG4YNF644N.com.xamarin.hellodietmultiscreen</string>
+	<string>FG4YNF644N.com.xamarin.hellomultiscreeniphonediet</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>FG4YNF644N.com.xamarin.hellodietmultiscreen</string>
+		<string>FG4YNF644N.com.xamarin.hellomultiscreeniphonediet</string>
 	</array>
 </dict>
 </plist>

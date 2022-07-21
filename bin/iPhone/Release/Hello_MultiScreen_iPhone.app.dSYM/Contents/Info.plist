@@ -5,7 +5,7 @@
 		<key>CFBundleDevelopmentRegion</key>
 		<string>English</string>
 		<key>CFBundleIdentifier</key>
-		<string>com.apple.xcode.dsym.com.xamarin.hellodietmultiscreen</string>
+		<string>com.apple.xcode.dsym.com.xamarin.hellomultiscreeniphonediet</string>
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundlePackageType</key>
@@ -13,8 +13,8 @@
 		<key>CFBundleSignature</key>
 		<string>????</string>
 		<key>CFBundleShortVersionString</key>
-		<string>28</string>
+		<string>30</string>
 		<key>CFBundleVersion</key>
-		<string>27</string>
+		<string>30</string>
 	</dict>
 </plist>
