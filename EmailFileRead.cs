@@ -29,7 +29,14 @@ namespace EmailReader //rename
         public static string fileName3 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "todo2.txt");
         public static string fileName4 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "workout.txt");
         public static string srcFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public static string fileNameImage = "";
+        public static string fileNameImage = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "background.jpg");
+        public static string fileNameImage1 = "MainTitlePic1.png";
+        public static string fileNameImage2 = "MainTitlePic1.png";
+
+        public static void AppendAllText(String text = "\n", String fileName = "")
+        {
+            File.AppendAllText(fileName, text);
+        }
 
         public static ICloudFileRead doc;
 
@@ -172,6 +179,24 @@ namespace EmailReader //rename
             if(file!="")
                 File.Delete(file);
         }
+
+ 
+
+        public static void DeleteImageFileName(String str)
+        {
+            String file = "";
+            DirectoryInfo dir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            foreach (FileInfo v in dir.GetFiles())
+            {
+                if (v.FullName.Contains(str) && v.FullName.Contains("image"))
+                {
+                    file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), v.Name);
+                    if (file != "")
+                        File.Delete(file);
+                }
+            }
+        }
+
 
         public static void DeleteAllImages()
         {
@@ -335,17 +360,17 @@ namespace EmailReader //rename
             {
                 if (v.Count > 1)
                 {
-                    v.Remove(v.Last());
+                    v.RemoveAt(v.Count - 1);
                     if (v.Last() == String.Empty)
                         v.RemoveAt(v.Count - 1);
                 }
                 else if (v.Count >= 0)
                 {
-                    v.Remove(v.Last());
+                    v.RemoveAt(v.Count - 1);
                 }
                 File.WriteAllLines(fileName, v);
             }
-            catch(Exception e)
+            catch (Exception e)
             { }
         }
 

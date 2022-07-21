@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
@@ -21,9 +21,13 @@ namespace Hello_MultiScreen_iPhone
         UIImagePickerController imagePicker;
 
         public UIButton ButtonDelete;
+        public UIButton BackgroundImage;
         public UIButton ButtonDelete1Line;
         public UIImagePickerController pickerView;
         public UIButton CameraButton;
+        public UIButton BackgroundImage2;
+        public UIButton BackgroundImage3;
+        public UIButton BackgroundImage4;
         public int i = 0;
 
         public UITextView readInfo;
@@ -43,15 +47,8 @@ namespace Hello_MultiScreen_iPhone
         //Create your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            nfloat size = 30;
-            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
-                size = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - size;
-            ResponsiveWidthRight = View.Frame.Width - 90;
-            //View issue
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(204, 204, 255);
+            user.View.BackgroundColor = HomeScreen.color;
 
             //Initialize Fields
             textViewWrite = new UIImageView();
@@ -59,25 +56,21 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             ImagePickerButton = new UIButton(UIButtonType.System);
             CameraButton = new UIButton(UIButtonType.System);
+            BackgroundImage = new UIButton(UIButtonType.System);
+            BackgroundImage2 = new UIButton(UIButtonType.System);
+            BackgroundImage3 = new UIButton(UIButtonType.System);
+            BackgroundImage4 = new UIButton(UIButtonType.System);
 
-            UIScrollView scrollView = new UIScrollView();
-            dateTimeText = new UIDatePicker(new CGRect(ResponsiveWidthRight, 80, 100, 30
-
-             ));
-            dateTimeText.Frame = new CGRect(ResponsiveWidthRight, 80, 100, 30
-             );
+            scrollView = new UIScrollView();
+            dateTimeText = new UIDatePicker();
+            dateTimeText.Hidden = true;
             ButtonDateClick = new UIButton(UIButtonType.System);
 
             //Buttons and edit properties
             textViewWrite.BackgroundColor = UIColor.White;
 
-            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
             ImagePickerButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             ImagePickerButton.SetBackgroundImage(UIImage.FromBundle("gallery.png"), UIControlState.Normal);
-            ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft + 60, 420, 50, 50);
-            //ImagePickerButton.SetTitle("Upload", UIControlState.Normal);
-
-
             dateTimeText.AccessibilityHint = "Today's date";
             var calendar = new NSCalendar(NSCalendarType.Gregorian);
             var currentDate = NSDate.Now;
@@ -89,17 +82,12 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MaximumDate = currentDate;
 
             ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonDelete.BackgroundColor = UIColor.FromRGB(240, 137, 171);
+            ButtonDelete.BackgroundColor = UIColor.FromRGB(255, 69, 103);
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDateClick.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(240, 137, 171);
-            ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
-            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, 500, 100, 30);
+            ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(255, 69, 103);
             ButtonDelete1Line.SetTitle("Delete", UIControlState.Normal);
-
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
-
-            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight + 50, 420, 50, 50);
             ButtonDateClick.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
             UIImage img2 = new UIImage();
@@ -109,29 +97,41 @@ namespace Hello_MultiScreen_iPhone
             String file = myDate.ToString("MMddyyyy");
             String fileName = EmailFileRead.GetImageFileName(myDate);
 
-            img2 = UIImage.FromFile(fileName);
-            var e = MaxResizeImage(img2, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20, textViewWrite);
-            textViewWrite.Image = e;
-            //textViewWrite.Frame = ;//new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20);
-
             CameraButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             CameraButton.SetBackgroundImage(UIImage.FromBundle("camera.png"), UIControlState.Normal);
-            CameraButton.Frame = new CGRect(ResponsiveWidthLeft, 420, 50, 50);
-            //CameraButton.SetTitle("Camera", UIControlState.Normal);
 
-           
+            BackgroundImage.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage.BackgroundColor = UIColor.SystemTeal;
+            BackgroundImage.SetTitle("Home Image", UIControlState.Normal);
+
+            BackgroundImage3.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage3.BackgroundColor = UIColor.SystemTeal;
+            BackgroundImage3.SetBackgroundImage(UIImage.FromBundle("TestPic.png"), UIControlState.Normal);
+
+            BackgroundImage4.SetTitleColor(UIColor.White, UIControlState.Normal);
+            UIImage imgtitle = new UIImage();
+            imgtitle = UIImage.FromFile(EmailFileRead.fileNameImage1);
+            BackgroundImage4.SetBackgroundImage(imgtitle, UIControlState.Normal);
+            //BackgroundImage4.SetTitle("Toggle Title", UIControlState.Normal);
+
             UIImage img4 = new UIImage();
-            img4 = UIImage.FromBundle("pinkflower.png");
-       
+            img4 = UIImage.FromBundle("pic8.jpg");
+            BackgroundImage2.SetBackgroundImage(img4, UIControlState.Normal);
+            BackgroundImage2.SetTitle("Home", UIControlState.Normal);
+            BackgroundImage2.SetTitleColor(UIColor.White, UIControlState.Normal);
 
             //ScrollView
             scrollView = new UIScrollView
             {
-                Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
+                Frame = new CGRect(0, 0, View.Frame.Width+200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300),
-                BackgroundColor = UIColor.FromRGB(128, 222, 237),
+                BackgroundColor = HomeScreen.color,
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView = new UIScrollView();
+            }
             curveRadius();
             //Button clicks
             ButtonDateClick.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
@@ -140,7 +140,16 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.AddTarget(ButtonDateClickEnd, UIControlEvent.EditingDidEnd);
             ImagePickerButton.AddTarget(ButtonPickImageClick, UIControlEvent.TouchUpInside);
             CameraButton.AddTarget(openCamera, UIControlEvent.TouchUpInside);
-     
+            BackgroundImage.AddTarget(BackgroundImageShow, UIControlEvent.TouchUpInside);
+            BackgroundImage2.AddTarget(ShowBGOptions, UIControlEvent.TouchUpInside);
+            BackgroundImage3.AddTarget(BackgroundImageShow3, UIControlEvent.TouchUpInside);
+            BackgroundImage4.AddTarget(BackgroundImageShow4, UIControlEvent.TouchUpInside);
+
+            BackgroundImage.Hidden = true;
+            BackgroundImage3.Hidden = true;
+            BackgroundImage4.Hidden = true;
+            //disable this doesn't crash
+
             //Add to View
             scrollView.Add(ButtonDelete1Line);
             scrollView.Add(ButtonDelete);
@@ -149,6 +158,10 @@ namespace Hello_MultiScreen_iPhone
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(dateTimeText);
             scrollView.Add(CameraButton);
+            scrollView.Add(BackgroundImage);
+            scrollView.Add(BackgroundImage2);
+            scrollView.Add(BackgroundImage3);
+            scrollView.Add(BackgroundImage4);
             View.AddSubview(scrollView);//ps
 
         }
@@ -157,10 +170,89 @@ namespace Hello_MultiScreen_iPhone
             ImagePickerButton.Layer.CornerRadius = 10;
             ButtonDateClick.Layer.CornerRadius = 10;
             CameraButton.Layer.CornerRadius = 10;
+            BackgroundImage.Layer.CornerRadius = 10;
+            BackgroundImage3.Layer.CornerRadius = 10;
+            BackgroundImage4.Layer.CornerRadius = 10;
             ButtonDelete1Line.Layer.CornerRadius = 10;
             ButtonDelete.Layer.CornerRadius = 10;
         }
 
+        public void ShowBGOptions(object sender, EventArgs eventArgs)
+        {
+            if (BackgroundImage.Hidden && BackgroundImage3.Hidden && BackgroundImage4.Hidden)
+            {
+                BackgroundImage.Hidden = false;
+                BackgroundImage3.Hidden = false;
+                BackgroundImage4.Hidden = false;
+            }
+            else
+            {
+                BackgroundImage.Hidden = true;
+                BackgroundImage3.Hidden = true;
+                BackgroundImage4.Hidden = true;
+            }
+        }
+
+        public void BackgroundImageShow4(object sender, EventArgs eventArgs)
+        {
+
+            if (i == 1)
+            {
+                EmailFileRead.fileNameImage1 = "MainTitlePic1.png";
+                i = 0;
+             }
+            else
+            {
+                EmailFileRead.fileNameImage1 = "MainTitlePic.png";
+                i = 1;
+            }
+            BackgroundImage4.SetTitleColor(UIColor.White, UIControlState.Normal);
+            UIImage imgtitle = new UIImage();
+            imgtitle = UIImage.FromFile(EmailFileRead.fileNameImage1);
+            BackgroundImage4.SetBackgroundImage(imgtitle, UIControlState.Normal);
+            
+        }
+
+        public void BackgroundImageShow(object sender, EventArgs eventArgs)
+        {
+            var Confirm = new UIAlertView("Confirmation", "Add image on main page", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    UIImage img2 = new UIImage();
+                    DateTime myDate = (DateTime)dateTimeText.Date;
+                    myDate = myDate.ToLocalTime();
+                    String file = myDate.ToString("MMddyyyy");
+                    String fileName = EmailFileRead.GetImageFileName(myDate);
+                    EmailFileRead.FileCopyToImageFile(fileName, EmailFileRead.fileNameImage);
+                }
+            };
+
+        }
+
+        public void BackgroundImageShow3(object sender, EventArgs eventArgs)
+        {
+            var Confirm = new UIAlertView("Confirmation", "Reset flower image main page", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    EmailFileRead.DeleteFile(EmailFileRead.fileNameImage);
+                }
+            };
+
+        }
 
         public void ButtonDateClickEnd(object sender, EventArgs eventArgs)
         {
@@ -194,19 +286,8 @@ namespace Hello_MultiScreen_iPhone
         // resize the image to be contained within a maximum width and height, keeping aspect ratio
         UIImage MaxResizeImage(UIImage sourceImage, float maxWidth, float maxHeight, UIImageView view)
         {
-            view.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 130, ResponsiveSizeX, 280);
-            /*
-            var sourceSize = sourceImage.Size;
-            var maxResizeFactor = Math.Min(maxWidth / sourceSize.Width, maxHeight / sourceSize.Height);
-            if (maxResizeFactor > 1) return sourceImage;
-            var width = maxResizeFactor * sourceSize.Width;
-            var height = maxResizeFactor * sourceSize.Height;
-            UIGraphics.BeginImageContext(new CGSize(width, height));
-            sourceImage.Draw(new CGRect(0, 0, width, height));
-            var resultImage = UIGraphics.GetImageFromCurrentImageContext();
-            UIGraphics.EndImageContext();
-            view.Frame = new CGRect(15, 0 + 60, height, width);
-            return resultImage;*/
+            view.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 130, ResponsiveSizeX, ResponsiveSizeX);
+
             return sourceImage;
         }
 
@@ -235,43 +316,22 @@ namespace Hello_MultiScreen_iPhone
                 String file = myDate.ToString("MMddyyyy");
                 String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + args.ReferenceUrl.PathExtension);
                 NSError err = null;
+                EmailFileRead.DeleteImageFileName(fileName.Replace(args.ReferenceUrl.PathExtension, ""));
+                EmailFileRead.DeleteImageFileName(fileName.Replace(".jpg", ""));
+
                 data.Save(fileName, false, out err);
 
-                //var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) *2.1 * View.Frame.Width-20;
-                //var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) *2.1 * View.Frame.Width-20;
 
-                //if (newWidth >= View.Frame.Width - 20)
-                //    newWidth = View.Frame.Width - 20;
-
-                //if (newHeight >= 350)
-                //    newHeight = 350;
                 var v = MaxResizeImage(image, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20, textViewWrite);
 
-                //textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, newHeight,newWidth);
-                // UIImage img2 = new UIImage();
-                //img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = v;
-
-                // await  voider(fileName); 
             }
             else
             {
             }
             imagePicker.DismissModalViewController(true);
         }
-        /*
-        void voider(String fileName)
-        {
 
-            TesseractApi tessApi = new TesseractApi();
-            tessApi.Init("eng");
-            //tessApi.Init("eng");
-            System.Threading.Thread.Sleep(1000 * 5);
-             tessApi.SetImage(fileName);
-            if (tessApi.Text != "")
-                EmailFileRead.WriteText(tessApi.Text);
-        }
-        */
 
         void OnImagePickerCancelled(object sender, EventArgs args)
         {
@@ -282,10 +342,6 @@ namespace Hello_MultiScreen_iPhone
         //Delete everything your story
         private void ButtonDeleteClick(object sender, EventArgs eventArgs)
         {
-            //textViewWrite = new UITextView();
-            //editTextWrite = new UITextField();
-            //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
-            //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
             var Confirm = new UIAlertView("Confirmation", "Are you Sure ", null, "Cancel", "Yes");
             Confirm.Show();
             Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
@@ -306,10 +362,6 @@ namespace Hello_MultiScreen_iPhone
         //Delete 1 line
         private void ButtonDelete1LineClick(object sender, EventArgs eventArgs)
         {
-            //textViewWrite = new UITextView();
-            //editTextWrite = new UITextField();
-            //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
-            //editTextWrite.Frame = new CGRect(25, 25, 300, 150);
             var Confirm = new UIAlertView("Confirmation", "Are you Sure?", null, "Cancel", "Yes");
             Confirm.Show();
             Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
@@ -336,15 +388,22 @@ namespace Hello_MultiScreen_iPhone
             var txt2 = NSData.FromFile(EmailReader.EmailFileRead.GetImageFileName(myDate));
             var item = NSObject.FromObject(txt2);
 
-            //String txt3 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate);
-            //var item3 = NSObject.FromObject(txt3);
-
             var activityItems = new NSObject[] { item }; //, item3 };
             UIActivity[] applicationActivities = null;
 
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
 
-            this.PresentViewController(activityController, true, null);
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+            {
+                PresentViewController(activityController, true, null);
+            }
+            else
+            {
+                UIPopoverController popup = new UIPopoverController(activityController);
+                var CGrect = new CGRect(View.Frame.Left, View.Frame.Bottom + 100, 100, 100);
+                popup.PresentFromRect(CGrect, View, UIPopoverArrowDirection.Any, true);
+                PresentViewController(activityController, true, null);
+            }
         }
 
         private void openCamera(object sender, EventArgs eventArgs)
@@ -389,30 +448,13 @@ namespace Hello_MultiScreen_iPhone
                 String file = myDate.ToString("MMddyyyy");
                 String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_" + file + ".jpg");
                 NSError err = null;
-
+                EmailFileRead.DeleteImageFileName(fileName.Replace(".jpg",""));
                 data.Save(fileName, false, out err);
 
                 var v = MaxResizeImage(image, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20, textViewWrite);
 
-                //textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, newHeight,newWidth);
-                // UIImage img2 = new UIImage();
-                //img2 = UIImage.FromFile(fileName);
                 textViewWrite.Image = v;
-                /*
-                var newHeight = (image.Size.Height / (image.Size.Width + image.Size.Height)) * 2.1 * View.Frame.Width-20;
-                var newWidth = (image.Size.Width / (image.Size.Width + image.Size.Height)) * 2.1 * View.Frame.Width-20;
 
-                if (newWidth >= View.Frame.Width - 20)
-                    newWidth = View.Frame.Width - 20;
-
-                if (newHeight >= 350)
-                    newHeight = 350;
-
-                textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 60, newHeight, newWidth);
-                UIImage img2 = new UIImage();
-                img2 = UIImage.FromFile(fileName);
-                */
-                //textViewWrite.Image = img2;
             }
 
             pickerView.DismissModalViewController(true);
@@ -444,7 +486,14 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            { 
+                scrollView.Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height);
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + 300);
+                scrollView.BackgroundColor = HomeScreen.color;
+                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
+            }
+            dateTimeText.Hidden = false;
             UIImage img2 = new UIImage();
 
             DateTime myDate = (DateTime)dateTimeText.Date;
@@ -454,6 +503,33 @@ namespace Hello_MultiScreen_iPhone
 
             img2 = UIImage.FromFile(fileName);
             textViewWrite.Image = img2;
+            BackgroundImage.Hidden = true;
+            BackgroundImage3.Hidden = true;
+            BackgroundImage4.Hidden = true;
+
+            ResponsiveWidthLeft = View.Frame.Width / 10;
+            ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
+            ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
+                ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 35;
+
+            img2 = UIImage.FromFile(fileName);
+            var e = MaxResizeImage(img2, (float)View.Frame.Width - 20, (float)View.Frame.Width - 20, textViewWrite);
+            textViewWrite.Image = e;
+            dateTimeText.Frame = new CGRect(ResponsiveWidthRight, View.Frame.Top + 80, 100, 30);
+
+            ImagePickerButton.Frame = new CGRect(ResponsiveWidthLeft + 60, textViewWrite.Frame.Bottom + 15, 50, 50);
+            CameraButton.Frame = new CGRect(ResponsiveWidthLeft, textViewWrite.Frame.Bottom+15, 50, 50);
+
+            ButtonDateClick.Frame = new CGRect(ResponsiveWidthRight + 50, textViewWrite.Frame.Bottom+15, 50, 50);
+            ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, CameraButton.Frame.Bottom + 20, 100, 30);
+            ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, CameraButton.Frame.Bottom + 20, 100, 30);
+            BackgroundImage2.Frame = new CGRect(ResponsiveWidthLeft, ButtonDelete1Line.Frame.Bottom + 20, 60, 60);
+            BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight + 50, ButtonDelete1Line.Frame.Bottom + 20, 50, 50);
+            BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, BackgroundImage2.Frame.Y + 70, 100, 30);
+            BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, BackgroundImage2.Frame.Y + 70, 100, 30);
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemIndigo;
+            this.NavigationController.NavigationBar.TintColor = UIColor.White;
 
         }
 

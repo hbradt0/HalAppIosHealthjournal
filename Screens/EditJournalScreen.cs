@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
@@ -8,8 +8,8 @@ using EmailReader;
 
 namespace Hello_MultiScreen_iPhone
 {
-    public partial class EditJournalScreen : UIViewController
-    {
+	public partial class EditJournalScreen : UIViewController
+	{
         public UITextField editText;
         public UITextView textView;
         public UITextView booktextView;
@@ -33,10 +33,11 @@ namespace Hello_MultiScreen_iPhone
 
         public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
+        public UIButton EditJournalButton;
 
         public UITextView readInfo;
 
-        HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
+        HelloUniverseScreen hellouniversescreen; //MAY NEED TO BE COMMENTED OUT
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight = 300;
@@ -49,26 +50,21 @@ namespace Hello_MultiScreen_iPhone
         private bool keyboardShowing;
         private bool keyboardOpen = false;
         //loads the HelloWorldScreen.xib file and connects it to this object
-        public EditJournalScreen() : base("EditJournalScreen", null)
-        {
-            //this.Title = "Read Journal!";
-            ViewDidLoad1();
-        }
+        public EditJournalScreen() : base ("EditJournalScreen", null)
+	{
+		//this.Title = "Read Journal!";
+		ViewDidLoad1();
+	}
 
         //Read your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            nfloat size = 30;
-            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
-                size = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - size;
-            ResponsiveWidthRight = View.Frame.Width - 90;
 
             //View Issue
-            View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
+            View.BackgroundColor = UIColor.FromRGB(178,178,227);
             var user = new UIViewController();
             user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
+            this.View.LargeContentTitle = "";
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -77,10 +73,17 @@ namespace Hello_MultiScreen_iPhone
                 Editable = true
             };
 
-            booktextView.Frame = new CGRect(ResponsiveWidthLeft, 90, ResponsiveSizeX, 440);
-            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName4);
+            ButtonDelete = new UIButton(UIButtonType.System);
+            ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
+
+            ButtonDelete.BackgroundColor = UIColor.FromRGB(255, 69, 103);
+            ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
+            ButtonDelete.Layer.CornerRadius = 10;
+
+
+            booktextView.Text = EmailFileRead.ReadText();
             booktextView.BackgroundColor = UIColor.White;
-            booktextView.TextColor = UIColor.Purple;
+            booktextView.TextColor = UIColor.Black;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
             booktextView.KeyboardType = UIKeyboardType.ASCIICapable;
@@ -102,33 +105,65 @@ namespace Hello_MultiScreen_iPhone
             };
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
-
-            Button3.Frame = new CGRect(ResponsiveWidthRight, 540, 100, 30);
+  
             Button3.SetTitle("Save", UIControlState.Normal);
-            Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
-            Button3.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            Button3.BackgroundColor = UIColor.SystemBlue;
             Button3.SetTitleColor(UIColor.White, UIControlState.Normal);
             Button3.Layer.CornerRadius = 10;
 
             //ScrollView
+ 
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 400),
-                BackgroundColor = UIColor.FromRGB(128, 222, 237),
+                ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 250),
+                BackgroundColor = HomeScreen.color,
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView = new UIScrollView();
+            }
+          
+
+            Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
+            ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
+
 
             //Add to view
             scrollView.Add(Button3);
+            scrollView.Add(ButtonDelete);
             scrollView.Add(booktextView);
-            View.AddSubview(scrollView);//ps
+            View.AddSubview(scrollView);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
 
             keyBoardWillHide = UIKeyboard.Notifications.ObserveWillHide(KeyboardWillHide);
 
 
+        }
+
+        //Delete everything your story
+        private void ButtonDeleteClick(object sender, EventArgs eventArgs)
+        {
+
+            var Confirm = new UIAlertView("Confirmation", "This will delete everything in the journal, are you sure? This will return to the journal when complete!", null, "Cancel", "Yes");
+            Confirm.Show();
+            Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+            {
+                if (es.ButtonIndex == 0)
+                {
+                    //Do nothing
+                }
+                else
+                {
+                    EmailFileRead.DeleteText();
+                    booktextView.Text = String.Empty;
+                    booktextView.Text = EmailFileRead.ReadText();
+                    if (this.hellouniversescreen == null) { this.hellouniversescreen = new HelloUniverseScreen(); }
+                    this.NavigationController.PushViewController(this.hellouniversescreen, true);
+                }
+            };
         }
 
         void KeyboardWillShow(object sender, UIKeyboardEventArgs args)
@@ -139,6 +174,15 @@ namespace Hello_MultiScreen_iPhone
                 keyboardShowing = true;
                 animDuration = args.AnimationDuration;
                 animCurve = args.AnimationCurve;
+                int i = 200;
+                if (View.Frame.Height >= 670)
+                    i = 30;
+                if (View.Frame.Height == 812)
+                    i = 100;
+                if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+                    i = 0;
+                var cGFrame = new CGRect(View.Frame.Left, View.Frame.Bottom - 30, 100, i);
+                scrollView.ScrollRectToVisible(cGFrame, true);
 
                 var r = UIKeyboard.FrameBeginFromNotification(args.Notification);
                 //if (r.Left >= booktextView.Frame.Right || r.Top >= booktextView.Frame.Bottom || r.Right <= booktextView.Frame.Left || r.Bottom <= booktextView.Frame.Top)
@@ -150,7 +194,7 @@ namespace Hello_MultiScreen_iPhone
                 else
                 {
                     scrollAmout = -1 * (r.Top - booktextView.Frame.Bottom) + r.Height / 4;
-                    ScrollTheView(true);
+                    //ScrollTheView(true);
                     keyboardOpen = true;
                 }
             }
@@ -158,6 +202,8 @@ namespace Hello_MultiScreen_iPhone
 
         void KeyboardWillHide(object sender, UIKeyboardEventArgs args)
         {
+            var cGFrame = new CGRect(View.Frame.Left, View.Frame.Top, 100, 200);
+            scrollView.ScrollRectToVisible(cGFrame, true);
             if (keyboardOpen)
             {
                 keyboardShowing = false;
@@ -173,12 +219,13 @@ namespace Hello_MultiScreen_iPhone
                 {
                     scrollAmout = -1 * (r.Top - booktextView.Frame.Bottom) + r.Height / 4;
 
-                    ScrollTheView(false);
+                    //ScrollTheView(false);
                     keyboardOpen = false;
                 }
             }
 
         }
+
 
         private void ScrollTheView(bool scale)
         {
@@ -210,7 +257,7 @@ namespace Hello_MultiScreen_iPhone
         {
             //textViewWrite = new UITextView();
             //editTextWrite = new UITextField();
-            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
+            if (EmailFileRead.FileSizeWarning())
             {
                 var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
                 Confirm.Show();
@@ -236,24 +283,24 @@ namespace Hello_MultiScreen_iPhone
                     if (es.ButtonIndex == 0)
                     {
                         //Do nothing
-                    }
+      			}
                     else
                     {
-                        String text = booktextView.Text;
-                        if (booktextView.Text == String.Empty)
-                            text = "";
-                        EmailFileRead.WriteAllText(text,EmailFileRead.fileName4);
-                        String totalText = EmailFileRead.ReadText(EmailFileRead.fileName4);
-                        booktextView.Text = totalText;
-                        UIApplication.SharedApplication.KeyWindow.EndEditing(true);
-                        keyboardOpen = false;
+                String text = booktextView.Text;
+                if (booktextView.Text == String.Empty)
+                    text = "";
+                EmailFileRead.WriteAllText(text);
+                String totalText = EmailFileRead.ReadText();
+		        booktextView.Text=totalText;
+                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                keyboardOpen = false;
                         //Do nothing
                     }
                 };
-
+               
             }
         }
-
+		
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -263,9 +310,35 @@ namespace Hello_MultiScreen_iPhone
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName4);
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
+                scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
+                scrollView.BackgroundColor = HomeScreen.color;
+                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
+            }
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
+                booktextView.Font = UIFont.SystemFontOfSize(14);
+
+            booktextView.Text = EmailFileRead.ReadText();
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
+
+            ResponsiveWidthLeft = View.Frame.Width / 12;
+            ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
+            ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+
+            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 4.5); //small
+            if (View.Frame.Height >= 670)
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 500); //big
+            if (View.Frame.Height == 812)
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 26); //small
+
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 50, ResponsiveSizeX, 440);
+            ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom+20, 100, 30);
+            Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 20, 100, 30);
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemIndigo;
+            this.NavigationController.NavigationBar.TintColor = UIColor.White;
         }
     }
 }

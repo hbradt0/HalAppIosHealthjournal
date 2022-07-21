@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Xamarin.Build.Download.0.11.0\build\Xamarin.Build.Download.props" Condition="Exists('packages\Xamarin.Build.Download.0.11.0\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -84,6 +85,15 @@
     <Reference Include="Tesseract.iOS">
       <HintPath>packages\Xamarin.Tesseract.0.3.4\lib\Xamarin.iOS10\Tesseract.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Firebase.Core">
+      <HintPath>packages\Xamarin.Firebase.iOS.Core.8.10.0.1\lib\xamarinios10\Firebase.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="Google.MobileAds">
+      <HintPath>packages\Xamarin.Google.iOS.MobileAds.8.13.0.1\lib\xamarinios10\Google.MobileAds.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -92,6 +102,9 @@
     <InterfaceDefinition Include="Screens\ImageScreen.xib" />
     <None Include="packages.config" />
     <InterfaceDefinition Include="Screens\ListScreen.xib" />
+    <InterfaceDefinition Include="Screens\EditFoodJournalScreen.xib" />
+    <InterfaceDefinition Include="Screens\EditImportant.xib" />
+    <None Include="GoogleService-Info.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -122,6 +135,10 @@
     <Compile Include="Screens\ListScreen.cs" />
     <Compile Include="Screens\ListScreen.designer.cs" />
     <Compile Include="ICloudFileRead.cs" />
+    <Compile Include="Screens\EditFoodJournalScreen.cs" />
+    <Compile Include="Screens\EditFoodJournalScreen.designer.cs" />
+    <Compile Include="Screens\EditImportant.cs" />
+    <Compile Include="Screens\EditImportant.designer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -169,6 +186,8 @@
     <BundleResource Include="Resources\camera.png" />
     <BundleResource Include="Resources\gallery.png" />
     <BundleResource Include="Resources\mailicon.png" />
+    <BundleResource Include="Resources\bg.jpg" />
+    <BundleResource Include="Resources\MainTitlePic1.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />
@@ -214,4 +233,7 @@
     <ITunesArtwork Include="iTunesArtwork" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="packages\Xamarin.Build.Download.0.11.0\build\Xamarin.Build.Download.targets" Condition="Exists('packages\Xamarin.Build.Download.0.11.0\build\Xamarin.Build.Download.targets')" />
+  <Import Project="packages\Xamarin.Firebase.iOS.Core.8.10.0.1\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('packages\Xamarin.Firebase.iOS.Core.8.10.0.1\build\Xamarin.Firebase.iOS.Core.targets')" />
+  <Import Project="packages\Xamarin.Google.iOS.MobileAds.8.13.0.1\build\Xamarin.Google.iOS.MobileAds.targets" Condition="Exists('packages\Xamarin.Google.iOS.MobileAds.8.13.0.1\build\Xamarin.Google.iOS.MobileAds.targets')" />
 </Project>

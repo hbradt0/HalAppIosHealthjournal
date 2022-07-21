@@ -11,5 +11,6 @@ namespace Hello_MultiScreen_iPhone
 	[Register ("HelloUniverseScreen")]
 	partial class HelloUniverseScreen
 	{
+	
 	}
 }

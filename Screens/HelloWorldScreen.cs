@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Foundation;
@@ -13,18 +13,18 @@ namespace Hello_MultiScreen_iPhone
         public UITextField editText;
         public UITextView textView;
         public UITextView booktextView;
+
         public UITextView textView2;
         public UITextField editTextWrite;
         public UITextView textViewWrite;
 
         public UIButton Button1;
-        public UIButton Button2;
         public UIButton Button3;
+        public UIButton ButtonShare;
         public UIButton Buttonbackyourstory;
         public UIButton Buttonyourstoryscreen;
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
-        public UITextView codes;
 
         public UIImage imageView;
         public UIView View1;
@@ -32,17 +32,12 @@ namespace Hello_MultiScreen_iPhone
         public UIView View3;
         public UIScrollView scrollView;//ps
 
-        public UIButton SecondClickButton;
-        public UIButton hiddenbutton;
-
         public UITextView readInfo;
-
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight = 300;
-        public UIButton ShareTodo;
-        public UITextField editTextDate;
+        public UIButton CloudLoginButton;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -51,6 +46,8 @@ namespace Hello_MultiScreen_iPhone
         private UIViewAnimationCurve animCurve;
         private bool keyboardShowing;
         private bool keyboardOpen = false;
+
+        public ListScreen listScreen;
 
         //loads the HelloWorldScreen.xib file and connects it to this object
         public HelloWorldScreen() : base("HelloWorldScreen", null)
@@ -68,13 +65,6 @@ namespace Hello_MultiScreen_iPhone
         //Read your journal page
         public void ViewDidLoad1()
         {
-            ResponsiveWidthLeft = View.Frame.Width / 8;
-            nfloat size = 30;
-            if (View.Frame.Width / 8 >= View.Frame.Width - 30)
-                size = View.Frame.Width / 8;
-            ResponsiveSizeX = View.Frame.Width - size;
-            ResponsiveWidthRight = View.Frame.Width - 90;
-
             //View Issue
             View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
             var user = new UIViewController();
@@ -82,170 +72,147 @@ namespace Hello_MultiScreen_iPhone
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
-            SecondClickButton = new UIButton(UIButtonType.System);
-            //UIScrollView scrollView = new UIScrollView();
+            CloudLoginButton = new UIButton(UIButtonType.System);
             booktextView = new UITextView()
             {
                 Editable = false
             };
-            hiddenbutton = new UIButton(UIButtonType.System);
-
-            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
-            //scrollView.BackgroundColor = UIColor.SystemPink;
+           
 
             var plist = NSUserDefaults.StandardUserDefaults;
             var p = plist.IntForKey("viewScroll1Y");
 
-            // ViewController view1 = new ViewController();
-            //if (null != p)
-            //    booktextView.y.Y = p;
-            var ButtonShare = new UIButton(UIButtonType.RoundedRect)
+            ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
 
-                //Frame = UIScreen.MainScreen.Bounds,
-                BackgroundColor = UIColor.FromRGB(204, 204, 255)
+                BackgroundColor = HomeScreen.color
             };
 
-            editTextDate = new UITextField();
-            ShareTodo = new UIButton(UIButtonType.System);
-
-            ShareTodo.SetTitleColor(UIColor.White, UIControlState.Normal);
-            //ShareTodo.BackgroundColor = UIColor.SystemTeal;
-            //ShareTodo.SetTitle("Share", UIControlState.Normal);
-            ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
-
-            editTextDate.BackgroundColor = UIColor.White;
-            editTextDate.TextColor = UIColor.Purple;
-            editTextDate.AccessibilityHint = "0 (days)";
-            editTextDate.Text = "0";
-            //editTextDate.KeyboardType = UIKeyboardType.NumberPad;
-
-            //exit keyboard
-            editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
-
-
-            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 10, 35, 35);
-            //ButtonShare.SetTitle("Share Journal", UIControlState.Normal);
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonShare.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
 
-            //booktextView.Frame = new CGRect(25, 150, 300, 150); ;
             booktextView.Text = "Enter your email to begin your story!";
-            booktextView.BackgroundColor = UIColor.White;
-            booktextView.TextColor = UIColor.Black;
+            booktextView.BackgroundColor = UIColor.FromRGB(252, 251, 244);
+            booktextView.TextColor = UIColor.Purple;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
-            //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
-            //booktextView.ReturnKeyType = UIReturnKeyType.Send;
 
-            //Button3.Frame = new CGRect(175, 25, 150, 150);
-            //Button3.SetTitle("Back", UIControlState.Normal);
+            
 
-            hiddenbutton.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
-            hiddenbutton.SetTitle("Calorie List", UIControlState.Normal);
-            hiddenbutton.BackgroundColor = UIColor.Blue;
-            hiddenbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            //exit keyboard 
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g)
 
-            SecondClickButton.Frame = new CGRect(ResponsiveWidthLeft, 500, 100, 30);
-            SecondClickButton.SetTitle("Sample Diets", UIControlState.Normal);
-            SecondClickButton.BackgroundColor = UIColor.Blue;
-            SecondClickButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            SecondClickButton.BackgroundColor = UIColor.FromRGB(100, 149, 240);
-
-            var text1 = EmailFileRead.ReadText(EmailFileRead.fileName4);
+            var text1 = EmailFileRead.ReadText();
             booktextView.Text = text1;
-            //HomeScreen.viewScroll1Y = ((float)booktextView.ContentOffset.Y);
 
-            editTextDate.Frame = new CGRect(ResponsiveWidthRight - 60, booktextView.Frame.Bottom + 10, 35, 35);
-            //ButtonDateClick.BackgroundColor = UIColor.FromRGB(100, 149, 237);
-            var sta = new UITextView();
-            sta.Editable = false;
-            sta.TextColor = UIColor.Purple;
-            sta.Frame = new CGRect(editTextDate.Frame.Right, booktextView.Frame.Bottom + 10, 75, 35);
-            sta.Text = "Days Prior";
-            sta.BackgroundColor = UIColor.White;
+            CloudLoginButton = new UIButton(UIButtonType.System);
 
-            ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, booktextView.Frame.Bottom + 10, 35, 35);
+            CloudLoginButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            CloudLoginButton.BackgroundColor = UIColor.SystemTeal;
+            CloudLoginButton.SetTitle("Grocery List", UIControlState.Normal);
+
+            CloudLoginButton.AddTarget(CloudLoginScreen, UIControlEvent.TouchUpInside);
+
             //ScrollView
+
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
                 ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + View.Frame.Height / 3 + 300),
-                BackgroundColor = UIColor.FromRGB(128, 222, 237),
+                BackgroundColor = HomeScreen.color,
                 //BackgroundColor = UIColor.FromRGB(178, 178, 227),
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView = new UIScrollView();
+            }
             ButtonShare.Layer.CornerRadius = 10;
             curveRadius();
-            //Add targets
-            hiddenbutton.AddTarget(HiddenClick, UIControlEvent.TouchUpInside);
+            Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
-            SecondClickButton.AddTarget(SecondClick, UIControlEvent.TouchUpInside);
-            ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
 
-            scrollView.Add(ShareTodo);
-            scrollView.Add(editTextDate);
-            scrollView.Add(sta);
-            //Add to view
-            //scrollView.AddSubview(booktextView);
+            scrollView.Add(CloudLoginButton);
             scrollView.AddSubview(booktextView);
-            scrollView.Add(hiddenbutton);
             scrollView.Add(ButtonShare);
-            scrollView.Add(SecondClickButton);
             scrollView.Add(Button3);
             View.AddSubview(scrollView);//ps
-            //View.AddSubview(booktextView);
-            keyboardOpen = false;
+
 
         }
 
-        private void ButtonShareClick(object sender, EventArgs eventArgs)
+        public void CloudLoginScreen(object sender, EventArgs eventArgs)
         {
-            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
-            keyboardOpen = false;
-            int i = 0;
-            Int32.TryParse(editTextDate.Text, out i);
-            String txt2 = EmailReader.EmailFileRead.ReadFileFromDate(EmailFileRead.fileName4, i);
-            var item = NSObject.FromObject(txt2);
-            var activityItems = new NSObject[] { item };
-            UIActivity[] applicationActivities = null;
-            var activityController = new UIActivityViewController(activityItems, applicationActivities);
-            PresentViewController(activityController, true, null);
+            //back to home screen
+            if (this.listScreen == null) { this.listScreen = new ListScreen(); }
+            this.NavigationController.PushViewController(this.listScreen, true);
         }
+
+         
 
         public void curveRadius()
         {
-            hiddenbutton.Layer.CornerRadius = 10;
             Button3.Layer.CornerRadius = 10;
-            SecondClickButton.Layer.CornerRadius = 10;
+            CloudLoginButton.Layer.CornerRadius = 10;
         }
 
 
         void ShareButtonClick(object sender, EventArgs eventArgs)
         {
-            String txt2 = "\n Your story: \n" + EmailFileRead.ReadText(EmailFileRead.fileName4);
+            String txt2 = "\n Health Information: \n" + booktextView.Text;
             var item = NSObject.FromObject(txt2);
             var activityItems = new NSObject[] { item };
             UIActivity[] applicationActivities = null;
             var activityController = new UIActivityViewController(activityItems, applicationActivities);
-            PresentViewController(activityController, true, null);
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+            {
+                PresentViewController(activityController, true, null);
+            }
+            else
+            {
+                UIPopoverController popup = new UIPopoverController(activityController);
+                var CGrect = new CGRect(View.Frame.Left, View.Frame.Bottom + 100, 100, 100);
+                popup.PresentFromRect(CGrect, View, UIPopoverArrowDirection.Any, true);
+                PresentViewController(activityController, true, null);
+            }
         }
 
-        public void HiddenClick(object sender, EventArgs eventArgs)
+      
+
+        private void ScrollTheView(bool scale)
         {
-                var v = NSBundle.MainBundle.PathForResource("Halbook3", "txt");
-                var text1 = EmailFileRead.ReadText(v);
-                booktextView.Text = text1;
-                booktextView.TextColor = UIColor.SystemIndigo;
+            UIView.BeginAnimations(string.Empty, IntPtr.Zero);
+            UIView.SetAnimationDuration(animDuration);
+            UIView.SetAnimationCurve(animCurve);
+
+            var frame = View.Frame;
+
+            if (scale)
+            {
+                //if (Math.Abs(frame.Y + scrollAmout) <= scrollAmout)
+                if (frame.Y - scrollAmout <= 0)
+                    frame.Y -= scrollAmout;
+            }
+            else
+            {
+                if (frame.Y + scrollAmout <= 0)
+                    frame.Y += scrollAmout;
+            }
+
+            View.Frame = frame;
+            UIView.CommitAnimations();
         }
 
-        public void SecondClick(object sender, EventArgs eventArgs)
+
+        //Back to home view
+        void Button3Click(object sender, EventArgs eventArgs)
         {
-            var v = NSBundle.MainBundle.PathForResource("Reflections2", "txt");
-            var text1 = EmailFileRead.ReadText(v);
-            booktextView.Text = text1;
-            booktextView.TextColor = UIColor.Blue;
+            //back to home screen
+            if (this.homeScreen == null) { this.homeScreen = new HomeScreen(); }
+            this.NavigationController.PushViewController(this.homeScreen, true);
         }
+
 
         public override void DidReceiveMemoryWarning()
         {
@@ -255,10 +222,42 @@ namespace Hello_MultiScreen_iPhone
 
         public override void ViewDidAppear(bool animated)
         {
-            base.ViewDidAppear(animated);
 
-            var text1 = EmailFileRead.ReadText(EmailFileRead.fileName4);
+            base.ViewDidAppear(animated);
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
+                scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
+                scrollView.BackgroundColor = HomeScreen.color;
+                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
+            }
+            ResponsiveWidthLeft = View.Frame.Width / 10;
+            ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
+            ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
+            var v = NSBundle.MainBundle.PathForResource("Halbook3", "txt");
+            var text1 = EmailFileRead.ReadText(v);
             booktextView.Text = text1;
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
+
+            CloudLoginButton.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 10, 100, 30);
+
+            booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
+
+            ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 10, 35, 35);
+           
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
+                booktextView.Font = UIFont.SystemFontOfSize(14);
+
+            var cgFrame = new CGRect(ResponsiveWidthLeft, View.Frame.Top, ResponsiveSizeX, 340);
+            scrollView.ScrollRectToVisible(cgFrame, true);
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemIndigo;
+            this.NavigationController.NavigationBar.TintColor = UIColor.White;
         }
     }
 }
+
+
+
