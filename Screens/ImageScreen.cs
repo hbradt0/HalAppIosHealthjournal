@@ -80,6 +80,8 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.MinimumDate = minDate;
             dateTimeText.Mode = UIDatePickerMode.Date;
             dateTimeText.MaximumDate = currentDate;
+            dateTimeText.BackgroundColor = HomeScreen.color;
+            dateTimeText.TintColor = UIColor.SystemBlue;
 
             ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete.BackgroundColor = UIColor.FromRGB(255, 69, 103);
@@ -161,7 +163,7 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(BackgroundImage);
             scrollView.Add(BackgroundImage2);
             scrollView.Add(BackgroundImage3);
-            scrollView.Add(BackgroundImage4);
+            //scrollView.Add(BackgroundImage4);
             View.AddSubview(scrollView);//ps
 
         }
@@ -528,7 +530,7 @@ namespace Hello_MultiScreen_iPhone
             BackgroundImage3.Frame = new CGRect(ResponsiveWidthRight + 50, ButtonDelete1Line.Frame.Bottom + 20, 50, 50);
             BackgroundImage.Frame = new CGRect(ResponsiveWidthRight, BackgroundImage2.Frame.Y + 70, 100, 30);
             BackgroundImage4.Frame = new CGRect(ResponsiveWidthLeft, BackgroundImage2.Frame.Y + 70, 100, 30);
-            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemIndigo;
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;
 
         }

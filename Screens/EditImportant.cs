@@ -387,7 +387,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 20, 35, 35);
 
             Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 20, 100, 30);
-            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemIndigo;
+            this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;
         }
     }
