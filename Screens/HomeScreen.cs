@@ -17,7 +17,7 @@ namespace Hello_MultiScreen_iPhone
         HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
         ImageScreen imageScreen;
-        public static UIColor color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpg"));
+        public static UIColor color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpeg"));
         //public static UIColor color2 = UIColor.FromRGB(100, 100, 255);
         //public static UIColor color3 = UIColor.FromRGB(204, 204, 255);
 
@@ -97,10 +97,12 @@ namespace Hello_MultiScreen_iPhone
         {
 
             base.ViewDidLoad();
-            color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpg"));
+            color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpeg"));
             
             ViewDidLoad1();
             View.BackgroundColor = HomeScreen.color;
+            var user = new UIViewController();
+            user.View.BackgroundColor = HomeScreen.color;
 
             ResponsiveWidthLeft = View.Frame.Width / 8;
             nfloat size = 30;

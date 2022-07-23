@@ -66,6 +66,7 @@ namespace Hello_MultiScreen_iPhone
             //View issue
             var user = new UIViewController();
             View.BackgroundColor = HomeScreen.color;
+            user.View.BackgroundColor = HomeScreen.color;
 
             //Initialize Fields
             textViewWrite = new UITextView();

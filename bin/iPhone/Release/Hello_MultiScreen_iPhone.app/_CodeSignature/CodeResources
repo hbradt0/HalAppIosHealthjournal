@@ -58,15 +58,15 @@
 		</data>
 		<key>Firebase.Core.aotdata.arm64</key>
 		<data>
-		uLKuH09lOJrXMPZL0TdnKfs9niM=
+		Gmc1AvFV4GrlcUT/jbPKIzJ6Fdk=
 		</data>
 		<key>Firebase.Core.dll</key>
 		<data>
-		vbCPLs8iEQuFPUD7Ae+r4MS8Lao=
+		14h0t4sFtnD5WUeenQU5lBnzXwU=
 		</data>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<data>
-		NGWkng+C8zJwNtpH4ZPFA5fwuIc=
+		97Gc0kfI14pM5hpFTml2Tecu+Vw=
 		</data>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		mHa3Lmmtfpw5/HxhrYBwMNTwGb4=
+		4dDWTJvHG/9grqCgzj2HEo5utF0=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/FirebaseCoreDiagnostics</key>
 		<data>
-		ZZYhM+glXxd997YiqM2vLjL2L0I=
+		3EZA720W03r4gy0SmrOUeRnEd34=
 		</data>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
-		WWDxwJevVVKUyB600Ut62DvDcwE=
+		s65uPdjmjR/o9iyB81LLZ900M4E=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>Frameworks/GoogleAPIClientForREST.framework/GoogleAPIClientForREST</key>
 		<data>
-		FUxH3EsxgDe5sU2qoH770pJLKUg=
+		h7ebpSrt7o/24n77Ct2CGUgs41w=
 		</data>
 		<key>Frameworks/GoogleAPIClientForREST.framework/Info.plist</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/GoogleDataTransport</key>
 		<data>
-		2++xxivqJD1yZGCWPz3zQRHsh90=
+		GbV9L0KriWKLl3M45o9khPSQrzI=
 		</data>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
 		<data>
-		/ZEI6TkuXMLXK19sa5bdzznlPkw=
+		IOvfYwfL3FIeO/8lO/rtq6rWLXU=
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/GoogleUtilities</key>
 		<data>
-		X29Vwitt60/fcbp1nX7aGyLEqnI=
+		aMxaIWQLmwhTU4JjjCxf0853lmY=
 		</data>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
 		<data>
@@ -166,7 +166,7 @@
 		</data>
 		<key>Frameworks/Protobuf.framework/Protobuf</key>
 		<data>
-		vtm5FvL65HQR4EjDnexjKYGbQL4=
+		r+tRIgXZxYvkVGtdOzFXJRY1cHg=
 		</data>
 		<key>Frameworks/Protobuf.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -182,7 +182,7 @@
 		</data>
 		<key>Frameworks/leveldb.framework/leveldb</key>
 		<data>
-		ykUeCE5DmbP7ySgoDDeSqSZ0XNQ=
+		Nvy4ZUGymmg/m2J2SgVzqzKaSAs=
 		</data>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
 		<data>
@@ -194,15 +194,15 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-		uK9SvgaqQOfHrSI9Z12Dzq2oIbo=
+		c6kiEyeV7dAy8wProPzDcmdcQ+s=
 		</data>
 		<key>Google.MobileAds.aotdata.arm64</key>
 		<data>
-		B7fGkWABbQJxzpDlGtmqb9901O4=
+		m8y2r01DO9jzCc1tWYPZyqCpYIo=
 		</data>
 		<key>Google.MobileAds.dll</key>
 		<data>
-		2kMrjpMnSXg6z1bjasRWXvtZG4A=
+		RtBVgrJ6saAbIGTDK8GLlAqTwd4=
 		</data>
 		<key>Halbook.txt</key>
 		<data>
@@ -214,7 +214,7 @@
 		</data>
 		<key>Halbook3.txt</key>
 		<data>
-		gxtr5ruFW2HGXlMUlUocCuHbQG8=
+		yE+ESgjvrS0ytUVnE67hWTytlmM=
 		</data>
 		<key>HelloUniverseScreen.nib</key>
 		<data>
@@ -226,11 +226,11 @@
 		</data>
 		<key>Hello_MultiScreen_iPhone.aotdata.arm64</key>
 		<data>
-		foMtqESZ7yZ/GLFtgtDXfltGStw=
+		fQjgVraD5Lm4Zw0vBZkzcw8h34I=
 		</data>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<data>
-		9vDQ3nC6vAW/I4GT57ljPgxIX9U=
+		6/I/5n5kdJ53H5i0iFqU8qyjET0=
 		</data>
 		<key>HomeScreen.nib</key>
 		<data>
@@ -246,7 +246,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mwdIk4Zj/FVC2TRQ0CdyNrBu6Ms=
+		wW7HVFtTyrh6KCH2zoDNjiaWIOQ=
 		</data>
 		<key>ListScreen.nib</key>
 		<data>
@@ -278,7 +278,7 @@
 		</data>
 		<key>System.Core.dll</key>
 		<data>
-		12ES7OyeW9MoU/daHu0Qk+/Lr/g=
+		UADBBZy+F05pEcFO6u3FRH07u34=
 		</data>
 		<key>System.Drawing.Common.aotdata.arm64</key>
 		<data>
@@ -286,7 +286,7 @@
 		</data>
 		<key>System.Drawing.Common.dll</key>
 		<data>
-		PXbf0fmpZvfz8cgqVR/QjV635ZQ=
+		zTXAErn9hb/lhE4812ckJE1HqwA=
 		</data>
 		<key>System.aotdata.arm64</key>
 		<data>
@@ -294,7 +294,7 @@
 		</data>
 		<key>System.dll</key>
 		<data>
-		e07ncJjBNKRiiH34TWagInZuGkE=
+		1rlSOPbB6PZfuO9kztsfk37csTI=
 		</data>
 		<key>TestPic.jpeg</key>
 		<data>
@@ -310,11 +310,11 @@
 		</data>
 		<key>Xamarin.iOS.aotdata.arm64</key>
 		<data>
-		n12UTBggCDVd6dI4e5yumH87zIM=
+		qr2px8It9eTCjzIaw4EvhDitivk=
 		</data>
 		<key>Xamarin.iOS.dll</key>
 		<data>
-		eYc/gsys+14tF432/OQPA/Gctuk=
+		pzwvvCb68ywXrHIyCOrxiwowMHI=
 		</data>
 		<key>alert.jpg</key>
 		<data>
@@ -324,9 +324,9 @@
 		<data>
 		nQwMg4CO3x0vaXO6vjmFYVkbvk4=
 		</data>
-		<key>bg.jpg</key>
+		<key>bg.jpeg</key>
 		<data>
-		Cb/fj2WJNtOfDKJEh3OZjViZJgY=
+		riuZkkAH3L22yyxEmWYQKIwjWJg=
 		</data>
 		<key>camera.png</key>
 		<data>
@@ -382,7 +382,7 @@
 		</data>
 		<key>mscorlib.dll</key>
 		<data>
-		3hMb0Yk/m37YHVc4WEo/0vGzO5A=
+		MLwsV5SXysHiZLjenuaQDyXd2FE=
 		</data>
 		<key>pic5.jpg</key>
 		<data>
@@ -490,21 +490,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1mQSscGwgx8vdIiAa0yPhPrhxcrSgc3RkH0Nz7YTYl8=
+			TCn5HQFxL5Qggiuj2S3EPSq+XHPdSe8Ep8zL8FvT/+A=
 			</data>
 		</dict>
 		<key>Firebase.Core.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nwNVpnsB8Ki85aExW6qRrPdlaOLMTg29H/pB2SD5dOE=
+			mDHDeS1sBihWurWQWcZP61FjJtOXj39Qjb4UBXZx3Ms=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/FBLPromises</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NNVaZFLUwAN5UC1WiYz8zUzpp6+HxD1SJ99V66Uv8zw=
+			Alz9muLsoYhxC56Rev4dGraoyIUs6h8ZJuHsS7bZj8I=
 			</data>
 		</dict>
 		<key>Frameworks/FBLPromises.framework/Info.plist</key>
@@ -525,7 +525,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IgPQrR2p6Pg8TY17TBLFHa/fMAV9T66A5ZilXxpUpBo=
+			UwshLazYIEXp7o0vvfaW2bv9xQuRr4yLXPArkt5IIkY=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -546,7 +546,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8v3gn6iOaBCbZ06lFZW9epTwF81A9W4CnCEDodSgD6w=
+			sS664za3aqN2XmJh+DeTlrq70XcZAsLnNiThuCheIfs=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCoreDiagnostics.framework/Info.plist</key>
@@ -567,7 +567,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nbkH6OUWkl8PjYqliSzR5wXsrUfmZfnrYFRmXIyD7ns=
+			FVYJShlfKHkSmq2blG1yCcdWF83gCi1aAtRBif08af0=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -588,7 +588,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			d+0BQlODTWeasqyXypMyCBS2Kr2TEI2NRKVeulxd7hw=
+			mTDQVl8r/1O+nt3vc33py3mwF+NM6Sg6fsKaQMdhfZA=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleAPIClientForREST.framework/Info.plist</key>
@@ -609,7 +609,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1TdGn6aJ6ESjW0tdnt2sH+K40tihQqzSGUW9A6HM3N4=
+			c7NP9e9QS3Ya4mPvcFtiBiF84adyPYvICrl8k8JFbOw=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleDataTransport.framework/Info.plist</key>
@@ -630,7 +630,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WxOHYOZfYPynjgqKLJefSvY/jegKAfUOy6KTqxkbibo=
+			Rn4TsRhSE1frFjNmxaMTKdjXr2zUp6vJB+Dv+rL1zkU=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
@@ -651,7 +651,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8TL38XxLni9PnYDCXyA8Sop7XspHHERpAWfhBJYswAs=
+			aAL8QKVKrhNJDaLEnWq39uZV/TCWq4EQKbfck2OLG6U=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleUtilities.framework/Info.plist</key>
@@ -679,7 +679,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EWfs67txRax/yF7QCp2uN4zIDReky50PpfTuV62TLaQ=
+			5ZE09F2X3Ir//otpRilIJURyRPig3bE2pl7nAWQKCjM=
 			</data>
 		</dict>
 		<key>Frameworks/Protobuf.framework/_CodeSignature/CodeResources</key>
@@ -707,7 +707,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1T9f47zCn+iKdiApFVVZBZ3PwAxqxnlbVvAYdoRxNiQ=
+			w0CMmOW4UqN9tzZ6++DfnsXZm6DeyOzsr/XoVF2wch8=
 			</data>
 		</dict>
 		<key>Frameworks/nanopb.framework/Info.plist</key>
@@ -728,21 +728,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZcQVcqtJScm6IKeMWo8k6puEZC0SXcP4ksD9bLEeMGY=
+			jOudX1kQ6eDXGvn+3VVD/hhdYbUVchiW9kqwiYwlvqg=
 			</data>
 		</dict>
 		<key>Google.MobileAds.aotdata.arm64</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NjSHcXL51bWHpG5TYWIV+AX4tFr7cEkb1hOweHtAJ5A=
+			7ELqFMJ4Od96xacQfRRVjq+a57mBxb84zRVPPQv9M2s=
 			</data>
 		</dict>
 		<key>Google.MobileAds.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4AvwetmvshcwLTfotDm3Q5YY7X/aaZ04Uo908MUFeg4=
+			Rb6hW6TzaKqLbRi7eSjcg+kQM6/a9uwRu2dmA2zVlV0=
 			</data>
 		</dict>
 		<key>Halbook.txt</key>
@@ -763,7 +763,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rls/VlPLoRVnHO89Fp5yKc3aYzsOUwv0kDLALnZFO9w=
+			fq7XfTIiHyoourDix4+oql0CfhRhgy5cCg3Fy0bNNmQ=
 			</data>
 		</dict>
 		<key>HelloUniverseScreen.nib</key>
@@ -784,14 +784,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zduy7V+ijUutbJq8yrR0CfGj/rflbfw2Wbr5MByzid8=
+			W2aay4hLko3xamafx5RrOgfzzF3Kag1bdGkpblVRh8Q=
 			</data>
 		</dict>
 		<key>Hello_MultiScreen_iPhone.exe</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cMZ2TG7WSrj9cZVG3ySj1IxCKg6T5y6MrHolD2liUl0=
+			DzepMBI/DWdPK6JC3dLlhnKR2tWSVjNSpc2uO8mbVrU=
 			</data>
 		</dict>
 		<key>HomeScreen.nib</key>
@@ -861,7 +861,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z4K0xQ4ML+kNtVjw6g+o3a13QUNh1Ondi5/K5FYaXAQ=
+			+UhASwd+1oR0/2ozm3T/YR7A9VMoLr3gwtVTHsjOd1g=
 			</data>
 		</dict>
 		<key>System.Drawing.Common.aotdata.arm64</key>
@@ -875,7 +875,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sU0jIdN7ltC6886J9Amj20y2laKmB8eHuDIc0kLDu8E=
+			4Y6PzbNToIgBn0sUAh9qyoEDiKSni57YOyx6YTV3+4U=
 			</data>
 		</dict>
 		<key>System.aotdata.arm64</key>
@@ -889,7 +889,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R9bBHTbU7THsMKAM+qJ0EjPyF9Jale+yqMpTOqh7WlQ=
+			c4OWl3qKI7BhYOTP2Sn9phaBWazy433lgx2peRF0AIM=
 			</data>
 		</dict>
 		<key>TestPic.jpeg</key>
@@ -917,14 +917,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JcWTN4QtMlkpX+z6J2AbWEDrqhFZxIPRFgLhHnP972w=
+			4fU7CSFU6ZpPJHfNSoPKtXsoAebSNEbvKUaaRASWpT0=
 			</data>
 		</dict>
 		<key>Xamarin.iOS.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AhCLdLuiOXF5nf4+jCIaHRioSDLWOqD0tSQ74ebpOJ0=
+			CQD8uZVvcGMP9p7lG5TR8HkpBeeLMIWtNtA6QaSUEWg=
 			</data>
 		</dict>
 		<key>alert.jpg</key>
@@ -941,11 +941,11 @@
 			zRX1/H3u1q/kfWYLM4nMgFsaNzprO01zdh+bnB+Ckqs=
 			</data>
 		</dict>
-		<key>bg.jpg</key>
+		<key>bg.jpeg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xlafpnBbpcga4Gu8EBzN3kSYO4L4sXRS0gTd1PHTdhM=
+			Ba9KX8Oocv1MUSatYfz3sMs9Hj3RLotVUJnjWY6UAYo=
 			</data>
 		</dict>
 		<key>camera.png</key>
@@ -1043,7 +1043,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X6b5Vgw4A7rLO+rOVYWY68vokYbdbXwoewEJ9VIfsOk=
+			MmlVBMtPUq2MKCSVlAbLfe/7OaQwludBhiRDsMEJJA0=
 			</data>
 		</dict>
 		<key>pic5.jpg</key>

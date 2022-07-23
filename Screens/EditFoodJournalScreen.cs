@@ -61,9 +61,9 @@ namespace Hello_MultiScreen_iPhone
         {
 
             //View Issue
-            View.BackgroundColor = UIColor.FromRGB(178,178,227);
+            View.BackgroundColor = HomeScreen.color;
             var user = new UIViewController();
-            user.View.BackgroundColor = UIColor.FromRGB(178, 178, 227);
+            user.View.BackgroundColor = HomeScreen.color;
             this.View.LargeContentTitle = "";
 
             //Initialize Buttons

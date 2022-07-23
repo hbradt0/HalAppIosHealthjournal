@@ -186,8 +186,8 @@
     <BundleResource Include="Resources\camera.png" />
     <BundleResource Include="Resources\gallery.png" />
     <BundleResource Include="Resources\mailicon.png" />
-    <BundleResource Include="Resources\bg.jpg" />
     <BundleResource Include="Resources\MainTitlePic1.png" />
+    <BundleResource Include="Resources\bg.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />
