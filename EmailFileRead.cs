@@ -53,6 +53,29 @@ namespace EmailReader //rename
             }
         }
 
+        public static Byte[] ReadAllBytes(String fileName = "")
+        {
+            if (fileName == "")
+                fileName = fileName1;
+            if (File.Exists(fileName))
+                return File.ReadAllBytes(fileName);
+            else
+            {
+                File.WriteAllText(fileName, "");
+                return null;
+            }
+        }
+
+        public static void WriteAllBytes(Byte[]array, String fileName="")
+        {
+            if (fileName == "")
+                fileName = fileName1;
+            if (File.Exists(fileName))
+            {
+                File.WriteAllBytes(fileName, array);
+            }
+        }
+
         public static String [] ReadAllLines(String fileName = "")
         {
             if (fileName == "")

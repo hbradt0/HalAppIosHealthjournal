@@ -25,6 +25,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton Buttonyourstoryscreen;
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
+        public UIButton ButtonImageClick;
         public UIButton ButtonShare;
 
         public UIImageView imageView;
@@ -36,6 +37,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView readInfo;
         public static float viewScroll1Y = 0;
         public static float viewScroll2Y = 0;
+        public UIImagePickerController imagePicker;
 
         public UITextField editTextTodo;
         public UITextView textViewTodo;
@@ -96,6 +98,7 @@ namespace Hello_MultiScreen_iPhone
             editTextDate = new UITextField();
             ShareTodo = new UIButton(UIButtonType.System);
             scratchpad = new UIButton(UIButtonType.System);
+            ButtonImageClick = new UIButton(UIButtonType.System);
 
             UIScrollView scrollView2 = new UIScrollView();
 
@@ -115,6 +118,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
+            ButtonImageClick.SetTitle("Imagepicker", UIControlState.Normal);
 
             ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
             editTextDate.BackgroundColor = UIColor.White;
@@ -207,6 +211,69 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.Layer.CornerRadius = 10;
             scratchpad.Layer.CornerRadius = 10;
         }
+        /*
+        void ButtonPickImageClick(object sender, EventArgs eventArgs)
+        {
+
+            imagePicker = new UIImagePickerController
+            {
+                SourceType = UIImagePickerControllerSourceType.PhotoLibrary,
+                MediaTypes = UIImagePickerController.AvailableMediaTypes(UIImagePickerControllerSourceType.PhotoLibrary)
+            };
+
+            // Set event handlers
+            imagePicker.FinishedPickingMedia += OnImagePickerFinishedPickingMediaAsync;
+            imagePicker.Canceled += OnImagePickerCancelled;
+
+            this.PresentViewController(imagePicker, true, null);
+
+        }
+
+        // resize the image to be contained within a maximum width and height, keeping aspect ratio
+        UIImage MaxResizeImage(UIImage sourceImage, float maxWidth, float maxHeight, UIImageView view)
+        {
+            view.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 130, ResponsiveSizeX, ResponsiveSizeX);
+
+            return sourceImage;
+        }
+
+        void OnImagePickerFinishedPickingMediaAsync(object sender, UIImagePickerMediaPickedEventArgs args)
+        {
+            UIImage image = args.EditedImage ?? args.OriginalImage;
+
+            if (image != null)
+            {
+                // Convert UIImage to .NET Stream object
+
+                NSData data;
+
+                if (args.ReferenceUrl.PathExtension.Equals("PNG") || args.ReferenceUrl.PathExtension.Equals("png"))
+                {
+                    data = image.AsPNG();
+                }
+                else
+                {
+                    data = image.AsJPEG(1);
+                }
+
+                String fileName = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "image_temp" + args.ReferenceUrl.PathExtension);
+                NSError err = null;
+                
+                data.Save(fileName, false, out err);
+                EmailFileRead.WriteAllText(string, sd);
+            }
+            else
+            {
+            }
+            imagePicker.DismissModalViewController(true);
+        }
+
+
+        void OnImagePickerCancelled(object sender, EventArgs args)
+        {
+            imagePicker.DismissModalViewController(true);
+        }
+        */
 
         public void borderFunction()
         {

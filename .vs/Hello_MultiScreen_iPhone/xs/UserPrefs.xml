@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/HomeScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Info.plist">
     <Files>
       <File FileName="Resources/Reflections2.txt" />
       <File FileName="Screens/HelloWorldScreen.cs" Line="71" Column="58" />
@@ -10,9 +10,12 @@
       <File FileName="Screens/HelloWorldScreen 2.cs" />
       <File FileName="../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
       <File FileName="Screens/ListScreen.designer.cs" />
-      <File FileName="Screens/ImageScreen.cs" Line="52" Column="53" />
+      <File FileName="Screens/ImageScreen.cs" Line="26" Column="18" />
       <File FileName="Screens/EditImportant.designer.cs" />
-      <File FileName="Screens/HomeScreen.cs" Line="1" Column="1" />
+      <File FileName="Screens/HomeScreen.cs" Line="100" Column="70" />
+      <File FileName="Screens/HomeScreen2.cs" Line="214" Column="11" />
+      <File FileName="EmailFileRead.cs" Line="68" Column="1" />
+      <File FileName="Info.plist" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,9 +25,8 @@
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
               <Node name="Assets.xcassets" expanded="True" />
               <Node name="Resources" expanded="True" />
-              <Node name="Screens" expanded="True">
-                <Node name="HomeScreen.cs" selected="True" />
-              </Node>
+              <Node name="Screens" expanded="True" />
+              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>
@@ -37,5 +39,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B97D1F5A-C66C-4D70-AF2C-FB2C43F727F9" />
+  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B1C1BD12-3ED9-412B-B4E0-4982CDB6BCCB" />
 </Properties>

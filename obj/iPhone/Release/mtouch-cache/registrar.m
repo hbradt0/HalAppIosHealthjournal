@@ -1654,13 +1654,13 @@ exception_handling:
 	-(BOOL) loadFromContents:(NSObject *)p0 ofType:(NSString *)p1 error:(NSError **)p2
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_6 (self, _cmd, &managed_method, p0, p1, p2, 0xB400);
+		return native_to_managed_trampoline_6 (self, _cmd, &managed_method, p0, p1, p2, 0xB600);
 	}
 
 	-(NSObject *) contentsForType:(NSString *)p0 error:(NSError **)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, p0, p1, 0xB500);
+		return native_to_managed_trampoline_7 (self, _cmd, &managed_method, p0, p1, 0xB700);
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
