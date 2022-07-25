@@ -49,6 +49,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ShareTodo;
         public UIButton scratchpad;
      	public UITextField editTextDate;
+        public UIButton QuickHealthyButton;
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         EditFoodJournalScreen editFoodJournalScreen;
@@ -101,6 +102,12 @@ namespace Hello_MultiScreen_iPhone
             ButtonImageClick = new UIButton(UIButtonType.System);
 
             UIScrollView scrollView2 = new UIScrollView();
+
+            QuickHealthyButton = new UIButton(UIButtonType.System);
+            QuickHealthyButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+            QuickHealthyButton.BackgroundColor = UIColor.SystemIndigo;
+            QuickHealthyButton.SetTitle("I Ate Healthy", UIControlState.Normal);
+
 
             //Buttons and edit properties
             textViewWrite.TextColor = UIColor.Black;
@@ -182,8 +189,11 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
             scratchpad.AddTarget(ClickScratchPad, UIControlEvent.TouchUpInside);
+            QuickHealthyButton.AddTarget(ButtonQuickClick, UIControlEvent.TouchUpInside);
+
 
             //Add to view
+            scrollView.Add(QuickHealthyButton);
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(ButtonyourstoryscreenUpload);
             scrollView.Add(sta);
@@ -210,6 +220,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete.Layer.CornerRadius = 10;
             ButtonDelete1Line.Layer.CornerRadius = 10;
             scratchpad.Layer.CornerRadius = 10;
+            QuickHealthyButton.Layer.CornerRadius = 10;
         }
         /*
         void ButtonPickImageClick(object sender, EventArgs eventArgs)
@@ -449,6 +460,42 @@ namespace Hello_MultiScreen_iPhone
             }
         }
 
+        //Upload to todo list (submit)
+        private void ButtonQuickClick(object sender, EventArgs eventArgs)
+        {
+            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName2))
+            {
+                var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
+                Confirm.Show();
+                Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                {
+                    if (es.ButtonIndex == 0)
+                    {
+                        //Do nothing
+                    }
+                    else
+                    {
+                        //Do nothing
+                    }
+                };
+
+            }
+            else
+            {
+                String text = "I ate healthy today!";
+                EmailFileRead.WriteText(text, EmailFileRead.fileName2, true);
+                String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
+                textViewWrite.Text = totalText;
+                editTextWrite.Text = String.Empty;
+                if (this.textViewWrite.Text.Length > 0)
+                {
+                    NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                    this.textViewWrite.ScrollRangeToVisible(range);
+                }
+
+            }
+        }
+
         //Back to main screen
         public void ButtonBackTodoListMainPage(object sender, EventArgs eventArgs)
         {
@@ -531,6 +578,7 @@ namespace Hello_MultiScreen_iPhone
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
             scratchpad.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
+            QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
 
             int expandipad = 60;
             int expandipad2 = 100;
@@ -548,6 +596,7 @@ namespace Hello_MultiScreen_iPhone
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 scratchpad.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
 
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
@@ -567,6 +616,7 @@ namespace Hello_MultiScreen_iPhone
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
                 scratchpad.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, editTextDate.Frame.Bottom+30, 100, 30);
 
             }
 
@@ -586,6 +636,7 @@ namespace Hello_MultiScreen_iPhone
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 scratchpad.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, editTextDate.Frame.Bottom + 30, 100, 30);
 
             }
             borderFunction();
