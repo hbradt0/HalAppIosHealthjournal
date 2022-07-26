@@ -188,6 +188,7 @@
     <BundleResource Include="Resources\mailicon.png" />
     <BundleResource Include="Resources\MainTitlePic1.png" />
     <BundleResource Include="Resources\bg.jpeg" />
+    <BundleResource Include="Resources\bg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />

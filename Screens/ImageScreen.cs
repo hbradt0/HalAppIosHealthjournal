@@ -82,7 +82,7 @@ namespace Hello_MultiScreen_iPhone
             dateTimeText.Mode = UIDatePickerMode.Date;
             dateTimeText.MaximumDate = currentDate;
             dateTimeText.BackgroundColor = HomeScreen.color;
-            dateTimeText.TintColor = UIColor.SystemBlue;
+            dateTimeText.TintColor = UIColor.White;
 
             ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete.BackgroundColor = UIColor.FromRGB(255, 69, 103);

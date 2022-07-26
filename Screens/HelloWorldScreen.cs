@@ -85,7 +85,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
 
-                BackgroundColor = HomeScreen.color
+                //BackgroundColor = HomeScreen.color
             };
 
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
@@ -109,7 +109,7 @@ namespace Hello_MultiScreen_iPhone
             CloudLoginButton = new UIButton(UIButtonType.System);
 
             CloudLoginButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            CloudLoginButton.BackgroundColor = UIColor.SystemTeal;
+            CloudLoginButton.BackgroundColor = HomeScreen.buttoncolor;
             CloudLoginButton.SetTitle("Grocery List", UIControlState.Normal);
 
             CloudLoginButton.AddTarget(CloudLoginScreen, UIControlEvent.TouchUpInside);

@@ -17,7 +17,8 @@ namespace Hello_MultiScreen_iPhone
         HelloUniverseScreen helloUniverseScreen;
         HomeScreen2 TodoScreen;
         ImageScreen imageScreen;
-        public static UIColor color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpeg"));
+        public static UIColor color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpg"));
+        public static UIColor buttoncolor = UIColor.FromRGB(0, 0, 128);
         //public static UIColor color2 = UIColor.FromRGB(100, 100, 255);
         //public static UIColor color3 = UIColor.FromRGB(204, 204, 255);
 
@@ -97,8 +98,8 @@ namespace Hello_MultiScreen_iPhone
         {
 
             base.ViewDidLoad();
-            color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpeg"));
-            
+            color = UIColor.FromPatternImage(UIImage.FromFile("bg.jpg"));
+            buttoncolor = UIColor.FromRGB(0, 0, 128);
             ViewDidLoad1();
             View.BackgroundColor = HomeScreen.color;
             var user = new UIViewController();
@@ -116,8 +117,8 @@ namespace Hello_MultiScreen_iPhone
             //---- when the hello world button is clicked
             this.btnHelloUniverse.SetTitle("Activity Journal", UIControlState.Normal);
             this.btnHelloWorld.SetTitle("Information", UIControlState.Normal);
-            this.btnHelloUniverse.BackgroundColor = UIColor.SystemBlue;
-            this.btnHelloWorld.BackgroundColor = UIColor.SystemBlue;
+            this.btnHelloUniverse.BackgroundColor = buttoncolor;
+            this.btnHelloWorld.BackgroundColor = buttoncolor;
             this.Title = "Home";
 
             this.btnHelloWorld.Layer.CornerRadius = 10;

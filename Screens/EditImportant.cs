@@ -116,7 +116,7 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
 
-                BackgroundColor = HomeScreen.color
+                //BackgroundColor = HomeScreen.color
             };
 
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);

@@ -43,7 +43,6 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textViewTodo;
         public UIButton ButtonTodoList;
         public UIButton ButtonTodoUpload;
-        public UIButton ButtonTodoDelete;
         public UIButton ButtonDelete1Line;
         public UIButton ButtonbackTodo;
         public UIButton ShareTodo;
@@ -93,7 +92,6 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite = new UITextField();
             Buttonbackyourstory = new UIButton(UIButtonType.System);
             ButtonyourstoryscreenUpload = new UIButton(UIButtonType.System);
-            ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             scrollView = new UIScrollView();
             editTextDate = new UITextField();
@@ -105,7 +103,7 @@ namespace Hello_MultiScreen_iPhone
 
             QuickHealthyButton = new UIButton(UIButtonType.System);
             QuickHealthyButton.SetTitleColor(UIColor.White, UIControlState.Normal);
-            QuickHealthyButton.BackgroundColor = UIColor.SystemIndigo;
+            QuickHealthyButton.BackgroundColor = HomeScreen.buttoncolor;
             QuickHealthyButton.SetTitle("I Ate Healthy", UIControlState.Normal);
 
 
@@ -116,14 +114,12 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.TextColor = UIColor.Black;
             ButtonyourstoryscreenUpload.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonyourstoryscreenUpload.BackgroundColor = UIColor.SystemBlue;//UIColor.FromRGB(100, 149, 237);
-            ButtonDelete.SetTitleColor(UIColor.White, UIControlState.Normal);
-            ButtonDelete.BackgroundColor = UIColor.FromRGB(255, 69, 103);
+
             ButtonDelete1Line.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonDelete1Line.BackgroundColor = UIColor.FromRGB(255, 69, 103);
             ShareTodo.SetTitleColor(UIColor.White, UIControlState.Normal);
             Buttonbackyourstory.SetTitle("Back", UIControlState.Normal);
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
-            ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
             ButtonImageClick.SetTitle("Imagepicker", UIControlState.Normal);
 
@@ -159,7 +155,7 @@ namespace Hello_MultiScreen_iPhone
                 this.textViewWrite.ScrollRangeToVisible(range);
             }
 
-            scratchpad.BackgroundColor = UIColor.SystemBlue;//UIColor.FromRGB(100, 149, 237);
+            scratchpad.BackgroundColor = HomeScreen.buttoncolor;//UIColor.FromRGB(100, 149, 237);
             scratchpad.SetTitleColor(UIColor.White, UIControlState.Normal);
             scratchpad.SetTitle("Edit Journal", UIControlState.Normal);
 
@@ -185,7 +181,6 @@ namespace Hello_MultiScreen_iPhone
             sta.BackgroundColor = UIColor.White;
 
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
-            ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
             scratchpad.AddTarget(ClickScratchPad, UIControlEvent.TouchUpInside);
@@ -198,7 +193,6 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(ButtonyourstoryscreenUpload);
             scrollView.Add(sta);
             scrollView.Add(ButtonDelete1Line);
-            scrollView.Add(ButtonDelete);
             scrollView.Add(editTextDate);
             scrollView.Add(ShareTodo);
             scrollView.Add(scratchpad);
@@ -217,7 +211,6 @@ namespace Hello_MultiScreen_iPhone
         {
             ButtonyourstoryscreenUpload.Layer.CornerRadius = 10;
             Buttonbackyourstory.Layer.CornerRadius = 10;
-            ButtonDelete.Layer.CornerRadius = 10;
             ButtonDelete1Line.Layer.CornerRadius = 10;
             scratchpad.Layer.CornerRadius = 10;
             QuickHealthyButton.Layer.CornerRadius = 10;
@@ -482,7 +475,7 @@ namespace Hello_MultiScreen_iPhone
             }
             else
             {
-                String text = "I ate healthy today!";
+                String text = "I ate healthy today! - breakfast/lunch/dinner";
                 EmailFileRead.WriteText(text, EmailFileRead.fileName2, true);
                 String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
                 textViewWrite.Text = totalText;
@@ -571,14 +564,13 @@ namespace Hello_MultiScreen_iPhone
             editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, 500, 30, 30);
             Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25, 70, 30);
             ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthRight, 450, 100, 30);
-            ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
+            QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 500, 100, 30);
             ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, 450, 150, 30);
             editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380, ResponsiveSizeX, 50);
             textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340);
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
             scratchpad.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
-            QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
 
             int expandipad = 60;
             int expandipad2 = 100;
@@ -590,13 +582,12 @@ namespace Hello_MultiScreen_iPhone
 
                 editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 Buttonbackyourstory.Frame = new CGRect(rightpad, 10, 70, 30);
-                ButtonDelete.Frame = new CGRect(rightpad, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(rightpad, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
                 ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + 30, 150, 30);
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 scratchpad.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
-                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
 
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
@@ -609,14 +600,13 @@ namespace Hello_MultiScreen_iPhone
                 editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, 500 + expandipad2, 30, 30);
                 Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25 + expandipad2, 70, 30);
                 ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthRight, 450 + expandipad2, 100, 30);
-                ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, 500 + expandipad2, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 500 + expandipad2, 100, 30);
                 ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, 450 + expandipad2, 150, 30);
                 editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380 + expandipad, ResponsiveSizeX, 50 + expandipad);
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
                 scratchpad.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 30);
-                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, editTextDate.Frame.Bottom+30, 100, 30);
 
             }
 
@@ -630,13 +620,12 @@ namespace Hello_MultiScreen_iPhone
 
                 editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 10, 70, 30);
-                ButtonDelete.Frame = new CGRect(ResponsiveWidthRight, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
                 ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, editTextWrite.Frame.Bottom + 30, 150, 30);
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 scratchpad.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 30);
-                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, editTextDate.Frame.Bottom + 30, 100, 30);
 
             }
             borderFunction();
