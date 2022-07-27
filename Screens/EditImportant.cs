@@ -6,6 +6,7 @@ using UIKit;
 using CoreGraphics;
 using EmailReader;
 using Google.MobileAds;
+using HealthKit;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -17,6 +18,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textView2;
         public UITextField editTextWrite;
         public UITextView textViewWrite;
+        public HKHealthStore HealthStore { get; set; }
 
         public UIButton Button1;
         public UIButton Button2;
@@ -36,6 +38,14 @@ namespace Hello_MultiScreen_iPhone
         public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
         public UIButton EditJournalButton;
+
+        public UIButton SaveStatsbutton;
+        public UITextField agefield;
+        public UITextField weightfield;
+        public UITextField heightfield;
+        public UITextView weightLabel;
+        public UITextView heightlabel;
+        public UITextView agelabel;
 
         public UITextView readInfo;
 
@@ -98,6 +108,7 @@ namespace Hello_MultiScreen_iPhone
             var user = new UIViewController();
             user.View.BackgroundColor = HomeScreen.color;
             this.View.LargeContentTitle = "";
+            HealthStore = new HKHealthStore();
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -112,6 +123,52 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete.BackgroundColor = UIColor.FromRGB(240, 137, 171);
             ButtonDelete.SetTitle("Enter", UIControlState.Normal);
             ButtonDelete.Layer.CornerRadius = 10;
+
+            SaveStatsbutton = new UIButton(UIButtonType.System);
+            SaveStatsbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
+
+            SaveStatsbutton.BackgroundColor = HomeScreen.buttoncolor;
+            SaveStatsbutton.SetTitle("Save Stats", UIControlState.Normal);
+            SaveStatsbutton.Layer.CornerRadius = 10;
+
+            agefield = new UITextField();
+            agefield.BackgroundColor = UIColor.White;
+            agefield.TextColor = UIColor.Black;
+            agefield.UserInteractionEnabled = true;
+            agefield.KeyboardType = UIKeyboardType.ASCIICapable;
+            agefield.ReturnKeyType = UIReturnKeyType.Done;
+
+            weightfield = new UITextField();
+            weightfield.BackgroundColor = UIColor.White;
+            weightfield.TextColor = UIColor.Black;
+            weightfield.UserInteractionEnabled = true;
+            weightfield.KeyboardType = UIKeyboardType.ASCIICapable;
+            weightfield.ReturnKeyType = UIReturnKeyType.Done;
+
+            heightfield = new UITextField();
+            heightfield.BackgroundColor = UIColor.White;
+            heightfield.TextColor = UIColor.Black;
+            heightfield.UserInteractionEnabled = true;
+            heightfield.KeyboardType = UIKeyboardType.ASCIICapable;
+            heightfield.ReturnKeyType = UIReturnKeyType.Done;
+
+            weightLabel = new UITextView();
+            weightLabel.Editable = false;
+            //weightLabel.BackgroundColor = UIColor.White;
+            weightLabel.TextColor = UIColor.Black;
+            weightLabel.Text = "Weight (lbs): ";
+
+            heightlabel = new UITextView();
+            //heightlabel.BackgroundColor = UIColor.White;
+            heightlabel.Editable = false;
+            heightlabel.TextColor = UIColor.Black;
+            heightlabel.Text = "Height (inches): ";
+
+            agelabel = new UITextView();
+            agelabel.Editable = false;
+            //agelabel.BackgroundColor = UIColor.White;
+            agelabel.TextColor = UIColor.Black;
+            agelabel.Text = "Age(years): ";
 
             ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
@@ -169,12 +226,18 @@ namespace Hello_MultiScreen_iPhone
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonSpaceClick, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
-
             //Add to view
             scrollView.Add(Button3);
             //scrollView.Add(ButtonDelete);
             scrollView.Add(booktextView);
             scrollView.Add(ButtonShare);
+            scrollView.Add(agefield);
+            scrollView.Add(agelabel);
+            scrollView.Add(heightfield);
+            scrollView.Add(heightlabel);
+            scrollView.Add(weightfield);
+            scrollView.Add(weightLabel);
+            //scrollView.Add(SaveStatsbutton);
             View.AddSubview(scrollView);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
@@ -297,12 +360,204 @@ namespace Hello_MultiScreen_iPhone
             UIView.CommitAnimations();
         }
 
+        void UpdateUsersAge()
+        {
+            NSError error;
+            NSDate dateOfBirth = HealthStore.GetDateOfBirth(out error);
+
+            if (error != null)
+            {
+                Console.WriteLine("An error occured fetching the user's age information. " +
+                "In your app, try to handle this gracefully. The error was: {0}", error);
+                return;
+            }
+
+            if (dateOfBirth == null)
+                return;
+
+            var now = NSDate.Now;
+
+            NSDateComponents ageComponents = NSCalendar.CurrentCalendar.Components(NSCalendarUnit.Year, dateOfBirth, now,
+                                                 NSCalendarOptions.WrapCalendarComponents);
+
+            nint usersAge = ageComponents.Year;
+            agefield.Text = string.Format("{0} years", usersAge);
+        }
+
+        void UpdateUsersHeight()
+        {
+            var heightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.Height);
+
+            FetchMostRecentData(heightType, (mostRecentQuantity, error) => {
+                if (error != null)
+                {
+                    Console.WriteLine("An error occured fetching the user's height information. " +
+                    "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
+                    return;
+                }
+
+                double usersHeight = 0.0;
+
+                if (mostRecentQuantity != null)
+                {
+                    var heightUnit = HKUnit.Inch;
+                    usersHeight = mostRecentQuantity.GetDoubleValue(heightUnit);
+                }
+                NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                heightfield.Text = numberFormatter.StringFromNumber(new NSNumber(usersHeight));
+            });
+        }
+
+
+        void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
+        {
+            var timeSortDescriptor = new NSSortDescriptor(HKSample.SortIdentifierEndDate, false);
+            var query = new HKSampleQuery(quantityType, null, 1, new NSSortDescriptor[] { timeSortDescriptor },
+                            (HKSampleQuery resultQuery, HKSample[] results, NSError error) => {
+                                if (completion != null && error != null)
+                                {
+                                    completion(null, error);
+                                    return;
+                                }
+
+                                HKQuantity quantity = null;
+                                if (results.Length != 0)
+                                {
+                                    var quantitySample = (HKQuantitySample)results[results.Length - 1];
+                                    quantity = quantitySample.Quantity;
+                                }
+
+                                if (completion != null)
+                                    completion(quantity, error);
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
+
+        void SaveHeightIntoHealthStore(double value)
+        {
+            var heightQuantity = HKQuantity.FromQuantity(HKUnit.Inch, value);
+            var heightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.Height);
+            var heightSample = HKQuantitySample.FromType(heightType, heightQuantity, NSDate.Now, NSDate.Now, new NSDictionary());
+
+            HealthStore.SaveObject(heightSample, (success, error) => {
+                if (!success)
+                {
+                    Console.WriteLine("An error occured saving the height sample {0}. " +
+                    "In your app, try to handle this gracefully. The error was: {1}.", heightSample, error);
+                    return;
+                }
+
+                UpdateUsersHeight();
+            });
+        }
+
+        void SaveWeightIntoHealthStore(double value)
+        {
+            var weightQuantity = HKQuantity.FromQuantity(HKUnit.Pound, value);
+            var weightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.BodyMass);
+            var weightSample = HKQuantitySample.FromType(weightType, weightQuantity, NSDate.Now, NSDate.Now, new NSDictionary());
+
+            HealthStore.SaveObject(weightSample, (success, error) => {
+                if (!success)
+                {
+                    Console.WriteLine("An error occured saving the weight sample {0}. " +
+                        "In your app, try to handle this gracefully. The error was: {1}.", weightSample, error.LocalizedDescription);
+                    return;
+                }
+
+                UpdateUsersWeight();
+            });
+        }
+
+        NSSet DataTypesToWrite
+        {
+            get
+            {
+                return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DietaryEnergyConsumed),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass)
+                });
+            }
+        }
+
+        NSSet DataTypesToRead
+        {
+            get
+            {
+                return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DietaryEnergyConsumed),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass),
+                    HKCharacteristicType.GetCharacteristicType (HKCharacteristicTypeIdentifierKey.DateOfBirth)
+                });
+            }
+        }
+
+        private static void Error(bool s, NSError e)
+        {
+            if (!s)
+            {
+                return;
+            }
+        }
+
+        public void HealthStoreInformation()
+        {
+            if (HKHealthStore.IsHealthDataAvailable)
+            {
+                HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
+
+                UpdateUsersAge();
+                UpdateUsersHeight();
+                UpdateUsersWeight();
+            }
+        }
+
+        void UpdateUsersWeight()
+        {
+            var weightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.BodyMass);
+
+            FetchMostRecentData(weightType, (mostRecentQuantity, error) => {
+                if (error != null)
+                {
+                    Console.WriteLine("An error occured fetching the user's age information. " +
+                    "In your app, try to handle this gracefully. The error was: {0}", error.LocalizedDescription);
+                    return;
+                }
+
+                double usersWeight = 0.0;
+
+                if (mostRecentQuantity != null)
+                {
+                    var weightUnit = HKUnit.Pound;
+                    usersWeight = mostRecentQuantity.GetDoubleValue(weightUnit);
+                }
+                NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                weightfield.Text = numberFormatter.StringFromNumber(new NSNumber(usersWeight));
+            }
+            );
+        }
+
 
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
         {
-            //textViewWrite = new UITextView();
-            //editTextWrite = new UITextField();
+            heightfield.Text.Replace(" ","");
+            weightfield.Text.Replace(" ","");
+            Double height = 0;
+            Double weight = 0;
+            if(Double.TryParse(heightfield.Text,out height))
+            { SaveHeightIntoHealthStore(height);
+                EmailFileRead.WriteText("Height (in): " + height);
+            }
+            if(Double.TryParse(weightfield.Text,out weight))
+            { SaveWeightIntoHealthStore(weight);                EmailFileRead.WriteText("Weight (lbs): " + weight);
+}            
+
             if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
             {
                 var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
@@ -349,7 +604,7 @@ namespace Hello_MultiScreen_iPhone
                
             }
         }
-		
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -387,6 +642,19 @@ namespace Hello_MultiScreen_iPhone
             ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 20, 35, 35);
 
             Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 20, 100, 30);
+            //IMPORTANT
+            agefield.Frame = new CGRect(ResponsiveWidthRight, Button3.Frame.Bottom + 20, 100, 30);
+
+            agelabel.Frame = new CGRect(ResponsiveWidthLeft, Button3.Frame.Bottom + 20, 100, 30);
+
+            heightfield.Frame = new CGRect(ResponsiveWidthRight, agefield.Frame.Bottom + 20, 100, 30);
+            heightlabel.Frame = new CGRect(ResponsiveWidthLeft, agefield.Frame.Bottom + 20, 100, 30);
+            weightfield.Frame = new CGRect(ResponsiveWidthRight, heightfield.Frame.Bottom + 20, 100, 30);
+            weightLabel.Frame = new CGRect(ResponsiveWidthLeft, heightlabel.Frame.Bottom + 20, 100, 30);
+            SaveStatsbutton.Frame = new CGRect(ResponsiveWidthRight, weightLabel.Frame.Bottom + 20, 100, 30);
+
+
+            HealthStoreInformation();
             this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;
         }

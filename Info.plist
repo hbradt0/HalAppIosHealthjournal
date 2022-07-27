@@ -198,5 +198,13 @@
 			<string>3qcr597p9d.skadnetwork</string>
 		</dict>
 	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>The apps need access to your Health Usage Update</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>The apps need access to your Health Usage Share</string>
 </dict>
 </plist>

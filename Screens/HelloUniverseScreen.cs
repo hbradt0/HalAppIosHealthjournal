@@ -6,6 +6,7 @@ using UIKit;
 using CoreGraphics;
 using EmailReader;
 using CoreAnimation;
+using HealthKit;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -18,6 +19,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textView2;
         public UITextView editTextWrite;
         public UITextView textViewWrite;
+        public HKHealthStore HealthStore;
 
         public UIButton ButtonDateClick;
         public UIButton Button1;
@@ -49,6 +51,10 @@ namespace Hello_MultiScreen_iPhone
         private UIViewAnimationCurve animCurve;
         private bool keyboardShowing = true;
         private bool keyboardOpen = false;
+        NSEnergyFormatter energyFormatter;
+        double simulatedBurntEnergy;
+        double consumedEnergy;
+        double netEnergy;
 
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
@@ -69,8 +75,10 @@ namespace Hello_MultiScreen_iPhone
             View.BackgroundColor = HomeScreen.color;
             user.View.BackgroundColor = HomeScreen.color;
 
-            //Initialize Fields
-            textViewWrite = new UITextView();
+            HealthStore = new HKHealthStore();
+
+        //Initialize Fields
+        textViewWrite = new UITextView();
             editTextWrite = new UITextView();
             editTextWrite.Editable = true;
             Buttonbackyourstory = new UIButton(UIButtonType.System);
@@ -328,6 +336,33 @@ namespace Hello_MultiScreen_iPhone
             UIView.CommitAnimations();
         }
 
+        NSEnergyFormatter EnergyFormatter
+        {
+            get
+            {
+                if (energyFormatter == null)
+                {
+                    energyFormatter = new NSEnergyFormatter
+                    {
+                        UnitStyle = NSFormattingUnitStyle.Long,
+                        ForFoodEnergyUse = true
+                    };
+
+                    energyFormatter.NumberFormatter.MaximumFractionDigits = 2;
+                }
+
+                return energyFormatter;
+            }
+        }
+
+        void GetStats(object sender, EventArgs eventArgs)
+        {
+            FetchMostRecentData((totalJoulesConsumed, error) => {
+                    simulatedBurntEnergy = new Random().Next(0, 300000);
+                    consumedEnergy = totalJoulesConsumed;
+                    netEnergy = consumedEnergy - simulatedBurntEnergy;
+            });
+        }
 
         private void ButtonEditJournalClick(object sender, EventArgs eventArgs)
         {
@@ -420,6 +455,18 @@ namespace Hello_MultiScreen_iPhone
             }
         }
 
+        public void Error(bool s, NSError e)
+        {
+            if (!s)
+            {
+                Console.WriteLine("You didn't allow HealthKit to access these read/write data types. " +
+                "In your app, try to handle this error gracefully when a user decides not to provide access. " +
+                "If you're using a simulator, try it on a device.");
+                return;
+            }
+
+        }
+
 
         //Submit your journal button
         private void ButtonQuickClick(object sender, EventArgs eventArgs)
@@ -444,9 +491,18 @@ namespace Hello_MultiScreen_iPhone
             else
             {
                 String text = "I exercised today - cardio/strength!";
+                if (HKHealthStore.IsHealthDataAvailable)
+                {
+                    HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
+                    FetchMostRecentData((totalJoulesConsumed, error) => {
+                            consumedEnergy = totalJoulesConsumed;
+                    });
+
+                    text = text + "\n";
+                    text = text + "Consumed Energy(Apple Fitness): " + consumedEnergy;
+                }
                 EmailFileRead.WriteText(text);
                 String totalText = EmailFileRead.ReadText();
-                //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
                 textViewWrite.Text = totalText;
                 if (this.textViewWrite.Text.Length > 0)
                 {
@@ -455,6 +511,64 @@ namespace Hello_MultiScreen_iPhone
                 }
                 editTextWrite.Text = String.Empty;
             }
+        }
+        NSSet DataTypesToWrite
+        {
+            get
+            {
+                return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DietaryEnergyConsumed),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass)
+                });
+            }
+        }
+
+        NSSet DataTypesToRead
+        {
+            get
+            {
+                return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DietaryEnergyConsumed),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass),
+                    HKCharacteristicType.GetCharacteristicType (HKCharacteristicTypeIdentifierKey.DateOfBirth)
+                });
+            }
+        }
+
+
+
+        void FetchMostRecentData(Action<double, NSError> completionHandler)
+        {
+            var calendar = NSCalendar.CurrentCalendar;
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddDays(1);
+
+            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.DietaryEnergyConsumed);
+            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
+
+            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
+                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
+
+                                if (error != null && completionHandler != null)
+                                    completionHandler(0.0f, error);
+
+                                if(results!=null)
+                                { 
+                                var totalCalories = results.SumQuantity();
+                                
+                                if (totalCalories == null)
+                                    totalCalories = HKQuantity.FromQuantity(HKUnit.Joule, 0.0);
+
+                                if (completionHandler != null)
+                                    completionHandler(totalCalories.GetDoubleValue(HKUnit.Joule), error);
+                                }
+                            });
+
+            HealthStore.ExecuteQuery(query);
         }
 
         //Delete 1 line

@@ -5,6 +5,7 @@ using Foundation;
 using UIKit;
 using Firebase;
 using Google.MobileAds;
+using HealthKit;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -37,5 +38,7 @@ namespace Hello_MultiScreen_iPhone
 
 			return true;
 		}
+
+
 	}
 }
