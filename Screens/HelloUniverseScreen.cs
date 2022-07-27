@@ -32,6 +32,8 @@ namespace Hello_MultiScreen_iPhone
         public UIButton EditJournalButton;
         public UIButton EditImportantButton;
         public UIButton QuickExercisedButton;
+        String healthQuantifier1;
+        String healthQuantifier2;
 
         public UIImage imageView;
         public UIView View1;
@@ -90,6 +92,9 @@ namespace Hello_MultiScreen_iPhone
             //dateTimeText.BackgroundColor = HomeScreen.color;
             dateTimeText.TintColor = UIColor.SystemBlue;
 
+            healthQuantifier1 = "";
+            healthQuantifier2 = "";
+
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
             EditJournalButton = new UIButton(UIButtonType.System);
@@ -98,6 +103,7 @@ namespace Hello_MultiScreen_iPhone
             QuickExercisedButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             QuickExercisedButton.BackgroundColor = HomeScreen.buttoncolor;
             QuickExercisedButton.SetTitle("I Exercised", UIControlState.Normal);
+
 
             EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             EditJournalButton.BackgroundColor = UIColor.SystemBlue;
@@ -497,9 +503,19 @@ namespace Hello_MultiScreen_iPhone
                     FetchMostRecentData((totalJoulesConsumed, error) => {
                             consumedEnergy = totalJoulesConsumed;
                     });
-
+                    if(consumedEnergy!=0)
+                    { 
                     text = text + "\n";
-                    text = text + "Consumed Energy(Apple Fitness): " + consumedEnergy;
+                    text = text + "Consumed Energy J(Apple Fitness): " + consumedEnergy;
+
+                    }
+                    GetTimeExercised();
+                    if(healthQuantifier1!="")
+                        text = text + "\nEnergy Time min(Apple Fitness): " + healthQuantifier1;
+                    GetCCBurned();
+                    if(healthQuantifier2!="")
+                        text = text + "\nCalories Burned kcal(Apple Fitness): " + healthQuantifier2;
+
                 }
                 EmailFileRead.WriteText(text);
                 String totalText = EmailFileRead.ReadText();
@@ -534,12 +550,91 @@ namespace Hello_MultiScreen_iPhone
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass),
-                    HKCharacteristicType.GetCharacteristicType (HKCharacteristicTypeIdentifierKey.DateOfBirth)
+                    HKCharacteristicType.GetCharacteristicType (HKCharacteristicTypeIdentifierKey.DateOfBirth),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.AppleExerciseTime)
+
                 });
             }
         }
 
+        void GetTimeExercised()
+        {
+            var timeExercise = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.AppleExerciseTime);
 
+            FetchMostRecentData(timeExercise, (mostRecentQuantity, error) => {
+                if (error != null)
+                {
+                    Console.WriteLine("An error occured fetching the user's information. " +
+                    "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
+                    return;
+                }
+
+                double timeexercising = 0.0;
+
+                if (mostRecentQuantity != null)
+                {
+                    var unit = HKUnit.Minute;
+                    timeexercising = mostRecentQuantity.GetDoubleValue(unit);
+                }
+                 if (timeexercising != 0) { 
+
+                NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                healthQuantifier1 = numberFormatter.StringFromNumber(new NSNumber(timeexercising));
+                    }
+                 
+            });
+        }
+
+          void GetCCBurned()
+        {
+            var timeExercise = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.ActiveEnergyBurned);
+
+            FetchMostRecentData(timeExercise, (mostRecentQuantity, error) => {
+                if (error != null)
+                {
+                    Console.WriteLine("An error occured fetching the user's information. " +
+                    "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
+                    return;
+                }
+
+                double q = 0.0;
+
+                if (mostRecentQuantity != null)
+                {
+                    var unit = HKUnit.Kilocalorie;
+                    q = mostRecentQuantity.GetDoubleValue(unit);
+                }
+                if (q != 0) { 
+                NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                healthQuantifier2 = numberFormatter.StringFromNumber(new NSNumber(q));}
+            });
+        }
+
+
+         void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
+        {
+            var timeSortDescriptor = new NSSortDescriptor(HKSample.SortIdentifierEndDate, false);
+            var query = new HKSampleQuery(quantityType, null, 1, new NSSortDescriptor[] { timeSortDescriptor },
+                            (HKSampleQuery resultQuery, HKSample[] results, NSError error) => {
+                                if (completion != null && error != null)
+                                {
+                                    completion(null, error);
+                                    return;
+                                }
+
+                                HKQuantity quantity = null;
+                                if (results.Length != 0)
+                                {
+                                    var quantitySample = (HKQuantitySample)results[results.Length - 1];
+                                    quantity = quantitySample.Quantity;
+                                }
+
+                                if (completion != null)
+                                    completion(quantity, error);
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
 
         void FetchMostRecentData(Action<double, NSError> completionHandler)
         {

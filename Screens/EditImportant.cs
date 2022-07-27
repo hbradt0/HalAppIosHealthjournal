@@ -552,10 +552,10 @@ namespace Hello_MultiScreen_iPhone
             Double weight = 0;
             if(Double.TryParse(heightfield.Text,out height))
             { SaveHeightIntoHealthStore(height);
-                EmailFileRead.WriteText("Height (in): " + height);
+                //xEmailFileRead.WriteText("Current Height (in): " + height);
             }
             if(Double.TryParse(weightfield.Text,out weight))
-            { SaveWeightIntoHealthStore(weight);                EmailFileRead.WriteText("Weight (lbs): " + weight);
+            { SaveWeightIntoHealthStore(weight);               // EmailFileRead.WriteText("Current Weight (lbs): " + weight);
 }            
 
             if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
