@@ -95,6 +95,7 @@ namespace Hello_MultiScreen_iPhone
 
             healthQuantifier1 = "";
             healthQuantifier2 = "";
+            healthQuantifier3 = "";
 
             ButtonDateClick = new UIButton(UIButtonType.System);
             UIScrollView scrollView2 = new UIScrollView();
@@ -555,7 +556,6 @@ namespace Hello_MultiScreen_iPhone
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DistanceWalkingRunning),
-                    HKCharacteristicType.GetCharacteristicType (HKCharacteristicTypeIdentifierKey.DateOfBirth),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.AppleExerciseTime)
 
                 });
@@ -583,8 +583,8 @@ namespace Hello_MultiScreen_iPhone
                 }
                  if (timeexercising != 0) { 
 
-                NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                healthQuantifier1 = numberFormatter.StringFromNumber(new NSNumber(timeexercising));
+                //NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                    healthQuantifier1 = timeexercising + "";// numberFormatter.StringFromNumber(new NSNumber(timeexercising));
                     }
                  
             });
@@ -609,9 +609,11 @@ namespace Hello_MultiScreen_iPhone
                     var unit = HKUnit.Kilocalorie;
                     q = mostRecentQuantity.GetDoubleValue(unit);
                 }
-                if (q != 0) { 
-                NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                healthQuantifier2 = numberFormatter.StringFromNumber(new NSNumber(q));}
+                if (q != 0)
+                {
+                    //NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                    healthQuantifier2 = "" + q;
+                }// numberFormatter.StringFromNumber(new NSNumber(q));
             });
         }
 
@@ -636,8 +638,8 @@ namespace Hello_MultiScreen_iPhone
                 }
                 if (q != 0)
                 {
-                    NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                    healthQuantifier3 = numberFormatter.StringFromNumber(new NSNumber(q));
+                    //NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                    healthQuantifier3 = q + "";// numberFormatter.StringFromNumber(new NSNumber(q));
                 }
             });
         }
