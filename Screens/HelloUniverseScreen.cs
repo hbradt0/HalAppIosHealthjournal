@@ -34,6 +34,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton QuickExercisedButton;
         String healthQuantifier1;
         String healthQuantifier2;
+        String healthQuantifier3;
 
         public UIImage imageView;
         public UIView View1;
@@ -515,6 +516,9 @@ namespace Hello_MultiScreen_iPhone
                     GetCCBurned();
                     if(healthQuantifier2!="")
                         text = text + "\nCalories Burned kcal(Apple Fitness): " + healthQuantifier2;
+                    GetCCBurned2();
+                    if (healthQuantifier3 != "")
+                        text = text + "\nDistance walked mile(Apple Fitness): " + healthQuantifier3;
 
                 }
                 EmailFileRead.WriteText(text);
@@ -550,6 +554,7 @@ namespace Hello_MultiScreen_iPhone
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass),
+                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DistanceWalkingRunning),
                     HKCharacteristicType.GetCharacteristicType (HKCharacteristicTypeIdentifierKey.DateOfBirth),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.AppleExerciseTime)
 
@@ -610,8 +615,35 @@ namespace Hello_MultiScreen_iPhone
             });
         }
 
+        void GetCCBurned2()
+        {
+            var timeExercise = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.DistanceWalkingRunning);
 
-         void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
+            FetchMostRecentData(timeExercise, (mostRecentQuantity, error) => {
+                if (error != null)
+                {
+                    Console.WriteLine("An error occured fetching the user's information. " +
+                    "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
+                    return;
+                }
+
+                double q = 0.0;
+
+                if (mostRecentQuantity != null)
+                {
+                    var unit = HKUnit.Mile;
+                    q = mostRecentQuantity.GetDoubleValue(unit);
+                }
+                if (q != 0)
+                {
+                    NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                    healthQuantifier3 = numberFormatter.StringFromNumber(new NSNumber(q));
+                }
+            });
+        }
+
+
+        void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
         {
             var timeSortDescriptor = new NSSortDescriptor(HKSample.SortIdentifierEndDate, false);
             var query = new HKSampleQuery(quantityType, null, 1, new NSSortDescriptor[] { timeSortDescriptor },

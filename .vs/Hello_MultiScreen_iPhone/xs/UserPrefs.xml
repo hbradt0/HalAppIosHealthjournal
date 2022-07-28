@@ -1,34 +1,33 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Entitlements.plist">
     <Files>
-      <File FileName="Resources/Reflections2.txt" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="112" Column="70" />
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="502" Column="66" />
-      <File FileName="Screens/EditFoodJournalScreen.cs" Line="64" Column="34" />
-      <File FileName="Screens/EditImportant.cs" Line="435" Column="32" />
-      <File FileName="Screens/EditJournalScreen.cs" Line="66" Column="58" />
+      <File FileName="Resources/Reflections2.txt" Line="1" Column="1" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
+      <File FileName="Screens/HelloUniverseScreen.cs" />
+      <File FileName="Screens/EditFoodJournalScreen.cs" />
+      <File FileName="Screens/EditImportant.cs" Line="435" Column="10" />
+      <File FileName="Screens/EditJournalScreen.cs" />
       <File FileName="Screens/HelloWorldScreen 2.cs" />
       <File FileName="../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
       <File FileName="Screens/ListScreen.designer.cs" />
-      <File FileName="Screens/ImageScreen.cs" Line="85" Column="51" />
+      <File FileName="Screens/ImageScreen.cs" />
       <File FileName="Screens/EditImportant.designer.cs" />
-      <File FileName="Screens/HomeScreen.cs" Line="21" Column="72" />
-      <File FileName="Screens/HomeScreen2.cs" Line="106" Column="73" />
-      <File FileName="EmailFileRead.cs" Line="343" Column="28" />
+      <File FileName="Screens/HomeScreen.cs" Line="22" Column="48" />
+      <File FileName="Screens/HomeScreen2.cs" />
+      <File FileName="EmailFileRead.cs" />
       <File FileName="Entitlements.plist" />
-      <File FileName="AppDelegate.cs" Line="4" Column="9" />
+      <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
       <File FileName="Main.cs" Line="13" Column="1" />
+      <File FileName="Screens/ListScreen.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
           <Node name="Hello_MultiScreen_iPhone" expanded="True">
-            <Node name="Hello_MultiScreen_iPhone" expanded="True">
-              <Node name="Assets.xcassets" expanded="True" />
+            <Node name="Hello_MultiScreen_iPhone" expanded="True" selected="True">
               <Node name="Screens" expanded="True" />
-              <Node name="Main.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -36,10 +35,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4AF9252F-7A13-4725-9567-7D6B75CAEECA" />
+  <MonoDevelop.Ide.ItemProperties.Hello__MultiScreen__iPhone PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
 </Properties>

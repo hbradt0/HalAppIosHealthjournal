@@ -135,38 +135,38 @@ namespace Hello_MultiScreen_iPhone
             agefield.BackgroundColor = UIColor.White;
             agefield.TextColor = UIColor.Black;
             agefield.UserInteractionEnabled = true;
-            agefield.KeyboardType = UIKeyboardType.ASCIICapable;
+            agefield.KeyboardType = UIKeyboardType.NumberPad;
             agefield.ReturnKeyType = UIReturnKeyType.Done;
 
             weightfield = new UITextField();
             weightfield.BackgroundColor = UIColor.White;
             weightfield.TextColor = UIColor.Black;
             weightfield.UserInteractionEnabled = true;
-            weightfield.KeyboardType = UIKeyboardType.ASCIICapable;
+            weightfield.KeyboardType = UIKeyboardType.NumberPad;
             weightfield.ReturnKeyType = UIReturnKeyType.Done;
 
             heightfield = new UITextField();
             heightfield.BackgroundColor = UIColor.White;
             heightfield.TextColor = UIColor.Black;
             heightfield.UserInteractionEnabled = true;
-            heightfield.KeyboardType = UIKeyboardType.ASCIICapable;
+            heightfield.KeyboardType = UIKeyboardType.NumberPad;
             heightfield.ReturnKeyType = UIReturnKeyType.Done;
 
             weightLabel = new UITextView();
             weightLabel.Editable = false;
-            //weightLabel.BackgroundColor = UIColor.White;
+            weightLabel.BackgroundColor = UIColor.White;
             weightLabel.TextColor = UIColor.Black;
             weightLabel.Text = "Weight (lbs): ";
 
             heightlabel = new UITextView();
-            //heightlabel.BackgroundColor = UIColor.White;
+            heightlabel.BackgroundColor = UIColor.White;
             heightlabel.Editable = false;
             heightlabel.TextColor = UIColor.Black;
             heightlabel.Text = "Height (inches): ";
 
             agelabel = new UITextView();
             agelabel.Editable = false;
-            //agelabel.BackgroundColor = UIColor.White;
+            agelabel.BackgroundColor = UIColor.White;
             agelabel.TextColor = UIColor.Black;
             agelabel.Text = "Age(years): ";
 
@@ -374,14 +374,16 @@ namespace Hello_MultiScreen_iPhone
 
             if (dateOfBirth == null)
                 return;
+            if (dateOfBirth != null)
+            {
+                var now = NSDate.Now;
 
-            var now = NSDate.Now;
+                NSDateComponents ageComponents = NSCalendar.CurrentCalendar.Components(NSCalendarUnit.Year, dateOfBirth, now,
+                                                     NSCalendarOptions.WrapCalendarComponents);
 
-            NSDateComponents ageComponents = NSCalendar.CurrentCalendar.Components(NSCalendarUnit.Year, dateOfBirth, now,
-                                                 NSCalendarOptions.WrapCalendarComponents);
-
-            nint usersAge = ageComponents.Year;
-            agefield.Text = string.Format("{0} years", usersAge);
+                nint usersAge = ageComponents.Year;
+                agefield.Text = string.Format("{0} years", usersAge);
+            }
         }
 
         void UpdateUsersHeight()
@@ -402,9 +404,10 @@ namespace Hello_MultiScreen_iPhone
                 {
                     var heightUnit = HKUnit.Inch;
                     usersHeight = mostRecentQuantity.GetDoubleValue(heightUnit);
+
+                    NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                    heightfield.Text = numberFormatter.StringFromNumber(new NSNumber(usersHeight));
                 }
-                NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                heightfield.Text = numberFormatter.StringFromNumber(new NSNumber(usersHeight));
             });
         }
 
@@ -535,9 +538,10 @@ namespace Hello_MultiScreen_iPhone
                 {
                     var weightUnit = HKUnit.Pound;
                     usersWeight = mostRecentQuantity.GetDoubleValue(weightUnit);
+
+                    NSNumberFormatter numberFormatter = new NSNumberFormatter();
+                    weightfield.Text = numberFormatter.StringFromNumber(new NSNumber(usersWeight));
                 }
-                NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                weightfield.Text = numberFormatter.StringFromNumber(new NSNumber(usersWeight));
             }
             );
         }
