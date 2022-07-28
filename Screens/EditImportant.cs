@@ -361,13 +361,12 @@ namespace Hello_MultiScreen_iPhone
 
                 if (mostRecentQuantity != null)
                 {
-                    var heightUnit = HKUnit.Inch;
-                    usersHeight = mostRecentQuantity.GetDoubleValue(heightUnit);
+                    usersHeight = mostRecentQuantity.GetDoubleValue(HKUnit.Inch);
 
                     if (usersHeight != 0)
                     {
-                        //NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                        heightfield.Text = "" + usersHeight;// numberFormatter.StringFromNumber(new NSNumber(usersHeight));
+                        EmailFileRead.WriteText("Height(in): " + usersHeight);
+                        heightfield.Text = "" + usersHeight;
                     }
                 }
             });
@@ -440,8 +439,6 @@ namespace Hello_MultiScreen_iPhone
             get
             {
                 return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DietaryEnergyConsumed),
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass)
                 });
@@ -453,8 +450,6 @@ namespace Hello_MultiScreen_iPhone
             get
             {
                 return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.DietaryEnergyConsumed),
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.ActiveEnergyBurned),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
                     HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass)
                 });
@@ -496,11 +491,9 @@ namespace Hello_MultiScreen_iPhone
 
                 if (mostRecentQuantity != null)
                 {
-                    var weightUnit = HKUnit.Pound;
-                    usersWeight = mostRecentQuantity.GetDoubleValue(weightUnit);
-
-                    //NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                    weightfield.Text = usersWeight+"";//numberFormatter.StringFromNumber(new NSNumber(usersWeight));
+                    usersWeight = mostRecentQuantity.GetDoubleValue(HKUnit.Pound);
+                    EmailFileRead.WriteText("Weight(lbs): " + usersWeight);
+                    weightfield.Text = usersWeight+"";
                 }
             }
             );
@@ -510,17 +503,23 @@ namespace Hello_MultiScreen_iPhone
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
         {
-            heightfield.Text.Replace(" ","");
-            weightfield.Text.Replace(" ","");
-            Double height = 0;
-            Double weight = 0;
-            if(Double.TryParse(heightfield.Text,out height))
-            { SaveHeightIntoHealthStore(height);
-                //xEmailFileRead.WriteText("Current Height (in): " + height);
+            if (HKHealthStore.IsHealthDataAvailable)
+            {
+                HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
+                heightfield.Text.Replace(" ", "");
+                weightfield.Text.Replace(" ", "");
+                Double height = 0;
+                Double weight = 0;
+                if (Double.TryParse(heightfield.Text, out height))
+                {
+                    SaveHeightIntoHealthStore(height);
+
+                }
+                if (Double.TryParse(weightfield.Text, out weight))
+                {
+                    SaveWeightIntoHealthStore(weight);
+                }
             }
-            if(Double.TryParse(weightfield.Text,out weight))
-            { SaveWeightIntoHealthStore(weight);               // EmailFileRead.WriteText("Current Weight (lbs): " + weight);
-}            
 
             if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
             {
@@ -614,8 +613,6 @@ namespace Hello_MultiScreen_iPhone
             weightLabel.Frame = new CGRect(ResponsiveWidthLeft, heightlabel.Frame.Bottom + 20, 100, 30);
             SaveStatsbutton.Frame = new CGRect(ResponsiveWidthRight, weightLabel.Frame.Bottom + 20, 100, 30);
 
-
-            HealthStoreInformation();
             this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;
         }

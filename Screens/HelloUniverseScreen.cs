@@ -590,60 +590,43 @@ namespace Hello_MultiScreen_iPhone
             });
         }
 
-          void GetCCBurned()
+        void GetCCBurned()
         {
-            var timeExercise = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.ActiveEnergyBurned);
 
-            FetchMostRecentData(timeExercise, (mostRecentQuantity, error) => {
+            FetchMostRecentData3((mostRecentQuantity, error) => {
                 if (error != null)
                 {
                     Console.WriteLine("An error occured fetching the user's information. " +
                     "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
                     return;
-                }
-
-                double q = 0.0;
-
-                if (mostRecentQuantity != null)
+                }                
+                if (mostRecentQuantity != 0)
                 {
-                    var unit = HKUnit.Kilocalorie;
-                    q = mostRecentQuantity.GetDoubleValue(unit);
+                    healthQuantifier2 = "" + mostRecentQuantity;
                 }
-                if (q != 0)
-                {
-                    //NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                    healthQuantifier2 = "" + q;
-                }// numberFormatter.StringFromNumber(new NSNumber(q));
             });
         }
 
+        
         void GetCCBurned2()
         {
             var timeExercise = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.DistanceWalkingRunning);
 
-            FetchMostRecentData(timeExercise, (mostRecentQuantity, error) => {
+            FetchMostRecentData2((mostRecentQuantity, error) => {
                 if (error != null)
                 {
                     Console.WriteLine("An error occured fetching the user's information. " +
                     "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
                     return;
-                }
-
-                double q = 0.0;
-
-                if (mostRecentQuantity != null)
-                {
-                    var unit = HKUnit.Mile;
-                    q = mostRecentQuantity.GetDoubleValue(unit);
-                }
-                if (q != 0)
+                }                
+                if (mostRecentQuantity != 0)
                 {
                     //NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                    healthQuantifier3 = q + "";// numberFormatter.StringFromNumber(new NSNumber(q));
+                    healthQuantifier3 = mostRecentQuantity + "";// numberFormatter.StringFromNumber(new NSNumber(q));
                 }
             });
         }
-
+        
 
         void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
         {
@@ -694,6 +677,66 @@ namespace Hello_MultiScreen_iPhone
 
                                 if (completionHandler != null)
                                     completionHandler(totalCalories.GetDoubleValue(HKUnit.Joule), error);
+                                }
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
+
+        void FetchMostRecentData2(Action<double, NSError> completionHandler)
+        {
+            var calendar = NSCalendar.CurrentCalendar;
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddDays(1);
+
+            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.DistanceWalkingRunning);
+            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
+
+            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
+                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
+
+                                if (error != null && completionHandler != null)
+                                    completionHandler(0.0f, error);
+
+                                if (results != null)
+                                {
+                                    var total = results.SumQuantity();
+
+                                    if (total == null)
+                                        total = HKQuantity.FromQuantity(HKUnit.Mile, 0.0);
+
+                                    if (completionHandler != null)
+                                        completionHandler(total.GetDoubleValue(HKUnit.Mile), error);
+                                }
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
+
+        void FetchMostRecentData3(Action<double, NSError> completionHandler)
+        {
+            var calendar = NSCalendar.CurrentCalendar;
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddDays(1);
+
+            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.ActiveEnergyBurned);
+            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
+
+            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
+                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
+
+                                if (error != null && completionHandler != null)
+                                    completionHandler(0.0f, error);
+
+                                if (results != null)
+                                {
+                                    var total = results.SumQuantity();
+
+                                    if (total == null)
+                                        total = HKQuantity.FromQuantity(HKUnit.Minute, 0.0);
+
+                                    if (completionHandler != null)
+                                        completionHandler(total.GetDoubleValue(HKUnit.Minute), error);
                                 }
                             });
 

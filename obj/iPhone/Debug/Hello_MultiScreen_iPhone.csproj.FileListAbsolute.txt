@@ -1,3 +1,10 @@
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Hello_MultiScreen_iPhone.pdb
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Firebase.Core.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Google.MobileAds.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Tesseract.Binding.iOS.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Tesseract.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Tesseract.iOS.dll
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/actool/_PartialAppManifest.items
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/actool/_BundleResourceWithLogicalName.items
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/actool/_ProcessedImageAssetsPath.items
@@ -31,13 +38,6 @@
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/optimized/MainTitlePic1.png
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/optimized/
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Hello_MultiScreen_iPhone.exe
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Hello_MultiScreen_iPhone.pdb
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Firebase.Core.dll
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Google.MobileAds.dll
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Tesseract.Binding.iOS.dll
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Tesseract.dll
-/Users/psargent/phillbookAppDiet/bin/iPhone/Debug/Tesseract.iOS.dll
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookAppDiet/obj/iPhone/Debug/Hello_MultiScreen_iPhone.pdb
