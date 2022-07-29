@@ -1,33 +1,35 @@
 ﻿<Properties StartupConfiguration="{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Entitlements.plist">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Resources/Reflections2.txt" Line="1" Column="1" />
       <File FileName="Screens/HelloWorldScreen.cs" />
       <File FileName="Screens/HelloUniverseScreen.cs" />
       <File FileName="Screens/EditFoodJournalScreen.cs" />
-      <File FileName="Screens/EditImportant.cs" Line="435" Column="10" />
+      <File FileName="Screens/EditImportant.cs" Line="550" Column="1" />
       <File FileName="Screens/EditJournalScreen.cs" />
       <File FileName="Screens/HelloWorldScreen 2.cs" />
       <File FileName="../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
       <File FileName="Screens/ListScreen.designer.cs" />
-      <File FileName="Screens/ImageScreen.cs" />
+      <File FileName="Screens/ImageScreen.cs" Line="124" Column="57" />
       <File FileName="Screens/EditImportant.designer.cs" />
-      <File FileName="Screens/HomeScreen.cs" Line="22" Column="48" />
+      <File FileName="Screens/HomeScreen.cs" />
       <File FileName="Screens/HomeScreen2.cs" />
       <File FileName="EmailFileRead.cs" />
       <File FileName="Entitlements.plist" />
       <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
       <File FileName="Main.cs" Line="13" Column="1" />
-      <File FileName="Screens/ListScreen.cs" Line="1" Column="1" />
+      <File FileName="Screens/ListScreen.cs" Line="189" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Option id="ShowAllFiles" value="True" />
           <Node name="Hello_MultiScreen_iPhone" expanded="True">
-            <Node name="Hello_MultiScreen_iPhone" expanded="True" selected="True">
-              <Node name="Screens" expanded="True" />
+            <Node name="Hello_MultiScreen_iPhone" expanded="True">
+              <Node name="Screens" expanded="True">
+                <Node name="EditImportant.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -35,7 +37,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

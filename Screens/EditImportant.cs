@@ -10,8 +10,8 @@ using HealthKit;
 
 namespace Hello_MultiScreen_iPhone
 {
-	public partial class EditImportant : UIViewController
-	{
+    public partial class EditImportant : UIViewController
+    {
         public UITextField editText;
         public UITextView textView;
         public UITextView booktextView;
@@ -61,12 +61,12 @@ namespace Hello_MultiScreen_iPhone
         private bool keyboardShowing;
         private bool keyboardOpen = false;
         //loads the HelloWorldScreen.xib file and connects it to this object
-        public EditImportant() : base ("EditImportant", null)
-	{
-		//this.Title = "Read Journal!";
-		ViewDidLoad1();
+        public EditImportant() : base("EditImportant", null)
+        {
+            //this.Title = "Read Journal!";
+            ViewDidLoad1();
             LoadBanner();
-	}
+        }
         public void LoadBanner()
         {
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
@@ -129,7 +129,7 @@ namespace Hello_MultiScreen_iPhone
             SaveStatsbutton.SetTitle("Save Stats", UIControlState.Normal);
             SaveStatsbutton.Layer.CornerRadius = 10;
 
-           
+
             weightfield = new UITextField();
             weightfield.BackgroundColor = UIColor.White;
             weightfield.TextColor = UIColor.Black;
@@ -189,13 +189,13 @@ namespace Hello_MultiScreen_iPhone
             };
             //booktextView.KeyboardType = UIKeyboardType.EmailAddress;
             //booktextView.ReturnKeyType = UIReturnKeyType.Send;
-  
+
             Button3.SetTitle("Save", UIControlState.Normal);
             Button3.BackgroundColor = UIColor.SystemBlue;
             Button3.SetTitleColor(UIColor.White, UIControlState.Normal);
             Button3.Layer.CornerRadius = 10;
             //ScrollView
- 
+
             scrollView = new UIScrollView
             {
                 Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height),
@@ -207,7 +207,7 @@ namespace Hello_MultiScreen_iPhone
             {
                 scrollView = new UIScrollView();
             }
-          
+
 
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonSpaceClick, UIControlEvent.TouchUpInside);
@@ -234,7 +234,7 @@ namespace Hello_MultiScreen_iPhone
         //Delete everything your story
         private void ButtonSpaceClick(object sender, EventArgs eventArgs)
         {
-            EmailFileRead.AppendAllText("\n",EmailFileRead.fileName4);
+            EmailFileRead.AppendAllText("\n", EmailFileRead.fileName4);
             booktextView.Text = String.Empty;
             booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName4);
         }
@@ -344,31 +344,81 @@ namespace Hello_MultiScreen_iPhone
             UIView.CommitAnimations();
         }
 
+        void FetchMostRecentData1(Action<double, NSError> completionHandler)
+        {
+            var calendar = NSCalendar.CurrentCalendar;
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddDays(1);
+
+            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.Height);
+            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
+
+            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
+                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
+
+                                if (error != null && completionHandler != null)
+                                    completionHandler(0.0f, error);
+
+                                if (results != null)
+                                {
+                                    var total = results.SumQuantity();
+
+                                    if (total == null)
+                                        total = HKQuantity.FromQuantity(HKUnit.Inch, 0.0);
+
+                                    if (completionHandler != null)
+                                        completionHandler(total.GetDoubleValue(HKUnit.Inch), error);
+                                }
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
+
+        void FetchMostRecentData2(Action<double, NSError> completionHandler)
+        {
+            var calendar = NSCalendar.CurrentCalendar;
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddDays(1);
+
+            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.BodyMass);
+            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
+
+            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
+                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
+
+                                if (error != null && completionHandler != null)
+                                    completionHandler(0.0f, error);
+
+                                if (results != null)
+                                {
+                                    var total = results.SumQuantity();
+
+                                    if (total == null)
+                                        total = HKQuantity.FromQuantity(HKUnit.Pound, 0.0);
+
+                                    if (completionHandler != null)
+                                        completionHandler(total.GetDoubleValue(HKUnit.Pound), error);
+                                }
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
 
         void UpdateUsersHeight()
         {
-            var heightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.Height);
-
-            FetchMostRecentData(heightType, (mostRecentQuantity, error) => {
+            FetchMostRecentData2((mostRecentQuantity, error) => {
                 if (error != null)
                 {
                     Console.WriteLine("An error occured fetching the user's height information. " +
                     "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
                     return;
                 }
-
-                double usersHeight = 0.0;
-
-                if (mostRecentQuantity != null)
+                if (mostRecentQuantity != 0)
                 {
-                    usersHeight = mostRecentQuantity.GetDoubleValue(HKUnit.Inch);
-
-                    if (usersHeight != 0)
-                    {
-                        EmailFileRead.WriteText("Height(in): " + usersHeight);
-                        heightfield.Text = "" + usersHeight;
-                    }
+                    // EmailFileRead.WriteText("Height(in): " + usersHeight);
+                    heightfield.Text = String.Format("{0:0.##}", mostRecentQuantity);
                 }
+
             });
         }
 
@@ -385,7 +435,7 @@ namespace Hello_MultiScreen_iPhone
                                 }
 
                                 HKQuantity quantity = null;
-                                if (results.Length != 0 )
+                                if (results.Length != 0)
                                 {
                                     var quantitySample = (HKQuantitySample)results[results.Length - 1];
                                     quantity = quantitySample.Quantity;
@@ -456,11 +506,16 @@ namespace Hello_MultiScreen_iPhone
             }
         }
 
-        private static void Error(bool s, NSError e)
+        private void Error(bool s, NSError e)
         {
-            if (!s)
+            if (!s || e != null)
             {
                 return;
+            }
+            else
+            {
+                UpdateUsersHeight();
+                UpdateUsersWeight();
             }
         }
 
@@ -470,31 +525,24 @@ namespace Hello_MultiScreen_iPhone
             {
                 HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
 
-                UpdateUsersHeight();
-                UpdateUsersWeight();
             }
         }
 
         void UpdateUsersWeight()
         {
-            var weightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.BodyMass);
-
-            FetchMostRecentData(weightType, (mostRecentQuantity, error) => {
+            FetchMostRecentData1((mostRecentQuantity, error) => {
                 if (error != null)
                 {
                     Console.WriteLine("An error occured fetching the user's age information. " +
                     "In your app, try to handle this gracefully. The error was: {0}", error.LocalizedDescription);
                     return;
                 }
-
-                double usersWeight = 0.0;
-
-                if (mostRecentQuantity != null)
+                if (mostRecentQuantity != 0)
                 {
-                    usersWeight = mostRecentQuantity.GetDoubleValue(HKUnit.Pound);
-                    EmailFileRead.WriteText("Weight(lbs): " + usersWeight);
-                    weightfield.Text = usersWeight+"";
+                    // EmailFileRead.WriteText("Height(in): " + usersHeight);
+                    weightfield.Text = String.Format("{0:0.##}", mostRecentQuantity);
                 }
+
             }
             );
         }
@@ -503,68 +551,72 @@ namespace Hello_MultiScreen_iPhone
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
         {
-            if (HKHealthStore.IsHealthDataAvailable)
+            if (heightfield.Text != "" || weightfield.Text != "")
             {
-                HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
-                heightfield.Text.Replace(" ", "");
-                weightfield.Text.Replace(" ", "");
-                Double height = 0;
-                Double weight = 0;
-                if (Double.TryParse(heightfield.Text, out height))
+                if (HKHealthStore.IsHealthDataAvailable)
                 {
-                    SaveHeightIntoHealthStore(height);
+                    HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
+                    heightfield.Text.Replace(" ", "");
+                    weightfield.Text.Replace(" ", "");
+                    Double height = 0;
+                    Double weight = 0;
+                    if (Double.TryParse(heightfield.Text, out height))
+                    {
+                        SaveHeightIntoHealthStore(height);
 
-                }
-                if (Double.TryParse(weightfield.Text, out weight))
-                {
-                    SaveWeightIntoHealthStore(weight);
+                    }
+                    if (Double.TryParse(weightfield.Text, out weight))
+                    {
+                        SaveWeightIntoHealthStore(weight);
+                    }
                 }
             }
-
-            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
+            if (booktextView.Text != "")
             {
-                var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
-                Confirm.Show();
-                Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
                 {
-                    if (es.ButtonIndex == 0)
+                    var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
+                    Confirm.Show();
+                    Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
                     {
+                        if (es.ButtonIndex == 0)
+                        {
                         //Do nothing
                     }
-                    else
-                    {
+                        else
+                        {
                         //Do nothing
                     }
-                };
+                    };
 
-            }
-            else
-            {
-                var Confirm = new UIAlertView("Confirmation", "Save your information?", null, "Cancel", "Yes");
-                Confirm.Show();
-                Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                }
+                else
                 {
-                    if (es.ButtonIndex == 0)
+                    var Confirm = new UIAlertView("Confirmation", "Save your information?", null, "Cancel", "Yes");
+                    Confirm.Show();
+                    Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
                     {
-                        //Do nothing
-      			}
-                    else
-                    {
-                String text = booktextView.Text;
-                if (booktextView.Text == String.Empty)
-                    text = "";
-                String txt = "";
-               String total = text;
-               if (total.Last() != '\n')
-                    txt = "\n";
-                EmailFileRead.WriteAllText(text + txt, EmailFileRead.fileName4); String totalText = EmailFileRead.ReadText(EmailFileRead.fileName4);
-		        booktextView.Text=totalText;
-                UIApplication.SharedApplication.KeyWindow.EndEditing(true);
-                keyboardOpen = false;
+                        if (es.ButtonIndex == 0)
+                        {
                         //Do nothing
                     }
-                };
-               
+                        else
+                        {
+                            String text = booktextView.Text;
+                            if (booktextView.Text == String.Empty)
+                                text = "";
+                            String txt = "";
+                            String total = text;
+                            if (total.Last() != '\n')
+                                txt = "\n";
+                            EmailFileRead.WriteAllText(text + txt, EmailFileRead.fileName4); String totalText = EmailFileRead.ReadText(EmailFileRead.fileName4);
+                            booktextView.Text = totalText;
+                            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+                            keyboardOpen = false;
+                        //Do nothing
+                    }
+                    };
+                }
             }
         }
 
@@ -580,7 +632,7 @@ namespace Hello_MultiScreen_iPhone
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
             {
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
-                scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
+                scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 400);
                 scrollView.BackgroundColor = HomeScreen.color;
                 scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
             }
@@ -593,7 +645,6 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveWidthLeft = View.Frame.Width / 12;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
-
             scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 4.5); //small
             if (View.Frame.Height >= 670)
                 scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 500); //big
@@ -612,6 +663,7 @@ namespace Hello_MultiScreen_iPhone
             weightfield.Frame = new CGRect(ResponsiveWidthRight, heightfield.Frame.Bottom + 20, 100, 30);
             weightLabel.Frame = new CGRect(ResponsiveWidthLeft, heightlabel.Frame.Bottom + 20, 100, 30);
             SaveStatsbutton.Frame = new CGRect(ResponsiveWidthRight, weightLabel.Frame.Bottom + 20, 100, 30);
+            HealthStoreInformation();
 
             this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;

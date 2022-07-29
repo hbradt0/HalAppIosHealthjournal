@@ -17,6 +17,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextField editTextWrite;
         public UITextView sta;
         public UITextView textViewWrite;
+        public UITableView listView;
 
         public UIButton Button1;
         public UIButton Button2;
@@ -49,7 +50,7 @@ namespace Hello_MultiScreen_iPhone
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         EditImportant editImportantScreen;
-
+        UIButton buttonAdd;
 
         private NSObject keyBoardWillShow;
         private NSObject keyBoardWillHide;
@@ -61,6 +62,12 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight= 150;
+                public static string[] list = {
+            "Fruit",
+            "Vegetables",
+            "Ice cream"
+            };
+
 
         //loads the HomeScreen.xib file and connects it to this object
         public ListScreen () : base ("ListScreen", null)
@@ -122,8 +129,6 @@ namespace Hello_MultiScreen_iPhone
             //exit keyboard
             editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
-            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
-            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
 
             editTextWrite.AccessibilityHint = "Write Here";
             editTextWrite.BackgroundColor = UIColor.FromRGB(252, 251, 244);
@@ -166,15 +171,29 @@ namespace Hello_MultiScreen_iPhone
             sta.TextColor = UIColor.Black;
             sta.BackgroundColor = UIColor.White;
 
+            buttonAdd = new UIButton();
+            buttonAdd.BackgroundColor = UIColor.FromRGB(255, 69, 103);
+            buttonAdd.SetTitleColor(UIColor.White, UIControlState.Normal);
+            buttonAdd.SetTitle("Add", UIControlState.Normal);
+
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
+            buttonAdd.AddTarget(ButtonAddFiles, UIControlEvent.TouchUpInside);
+
+            listView = new UITableView();
+            listView.Source = new TableSource(list);
+            listView.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            listView.TintColor = UIColor.Cyan;
+            listView.UserInteractionEnabled = true;
+            scrollView.Add(listView);
 
             //Add to view
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(ButtonyourstoryscreenUpload);
             scrollView.Add(sta);
+            scrollView.Add(buttonAdd);
             scrollView.Add(ButtonDelete1Line);
             scrollView.Add(ButtonDelete);
             scrollView.Add(editTextDate);
@@ -332,6 +351,12 @@ namespace Hello_MultiScreen_iPhone
             }
         }
 
+        private void ButtonAddFiles(object sender, EventArgs eventArgs)
+        {
+            EmailFileRead.WriteText(TableSource.SelectedRow, EmailFileRead.fileName3);
+            textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
+        }
+
         //Upload to todo list (submit)
         private void ButtonyourstoryscreenUploadClick(object sender, EventArgs eventArgs)
         {
@@ -453,6 +478,8 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340);
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
+            listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 150);
+            buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
 
             int expandipad = 60;
             int expandipad2 = 100;
@@ -469,7 +496,8 @@ namespace Hello_MultiScreen_iPhone
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
-
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
 
@@ -487,6 +515,8 @@ namespace Hello_MultiScreen_iPhone
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + expandipad2, 100, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
 
             }
 
@@ -505,6 +535,8 @@ namespace Hello_MultiScreen_iPhone
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
 
             }
             borderFunction();
@@ -522,3 +554,46 @@ namespace Hello_MultiScreen_iPhone
         }
     }
 }
+
+
+    public class TableSource : UITableViewSource
+    {
+
+    string[] list;
+        public TableSource() { }
+        public TableSource(string[] list)
+        {
+            this.list = list;
+        }
+
+
+
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        {
+            var cell = new UITableViewCell(UITableViewCellStyle.Default, "");
+            cell.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            string item = list[indexPath.Row];
+            cell.TintColor = UIColor.SystemGray;
+            cell.TextLabel.TextColor = UIColor.White;
+            cell.TextLabel.Text = item;
+            return cell;
+        }
+
+        public override nint RowsInSection(UITableView tableview, nint section)
+        {
+            return list.Length;
+        }
+
+
+        public static string SelectedRow = "";
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            string item = list[indexPath.Row];
+            //new UIAlertView("Row Selected", item, null, "OK").Show();
+            SelectedRow = item;
+        }
+
+
+}
+

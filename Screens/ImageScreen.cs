@@ -118,10 +118,10 @@ namespace Hello_MultiScreen_iPhone
             //BackgroundImage4.SetTitle("Toggle Title", UIControlState.Normal);
 
             UIImage img4 = new UIImage();
-            img4 = UIImage.FromBundle("pic8.jpg");
+            img4 = UIImage.FromBundle("bg.jpg");
             BackgroundImage2.SetBackgroundImage(img4, UIControlState.Normal);
             BackgroundImage2.SetTitle("Home", UIControlState.Normal);
-            BackgroundImage2.SetTitleColor(UIColor.White, UIControlState.Normal);
+            BackgroundImage2.SetTitleColor(UIColor.Black, UIControlState.Normal);
 
             //ScrollView
             scrollView = new UIScrollView

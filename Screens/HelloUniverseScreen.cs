@@ -498,7 +498,9 @@ namespace Hello_MultiScreen_iPhone
             }
             else
             {
-                String text = "I exercised today - cardio/strength!";
+                String text = "";
+                if (!HKHealthStore.IsHealthDataAvailable)
+                    text = "I exercised today - cardio/strength!";
                 if (HKHealthStore.IsHealthDataAvailable)
                 {
                     HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
@@ -508,19 +510,20 @@ namespace Hello_MultiScreen_iPhone
                     if(consumedEnergy!=0)
                     { 
                     text = text + "\n";
-                    text = text + "Consumed Energy J(Apple Fitness): " + consumedEnergy;
+                    text = text + "Consumed Energy (Apple Fitness): " + consumedEnergy + " Joules";
 
                     }
                     GetTimeExercised();
                     if(healthQuantifier1!="")
-                        text = text + "\nEnergy Time min(Apple Fitness): " + healthQuantifier1;
+                        text = text + "\nEnergy Time (Apple Fitness): " + healthQuantifier1 + " Minutes"; 
                     GetCCBurned();
                     if(healthQuantifier2!="")
-                        text = text + "\nCalories Burned kcal(Apple Fitness): " + healthQuantifier2;
+                        text = text + "\nCalories Burned (Apple Fitness): " + healthQuantifier2 + " Kcal"; 
                     GetCCBurned2();
                     if (healthQuantifier3 != "")
-                        text = text + "\nDistance walked mile(Apple Fitness): " + healthQuantifier3;
-
+                        text = text + "\nDistance walked mile(Apple Fitness): " + healthQuantifier3 + " Miles"; 
+                    if (text == "")
+                        text = "I exercised today - cardio/strength!";
                 }
                 EmailFileRead.WriteText(text);
                 String totalText = EmailFileRead.ReadText();
@@ -564,9 +567,7 @@ namespace Hello_MultiScreen_iPhone
 
         void GetTimeExercised()
         {
-            var timeExercise = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.AppleExerciseTime);
-
-            FetchMostRecentData(timeExercise, (mostRecentQuantity, error) => {
+            FetchMostRecentData4((mostRecentQuantity, error) => {
                 if (error != null)
                 {
                     Console.WriteLine("An error occured fetching the user's information. " +
@@ -574,18 +575,11 @@ namespace Hello_MultiScreen_iPhone
                     return;
                 }
 
-                double timeexercising = 0.0;
-
-                if (mostRecentQuantity != null)
-                {
-                    var unit = HKUnit.Minute;
-                    timeexercising = mostRecentQuantity.GetDoubleValue(unit);
-                }
+                var timeexercising = mostRecentQuantity;
+                
                  if (timeexercising != 0) { 
-
-                //NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                    healthQuantifier1 = timeexercising + "";// numberFormatter.StringFromNumber(new NSNumber(timeexercising));
-                    }
+                    healthQuantifier1 = String.Format("{0:0.##}", timeexercising);
+                }
                  
             });
         }
@@ -602,7 +596,7 @@ namespace Hello_MultiScreen_iPhone
                 }                
                 if (mostRecentQuantity != 0)
                 {
-                    healthQuantifier2 = "" + mostRecentQuantity;
+                    healthQuantifier2 = String.Format("{0:0.##}", mostRecentQuantity);
                 }
             });
         }
@@ -621,13 +615,12 @@ namespace Hello_MultiScreen_iPhone
                 }                
                 if (mostRecentQuantity != 0)
                 {
-                    //NSNumberFormatter numberFormatter = new NSNumberFormatter();
-                    healthQuantifier3 = mostRecentQuantity + "";// numberFormatter.StringFromNumber(new NSNumber(q));
+                    healthQuantifier3 = String.Format("{0:0.##}", mostRecentQuantity);
                 }
             });
         }
         
-
+        //OLD WAY
         void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
         {
             var timeSortDescriptor = new NSSortDescriptor(HKSample.SortIdentifierEndDate, false);
@@ -733,6 +726,36 @@ namespace Hello_MultiScreen_iPhone
                                     var total = results.SumQuantity();
 
                                     if (total == null)
+                                        total = HKQuantity.FromQuantity(HKUnit.Joule, 0.0);
+
+                                    if (completionHandler != null)
+                                        completionHandler(total.GetDoubleValue(HKUnit.Joule), error);
+                                }
+                            });
+
+            HealthStore.ExecuteQuery(query);
+        }
+
+        void FetchMostRecentData4(Action<double, NSError> completionHandler)
+        {
+            var calendar = NSCalendar.CurrentCalendar;
+            var startDate = DateTime.Now.Date;
+            var endDate = startDate.AddDays(1);
+
+            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.AppleExerciseTime);
+            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
+
+            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
+                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
+
+                                if (error != null && completionHandler != null)
+                                    completionHandler(0.0f, error);
+
+                                if (results != null)
+                                {
+                                    var total = results.SumQuantity();
+
+                                    if (total == null)
                                         total = HKQuantity.FromQuantity(HKUnit.Minute, 0.0);
 
                                     if (completionHandler != null)
@@ -742,6 +765,7 @@ namespace Hello_MultiScreen_iPhone
 
             HealthStore.ExecuteQuery(query);
         }
+
 
         //Delete 1 line
         private void ButtonDelete1LineClick(object sender, EventArgs eventArgs)

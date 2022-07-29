@@ -30,9 +30,9 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow device to access Photo</string>
 	<key>CFBundleShortVersionString</key>
-	<string>41</string>
+	<string>43</string>
 	<key>CFBundleVersion</key>
-	<string>41</string>
+	<string>43</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict/>
 	<key>UIRequiresFullScreen</key>

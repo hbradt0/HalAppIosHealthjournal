@@ -10,9 +10,7 @@
 	<false/>
 	<key>com.apple.developer.team-identifier</key>
 	<string>FG4YNF644N</string>
-	<key>keychain-access-groups</key>
-	<array>
-		<string>FG4YNF644N.com.xamarin.hellodietmultiscreen</string>
-	</array>
+	<key>com.apple.developer.healthkit</key>
+	<true/>
 </dict>
 </plist>

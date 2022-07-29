@@ -8,9 +8,12 @@
 #include <objc/message.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <HealthKit/HealthKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+@class UITableViewSource;
+@class TableSource;
 @class UIApplicationDelegate;
 @class AppDelegate;
 @class HelloWorldScreen;
@@ -156,6 +159,26 @@ struct trampoline_struct_ddi {
 @class FIRApp;
 @class FIRConfiguration;
 @class FIROptions;
+
+@interface UITableViewSource : NSObject<UIScrollViewDelegate, UIScrollViewDelegate> {
+}
+	-(id) init;
+@end
+
+@interface TableSource : NSObject<UIScrollViewDelegate, UIScrollViewDelegate, UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
 
 @interface UIApplicationDelegate : NSObject<UIApplicationDelegate> {
 }

@@ -5,40 +5,40 @@
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Debug/Tesseract.Binding.iOS.dll
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Debug/Tesseract.dll
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Debug/Tesseract.iOS.dll
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/actool/_PartialAppManifest.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/actool/_BundleResourceWithLogicalName.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/actool/_ProcessedImageAssetsPath.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/ibtool/_BundleResourceWithLogicalName.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/coremlc/_PartialAppManifest.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/coremlc/_BundleResourceWithLogicalName.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/_ProcessedBundleResourcesPath.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/_ProcessedContentPath.items
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/icon-72.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/icon-50.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/icon-100.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/iTunesArtwork@2x.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default-568h@2x.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default-Landscape@2x~ipad.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default-Landscape~ipad.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default-Portrait@2x~ipad.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default-Portrait~ipad.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/Default@2x.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/icon-144.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/ic_launcher.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/ic_launcher_foreground.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/ic_launcher_round.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/MainTitlePic.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/TestPic.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/camera.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/gallery.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/mailicon.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/MainTitlePic1.png
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.5/optimized/
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.pdb
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/actool/_PartialAppManifest.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/actool/_BundleResourceWithLogicalName.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/actool/_ProcessedImageAssetsPath.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/ibtool/_BundleResourceWithLogicalName.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/ibtool/_ProcessedInterfaceDefinitionsPath.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/coremlc/_PartialAppManifest.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/coremlc/_BundleResourceWithLogicalName.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/coremlc/_ProcessedCoreMLModelsPath.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/_ProcessedBundleResourcesPath.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/_ProcessedContentPath.items
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/icon-72.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/icon-50.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/icon-100.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/iTunesArtwork@2x.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default-568h@2x.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default-Landscape@2x~ipad.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default-Landscape~ipad.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default-Portrait@2x~ipad.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default-Portrait~ipad.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/Default@2x.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/icon-144.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/ic_launcher.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/ic_launcher_foreground.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/ic_launcher_round.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/MainTitlePic.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/TestPic.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/camera.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/gallery.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/mailicon.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/MainTitlePic1.png
-/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Debug/device-builds/iphone 13-15.4/optimized/

@@ -9,7 +9,7 @@
 	--dev=/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app \
 	--executable=Hello_MultiScreen_iPhone \
 	--linksdkonly \
-	--sdk=15.4 \
+	--sdk=15.5 \
 	--aot-options=-O=-float32 \
 	--abi=arm64 \
 	--symbollist=/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-symbols.list \
