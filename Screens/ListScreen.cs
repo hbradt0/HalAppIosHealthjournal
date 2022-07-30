@@ -63,9 +63,9 @@ namespace Hello_MultiScreen_iPhone
         public nfloat ResponsiveSizeX = 300;
         public nfloat ResponsiveWidthRight= 150;
                 public static string[] list = {
-            "Fruit",
+            "Fruit 🍉",
             "Vegetables",
-            "Ice cream"
+            "Ice cream",
             };
 
 
@@ -98,6 +98,8 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete = new UIButton(UIButtonType.System);
             ButtonDelete1Line = new UIButton(UIButtonType.System);
             scrollView = new UIScrollView();
+            var v = NSBundle.MainBundle.PathForResource("Halbook2", "txt");
+            list = (EmailFileRead.ReadAllLines(v));
             editTextDate = new UITextField();
             ShareTodo = new UIButton(UIButtonType.System);
 
@@ -172,7 +174,7 @@ namespace Hello_MultiScreen_iPhone
             sta.BackgroundColor = UIColor.White;
 
             buttonAdd = new UIButton();
-            buttonAdd.BackgroundColor = UIColor.FromRGB(255, 69, 103);
+            buttonAdd.BackgroundColor = UIColor.SystemBlue;
             buttonAdd.SetTitleColor(UIColor.White, UIControlState.Normal);
             buttonAdd.SetTitle("Add", UIControlState.Normal);
 
@@ -353,8 +355,35 @@ namespace Hello_MultiScreen_iPhone
 
         private void ButtonAddFiles(object sender, EventArgs eventArgs)
         {
-            EmailFileRead.WriteText(TableSource.SelectedRow, EmailFileRead.fileName3);
-            textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
+            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName3))
+            {
+                var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
+                Confirm.Show();
+                Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                {
+                    if (es.ButtonIndex == 0)
+                    {
+                        //Do nothing
+                    }
+                    else
+                    {
+                        //Do nothing
+                    }
+                };
+
+            }
+            else
+            {
+                EmailFileRead.WriteText(TableSource.SelectedRow, EmailFileRead.fileName3, true);
+                textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
+                if (this.textViewWrite.Text.Length > 0)
+                {
+                    NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                    this.textViewWrite.ScrollRangeToVisible(range);
+                }
+
+            }
+
         }
 
         //Upload to todo list (submit)
@@ -478,7 +507,7 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340);
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
-            listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 150);
+            listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
             buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
 
             int expandipad = 60;
@@ -496,7 +525,7 @@ namespace Hello_MultiScreen_iPhone
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
-                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 150);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
                 buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
@@ -515,7 +544,7 @@ namespace Hello_MultiScreen_iPhone
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
-                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + expandipad2, 100, 150);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + expandipad2, 250, 150);
                 buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
 
             }
@@ -535,7 +564,7 @@ namespace Hello_MultiScreen_iPhone
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
-                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 150);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
                 buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
 
             }
@@ -571,10 +600,10 @@ namespace Hello_MultiScreen_iPhone
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = new UITableViewCell(UITableViewCellStyle.Default, "");
-            cell.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            cell.BackgroundColor = UIColor.White;//UIColor.FromRGB(100, 149, 237);
             string item = list[indexPath.Row];
             cell.TintColor = UIColor.SystemGray;
-            cell.TextLabel.TextColor = UIColor.White;
+            cell.TextLabel.TextColor = UIColor.Black;
             cell.TextLabel.Text = item;
             return cell;
         }

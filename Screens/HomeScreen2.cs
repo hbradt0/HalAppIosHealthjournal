@@ -9,14 +9,16 @@ using CoreAnimation;
 
 namespace Hello_MultiScreen_iPhone
 {
-	public partial class HomeScreen2 : UIViewController
-	{
+    public partial class HomeScreen2 : UIViewController
+    {
         public UITextView textView;
         public UITextView booktextView;
         public UITextView textView2;
         public UITextField editTextWrite;
         public UITextView sta;
         public UITextView textViewWrite;
+        public UITableView listView;
+        public UIButton buttonAdd;
 
         public UIButton Button1;
         public UIButton Button2;
@@ -47,7 +49,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonbackTodo;
         public UIButton ShareTodo;
         public UIButton scratchpad;
-     	public UITextField editTextDate;
+        public UITextField editTextDate;
         public UIButton QuickHealthyButton;
 
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
@@ -63,19 +65,25 @@ namespace Hello_MultiScreen_iPhone
         private bool keyboardOpen = false;
         public nfloat ResponsiveWidthLeft = 300;
         public nfloat ResponsiveSizeX = 300;
-        public nfloat ResponsiveWidthRight= 150;
+        public nfloat ResponsiveWidthRight = 150;
+        public static string[] list = {
+            "Fruit 🍉",
+            "Vegetables",
+            "Ice cream",
+            };
+
 
         //loads the HomeScreen.xib file and connects it to this object
-        public HomeScreen2 () : base ("HomeScreen2", null)
-		{
-		}
+        public HomeScreen2() : base("HomeScreen2", null)
+        {
+        }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
             this.Title = "";
-			ViewDidLoad1();
-		}
+            ViewDidLoad1();
+        }
 
         //Todo list 
 
@@ -98,7 +106,8 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo = new UIButton(UIButtonType.System);
             scratchpad = new UIButton(UIButtonType.System);
             ButtonImageClick = new UIButton(UIButtonType.System);
-
+            var v = NSBundle.MainBundle.PathForResource("Halbook2", "txt");
+            list = (EmailFileRead.ReadAllLines(v));
             UIScrollView scrollView2 = new UIScrollView();
 
             QuickHealthyButton = new UIButton(UIButtonType.System);
@@ -145,7 +154,7 @@ namespace Hello_MultiScreen_iPhone
             var components = new NSDateComponents();
             components.Year = -60;
             NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
-            
+
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
             textViewWrite.UserInteractionEnabled = true;
             textViewWrite.ScrollEnabled = true;
@@ -155,7 +164,7 @@ namespace Hello_MultiScreen_iPhone
                 this.textViewWrite.ScrollRangeToVisible(range);
             }
 
-            scratchpad.BackgroundColor = HomeScreen.buttoncolor;//UIColor.FromRGB(100, 149, 237);
+            scratchpad.BackgroundColor = UIColor.SystemBlue;//UIColor.FromRGB(100, 149, 237);
             scratchpad.SetTitleColor(UIColor.White, UIControlState.Normal);
             scratchpad.SetTitle("Edit Journal", UIControlState.Normal);
 
@@ -185,7 +194,20 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
             scratchpad.AddTarget(ClickScratchPad, UIControlEvent.TouchUpInside);
             QuickHealthyButton.AddTarget(ButtonQuickClick, UIControlEvent.TouchUpInside);
+            buttonAdd = new UIButton();
+            buttonAdd.BackgroundColor = UIColor.SystemBlue;
+            buttonAdd.SetTitleColor(UIColor.White, UIControlState.Normal);
+            buttonAdd.SetTitle("Add", UIControlState.Normal);
 
+            buttonAdd.AddTarget(ButtonAddFiles, UIControlEvent.TouchUpInside);
+
+            listView = new UITableView();
+            listView.Source = new TableSource(list);
+            listView.BackgroundColor = UIColor.FromRGB(100, 149, 237);
+            listView.TintColor = UIColor.Cyan;
+            listView.UserInteractionEnabled = true;
+            scrollView.Add(listView);
+            scrollView.Add(buttonAdd);
 
             //Add to view
             scrollView.Add(QuickHealthyButton);
@@ -413,6 +435,39 @@ namespace Hello_MultiScreen_iPhone
             }
         }
 
+        private void ButtonAddFiles(object sender, EventArgs eventArgs)
+        {
+            if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName2))
+            {
+                var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
+                Confirm.Show();
+                Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                {
+                    if (es.ButtonIndex == 0)
+                    {
+                        //Do nothing
+                    }
+                    else
+                    {
+                        //Do nothing
+                    }
+                };
+
+            }
+            else
+            {
+                EmailFileRead.WriteText(TableSource.SelectedRow, EmailFileRead.fileName2, true);
+                textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName2);
+                if (this.textViewWrite.Text.Length > 0)
+                {
+                    NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                    this.textViewWrite.ScrollRangeToVisible(range);
+                }
+
+            }
+
+        }
+
         //Upload to todo list (submit)
         private void ButtonyourstoryscreenUploadClick(object sender, EventArgs eventArgs)
         {
@@ -438,7 +493,7 @@ namespace Hello_MultiScreen_iPhone
                 String text = editTextWrite.Text;
                 if (editTextWrite.Text == String.Empty)
                     text = "";
-                EmailFileRead.WriteText(text,EmailFileRead.fileName2,true);
+                EmailFileRead.WriteText(text, EmailFileRead.fileName2, true);
                 String totalText = EmailFileRead.ReadText(EmailFileRead.fileName2);
                 //textViewWrite.Frame = new CGRect(25, 25, 300, 150);
                 textViewWrite.Text = totalText;
@@ -521,7 +576,7 @@ namespace Hello_MultiScreen_iPhone
         //Delete 1 line
         private void ButtonDelete1LineClick(object sender, EventArgs eventArgs)
         {
- 
+
             if (this.textViewWrite.Text.Length > 0)
             {
                 NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
@@ -534,8 +589,8 @@ namespace Hello_MultiScreen_iPhone
 
         private void ClickScratchPad(object sender, EventArgs eventArgs)
         {
-                if (this.editFoodJournalScreen == null) { this.editFoodJournalScreen = new EditFoodJournalScreen(); }
-                this.NavigationController.PushViewController(this.editFoodJournalScreen, true);
+            if (this.editFoodJournalScreen == null) { this.editFoodJournalScreen = new EditFoodJournalScreen(); }
+            this.NavigationController.PushViewController(this.editFoodJournalScreen, true);
         }
 
 
@@ -543,9 +598,9 @@ namespace Hello_MultiScreen_iPhone
         {
             base.ViewDidAppear(animated);
             scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
-                scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
-                scrollView.BackgroundColor = HomeScreen.color;
-                scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
+            scrollView.ContentSize = new CGSize(View.Frame.Width + 200, View.Frame.Height + 300);
+            scrollView.BackgroundColor = HomeScreen.color;
+            scrollView.AutoresizingMask = UIViewAutoresizing.FlexibleHeight;
 
             scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 7.5); //small
             if (View.Frame.Height >= 670)
@@ -570,7 +625,9 @@ namespace Hello_MultiScreen_iPhone
             textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340);
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
-            scratchpad.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
+            listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
+            buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, QuickHealthyButton.Frame.Bottom + 30, 50, 50);
+            scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom+30, 100, 30);
 
             int expandipad = 60;
             int expandipad2 = 100;
@@ -587,7 +644,9 @@ namespace Hello_MultiScreen_iPhone
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
-                scratchpad.Frame = new CGRect(ResponsiveWidthLeft, 550, 100, 30);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, QuickHealthyButton.Frame.Bottom + 30, 50, 30);
+                scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom + 30, 100, 30);
 
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
@@ -595,7 +654,7 @@ namespace Hello_MultiScreen_iPhone
             }
             if (View.Frame.Height >= 850)
             {
-                 expandipad = 20;
+                expandipad = 20;
                 expandipad2 = 40;
                 editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, 500 + expandipad2, 30, 30);
                 Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25 + expandipad2, 70, 30);
@@ -606,7 +665,9 @@ namespace Hello_MultiScreen_iPhone
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
-                scratchpad.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 30);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, QuickHealthyButton.Frame.Bottom + 30, 50, 50);
+                scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom + 30, 100, 30);
 
             }
 
@@ -614,9 +675,9 @@ namespace Hello_MultiScreen_iPhone
             {
                 expandipad = 150;
                 ResponsiveWidthRight = editTextWrite.Frame.Right - 100;
-                editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380 + expandipad, ResponsiveSizeX, 50 + expandipad/2);
+                editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380 + expandipad, ResponsiveSizeX, 50 + expandipad / 2);
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
-                ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthRight, editTextWrite.Frame.Bottom+30, 100, 30);
+                ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthRight, editTextWrite.Frame.Bottom + 30, 100, 30);
 
                 editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 10, 70, 30);
@@ -625,7 +686,9 @@ namespace Hello_MultiScreen_iPhone
 
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
-                scratchpad.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 100, 30);
+                scratchpad.Frame = new CGRect(ResponsiveWidthRight, QuickHealthyButton.Frame.Bottom + 30, 100, 30);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, scratchpad.Frame.Bottom+30, 50, 50);
 
             }
             borderFunction();
@@ -641,5 +704,47 @@ namespace Hello_MultiScreen_iPhone
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+    }
+
+
+    public class TableSource : UITableViewSource
+    {
+
+        string[] list;
+        public TableSource() { }
+        public TableSource(string[] list)
+        {
+            this.list = list;
+        }
+
+
+
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        {
+            var cell = new UITableViewCell(UITableViewCellStyle.Default, "");
+            cell.BackgroundColor = UIColor.White;//UIColor.FromRGB(100, 149, 237);
+            string item = list[indexPath.Row];
+            cell.TintColor = UIColor.SystemGray;
+            cell.TextLabel.TextColor = UIColor.Black;
+            cell.TextLabel.Text = item;
+            return cell;
+        }
+
+        public override nint RowsInSection(UITableView tableview, nint section)
+        {
+            return list.Length;
+        }
+
+
+        public static string SelectedRow = "";
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            string item = list[indexPath.Row];
+            //new UIAlertView("Row Selected", item, null, "OK").Show();
+            SelectedRow = item;
+        }
+
+
     }
 }

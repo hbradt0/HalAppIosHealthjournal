@@ -17,6 +17,7 @@
 @class UIApplicationDelegate;
 @class AppDelegate;
 @class HelloWorldScreen;
+@class Hello_MultiScreen_iPhone_TableSource;
 @class EmailReader_ICloudFileRead;
 @class EditJournalScreen;
 @class HomeScreen;
@@ -209,6 +210,21 @@ struct trampoline_struct_ddi {
 	-(void) viewDidLoad;
 	-(void) didReceiveMemoryWarning;
 	-(void) viewDidAppear:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface Hello_MultiScreen_iPhone_TableSource : NSObject<UIScrollViewDelegate, UIScrollViewDelegate, UIScrollViewDelegate> {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(UITableViewCell *) tableView:(UITableView *)p0 cellForRowAtIndexPath:(NSIndexPath *)p1;
+	-(NSInteger) tableView:(UITableView *)p0 numberOfRowsInSection:(NSInteger)p1;
+	-(void) tableView:(UITableView *)p0 didSelectRowAtIndexPath:(NSIndexPath *)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;
 @end

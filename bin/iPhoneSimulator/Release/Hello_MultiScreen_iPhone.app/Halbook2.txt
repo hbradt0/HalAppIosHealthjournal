@@ -6,7 +6,6 @@ Strawberries-fruit 🍓
 Chicken-meat 🍖 
 fruit-fruit
 berries-fruit 
-berries-fruit
 green bean-vegetable
 fried-oil, maybe try to use coconut oil instead
 nuts-protein/nut

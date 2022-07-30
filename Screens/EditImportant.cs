@@ -344,231 +344,26 @@ namespace Hello_MultiScreen_iPhone
             UIView.CommitAnimations();
         }
 
-        void FetchMostRecentData1(Action<double, NSError> completionHandler)
-        {
-            var calendar = NSCalendar.CurrentCalendar;
-            var startDate = DateTime.Now.Date;
-            var endDate = startDate.AddDays(1);
-
-            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.Height);
-            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
-
-            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
-                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
-
-                                if (error != null && completionHandler != null)
-                                    completionHandler(0.0f, error);
-
-                                if (results != null)
-                                {
-                                    var total = results.SumQuantity();
-
-                                    if (total == null)
-                                        total = HKQuantity.FromQuantity(HKUnit.Inch, 0.0);
-
-                                    if (completionHandler != null)
-                                        completionHandler(total.GetDoubleValue(HKUnit.Inch), error);
-                                }
-                            });
-
-            HealthStore.ExecuteQuery(query);
-        }
-
-        void FetchMostRecentData2(Action<double, NSError> completionHandler)
-        {
-            var calendar = NSCalendar.CurrentCalendar;
-            var startDate = DateTime.Now.Date;
-            var endDate = startDate.AddDays(1);
-
-            var sampleType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.BodyMass);
-            var predicate = HKQuery.GetPredicateForSamples((NSDate)startDate, (NSDate)endDate, HKQueryOptions.StrictStartDate);
-
-            var query = new HKStatisticsQuery(sampleType, predicate, HKStatisticsOptions.CumulativeSum,
-                            (HKStatisticsQuery resultQuery, HKStatistics results, NSError error) => {
-
-                                if (error != null && completionHandler != null)
-                                    completionHandler(0.0f, error);
-
-                                if (results != null)
-                                {
-                                    var total = results.SumQuantity();
-
-                                    if (total == null)
-                                        total = HKQuantity.FromQuantity(HKUnit.Pound, 0.0);
-
-                                    if (completionHandler != null)
-                                        completionHandler(total.GetDoubleValue(HKUnit.Pound), error);
-                                }
-                            });
-
-            HealthStore.ExecuteQuery(query);
-        }
-
-        void UpdateUsersHeight()
-        {
-            FetchMostRecentData2((mostRecentQuantity, error) => {
-                if (error != null)
-                {
-                    Console.WriteLine("An error occured fetching the user's height information. " +
-                    "In your app, try to handle this gracefully. The error was: {0}.", error.LocalizedDescription);
-                    return;
-                }
-                if (mostRecentQuantity != 0)
-                {
-                    // EmailFileRead.WriteText("Height(in): " + usersHeight);
-                    heightfield.Text = String.Format("{0:0.##}", mostRecentQuantity);
-                }
-
-            });
-        }
-
-
-        void FetchMostRecentData(HKQuantityType quantityType, Action<HKQuantity, NSError> completion)
-        {
-            var timeSortDescriptor = new NSSortDescriptor(HKSample.SortIdentifierEndDate, false);
-            var query = new HKSampleQuery(quantityType, null, 1, new NSSortDescriptor[] { timeSortDescriptor },
-                            (HKSampleQuery resultQuery, HKSample[] results, NSError error) => {
-                                if (completion != null && error != null)
-                                {
-                                    completion(null, error);
-                                    return;
-                                }
-
-                                HKQuantity quantity = null;
-                                if (results.Length != 0)
-                                {
-                                    var quantitySample = (HKQuantitySample)results[results.Length - 1];
-                                    quantity = quantitySample.Quantity;
-                                }
-
-                                if (completion != null)
-                                    completion(quantity, error);
-                            });
-
-            HealthStore.ExecuteQuery(query);
-        }
-
-        void SaveHeightIntoHealthStore(double value)
-        {
-            var heightQuantity = HKQuantity.FromQuantity(HKUnit.Inch, value);
-            var heightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.Height);
-            var heightSample = HKQuantitySample.FromType(heightType, heightQuantity, NSDate.Now, NSDate.Now, new NSDictionary());
-
-            HealthStore.SaveObject(heightSample, (success, error) => {
-                if (!success)
-                {
-                    Console.WriteLine("An error occured saving the height sample {0}. " +
-                    "In your app, try to handle this gracefully. The error was: {1}.", heightSample, error);
-                    return;
-                }
-
-                UpdateUsersHeight();
-            });
-        }
-
-        void SaveWeightIntoHealthStore(double value)
-        {
-            var weightQuantity = HKQuantity.FromQuantity(HKUnit.Pound, value);
-            var weightType = HKQuantityType.GetQuantityType(HKQuantityTypeIdentifierKey.BodyMass);
-            var weightSample = HKQuantitySample.FromType(weightType, weightQuantity, NSDate.Now, NSDate.Now, new NSDictionary());
-
-            HealthStore.SaveObject(weightSample, (success, error) => {
-                if (!success)
-                {
-                    Console.WriteLine("An error occured saving the weight sample {0}. " +
-                        "In your app, try to handle this gracefully. The error was: {1}.", weightSample, error.LocalizedDescription);
-                    return;
-                }
-
-                UpdateUsersWeight();
-            });
-        }
-
-        NSSet DataTypesToWrite
-        {
-            get
-            {
-                return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass)
-                });
-            }
-        }
-
-        NSSet DataTypesToRead
-        {
-            get
-            {
-                return NSSet.MakeNSObjectSet<HKObjectType>(new HKObjectType[] {
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.Height),
-                    HKQuantityType.GetQuantityType (HKQuantityTypeIdentifierKey.BodyMass)
-                });
-            }
-        }
-
-        private void Error(bool s, NSError e)
-        {
-            if (!s || e != null)
-            {
-                return;
-            }
-            else
-            {
-                UpdateUsersHeight();
-                UpdateUsersWeight();
-            }
-        }
-
-        public void HealthStoreInformation()
-        {
-            if (HKHealthStore.IsHealthDataAvailable)
-            {
-                HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
-
-            }
-        }
-
-        void UpdateUsersWeight()
-        {
-            FetchMostRecentData1((mostRecentQuantity, error) => {
-                if (error != null)
-                {
-                    Console.WriteLine("An error occured fetching the user's age information. " +
-                    "In your app, try to handle this gracefully. The error was: {0}", error.LocalizedDescription);
-                    return;
-                }
-                if (mostRecentQuantity != 0)
-                {
-                    // EmailFileRead.WriteText("Height(in): " + usersHeight);
-                    weightfield.Text = String.Format("{0:0.##}", mostRecentQuantity);
-                }
-
-            }
-            );
-        }
-
 
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
         {
             if (heightfield.Text != "" || weightfield.Text != "")
             {
-                if (HKHealthStore.IsHealthDataAvailable)
+                heightfield.Text.Replace(" ", "");
+                weightfield.Text.Replace(" ", "");
+                Double height = 0;
+                Double weight = 0;
+                if (Double.TryParse(heightfield.Text, out height))
                 {
-                    HealthStore.RequestAuthorizationToShare(DataTypesToWrite, DataTypesToRead, Error);
-                    heightfield.Text.Replace(" ", "");
-                    weightfield.Text.Replace(" ", "");
-                    Double height = 0;
-                    Double weight = 0;
-                    if (Double.TryParse(heightfield.Text, out height))
-                    {
-                        SaveHeightIntoHealthStore(height);
+                    EmailFileRead.WriteText("Height was changed " + height);
+                    heightfield.Text = "";
 
-                    }
-                    if (Double.TryParse(weightfield.Text, out weight))
-                    {
-                        SaveWeightIntoHealthStore(weight);
-                    }
+                }
+                if (Double.TryParse(weightfield.Text, out weight))
+                {
+                    EmailFileRead.WriteText("Weight was changed " + weight + " lbs");
+                    weightfield.Text = "";
                 }
             }
             if (booktextView.Text != "")
@@ -663,7 +458,6 @@ namespace Hello_MultiScreen_iPhone
             weightfield.Frame = new CGRect(ResponsiveWidthRight, heightfield.Frame.Bottom + 20, 100, 30);
             weightLabel.Frame = new CGRect(ResponsiveWidthLeft, heightlabel.Frame.Bottom + 20, 100, 30);
             SaveStatsbutton.Frame = new CGRect(ResponsiveWidthRight, weightLabel.Frame.Bottom + 20, 100, 30);
-            HealthStoreInformation();
 
             this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;
