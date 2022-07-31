@@ -602,7 +602,7 @@ namespace Hello_MultiScreen_iPhone
             var cell = new UITableViewCell(UITableViewCellStyle.Default, "");
             cell.BackgroundColor = UIColor.White;//UIColor.FromRGB(100, 149, 237);
             string item = list[indexPath.Row];
-            cell.TintColor = UIColor.SystemGray;
+            cell.TintColor = UIColor.LightGray;
             cell.TextLabel.TextColor = UIColor.Black;
             cell.TextLabel.Text = item;
             return cell;

@@ -200,6 +200,7 @@ namespace Hello_MultiScreen_iPhone
             buttonAdd.SetTitle("Add", UIControlState.Normal);
 
             buttonAdd.AddTarget(ButtonAddFiles, UIControlEvent.TouchUpInside);
+            buttonAdd.Layer.CornerRadius = 10;
 
             listView = new UITableView();
             listView.Source = new TableSource(list);
@@ -646,13 +647,13 @@ namespace Hello_MultiScreen_iPhone
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
                 buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, QuickHealthyButton.Frame.Bottom + 30, 50, 30);
-                scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom + 30, 100, 30);
+                scratchpad.Frame = new CGRect(ResponsiveWidthRight, QuickHealthyButton.Frame.Bottom + 30, 100, 30);
 
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
 
             }
-            if (View.Frame.Height >= 850)
+            if (View.Frame.Height >= 850 && UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom != UIUserInterfaceIdiom.Pad)
             {
                 expandipad = 20;
                 expandipad2 = 40;
@@ -670,7 +671,24 @@ namespace Hello_MultiScreen_iPhone
                 scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom + 30, 100, 30);
 
             }
+            if (View.Frame.Height >= 850 && UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            {
+                expandipad = 20;
+                expandipad2 = 40;
+                editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, 500 + expandipad2, 30, 30);
+                Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25 + expandipad2, 70, 30);
+                ButtonyourstoryscreenUpload.Frame = new CGRect(ResponsiveWidthRight, 450 + expandipad2, 100, 30);
+                QuickHealthyButton.Frame = new CGRect(ResponsiveWidthRight, 500 + expandipad2, 100, 30);
+                ButtonDelete1Line.Frame = new CGRect(ResponsiveWidthLeft, 450 + expandipad2, 150, 30);
+                editTextWrite.Frame = new CGRect(ResponsiveWidthLeft, 380 + expandipad, ResponsiveSizeX, 50 + expandipad);
+                textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
+                sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
+                ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
+                listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, QuickHealthyButton.Frame.Bottom + 30, 50, 50);
+                scratchpad.Frame = new CGRect(ResponsiveWidthRight, QuickHealthyButton.Frame.Bottom + 30, 100, 30);
 
+            }
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad && View.Frame.Height >= 1194)
             {
                 expandipad = 150;
@@ -724,7 +742,7 @@ namespace Hello_MultiScreen_iPhone
             var cell = new UITableViewCell(UITableViewCellStyle.Default, "");
             cell.BackgroundColor = UIColor.White;//UIColor.FromRGB(100, 149, 237);
             string item = list[indexPath.Row];
-            cell.TintColor = UIColor.SystemGray;
+            cell.TintColor = UIColor.LightGray;
             cell.TextLabel.TextColor = UIColor.Black;
             cell.TextLabel.Text = item;
             return cell;
