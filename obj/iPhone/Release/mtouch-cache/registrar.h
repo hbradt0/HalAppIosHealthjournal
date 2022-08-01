@@ -27,6 +27,7 @@
 @class ListScreen;
 @class EditFoodJournalScreen;
 @class EditImportant;
+@class EditVideo;
 @class Foundation_NSDispatcher;
 @class __MonoMac_NSSynchronizationContextDispatcher;
 @class Foundation_NSAsyncDispatcher;
@@ -44,6 +45,7 @@
 @class UIKit_UIScrollView__UIScrollViewDelegate;
 @class UIKit_UITextView__UITextViewDelegate;
 @class UIKit_UIView_UIViewAppearance;
+@class UIKit_UIWebView__UIWebViewDelegate;
 @class GADAdLoader;
 @class GADRequest;
 @class GADAdapterStatus;
@@ -358,6 +360,21 @@ struct trampoline_struct_ddi {
 	-(enum XamarinGCHandleFlags) xamarinGetFlags;
 	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
 	-(void) didReceiveMemoryWarning;
+	-(void) viewDidAppear:(BOOL)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface EditVideo : UIViewController {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	-(void) didReceiveMemoryWarning;
+	-(void) viewDidDisappear:(BOOL)p0;
 	-(void) viewDidAppear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
 	-(id) init;

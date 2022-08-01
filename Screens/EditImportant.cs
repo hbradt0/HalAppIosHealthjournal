@@ -18,7 +18,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textView2;
         public UITextField editTextWrite;
         public UITextView textViewWrite;
-        public HKHealthStore HealthStore { get; set; }
+        public EditVideo videoscreen;
 
         public UIButton Button1;
         public UIButton Button2;
@@ -35,15 +35,14 @@ namespace Hello_MultiScreen_iPhone
         public UIView View3;
         public UIScrollView scrollView;//ps
 
+        public UITextField urlfield;
+        public UITextView urllabel;
+        public UIButton urlbutton;
+
         public UITextField hiddenbuttoncode;
         public UIButton hiddenbutton;
         public UIButton EditJournalButton;
 
-        public UIButton SaveStatsbutton;
-        public UITextField weightfield;
-        public UITextField heightfield;
-        public UITextView weightLabel;
-        public UITextView heightlabel;
 
         public UITextView readInfo;
 
@@ -106,7 +105,6 @@ namespace Hello_MultiScreen_iPhone
             var user = new UIViewController();
             user.View.BackgroundColor = HomeScreen.color;
             this.View.LargeContentTitle = "";
-            HealthStore = new HKHealthStore();
 
             //Initialize Buttons
             Button3 = new UIButton(UIButtonType.System);
@@ -122,39 +120,6 @@ namespace Hello_MultiScreen_iPhone
             ButtonDelete.SetTitle("Enter", UIControlState.Normal);
             ButtonDelete.Layer.CornerRadius = 10;
 
-            SaveStatsbutton = new UIButton(UIButtonType.System);
-            SaveStatsbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
-
-            SaveStatsbutton.BackgroundColor = HomeScreen.buttoncolor;
-            SaveStatsbutton.SetTitle("Save Stats", UIControlState.Normal);
-            SaveStatsbutton.Layer.CornerRadius = 10;
-
-
-            weightfield = new UITextField();
-            weightfield.BackgroundColor = UIColor.White;
-            weightfield.TextColor = UIColor.Black;
-            weightfield.UserInteractionEnabled = true;
-            weightfield.KeyboardType = UIKeyboardType.NumberPad;
-            weightfield.ReturnKeyType = UIReturnKeyType.Done;
-
-            heightfield = new UITextField();
-            heightfield.BackgroundColor = UIColor.White;
-            heightfield.TextColor = UIColor.Black;
-            heightfield.UserInteractionEnabled = true;
-            heightfield.KeyboardType = UIKeyboardType.NumberPad;
-            heightfield.ReturnKeyType = UIReturnKeyType.Done;
-
-            weightLabel = new UITextView();
-            weightLabel.Editable = false;
-            weightLabel.BackgroundColor = UIColor.White;
-            weightLabel.TextColor = UIColor.Black;
-            weightLabel.Text = "Weight (lbs): ";
-
-            heightlabel = new UITextView();
-            heightlabel.BackgroundColor = UIColor.White;
-            heightlabel.Editable = false;
-            heightlabel.TextColor = UIColor.Black;
-            heightlabel.Text = "Height (inches): ";
 
             ButtonShare = new UIButton(UIButtonType.RoundedRect)
             {
@@ -164,6 +129,33 @@ namespace Hello_MultiScreen_iPhone
 
             ButtonShare.SetTitleColor(UIColor.White, UIControlState.Normal);
             ButtonShare.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
+
+            urlfield = new UITextField();
+            urlfield.BackgroundColor = UIColor.White;
+            urlfield.TextColor = UIColor.Black;
+            urlfield.UserInteractionEnabled = true;
+            urlfield.KeyboardType = UIKeyboardType.ASCIICapable;
+            urlfield.ReturnKeyType = UIReturnKeyType.Done;
+            urlfield.ShouldReturn = (textField) => { urlfield.ResignFirstResponder(); return true; };
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            urlfield.Text = "https://www.youtube.com/watch?v=aTFGFTB6mIc";
+            g.CancelsTouchesInView = false; //for iOS5View.AddGestureRecognizer (g);
+
+            urllabel = new UITextView();
+            urllabel.Editable = false;
+            urllabel.BackgroundColor = UIColor.White;
+            urllabel.TextColor = UIColor.Black;
+            urllabel.Text = "URL (youtube): ";
+
+            urlbutton = new UIButton(UIButtonType.RoundedRect)
+            {
+
+                BackgroundColor = HomeScreen.color
+            };
+
+            urlbutton.SetTitleColor(UIColor.White, UIControlState.Normal);
+           urlbutton.SetTitle("Search", UIControlState.Normal);
+            urlbutton.Layer.CornerRadius = 10;
 
             booktextView.Text = EmailFileRead.ReadText(EmailFileRead.fileName4);
             booktextView.BackgroundColor = UIColor.White;
@@ -208,20 +200,17 @@ namespace Hello_MultiScreen_iPhone
                 scrollView = new UIScrollView();
             }
 
-
+            urlbutton.AddTarget(urlbuttonclick, UIControlEvent.TouchUpInside);
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonSpaceClick, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
             //Add to view
             scrollView.Add(Button3);
-            //scrollView.Add(ButtonDelete);
             scrollView.Add(booktextView);
             scrollView.Add(ButtonShare);
-            scrollView.Add(heightfield);
-            scrollView.Add(heightlabel);
-            scrollView.Add(weightfield);
-            scrollView.Add(weightLabel);
-            //scrollView.Add(SaveStatsbutton);
+            scrollView.Add(urllabel);
+            scrollView.Add(urlfield);
+            scrollView.Add(urlbutton);
             View.AddSubview(scrollView);
             keyboardOpen = false;
             keyBoardWillShow = UIKeyboard.Notifications.ObserveWillShow(KeyboardWillShow);
@@ -348,25 +337,7 @@ namespace Hello_MultiScreen_iPhone
         //Submit total edit
         private void Button3Click(object sender, EventArgs eventArgs)
         {
-            if (heightfield.Text != "" || weightfield.Text != "")
-            {
-                heightfield.Text.Replace(" ", "");
-                weightfield.Text.Replace(" ", "");
-                Double height = 0;
-                Double weight = 0;
-                if (Double.TryParse(heightfield.Text, out height))
-                {
-                    EmailFileRead.WriteText("Height was changed " + height);
-                    heightfield.Text = "";
-
-                }
-                if (Double.TryParse(weightfield.Text, out weight))
-                {
-                    EmailFileRead.WriteText("Weight was changed " + weight + " lbs");
-                    weightfield.Text = "";
-                }
-            }
-            if (booktextView.Text != "")
+           if (booktextView.Text != "" || urlfield.Text!="")
             {
                 if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName4))
                 {
@@ -401,10 +372,14 @@ namespace Hello_MultiScreen_iPhone
                             if (booktextView.Text == String.Empty)
                                 text = "";
                             String txt = "";
+                            if (urlfield.Text != "")
+                                text = text + "Video: " + urlfield.Text;
                             String total = text;
+                            
                             if (total.Last() != '\n')
                                 txt = "\n";
-                            EmailFileRead.WriteAllText(text + txt, EmailFileRead.fileName4); String totalText = EmailFileRead.ReadText(EmailFileRead.fileName4);
+                            EmailFileRead.WriteAllText(text + txt, EmailFileRead.fileName4);
+                            String totalText = EmailFileRead.ReadText(EmailFileRead.fileName4);
                             booktextView.Text = totalText;
                             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
                             keyboardOpen = false;
@@ -414,7 +389,18 @@ namespace Hello_MultiScreen_iPhone
                 }
             }
         }
-
+        //Back to home view
+        void urlbuttonclick(object sender, EventArgs eventArgs)
+        {
+            //back to home screen
+            if (urlfield.Text != "" && urlfield.Text.ToLower().Contains("youtube.com") && !urlfield.Text.Contains("\n"))
+                
+            {
+                EditVideo.url = urlfield.Text;
+                if (this.videoscreen == null) { this.videoscreen = new EditVideo(); }
+                this.NavigationController.PushViewController(this.videoscreen, true);
+            }
+        }
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -440,11 +426,11 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveWidthLeft = View.Frame.Width / 12;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
-            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 4.5); //small
+            scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 3.5); //small
             if (View.Frame.Height >= 670)
-                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 500); //big
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 15); //big
             if (View.Frame.Height == 812)
-                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 26); //small
+                scrollView.ContentSize = new CGSize(View.Frame.Width, View.Frame.Height + View.Frame.Height / 5); //small
 
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 50, ResponsiveSizeX, 440);
             ButtonDelete.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom+20, 100, 30);
@@ -453,11 +439,9 @@ namespace Hello_MultiScreen_iPhone
             Button3.Frame = new CGRect(ResponsiveWidthRight, booktextView.Frame.Bottom + 20, 100, 30);
             //IMPORTANT
 
-            heightfield.Frame = new CGRect(ResponsiveWidthRight, Button3.Frame.Bottom + 20, 100, 30);
-            heightlabel.Frame = new CGRect(ResponsiveWidthLeft, Button3.Frame.Bottom + 20, 100, 30);
-            weightfield.Frame = new CGRect(ResponsiveWidthRight, heightfield.Frame.Bottom + 20, 100, 30);
-            weightLabel.Frame = new CGRect(ResponsiveWidthLeft, heightlabel.Frame.Bottom + 20, 100, 30);
-            SaveStatsbutton.Frame = new CGRect(ResponsiveWidthRight, weightLabel.Frame.Bottom + 20, 100, 30);
+            urllabel.Frame = new CGRect(ResponsiveWidthLeft, Button3.Frame.Bottom + 20, 100, 30);
+            urlfield.Frame = new CGRect(urllabel.Frame.Right+10, Button3.Frame.Bottom + 20, 180, 30);
+            urlbutton.Frame = new CGRect(ResponsiveWidthRight, urlfield.Frame.Bottom + 20, 100, 30);
 
             this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;

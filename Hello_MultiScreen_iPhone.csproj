@@ -109,6 +109,7 @@
     <InterfaceDefinition Include="Screens\EditImportant.xib" />
     <None Include="GoogleService-Info.plist" />
     <None Include="Entitlements.plist" />
+    <InterfaceDefinition Include="Screens\EditVideo.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -143,6 +144,8 @@
     <Compile Include="Screens\EditFoodJournalScreen.designer.cs" />
     <Compile Include="Screens\EditImportant.cs" />
     <Compile Include="Screens\EditImportant.designer.cs" />
+    <Compile Include="Screens\EditVideo.cs" />
+    <Compile Include="Screens\EditVideo.designer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

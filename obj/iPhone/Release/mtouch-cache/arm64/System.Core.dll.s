@@ -272,7 +272,7 @@ bl _p_13
 .word 0xaa1803e0
 .word 0xd2800001
 .word 0xf9400302
-.word 0x92800bf0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -283,7 +283,7 @@ bl _p_14
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0x928008f0
+.word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -314,7 +314,7 @@ bl _p_15
 .word 0xf9402ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0x928000f0
+.word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -479,7 +479,7 @@ bl _p_25
 .word 0xf9402ba1
 .word 0xaa1803e0
 .word 0xf9400302
-.word 0x92800bf0
+.word 0x928012f0
 .word 0xf2bffff0
 .word 0xf8706850
 .word 0xd63f0200
@@ -490,7 +490,7 @@ bl _p_26
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
-.word 0x928008f0
+.word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -518,7 +518,7 @@ bl _p_27
 .word 0xf9402ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0x928000f0
+.word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -1207,7 +1207,7 @@ bl _p_60
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0x928008f0
+.word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -1228,7 +1228,7 @@ bl _p_61
 .word 0xf94033a1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0x928000f0
+.word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -4225,7 +4225,7 @@ bl _p_182
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0x928008f0
+.word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -4241,7 +4241,7 @@ bl _p_183
 .word 0xf9402ba1
 .word 0xaa0103e0
 .word 0xf9400021
-.word 0x928000f0
+.word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
 .word 0xd63f0200
@@ -6236,7 +6236,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 72,242,209,159,36,138,20,32,86,199,211,104,223,115,197,245
+	.byte 92,66,108,173,98,95,137,251,226,52,105,167,150,2,68,241
 	.globl _mono_aot_module_System_Core_info
 	.align 3
 _mono_aot_module_System_Core_info:
