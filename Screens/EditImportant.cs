@@ -397,6 +397,7 @@ namespace Hello_MultiScreen_iPhone
                 
             {
                 EditVideo.url = urlfield.Text;
+                Xamarin.Essentials.Preferences.Set("url", EditVideo.url);
                 if (this.videoscreen == null) { this.videoscreen = new EditVideo(); }
                 this.NavigationController.PushViewController(this.videoscreen, true);
             }
@@ -423,6 +424,9 @@ namespace Hello_MultiScreen_iPhone
             UIApplication.SharedApplication.KeyWindow.EndEditing(true);
             keyboardOpen = false;
 
+            String str1 = Xamarin.Essentials.Preferences.Get("url", "");
+            if (str1 != "")
+                urlfield.Text = str1;
             ResponsiveWidthLeft = View.Frame.Width / 12;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;

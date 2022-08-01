@@ -7,3 +7,5 @@ RemoveDynamicRegistrar:false
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/System.Drawing.Common.dll
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Google.MobileAds.dll
 /Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Firebase.Core.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/Xamarin.Essentials.dll
+/Users/psargent/phillbookAppDiet/bin/iPhone/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhone/Release/mtouch-cache/1-Link/OpenTK-1.0.dll

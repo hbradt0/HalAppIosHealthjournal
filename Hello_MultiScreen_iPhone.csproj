@@ -97,6 +97,11 @@
     <Reference Include="Google.MobileAds">
       <HintPath>packages\Xamarin.Google.iOS.MobileAds.8.13.0.1\lib\xamarinios10\Google.MobileAds.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>packages\Xamarin.Essentials.1.7.3\lib\xamarinios10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="System.Drawing.Common.dll" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />

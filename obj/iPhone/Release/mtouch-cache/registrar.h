@@ -8,8 +8,13 @@
 #include <objc/message.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <SafariServices/SafariServices.h>
+#import <ContactsUI/ContactsUI.h>
 #import <HealthKit/HealthKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import <QuartzCore/QuartzCore.h>
+#import <Contacts/Contacts.h>
+#import <AuthenticationServices/AuthenticationServices.h>
 #import <CoreGraphics/CoreGraphics.h>
 
 @class UITableViewSource;
@@ -28,13 +33,20 @@
 @class EditFoodJournalScreen;
 @class EditImportant;
 @class EditVideo;
+@class SFSafariViewControllerDelegate;
+@class CNContactPickerDelegate;
 @class Foundation_NSDispatcher;
 @class __MonoMac_NSSynchronizationContextDispatcher;
+@class __Xamarin_NSTimerActionDispatcher;
 @class Foundation_NSAsyncDispatcher;
 @class __MonoMac_NSAsyncActionDispatcher;
 @class __MonoMac_NSAsyncSynchronizationContextDispatcher;
 @class Foundation_InternalNSNotificationHandler;
+@class CLLocationManagerDelegate;
+@class UIAdaptivePresentationControllerDelegate;
 @class UIKit_UIControlEventProxy;
+@class UIActivityItemSource;
+@class UIDocumentPickerDelegate;
 @class UIImagePickerControllerDelegate;
 @class __NSObject_Disposer;
 @class UIKit_UIAlertView__UIAlertViewDelegate;
@@ -162,6 +174,18 @@ struct trampoline_struct_ddi {
 @class FIRApp;
 @class FIRConfiguration;
 @class FIROptions;
+@class Xamarin_Essentials_ShareActivityItemSource;
+@class Xamarin_Essentials_AuthManager;
+@class Xamarin_Essentials_SingleLocationListener;
+@class Xamarin_Essentials_Contacts_ContactPickerDelegate;
+@class Xamarin_Essentials_FilePicker_PickerDelegate;
+@class Xamarin_Essentials_MediaPicker_PhotoPickerDelegate;
+@class Xamarin_Essentials_Platform_UIPresentationControllerDelegate;
+@class Xamarin_Essentials_WebAuthenticator_NativeSFSafariViewControllerDelegate;
+@class Xamarin_Essentials_WebAuthenticator_ContextProvider;
+@class Xamarin_Essentials_Permissions_LocationWhenInUse_ManagerDelegate;
+@class OpenTK_Platform_iPhoneOS_CADisplayLinkTimeSource;
+@class OpenTK_Platform_iPhoneOS_iPhoneOSGameView;
 
 @interface UITableViewSource : NSObject<UIScrollViewDelegate, UIScrollViewDelegate> {
 }
@@ -377,6 +401,36 @@ struct trampoline_struct_ddi {
 	-(void) viewDidDisappear:(BOOL)p0;
 	-(void) viewDidAppear:(BOOL)p0;
 	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) init;
+@end
+
+@interface SFSafariViewControllerDelegate : NSObject<SFSafariViewControllerDelegate> {
+}
+	-(id) init;
+@end
+
+@interface CNContactPickerDelegate : NSObject<CNContactPickerDelegate> {
+}
+	-(id) init;
+@end
+
+@interface CLLocationManagerDelegate : NSObject<CLLocationManagerDelegate> {
+}
+	-(id) init;
+@end
+
+@interface UIAdaptivePresentationControllerDelegate : NSObject<UIAdaptivePresentationControllerDelegate> {
+}
+	-(id) init;
+@end
+
+@interface UIActivityItemSource : NSObject<UIActivityItemSource> {
+}
+	-(id) init;
+@end
+
+@interface UIDocumentPickerDelegate : NSObject<UIDocumentPickerDelegate> {
+}
 	-(id) init;
 @end
 
@@ -1368,6 +1422,22 @@ struct trampoline_struct_ddi {
 	-(void) setTrackingID:(NSString *)p0;
 	-(id) initWithContentsOfFile:(NSString *)p0;
 	-(id) initWithGoogleAppID:(NSString *)p0 GCMSenderID:(NSString *)p1;
+@end
+
+@interface OpenTK_Platform_iPhoneOS_iPhoneOSGameView : UIView {
+}
+	-(void) release;
+	-(id) retain;
+	-(GCHandle) xamarinGetGCHandle;
+	-(bool) xamarinSetGCHandle: (GCHandle) gchandle flags: (enum XamarinGCHandleFlags) flags;
+	-(enum XamarinGCHandleFlags) xamarinGetFlags;
+	-(void) xamarinSetFlags: (enum XamarinGCHandleFlags) flags;
+	+(Class) layerClass;
+	-(void) layoutSubviews;
+	-(void) willMoveToWindow:(UIWindow *)p0;
+	-(BOOL) conformsToProtocol:(void *)p0;
+	-(id) initWithCoder:(NSCoder *)p0;
+	-(id) initWithFrame:(CGRect)p0;
 @end
 
 

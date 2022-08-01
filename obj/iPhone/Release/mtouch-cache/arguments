@@ -63,6 +63,7 @@
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Firebase.iOS.Core.8.10.0.1/lib/xamarinios10/Firebase.Core.dll \
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Google.iOS.MobileAds.8.13.0.1/lib/xamarinios10/Google.MobileAds.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/OpenTK-1.0.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Drawing.Common.dll \
@@ -72,6 +73,7 @@
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Tesseract.0.3.4/lib/Xamarin.iOS10/Tesseract.Binding.iOS.dll \
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Tesseract.0.3.4/lib/Xamarin.iOS10/Tesseract.dll \
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Tesseract.0.3.4/lib/Xamarin.iOS10/Tesseract.iOS.dll \
+	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Essentials.1.7.3/lib/xamarinios10/Xamarin.Essentials.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Primitives.dll \
 	--reference=/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Registry.AccessControl.dll \
@@ -220,5 +222,6 @@
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Tesseract.0.3.4/lib/Xamarin.iOS10/Tesseract.Binding.iOS.dll \
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Tesseract.0.3.4/lib/Xamarin.iOS10/Tesseract.dll \
 	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Tesseract.0.3.4/lib/Xamarin.iOS10/Tesseract.iOS.dll \
+	--reference=/Users/psargent/phillbookAppDiet/packages/Xamarin.Essentials.1.7.3/lib/xamarinios10/Xamarin.Essentials.dll \
 	@/Users/psargent/phillbookAppDiet/obj/iPhone/Release/response-file.rsp \
 	'--gcc_flags=-ObjC -lc++ -lsqlite3 -lz -ObjC -lz -lsqlite3' \

@@ -13872,7 +13872,7 @@ Google_MobileAds_BannerView_EnsureBannerViewDelegate:
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9411430
+.word 0xf9412830
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xaa1903e0
@@ -13904,7 +13904,7 @@ bl _p_168
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf9411050
+.word 0xf9412450
 .word 0xd63f0200
 .word 0xb4000179
 .word 0xf9400320
@@ -13941,7 +13941,7 @@ Google_MobileAds_BannerView_EnsureAdSizeDelegate:
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9412c30
+.word 0xf9414030
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xaa1903e0
@@ -13973,7 +13973,7 @@ bl _p_169
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf9412850
+.word 0xf9413c50
 .word 0xd63f0200
 .word 0xb4000179
 .word 0xf9400320
@@ -45033,7 +45033,7 @@ bl _p_282
 .word 0xaa1803e2
 .word 0xf9401ba3
 .word 0xf9400063
-.word 0xf9416870
+.word 0xf9417c70
 .word 0xd63f0200
 .word 0xaa1803e0
 bl _p_283
@@ -46340,7 +46340,7 @@ Google_MobileAds_DoubleClick_BannerView_EnsureAdSizeDelegate:
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0xf9400341
-.word 0xf9416430
+.word 0xf9417830
 .word 0xd63f0200
 .word 0xaa0003f9
 .word 0xaa1903e0
@@ -46372,7 +46372,7 @@ bl _p_289
 .word 0xaa1a03e0
 .word 0xaa1903e1
 .word 0xf9400342
-.word 0xf9416050
+.word 0xf9417450
 .word 0xd63f0200
 .word 0xb4000179
 .word 0xf9400320
@@ -51114,7 +51114,7 @@ bl _p_347
 .word 0xa8c67bfd
 .word 0xd65f03c0
 .loc 4 269 0
-.word 0xd28c03c0
+.word 0xd28c1f40
 bl _p_348
 .word 0xaa0003e1
 .word 0xd2801000
@@ -51122,7 +51122,7 @@ bl _p_348
 bl _mono_create_corlib_exception_1
 bl _p_25
 .loc 4 271 0
-.word 0xd28c0e80
+.word 0xd28c2a00
 bl _p_348
 .word 0xaa0003e1
 .word 0xd2801000
@@ -68079,13 +68079,13 @@ _mono_aot_file_info:
 	.quad unbox_trampoline_addresses
 
 	.long 580,8208,446,1612,141,98,387000831,0
-	.long 39450,128,8,8,8,9,8388607,0
-	.long 4,25,54080,0,0,14624,14184,8680
+	.long 39646,128,8,8,8,9,8388607,0
+	.long 4,25,54280,0,0,14624,14184,8680
 	.long 0,11152,13760,10376,0,7224,2256,14616
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 221,21,179,141,146,18,145,252,204,205,228,30,239,231,159,218
+	.byte 104,49,78,68,227,117,194,177,105,167,28,51,135,188,216,202
 	.globl _mono_aot_module_Google_MobileAds_info
 	.align 3
 _mono_aot_module_Google_MobileAds_info:

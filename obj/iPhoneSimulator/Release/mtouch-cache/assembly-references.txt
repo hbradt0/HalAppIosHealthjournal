@@ -10,3 +10,5 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/Facades/System.Drawing.Common.dll
 /Users/psargent/phillbookAppDiet/packages/Xamarin.Google.iOS.MobileAds.8.13.0.1/lib/xamarinios10/Google.MobileAds.dll
 /Users/psargent/phillbookAppDiet/packages/Xamarin.Firebase.iOS.Core.8.10.0.1/lib/xamarinios10/Firebase.Core.dll
+/Users/psargent/phillbookAppDiet/packages/Xamarin.Essentials.1.7.3/lib/xamarinios10/Xamarin.Essentials.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/15.10.0.5/lib/mono/Xamarin.iOS/OpenTK-1.0.dll

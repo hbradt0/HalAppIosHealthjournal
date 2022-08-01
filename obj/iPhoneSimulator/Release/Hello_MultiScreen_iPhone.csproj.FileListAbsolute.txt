@@ -39,3 +39,7 @@
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CoreCompileInputs.cache
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.CopyComplete
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.exe
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Xamarin.Essentials.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Xamarin.Essentials.pdb
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Xamarin.Essentials.xml
+/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache

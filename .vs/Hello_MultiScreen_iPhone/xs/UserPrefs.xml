@@ -2,27 +2,27 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Resources/Reflections2.txt" Line="1" Column="1" />
-      <File FileName="Screens/HelloWorldScreen.cs" Line="208" Column="1" />
+      <File FileName="Screens/HelloWorldScreen.cs" />
       <File FileName="Screens/HelloUniverseScreen.cs" />
       <File FileName="Screens/EditFoodJournalScreen.cs" />
-      <File FileName="Screens/EditImportant.cs" Line="431" Column="113" />
+      <File FileName="Screens/EditImportant.cs" Line="429" Column="37" />
       <File FileName="Screens/EditJournalScreen.cs" />
       <File FileName="Screens/HelloWorldScreen 2.cs" />
       <File FileName="../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.Shared.targets" />
       <File FileName="Screens/ListScreen.designer.cs" />
       <File FileName="Screens/ImageScreen.cs" />
-      <File FileName="Screens/EditImportant.designer.cs" Line="1" Column="1" />
+      <File FileName="Screens/EditImportant.designer.cs" />
       <File FileName="Screens/HomeScreen.cs" />
-      <File FileName="Screens/HomeScreen2.cs" Line="143" Column="1" />
+      <File FileName="Screens/HomeScreen2.cs" />
       <File FileName="EmailFileRead.cs" />
       <File FileName="Entitlements.plist" />
       <File FileName="AppDelegate.cs" />
       <File FileName="Info.plist" />
-      <File FileName="Main.cs" Line="13" Column="1" />
-      <File FileName="Screens/ListScreen.cs" Line="155" Column="13" />
+      <File FileName="Main.cs" />
+      <File FileName="Screens/ListScreen.cs" />
       <File FileName="Resources/Halbook2.txt" />
-      <File FileName="Screens/EditVideo.cs" Line="197" Column="1" />
-      <File FileName="Screens/EditVideo.designer.cs" Line="12" Column="25" />
+      <File FileName="Screens/EditVideo.cs" />
+      <File FileName="Screens/EditVideo.designer.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,9 +31,8 @@
           <Node name="Hello_MultiScreen_iPhone" expanded="True">
             <Node name="Hello_MultiScreen_iPhone" expanded="True">
               <Node name="Resources" expanded="True" />
-              <Node name="Screens" expanded="True">
-                <Node name="EditVideo.cs" selected="True" />
-              </Node>
+              <Node name="Screens" expanded="True" />
+              <Node name="Info.plist" selected="True" />
             </Node>
           </Node>
         </State>

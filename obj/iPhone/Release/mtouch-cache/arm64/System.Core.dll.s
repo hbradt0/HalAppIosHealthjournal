@@ -407,6 +407,27 @@ bl _p_7
 Lme_4:
 .text
 	.align 4
+	.no_dead_strip System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF:
+.loc 3 34 0 prologue_end
+.word 0xa9bd7bfd
+.word 0x910003fd
+.word 0xf9000faf
+.word 0xf9000ba0
+.word 0x390083bf
+.word 0xf9400fa0
+bl _p_21
+.word 0xaa0003ef
+.word 0xf9400ba0
+.word 0x910083a1
+bl _p_22
+.word 0x910003bf
+.word 0xa8c37bfd
+.word 0xd65f03c0
+
+Lme_5:
+.text
+	.align 4
 	.no_dead_strip System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
 System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_:
 .loc 3 41 0 prologue_end
@@ -421,7 +442,7 @@ System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumer
 .word 0xb4001239
 .loc 3 46 0
 .word 0xf94017a0
-bl _p_21
+bl _p_23
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1903e0
@@ -431,7 +452,7 @@ bl _p_9
 .word 0xb4000180
 .loc 3 48 0
 .word 0xf94017a0
-bl _p_22
+bl _p_24
 .word 0xaa0003ef
 .word 0xaa1803e0
 .word 0xaa1a03e1
@@ -443,7 +464,7 @@ bl _p_22
 .word 0x14000078
 .loc 3 51 0
 .word 0xf94017a0
-bl _p_23
+bl _p_25
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1903e0
@@ -453,7 +474,7 @@ bl _p_9
 .word 0xb40003c0
 .loc 3 53 0
 .word 0xf94017a0
-bl _p_24
+bl _p_26
 .word 0xaa0003ef
 .word 0xaa1803e0
 .word 0xf9400301
@@ -474,7 +495,7 @@ bl _p_24
 .word 0x51000720
 .word 0xf9002ba0
 .word 0xf94017a0
-bl _p_25
+bl _p_27
 .word 0xaa0003ef
 .word 0xf9402ba1
 .word 0xaa1803e0
@@ -486,7 +507,7 @@ bl _p_25
 .word 0x14000052
 .loc 3 62 0
 .word 0xf94017a0
-bl _p_26
+bl _p_28
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
@@ -513,7 +534,7 @@ ldr x15, [x16, #224]
 .word 0xf9401ba0
 .word 0xf9002ba0
 .word 0xf94017a0
-bl _p_27
+bl _p_29
 .word 0xaa0003ef
 .word 0xf9402ba1
 .word 0xaa0103e0
@@ -593,7 +614,7 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_5:
+Lme_6:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
@@ -609,7 +630,7 @@ System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerabl
 .word 0xb40003a0
 .loc 4 18 0
 .word 0xf94013a0
-bl _p_28
+bl _p_30
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xf9400fa0
@@ -618,13 +639,13 @@ bl _p_9
 .word 0xaa1903e0
 .word 0xb50000e0
 .word 0xf94013a0
-bl _p_29
+bl _p_31
 .word 0xaa0003ef
 .word 0xf9400fa0
-bl _p_30
+bl _p_32
 .word 0x1400000a
 .word 0xf94013a0
-bl _p_31
+bl _p_33
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
@@ -646,7 +667,7 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_6:
+Lme_7:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
@@ -661,7 +682,7 @@ System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable
 .word 0xb40004a0
 .loc 4 30 0
 .word 0xf94013a0
-bl _p_32
+bl _p_34
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xf9400fa0
@@ -670,21 +691,21 @@ bl _p_9
 .word 0xaa1903e0
 .word 0xb50001e0
 .word 0xf94013a0
-bl _p_33
+bl _p_35
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf94013a0
-bl _p_33
+bl _p_35
 .word 0xd2800401
 bl _p_1
 .word 0xf9001ba0
 .word 0xf9400fa1
-bl _p_35
+bl _p_37
 .word 0xf9401ba0
 .word 0x1400000a
 .word 0xf94013a0
-bl _p_36
+bl _p_38
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
@@ -706,9 +727,9 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_7:
+Lme_8:
 .text
-ut_12:
+ut_13:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity
 ut_end:
@@ -716,7 +737,7 @@ ut_end:
 _unbox_trampoline_p:
 
 	.long 0
-LDIFF_SYM3=ut_end - ut_12
+LDIFF_SYM3=ut_end - ut_13
 	.long LDIFF_SYM3
 .text
 	.align 4
@@ -740,9 +761,9 @@ System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity:
 .word 0xa8c27bfd
 .word 0xd65f03c0
 
-Lme_c:
+Lme_d:
 .text
-ut_13:
+ut_14:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_REF_get_Count
 .text
@@ -760,9 +781,9 @@ System_Collections_Generic_ArrayBuilder_1_T_REF_get_Count:
 .word 0xa8c27bfd
 .word 0xd65f03c0
 
-Lme_d:
+Lme_e:
 .text
-ut_14:
+ut_15:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_REF_get_Item_int
 .text
@@ -792,11 +813,11 @@ System_Collections_Generic_ArrayBuilder_1_T_REF_get_Item_int:
 .word 0xd65f03c0
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_37
+bl _p_39
 
-Lme_e:
+Lme_f:
 .text
-ut_15:
+ut_16:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_REF_Add_T_REF
 .text
@@ -814,7 +835,7 @@ System_Collections_Generic_ArrayBuilder_1_T_REF_Add_T_REF:
 .word 0xb9800b20
 .word 0xf9001ba0
 .word 0xf94017a0
-bl _p_38
+bl _p_40
 .word 0xf9400320
 .word 0xaa0003f7
 .word 0xb5000060
@@ -830,18 +851,18 @@ bl _p_38
 .word 0x11000400
 .word 0xf90023a0
 .word 0xf94017a0
-bl _p_38
+bl _p_40
 .word 0xaa0003ef
 .word 0xf94023a1
 .word 0xaa1903e0
-bl _p_39
+bl _p_41
 .loc 5 74 0
 .word 0xf94017a0
-bl _p_38
+bl _p_40
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf94013a1
-bl _p_40
+bl _p_42
 .loc 5 75 0
 .word 0xf9400bb7
 .word 0xf9400fb9
@@ -849,9 +870,9 @@ bl _p_40
 .word 0xa8c57bfd
 .word 0xd65f03c0
 
-Lme_f:
+Lme_10:
 .text
-ut_16:
+ut_17:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
 .text
@@ -881,9 +902,9 @@ System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF:
 .word 0xa8c37bfd
 .word 0xd65f03c0
 
-Lme_10:
+Lme_11:
 .text
-ut_17:
+ut_18:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
 .text
@@ -900,7 +921,7 @@ System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int:
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf9401fa0
-bl _p_38
+bl _p_40
 .word 0xf9400320
 .word 0xaa0003f8
 .word 0xb5000060
@@ -942,9 +963,9 @@ bl _p_38
 .word 0xaa1a03f6
 .loc 5 157 0
 .word 0xf9401fa0
-bl _p_41
+bl _p_43
 .word 0xaa1a03e1
-bl _p_42
+bl _p_44
 .word 0xaa0003fa
 .loc 5 158 0
 .word 0xb9800b20
@@ -956,7 +977,7 @@ bl _p_42
 .word 0xd2800001
 .word 0xaa1a03e2
 .word 0xd2800003
-bl _p_43
+bl _p_45
 .loc 5 162 0
 .word 0xd5033bbf
 .word 0xf900033a
@@ -979,7 +1000,7 @@ ldr x1, [x16, #16]
 .word 0xa8c47bfd
 .word 0xd65f03c0
 
-Lme_11:
+Lme_12:
 .text
 	.align 4
 	.no_dead_strip System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Generic_IEnumerable_1_T_REF
@@ -999,7 +1020,7 @@ System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Ge
 .word 0xf90027a0
 .word 0xf9002ba0
 .word 0xf94013a0
-bl _p_44
+bl _p_46
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1a03e0
@@ -1009,7 +1030,7 @@ bl _p_9
 .word 0xb4000560
 .loc 6 72 0
 .word 0xf94013a0
-bl _p_45
+bl _p_47
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
@@ -1024,25 +1045,25 @@ bl _p_45
 .word 0x35000180
 .loc 6 75 0
 .word 0xf94013a0
-bl _p_46
+bl _p_48
 .word 0xf94013a0
-bl _p_47
+bl _p_49
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf94013a0
-bl _p_48
+bl _p_50
 .word 0xf9400000
 .word 0x14000024
 .loc 6 78 0
 .word 0xf94013a0
-bl _p_49
+bl _p_51
 .word 0xaa1a03e1
-bl _p_42
+bl _p_44
 .word 0xaa0003fa
 .loc 6 79 0
 .word 0xf94013a0
-bl _p_50
+bl _p_52
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xaa1a03e1
@@ -1057,32 +1078,32 @@ bl _p_50
 .word 0x14000012
 .loc 6 83 0
 .word 0xf94013a0
-bl _p_51
+bl _p_53
 .word 0xaa0003ef
 .word 0x9100a3a0
 .word 0xd2800021
-bl _p_52
+bl _p_54
 .loc 6 84 0
 .word 0xf94013a0
-bl _p_51
+bl _p_53
 .word 0xaa0003ef
 .word 0x9100a3a0
 .word 0xaa1a03e1
-bl _p_53
+bl _p_55
 .loc 6 85 0
 .word 0xf94013a0
-bl _p_51
+bl _p_53
 .word 0xaa0003ef
 .word 0x9100a3a0
-bl _p_54
+bl _p_56
 .word 0xa9416bb9
 .word 0x910003bf
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_12:
+Lme_13:
 .text
-ut_19:
+ut_20:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
 .text
@@ -1097,20 +1118,20 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf94013a0
-bl _p_55
+bl _p_57
 .word 0xaa0003ef
 .word 0xf9400ba0
 .word 0xd29fffe1
 .word 0xf2afffe1
-bl _p_56
+bl _p_58
 .loc 7 91 0
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
 
-Lme_13:
+Lme_14:
 .text
-ut_20:
+ut_21:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
 .text
@@ -1133,14 +1154,14 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int:
 .word 0xf9001720
 .loc 7 105 0
 .word 0xf94013a0
-bl _p_57
+bl _p_59
 .word 0xf94013a0
-bl _p_58
+bl _p_60
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf94013a0
-bl _p_59
+bl _p_61
 .word 0xf9400000
 .word 0xf9001ba0
 .word 0xf9001fa0
@@ -1183,9 +1204,9 @@ ldr x2, [x16, #16]
 .word 0xa8c47bfd
 .word 0xd65f03c0
 
-Lme_14:
+Lme_15:
 .text
-ut_21:
+ut_22:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
 .text
@@ -1203,7 +1224,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections
 .word 0xf9001bbf
 .word 0xb9003bbf
 .word 0xf94013a0
-bl _p_60
+bl _p_62
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
@@ -1223,7 +1244,7 @@ bl _p_60
 .word 0xf94017a0
 .word 0xf90033a0
 .word 0xf94013a0
-bl _p_61
+bl _p_63
 .word 0xaa0003ef
 .word 0xf94033a1
 .word 0xaa0103e0
@@ -1241,13 +1262,13 @@ bl _p_61
 .word 0x54000143
 .loc 7 178 0
 .word 0xf94013a0
-bl _p_55
+bl _p_57
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xaa1a03e1
 .word 0x9100c3a2
 .word 0x9100e3a3
-bl _p_62
+bl _p_64
 .word 0x14000008
 .loc 7 182 0
 .word 0xf9401ba3
@@ -1314,9 +1335,9 @@ ldr x15, [x16, #232]
 .word 0xa8c77bfd
 .word 0xd65f03c0
 
-Lme_15:
+Lme_16:
 .text
-ut_22:
+ut_23:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
 .text
@@ -1344,10 +1365,10 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_R
 .word 0xb9002ae0
 .loc 7 200 0
 .word 0xf9401ba0
-bl _p_55
+bl _p_57
 .word 0xaa0003ef
 .word 0xaa1703e0
-bl _p_63
+bl _p_65
 .loc 7 201 0
 .word 0xf94012e0
 .word 0xf90023a0
@@ -1384,9 +1405,9 @@ ldr x2, [x16, #16]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 
-Lme_16:
+Lme_17:
 .text
-ut_23:
+ut_24:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
 .text
@@ -1409,11 +1430,11 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int:
 .word 0x14000019
 .loc 7 221 0
 .word 0xf9402ba0
-bl _p_55
+bl _p_57
 .word 0xaa0003ef
 .word 0xaa1703e0
 .word 0xaa1603e1
-bl _p_64
+bl _p_66
 .word 0xaa0003f5
 .loc 7 224 0
 .word 0xb9801aa0
@@ -1430,7 +1451,7 @@ bl _p_64
 .word 0xaa1803e2
 .word 0xaa1903e3
 .word 0xaa1303e4
-bl _p_43
+bl _p_45
 .loc 7 228 0
 .word 0x4b13035a
 .loc 7 229 0
@@ -1448,9 +1469,9 @@ bl _p_43
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_17:
+Lme_18:
 .text
-ut_24:
+ut_25:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
 .text
@@ -1469,7 +1490,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int:
 .word 0x91004320
 .word 0xf9001ba0
 .word 0xf94013a0
-bl _p_65
+bl _p_67
 .word 0xaa0003e1
 .word 0xf9401ba0
 .word 0xb9800801
@@ -1484,7 +1505,7 @@ bl _p_65
 .word 0x51000400
 .word 0xf9001fa0
 .word 0xf94013a0
-bl _p_65
+bl _p_67
 .word 0xaa0003e2
 .word 0xf9401ba0
 .word 0xf9401fa1
@@ -1506,11 +1527,11 @@ bl _p_65
 .word 0xd65f03c0
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_37
+bl _p_39
 
-Lme_18:
+Lme_19:
 .text
-ut_25:
+ut_26:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
 .text
@@ -1525,11 +1546,11 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray:
 .word 0xaa0003fa
 .word 0xf90013bf
 .word 0xf9400fa0
-bl _p_55
+bl _p_57
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0x910083a1
-bl _p_66
+bl _p_68
 .word 0x53001c00
 .word 0x34000060
 .loc 7 345 0
@@ -1539,9 +1560,9 @@ bl _p_66
 .word 0xb9802f40
 .word 0xf90023a0
 .word 0xf9400fa0
-bl _p_67
+bl _p_69
 .word 0xf94023a1
-bl _p_42
+bl _p_44
 .word 0xf90013a0
 .loc 7 349 0
 .word 0xf94013a0
@@ -1549,13 +1570,13 @@ bl _p_42
 .word 0xb9802f40
 .word 0xf9001fa0
 .word 0xf9400fa0
-bl _p_55
+bl _p_57
 .word 0xaa0003ef
 .word 0xf9401ba1
 .word 0xf9401fa3
 .word 0xaa1a03e0
 .word 0xd2800002
-bl _p_68
+bl _p_70
 .loc 7 350 0
 .word 0xf94013a0
 .word 0xf9400bba
@@ -1563,9 +1584,9 @@ bl _p_68
 .word 0xa8c57bfd
 .word 0xd65f03c0
 
-Lme_19:
+Lme_1a:
 .text
-ut_26:
+ut_27:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
 .text
@@ -1607,9 +1628,9 @@ ldr x2, [x16, #16]
 .word 0xa8c47bfd
 .word 0xd65f03c0
 
-Lme_1a:
+Lme_1b:
 .text
-ut_27:
+ut_28:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
 .text
@@ -1644,9 +1665,9 @@ System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer:
 .word 0xaa1903f8
 .loc 7 384 0
 .word 0xf94017a0
-bl _p_67
+bl _p_69
 .word 0xaa1903e1
-bl _p_42
+bl _p_44
 .word 0xf9001fa0
 .word 0x91008341
 .word 0xd5033bbf
@@ -1669,7 +1690,7 @@ ldr x2, [x16, #16]
 .word 0xb9802f44
 .word 0xd2800001
 .word 0xd2800003
-bl _p_43
+bl _p_45
 .loc 7 386 0
 .word 0xf9401340
 .word 0xf9001ba0
@@ -1703,11 +1724,11 @@ ldr x2, [x16, #16]
 .word 0xf9401340
 .word 0xf9001fa0
 .word 0xf94017a0
-bl _p_65
+bl _p_67
 .word 0xaa0003ef
 .word 0xf9401ba0
 .word 0xf9401fa1
-bl _p_69
+bl _p_71
 .loc 7 411 0
 .word 0xb9802f40
 .word 0xb9800341
@@ -1722,9 +1743,9 @@ bl _p_69
 .word 0xaa1803f9
 .loc 7 414 0
 .word 0xf94017a0
-bl _p_67
+bl _p_69
 .word 0xaa1903e1
-bl _p_42
+bl _p_44
 .word 0xf9001ba0
 .word 0x91008341
 .word 0xd5033bbf
@@ -1750,7 +1771,7 @@ ldr x2, [x16, #16]
 .word 0xa8c47bfd
 .word 0xd65f03c0
 
-Lme_1b:
+Lme_1c:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
@@ -1763,7 +1784,7 @@ System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnume
 .word 0xf9001baf
 .word 0xf90017a0
 .word 0xf9401ba0
-bl _p_70
+bl _p_72
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -1782,10 +1803,10 @@ bl _p_70
 .word 0x910003f8
 .word 0x3900e3bf
 .word 0xf9401ba0
-bl _p_71
+bl _p_73
 .word 0xf90027a0
 .word 0xf9401ba0
-bl _p_72
+bl _p_74
 .word 0xaa0003e2
 .word 0xf94027af
 .word 0xb9802321
@@ -1817,7 +1838,7 @@ bl _p_72
 .word 0xf9400720
 .word 0xf9400b20
 .word 0xf9401ba0
-bl _p_73
+bl _p_75
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -1830,7 +1851,7 @@ bl _mono_gsharedvt_value_copy
 bl _p_6
 bl _p_7
 
-Lme_1d:
+Lme_1e:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
@@ -1846,7 +1867,7 @@ System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf94023a0
-bl _p_74
+bl _p_76
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0x91003c10
@@ -1878,7 +1899,7 @@ bl _p_74
 .word 0xb4001879
 .loc 2 46 0
 .word 0xf94023a0
-bl _p_75
+bl _p_77
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1903e0
@@ -1888,10 +1909,10 @@ bl _p_9
 .word 0xb4000360
 .loc 2 48 0
 .word 0xf94023a0
-bl _p_76
+bl _p_78
 .word 0xf90043a0
 .word 0xf94023a0
-bl _p_77
+bl _p_79
 .word 0xaa0003e2
 .word 0xf94043af
 .word 0xb9803300
@@ -1907,7 +1928,7 @@ bl _p_77
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_78
+bl _p_80
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -1915,7 +1936,7 @@ bl _mono_gsharedvt_value_copy
 .word 0x1400009a
 .loc 2 51 0
 .word 0xf94023a0
-bl _p_79
+bl _p_81
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1903e0
@@ -1925,10 +1946,10 @@ bl _p_9
 .word 0xb4000520
 .loc 2 53 0
 .word 0xf94023a0
-bl _p_80
+bl _p_82
 .word 0xf9003ba0
 .word 0xf94023a0
-bl _p_81
+bl _p_83
 .word 0xaa0003e1
 .word 0xf9403baf
 .word 0xaa1603e0
@@ -1941,10 +1962,10 @@ bl _p_81
 .word 0x3900035e
 .loc 2 56 0
 .word 0xf94023a0
-bl _p_82
+bl _p_84
 .word 0xf90043a0
 .word 0xf94023a0
-bl _p_83
+bl _p_85
 .word 0xaa0003e2
 .word 0xf94043af
 .word 0xb9803b00
@@ -1960,7 +1981,7 @@ bl _p_83
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_78
+bl _p_80
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -1968,10 +1989,10 @@ bl _mono_gsharedvt_value_copy
 .word 0x14000069
 .loc 2 61 0
 .word 0xf94023a0
-bl _p_84
+bl _p_86
 .word 0xf9003ba0
 .word 0xf94023a0
-bl _p_85
+bl _p_87
 .word 0xaa0003e1
 .word 0xf9403baf
 .word 0xaa1903e0
@@ -1998,10 +2019,10 @@ ldr x15, [x16, #224]
 .word 0xf94027a0
 .word 0xf9003ba0
 .word 0xf94023a0
-bl _p_86
+bl _p_88
 .word 0xf9003fa0
 .word 0xf94023a0
-bl _p_87
+bl _p_89
 .word 0xaa0003e1
 .word 0xf9403ba0
 .word 0xf9403faf
@@ -2060,7 +2081,7 @@ ldr x15, [x16, #232]
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_78
+bl _p_80
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -2075,7 +2096,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_78
+bl _p_80
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -2096,7 +2117,7 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_1e:
+Lme_1f:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
@@ -2109,7 +2130,7 @@ System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumer
 .word 0xf9001baf
 .word 0xf90017a0
 .word 0xf9401ba0
-bl _p_88
+bl _p_90
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -2128,10 +2149,10 @@ bl _p_88
 .word 0x910003f8
 .word 0x3900e3bf
 .word 0xf9401ba0
-bl _p_89
+bl _p_91
 .word 0xf90027a0
 .word 0xf9401ba0
-bl _p_90
+bl _p_92
 .word 0xaa0003e2
 .word 0xf94027af
 .word 0xb9802321
@@ -2163,7 +2184,7 @@ bl _p_90
 .word 0xf9400720
 .word 0xf9400b20
 .word 0xf9401ba0
-bl _p_91
+bl _p_93
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -2176,7 +2197,70 @@ bl _mono_gsharedvt_value_copy
 bl _p_6
 bl _p_7
 
-Lme_1f:
+Lme_20:
+.text
+	.align 4
+	.no_dead_strip System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT:
+.loc 3 34 0 prologue_end
+.word 0xa9ba7bfd
+.word 0x910003fd
+.word 0xa90167b8
+.word 0xf90013a8
+.word 0xf9001baf
+.word 0xf90017a0
+.word 0xf9401ba0
+bl _p_94
+.word 0xaa0003f9
+.word 0xb9800320
+.word 0x91003c10
+.word 0x928001f1
+.word 0xf2bffff1
+.word 0x8a110210
+.word 0x910003f1
+.word 0xcb100231
+.word 0x9100023f
+.word 0x8b100230
+.word 0xeb10023f
+.word 0x54000080
+.word 0xa9007e3f
+.word 0x91004231
+.word 0x17fffffc
+.word 0x910003f8
+.word 0x3900e3bf
+.word 0xf9401ba0
+bl _p_95
+.word 0xf9002ba0
+.word 0xf9401ba0
+bl _p_96
+.word 0xaa0003e2
+.word 0xf9402baf
+.word 0xb9801b21
+.word 0xaa1803e0
+.word 0x8b010008
+.word 0xf94017a0
+.word 0x9100e3a1
+.word 0xd63f0040
+.word 0xf94013a0
+.word 0xb9801b22
+.word 0xaa1803e1
+.word 0x8b020021
+.word 0xf90027a1
+.word 0xf90023a0
+.word 0xf9400720
+.word 0xf9400b20
+.word 0xf9401ba0
+bl _p_97
+.word 0xaa0003e2
+.word 0xf94023a0
+.word 0xf94027a1
+bl _mono_gsharedvt_value_copy
+.word 0xa94167b8
+.word 0x910003bf
+.word 0xa8c67bfd
+.word 0xd65f03c0
+
+Lme_21:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
@@ -2192,7 +2276,7 @@ System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_I
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf94023a0
-bl _p_92
+bl _p_98
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0x91003c10
@@ -2230,7 +2314,7 @@ bl _p_92
 .word 0xb4001b59
 .loc 3 46 0
 .word 0xf94023a0
-bl _p_93
+bl _p_99
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1903e0
@@ -2240,10 +2324,10 @@ bl _p_9
 .word 0xb4000360
 .loc 3 48 0
 .word 0xf94023a0
-bl _p_94
+bl _p_100
 .word 0xf90043a0
 .word 0xf94023a0
-bl _p_95
+bl _p_101
 .word 0xaa0003e2
 .word 0xf94043af
 .word 0xb9803b00
@@ -2259,7 +2343,7 @@ bl _p_95
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_96
+bl _p_102
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -2267,7 +2351,7 @@ bl _mono_gsharedvt_value_copy
 .word 0x140000b1
 .loc 3 51 0
 .word 0xf94023a0
-bl _p_97
+bl _p_103
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1903e0
@@ -2277,10 +2361,10 @@ bl _p_9
 .word 0xb40005a0
 .loc 3 53 0
 .word 0xf94023a0
-bl _p_98
+bl _p_104
 .word 0xf9003ba0
 .word 0xf94023a0
-bl _p_99
+bl _p_105
 .word 0xaa0003e1
 .word 0xf9403baf
 .word 0xaa1603e0
@@ -2298,10 +2382,10 @@ bl _p_99
 .word 0x51000720
 .word 0xf90043a0
 .word 0xf94023a0
-bl _p_100
+bl _p_106
 .word 0xf90047a0
 .word 0xf94023a0
-bl _p_101
+bl _p_107
 .word 0xaa0003e2
 .word 0xf94043a1
 .word 0xf94047af
@@ -2317,7 +2401,7 @@ bl _p_101
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_96
+bl _p_102
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -2325,10 +2409,10 @@ bl _mono_gsharedvt_value_copy
 .word 0x1400007c
 .loc 3 62 0
 .word 0xf94023a0
-bl _p_102
+bl _p_108
 .word 0xf9003ba0
 .word 0xf94023a0
-bl _p_103
+bl _p_109
 .word 0xaa0003e1
 .word 0xf9403baf
 .word 0xaa1903e0
@@ -2352,10 +2436,10 @@ ldr x15, [x16, #224]
 .word 0xf94027a0
 .word 0xf9003ba0
 .word 0xf94023a0
-bl _p_104
+bl _p_110
 .word 0xf9003fa0
 .word 0xf94023a0
-bl _p_105
+bl _p_111
 .word 0xaa0003e1
 .word 0xf9403ba0
 .word 0xf9403faf
@@ -2439,7 +2523,7 @@ ldr x15, [x16, #232]
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_96
+bl _p_102
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -2454,7 +2538,7 @@ bl _mono_gsharedvt_value_copy
 .word 0xf9400700
 .word 0xf9400f00
 .word 0xf94023a0
-bl _p_96
+bl _p_102
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -2475,7 +2559,7 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_20:
+Lme_22:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
@@ -2487,7 +2571,7 @@ System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnu
 .word 0xf90013af
 .word 0xf9000fa0
 .word 0xf94013a0
-bl _p_106
+bl _p_112
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
@@ -2495,7 +2579,7 @@ bl _p_106
 .word 0xb4000420
 .loc 4 18 0
 .word 0xf94013a0
-bl _p_107
+bl _p_113
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xf9400fa0
@@ -2504,20 +2588,20 @@ bl _p_9
 .word 0xaa1903e0
 .word 0xb5000160
 .word 0xf94013a0
-bl _p_108
+bl _p_114
 .word 0xf9001ba0
 .word 0xf94013a0
-bl _p_109
+bl _p_115
 .word 0xaa0003e1
 .word 0xf9401baf
 .word 0xf9400fa0
 .word 0xd63f0020
 .word 0x1400000a
 .word 0xf94013a0
-bl _p_110
+bl _p_116
 .word 0xf9001ba0
 .word 0xf94013a0
-bl _p_111
+bl _p_117
 .word 0xaa0003e1
 .word 0xf9401baf
 .word 0xaa1903e0
@@ -2536,7 +2620,7 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_21:
+Lme_23:
 .text
 	.align 4
 	.no_dead_strip System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
@@ -2548,7 +2632,7 @@ System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnum
 .word 0xf90013af
 .word 0xf9000fa0
 .word 0xf94013a0
-bl _p_112
+bl _p_118
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
@@ -2556,7 +2640,7 @@ bl _p_112
 .word 0xb4000520
 .loc 4 30 0
 .word 0xf94013a0
-bl _p_113
+bl _p_119
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xf9400fa0
@@ -2565,16 +2649,16 @@ bl _p_9
 .word 0xaa1903e0
 .word 0xb5000260
 .word 0xf94013a0
-bl _p_114
+bl _p_120
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf94013a0
-bl _p_114
-bl _p_115
+bl _p_120
+bl _p_121
 .word 0xf9001fa0
 .word 0xf94013a0
-bl _p_116
+bl _p_122
 .word 0xaa0003e2
 .word 0xf9401fa0
 .word 0xf9001ba0
@@ -2583,10 +2667,10 @@ bl _p_116
 .word 0xf9401ba0
 .word 0x1400000a
 .word 0xf94013a0
-bl _p_117
+bl _p_123
 .word 0xf9001ba0
 .word 0xf94013a0
-bl _p_118
+bl _p_124
 .word 0xaa0003e1
 .word 0xf9401baf
 .word 0xaa1903e0
@@ -2605,9 +2689,9 @@ bl _p_17
 bl _p_18
 bl _p_7
 
-Lme_22:
+Lme_24:
 .text
-ut_39:
+ut_41:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity
 .text
@@ -2621,7 +2705,7 @@ System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity:
 .word 0xf90013af
 .word 0xaa0003fa
 .word 0xf94013a0
-bl _p_119
+bl _p_125
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
@@ -2639,9 +2723,9 @@ bl _p_119
 .word 0xa8c37bfd
 .word 0xd65f03c0
 
-Lme_27:
+Lme_29:
 .text
-ut_40:
+ut_42:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Count
 .text
@@ -2655,7 +2739,7 @@ System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Count:
 .word 0xf90013af
 .word 0xf9000fa0
 .word 0xf94013a0
-bl _p_120
+bl _p_126
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
@@ -2669,9 +2753,9 @@ bl _p_120
 .word 0xa8c37bfd
 .word 0xd65f03c0
 
-Lme_28:
+Lme_2a:
 .text
-ut_41:
+ut_43:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Item_int
 .text
@@ -2687,7 +2771,7 @@ System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Item_int:
 .word 0xf90017a0
 .word 0xf9001ba1
 .word 0xf9401fa0
-bl _p_121
+bl _p_127
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0x91003c10
@@ -2733,7 +2817,7 @@ bl _p_121
 .word 0xf9400f00
 .word 0xf9401300
 .word 0xf9401fa0
-bl _p_122
+bl _p_128
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -2744,11 +2828,11 @@ bl _mono_gsharedvt_value_copy
 .word 0xd65f03c0
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_37
+bl _p_39
 
-Lme_29:
+Lme_2b:
 .text
-ut_42:
+ut_44:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_Add_T_GSHAREDVT
 .text
@@ -2763,7 +2847,7 @@ System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_Add_T_GSHAREDVT:
 .word 0xaa0003fa
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_123
+bl _p_129
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf9001bbf
@@ -2773,10 +2857,10 @@ bl _p_123
 .word 0xb9800000
 .word 0xf90023a0
 .word 0xf94017a0
-bl _p_124
+bl _p_130
 .word 0xf90027a0
 .word 0xf94017a0
-bl _p_125
+bl _p_131
 .word 0xaa0003e1
 .word 0xf94027af
 .word 0xaa1a03e0
@@ -2794,10 +2878,10 @@ bl _p_125
 .word 0x11000400
 .word 0xf90023a0
 .word 0xf94017a0
-bl _p_124
+bl _p_130
 .word 0xf90027a0
 .word 0xf94017a0
-bl _p_126
+bl _p_132
 .word 0xaa0003e2
 .word 0xf94023a1
 .word 0xf94027af
@@ -2805,10 +2889,10 @@ bl _p_126
 .word 0xd63f0040
 .loc 5 74 0
 .word 0xf94017a0
-bl _p_124
+bl _p_130
 .word 0xf90023a0
 .word 0xf94017a0
-bl _p_127
+bl _p_133
 .word 0xaa0003e2
 .word 0xf94023af
 .word 0xaa1a03e0
@@ -2821,9 +2905,9 @@ bl _p_127
 .word 0xa8c57bfd
 .word 0xd65f03c0
 
-Lme_2a:
+Lme_2c:
 .text
-ut_43:
+ut_45:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_UncheckedAdd_T_GSHAREDVT
 .text
@@ -2838,7 +2922,7 @@ System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_UncheckedAdd_T_GSHAREDVT:
 .word 0xaa0003fa
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_128
+bl _p_134
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xd2800001
@@ -2872,7 +2956,7 @@ bl _p_128
 .word 0xf9401320
 .word 0xf9401720
 .word 0xf94017a0
-bl _p_122
+bl _p_128
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -2884,11 +2968,11 @@ bl _mono_gsharedvt_value_copy
 .word 0xd65f03c0
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_37
+bl _p_39
 
-Lme_2b:
+Lme_2d:
 .text
-ut_44:
+ut_46:
 add x0, x0, 16
 b System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_EnsureCapacity_int
 .text
@@ -2905,15 +2989,15 @@ System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_EnsureCapacity_int:
 .word 0xaa0003f9
 .word 0xaa0103fa
 .word 0xf94023a0
-bl _p_129
+bl _p_135
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0xf90027bf
 .word 0xf94023a0
-bl _p_124
+bl _p_130
 .word 0xf9002ba0
 .word 0xf94023a0
-bl _p_125
+bl _p_131
 .word 0xaa0003e1
 .word 0xf9402baf
 .word 0xaa1903e0
@@ -2936,22 +3020,22 @@ bl _p_125
 .word 0x110006e0
 .word 0xd29fffe1
 .word 0xf2affde1
-bl _p_130
+bl _p_136
 .word 0x93407c00
 .word 0xaa0003f5
 .loc 5 155 0
 .word 0xaa1503e0
 .word 0xaa1a03e1
-bl _p_130
+bl _p_136
 .word 0x93407c00
 .word 0xaa0003f5
 .loc 5 157 0
 .word 0xaa1503e0
 .word 0xf9002ba0
 .word 0xf94023a0
-bl _p_131
+bl _p_137
 .word 0xf9402ba1
-bl _p_42
+bl _p_44
 .word 0xaa0003fa
 .loc 5 158 0
 .word 0xf9400700
@@ -2972,7 +3056,7 @@ bl _p_42
 .word 0xd2800001
 .word 0xaa1a03e2
 .word 0xd2800003
-bl _p_43
+bl _p_45
 .loc 5 162 0
 .word 0xf9400b00
 .word 0xd1000400
@@ -3000,7 +3084,7 @@ ldr x1, [x16, #16]
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_2c:
+Lme_2e:
 .text
 	.align 4
 	.no_dead_strip System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
@@ -3013,7 +3097,7 @@ System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collecti
 .word 0xf9001baf
 .word 0xaa0003fa
 .word 0xf9401ba0
-bl _p_132
+bl _p_138
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0x91003c10
@@ -3036,7 +3120,7 @@ bl _p_132
 .word 0xf9400b22
 .word 0xd63f0040
 .word 0xf9401ba0
-bl _p_133
+bl _p_139
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1a03e0
@@ -3046,10 +3130,10 @@ bl _p_9
 .word 0xb4000500
 .loc 6 72 0
 .word 0xf9401ba0
-bl _p_134
+bl _p_140
 .word 0xf90023a0
 .word 0xf9401ba0
-bl _p_135
+bl _p_141
 .word 0xaa0003e1
 .word 0xf94023af
 .word 0xaa1703e0
@@ -3061,25 +3145,25 @@ bl _p_135
 .word 0x35000120
 .loc 6 75 0
 .word 0xf9401ba0
-bl _p_136
+bl _p_142
 .word 0xf90023a0
 .word 0xf9401ba0
-bl _p_137
+bl _p_143
 .word 0xf94023af
 .word 0xd63f0000
 .word 0x14000033
 .loc 6 78 0
 .word 0xf9401ba0
-bl _p_138
+bl _p_144
 .word 0xaa1a03e1
-bl _p_42
+bl _p_44
 .word 0xaa0003fa
 .loc 6 79 0
 .word 0xf9401ba0
-bl _p_139
+bl _p_145
 .word 0xf90023a0
 .word 0xf9401ba0
-bl _p_140
+bl _p_146
 .word 0xaa0003e3
 .word 0xf94023af
 .word 0xaa1703e0
@@ -3091,10 +3175,10 @@ bl _p_140
 .word 0x14000021
 .loc 6 83 0
 .word 0xf9401ba0
-bl _p_141
+bl _p_147
 .word 0xf9002ba0
 .word 0xf9401ba0
-bl _p_142
+bl _p_148
 .word 0xaa0003e2
 .word 0xf9402baf
 .word 0xb9801b20
@@ -3103,10 +3187,10 @@ bl _p_142
 .word 0xd63f0040
 .loc 6 84 0
 .word 0xf9401ba0
-bl _p_141
+bl _p_147
 .word 0xf90027a0
 .word 0xf9401ba0
-bl _p_143
+bl _p_149
 .word 0xaa0003e2
 .word 0xf94027af
 .word 0xb9801b20
@@ -3115,10 +3199,10 @@ bl _p_143
 .word 0xd63f0040
 .loc 6 85 0
 .word 0xf9401ba0
-bl _p_141
+bl _p_147
 .word 0xf90023a0
 .word 0xf9401ba0
-bl _p_144
+bl _p_150
 .word 0xaa0003e1
 .word 0xf94023af
 .word 0xb9801b20
@@ -3130,9 +3214,9 @@ bl _p_144
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_2d:
+Lme_2f:
 .text
-ut_46:
+ut_48:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool
 .text
@@ -3146,16 +3230,16 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool:
 .word 0xf9000ba0
 .word 0xf9000fa1
 .word 0xf94013a0
-bl _p_145
+bl _p_151
 .word 0xf90017a0
 .word 0xf94017a0
 .word 0xb9800000
 .word 0xf90017bf
 .word 0xf94013a0
-bl _p_146
+bl _p_152
 .word 0xf9001ba0
 .word 0xf94013a0
-bl _p_147
+bl _p_153
 .word 0xaa0003e2
 .word 0xf9401baf
 .word 0xf9400ba0
@@ -3167,9 +3251,9 @@ bl _p_147
 .word 0xa8c47bfd
 .word 0xd65f03c0
 
-Lme_2e:
+Lme_30:
 .text
-ut_47:
+ut_49:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_int
 .text
@@ -3184,7 +3268,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_int:
 .word 0xaa0003f9
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_148
+bl _p_154
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0xf9001bbf
@@ -3194,10 +3278,10 @@ bl _p_148
 .word 0xd63f0040
 .loc 7 105 0
 .word 0xf94017a0
-bl _p_149
+bl _p_155
 .word 0xf9002ba0
 .word 0xf94017a0
-bl _p_150
+bl _p_156
 .word 0xf9402baf
 .word 0xd63f0000
 .word 0xf90023a0
@@ -3248,9 +3332,9 @@ ldr x2, [x16, #16]
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_2f:
+Lme_31:
 .text
-ut_48:
+ut_50:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
 .text
@@ -3266,7 +3350,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Colle
 .word 0xaa0003f9
 .word 0xf90017a1
 .word 0xf9401ba0
-bl _p_151
+bl _p_157
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0x91003c10
@@ -3292,10 +3376,10 @@ bl _p_151
 .word 0xf9401b02
 .word 0xd63f0040
 .word 0xf9401ba0
-bl _p_152
+bl _p_158
 .word 0xf9003ba0
 .word 0xf9401ba0
-bl _p_153
+bl _p_159
 .word 0xaa0003e1
 .word 0xf9403baf
 .word 0xf94017a0
@@ -3318,10 +3402,10 @@ bl _p_153
 .word 0xf9401fa0
 .word 0xf9003ba0
 .word 0xf9401ba0
-bl _p_154
+bl _p_160
 .word 0xf9003fa0
 .word 0xf9401ba0
-bl _p_155
+bl _p_161
 .word 0xaa0003e1
 .word 0xf9403ba0
 .word 0xf9403faf
@@ -3336,10 +3420,10 @@ bl _p_155
 .word 0x540001e3
 .loc 7 178 0
 .word 0xf9401ba0
-bl _p_146
+bl _p_152
 .word 0xf9003ba0
 .word 0xf9401ba0
-bl _p_156
+bl _p_162
 .word 0xaa0003e4
 .word 0xf9403baf
 .word 0xaa1903e0
@@ -3368,7 +3452,7 @@ bl _p_156
 .word 0xf9401700
 .word 0xf9401f00
 .word 0xf9401ba0
-bl _p_157
+bl _p_163
 .word 0xaa0003e2
 .word 0xf9403ba0
 .word 0xf9403fa1
@@ -3444,11 +3528,11 @@ ldr x15, [x16, #232]
 .word 0xd65f03c0
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_37
+bl _p_39
 
-Lme_30:
+Lme_32:
 .text
-ut_49:
+ut_51:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddWithBufferAllocation_T_GSHAREDVT_T_GSHAREDVT____int_
 .text
@@ -3466,7 +3550,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddWithBufferAllocati
 .word 0xf9001ba2
 .word 0xaa0303fa
 .word 0xf9401fa0
-bl _p_158
+bl _p_164
 .word 0xaa0003f7
 .word 0xb98002e0
 .word 0xf90023bf
@@ -3493,10 +3577,10 @@ bl _p_158
 .word 0xb9000001
 .loc 7 200 0
 .word 0xf9401fa0
-bl _p_146
+bl _p_152
 .word 0xf90037a0
 .word 0xf9401fa0
-bl _p_159
+bl _p_165
 .word 0xaa0003e1
 .word 0xf94037af
 .word 0xaa1803e0
@@ -3550,7 +3634,7 @@ ldr x2, [x16, #16]
 .word 0xf94016e0
 .word 0xf9401ae0
 .word 0xf9401fa0
-bl _p_157
+bl _p_163
 .word 0xaa0003e2
 .word 0xf9402ba0
 .word 0xf9402fa1
@@ -3563,11 +3647,11 @@ bl _mono_gsharedvt_value_copy
 .word 0xd65f03c0
 .word 0xd2800f60
 .word 0xaa1103e1
-bl _p_37
+bl _p_39
 
-Lme_31:
+Lme_33:
 .text
-ut_50:
+ut_52:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_CopyTo_T_GSHAREDVT___int_int
 .text
@@ -3587,7 +3671,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_CopyTo_T_GSHAREDVT___
 .word 0xaa0203f9
 .word 0xaa0303fa
 .word 0xf94027a0
-bl _p_160
+bl _p_166
 .word 0xaa0003f6
 .word 0xb98002c0
 .word 0xf9002bbf
@@ -3595,10 +3679,10 @@ bl _p_160
 .word 0x1400001a
 .loc 7 221 0
 .word 0xf94027a0
-bl _p_146
+bl _p_152
 .word 0xf90033a0
 .word 0xf94027a0
-bl _p_161
+bl _p_167
 .word 0xaa0003e2
 .word 0xf94033af
 .word 0xaa1703e0
@@ -3608,7 +3692,7 @@ bl _p_161
 .loc 7 224 0
 .word 0xb9801aa1
 .word 0xaa1a03e0
-bl _p_162
+bl _p_168
 .word 0x93407c00
 .word 0xaa0003f4
 .loc 7 225 0
@@ -3617,7 +3701,7 @@ bl _p_162
 .word 0xaa1803e2
 .word 0xaa1903e3
 .word 0xaa1403e4
-bl _p_43
+bl _p_45
 .loc 7 228 0
 .word 0x4b14035a
 .loc 7 229 0
@@ -3635,9 +3719,9 @@ bl _p_43
 .word 0xa8c77bfd
 .word 0xd65f03c0
 
-Lme_32:
+Lme_34:
 .text
-ut_51:
+ut_53:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_GetBuffer_int
 .text
@@ -3652,7 +3736,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_GetBuffer_int:
 .word 0xaa0003f9
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_163
+bl _p_169
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0xf9001bbf
@@ -3663,10 +3747,10 @@ bl _p_163
 .word 0x8b000320
 .word 0xf90023a0
 .word 0xf94017a0
-bl _p_164
+bl _p_170
 .word 0xf90027a0
 .word 0xf94017a0
-bl _p_165
+bl _p_171
 .word 0xaa0003e1
 .word 0xf94023a0
 .word 0xf94027af
@@ -3689,10 +3773,10 @@ bl _p_165
 .word 0x51000400
 .word 0xf90027a0
 .word 0xf94017a0
-bl _p_164
+bl _p_170
 .word 0xf9002ba0
 .word 0xf94017a0
-bl _p_166
+bl _p_172
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -3708,9 +3792,9 @@ bl _p_166
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_33:
+Lme_35:
 .text
-ut_52:
+ut_54:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_ToArray
 .text
@@ -3724,16 +3808,16 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_ToArray:
 .word 0xf90013af
 .word 0xaa0003fa
 .word 0xf94013a0
-bl _p_167
+bl _p_173
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf90017bf
 .word 0xf9001bbf
 .word 0xf94013a0
-bl _p_146
+bl _p_152
 .word 0xf90023a0
 .word 0xf94013a0
-bl _p_168
+bl _p_174
 .word 0xaa0003e2
 .word 0xf94023af
 .word 0xaa1a03e0
@@ -3751,9 +3835,9 @@ bl _p_168
 .word 0xb9800000
 .word 0xf9002fa0
 .word 0xf94013a0
-bl _p_169
+bl _p_175
 .word 0xf9402fa1
-bl _p_42
+bl _p_44
 .word 0xf9001ba0
 .loc 7 349 0
 .word 0xf9401ba0
@@ -3764,10 +3848,10 @@ bl _p_42
 .word 0xb9800000
 .word 0xf90027a0
 .word 0xf94013a0
-bl _p_146
+bl _p_152
 .word 0xf9002ba0
 .word 0xf94013a0
-bl _p_170
+bl _p_176
 .word 0xaa0003e4
 .word 0xf94023a1
 .word 0xf94027a3
@@ -3782,9 +3866,9 @@ bl _p_170
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_34:
+Lme_36:
 .text
-ut_53:
+ut_55:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_TryMove_T_GSHAREDVT___
 .text
@@ -3799,7 +3883,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_TryMove_T_GSHAREDVT__
 .word 0xaa0003f9
 .word 0xf90013a1
 .word 0xf94017a0
-bl _p_171
+bl _p_177
 .word 0xaa0003f8
 .word 0xb9800300
 .word 0xf9001bbf
@@ -3840,9 +3924,9 @@ ldr x2, [x16, #16]
 .word 0xa8c57bfd
 .word 0xd65f03c0
 
-Lme_35:
+Lme_37:
 .text
-ut_54:
+ut_56:
 add x0, x0, 16
 b System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AllocateBuffer
 .text
@@ -3857,7 +3941,7 @@ System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AllocateBuffer:
 .word 0xf90017af
 .word 0xaa0003fa
 .word 0xf94017a0
-bl _p_172
+bl _p_178
 .word 0xaa0003f9
 .word 0xb9800320
 .word 0xf9001bbf
@@ -3886,14 +3970,14 @@ bl _p_172
 .word 0x8b000340
 .word 0xb9800001
 .word 0xaa1803e0
-bl _p_162
+bl _p_168
 .word 0x93407c00
 .word 0xaa0003f8
 .loc 7 384 0
 .word 0xf94017a0
-bl _p_169
+bl _p_175
 .word 0xaa1803e1
-bl _p_42
+bl _p_44
 .word 0xf90027a0
 .word 0xf9400f20
 .word 0xd1000400
@@ -3927,7 +4011,7 @@ ldr x2, [x16, #16]
 .word 0xb9800024
 .word 0xd2800001
 .word 0xd2800003
-bl _p_43
+bl _p_45
 .loc 7 386 0
 .word 0xf9400f20
 .word 0xd1000400
@@ -3974,10 +4058,10 @@ ldr x2, [x16, #16]
 .word 0xf9400000
 .word 0xf90027a0
 .word 0xf94017a0
-bl _p_164
+bl _p_170
 .word 0xf9002ba0
 .word 0xf94017a0
-bl _p_173
+bl _p_179
 .word 0xaa0003e2
 .word 0xf94023a0
 .word 0xf94027a1
@@ -3997,14 +4081,14 @@ bl _p_173
 .word 0x8b020342
 .word 0xb9800042
 .word 0x4b020021
-bl _p_162
+bl _p_168
 .word 0x93407c00
 .word 0xaa0003f8
 .loc 7 414 0
 .word 0xf94017a0
-bl _p_169
+bl _p_175
 .word 0xaa1803e1
-bl _p_42
+bl _p_44
 .word 0xf90023a0
 .word 0xf9400f20
 .word 0xd1000400
@@ -4035,7 +4119,7 @@ ldr x2, [x16, #16]
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_36:
+Lme_38:
 .text
 	.align 4
 	.no_dead_strip System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumerable_1_T_REF
@@ -4051,7 +4135,7 @@ System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumer
 .loc 8 69 0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_174
+bl _p_180
 .word 0xaa0003e2
 .word 0xf9400441
 .word 0xaa1a03e0
@@ -4062,7 +4146,7 @@ bl _p_9
 .loc 8 71 0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_175
+bl _p_181
 .word 0xaa0003ef
 .word 0xaa1903e0
 .word 0xf9400321
@@ -4080,13 +4164,13 @@ bl _p_175
 .word 0xf9001fa0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_176
+bl _p_182
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_177
+bl _p_183
 .word 0xaa0003e1
 .word 0xf9401fa0
 .word 0xf9400021
@@ -4112,9 +4196,9 @@ ldr x2, [x16, #16]
 .word 0xf90023a0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_178
+bl _p_184
 .word 0xaa1a03e1
-bl _p_42
+bl _p_44
 .word 0xaa0003e1
 .word 0xf94023a0
 .word 0xf9001fa1
@@ -4139,7 +4223,7 @@ ldr x2, [x16, #16]
 .word 0xf9001ba0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_179
+bl _p_185
 .word 0xaa0003ef
 .word 0xf9401ba1
 .word 0xaa1903e0
@@ -4161,13 +4245,13 @@ bl _p_179
 .word 0xf9001fa0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_176
+bl _p_182
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_177
+bl _p_183
 .word 0xaa0003e1
 .word 0xf9401fa0
 .word 0xf9400021
@@ -4190,7 +4274,7 @@ ldr x2, [x16, #16]
 .loc 8 87 0
 .word 0xf94013a0
 .word 0xaa1a03e1
-bl _p_180
+bl _p_186
 .loc 8 89 0
 .word 0xa9416bb9
 .word 0x910003bf
@@ -4198,10 +4282,10 @@ bl _p_180
 .word 0xd65f03c0
 .loc 8 67 0
 .word 0xd28000c0
-bl _p_181
+bl _p_187
 .word 0x17ffff78
 
-Lme_37:
+Lme_39:
 .text
 	.align 4
 	.no_dead_strip System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
@@ -4221,7 +4305,7 @@ System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic
 .loc 8 1105 0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_182
+bl _p_188
 .word 0xaa0003ef
 .word 0xaa1a03e0
 .word 0xf9400341
@@ -4236,7 +4320,7 @@ bl _p_182
 .word 0xf9002ba0
 .word 0xf94013a0
 .word 0xf9400000
-bl _p_183
+bl _p_189
 .word 0xaa0003ef
 .word 0xf9402ba1
 .word 0xaa0103e0
@@ -4259,7 +4343,7 @@ bl _p_183
 .word 0xf94013a1
 .word 0xb9801821
 .word 0x11000421
-bl _p_184
+bl _p_190
 .loc 8 1119 0
 .word 0xf94013a0
 .word 0xf9400803
@@ -4318,7 +4402,7 @@ ldr x15, [x16, #232]
 .word 0xa8c67bfd
 .word 0xd65f03c0
 
-Lme_38:
+Lme_3a:
 .text
 	.align 4
 	.no_dead_strip System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
@@ -4362,14 +4446,14 @@ System_Collections_Generic_List_1_T_REF_EnsureCapacity_int:
 .loc 8 426 0
 .word 0xf94013a0
 .word 0xaa1803e1
-bl _p_185
+bl _p_191
 .loc 8 428 0
 .word 0xa94167b8
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
 
-Lme_39:
+Lme_3b:
 .text
 	.align 4
 	.no_dead_strip System_Collections_Generic_List_1_T_REF_set_Capacity_int
@@ -4396,9 +4480,9 @@ System_Collections_Generic_List_1_T_REF_set_Capacity_int:
 .loc 8 112 0
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_178
+bl _p_184
 .word 0xaa1a03e1
-bl _p_42
+bl _p_44
 .word 0xaa0003fa
 .loc 8 113 0
 .word 0xf9400fa0
@@ -4413,7 +4497,7 @@ bl _p_42
 .word 0xd2800001
 .word 0xaa1a03e2
 .word 0xd2800003
-bl _p_43
+bl _p_45
 .loc 8 117 0
 .word 0xf9400fa0
 .word 0x91004000
@@ -4438,13 +4522,13 @@ ldr x1, [x16, #16]
 .word 0xf90017a0
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_176
+bl _p_182
 .word 0x3980b410
 .word 0xb5000050
-bl _p_34
+bl _p_36
 .word 0xf9400fa0
 .word 0xf9400000
-bl _p_177
+bl _p_183
 .word 0xaa0003e1
 .word 0xf94017a0
 .word 0xf9400021
@@ -4472,10 +4556,10 @@ ldr x2, [x16, #16]
 .loc 8 105 0
 .word 0xd28001e0
 .word 0xd28002a1
-bl _p_186
+bl _p_192
 .word 0x17ffffb2
 
-Lme_3a:
+Lme_3c:
 .text
 	.align 3
 jit_code_end:
@@ -4490,6 +4574,7 @@ bl System_Linq_Error_NoElements
 bl System_Linq_Enumerable_First_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
 bl System_Linq_Enumerable_TryGetFirst_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
 bl System_Linq_Enumerable_Last_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+bl System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
 bl System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
 bl System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
 bl System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
@@ -4517,6 +4602,7 @@ bl method_addresses
 bl System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
 bl System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
 bl System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+bl System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
 bl System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
 bl System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
 bl System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
@@ -4550,23 +4636,22 @@ method_addresses_end:
 	.align 3
 unbox_trampolines:
 
-	.long 12,13,14,15,16,17,19,20
-	.long 21,22,23,24,25,26,27,39
-	.long 40,41,42,43,44,46,47,48
-	.long 49,50,51,52,53,54
+	.long 13,14,15,16,17,18,20,21
+	.long 22,23,24,25,26,27,28,41
+	.long 42,43,44,45,46,48,49,50
+	.long 51,52,53,54,55,56
 unbox_trampolines_end:
 
 	.long 0
 .text
 	.align 3
 unbox_trampoline_addresses:
-bl ut_12
 bl ut_13
 bl ut_14
 bl ut_15
 bl ut_16
 bl ut_17
-bl ut_19
+bl ut_18
 bl ut_20
 bl ut_21
 bl ut_22
@@ -4575,14 +4660,13 @@ bl ut_24
 bl ut_25
 bl ut_26
 bl ut_27
-bl ut_39
-bl ut_40
+bl ut_28
 bl ut_41
 bl ut_42
 bl ut_43
 bl ut_44
+bl ut_45
 bl ut_46
-bl ut_47
 bl ut_48
 bl ut_49
 bl ut_50
@@ -4590,6 +4674,8 @@ bl ut_51
 bl ut_52
 bl ut_53
 bl ut_54
+bl ut_55
+bl ut_56
 
 	.long 0
 .section __TEXT, __const
@@ -4606,12 +4692,12 @@ unwind_info:
 	.byte 33,12,31,0,68,14,96,157,12,158,11,68,13,29,68,147,10,148,9,68,149,8,150,7,68,151,6,152,5,68,153,4
 	.byte 154,3,16,12,31,0,68,14,80,157,10,158,9,68,13,29,68,154,8,21,12,31,0,68,14,64,157,8,158,7,68,13
 	.byte 29,68,152,6,153,5,68,154,4,18,12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7,27,12,31,0
-	.byte 68,14,144,1,157,18,158,17,68,13,29,68,150,16,151,15,68,152,14,153,13,68,154,12,18,12,31,0,68,14,48,157
-	.byte 6,158,5,68,13,29,68,153,4,154,3,18,12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7,18,12
-	.byte 31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7,28,12,31,0,68,14,96,157,12,158,11,68,13,29,68
-	.byte 149,10,150,9,68,151,8,152,7,68,153,6,154,5,23,12,31,0,68,14,96,157,12,158,11,68,13,29,68,151,10,152
-	.byte 9,68,153,8,154,7,13,12,31,0,68,14,64,157,8,158,7,68,13,29,18,12,31,0,68,14,96,157,12,158,11,68
-	.byte 13,29,68,152,10,153,9,22,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,151,14,152,13,68,153,12,21,12
+	.byte 68,14,144,1,157,18,158,17,68,13,29,68,150,16,151,15,68,152,14,153,13,68,154,12,18,12,31,0,68,14,96,157
+	.byte 12,158,11,68,13,29,68,152,10,153,9,18,12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3,18,12
+	.byte 31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7,18,12,31,0,68,14,80,157,10,158,9,68,13,29,68
+	.byte 153,8,154,7,28,12,31,0,68,14,96,157,12,158,11,68,13,29,68,149,10,150,9,68,151,8,152,7,68,153,6,154
+	.byte 5,23,12,31,0,68,14,96,157,12,158,11,68,13,29,68,151,10,152,9,68,153,8,154,7,13,12,31,0,68,14,64
+	.byte 157,8,158,7,68,13,29,22,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,151,14,152,13,68,153,12,21,12
 	.byte 31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,154,10,31,12,31,0,68,14,112,157,14,158,13,68
 	.byte 13,29,68,148,12,149,11,68,150,10,151,9,68,152,8,153,7,68,154,6,18,12,31,0,68,14,48,157,6,158,5,68
 	.byte 13,29,68,152,4,153,3
@@ -4627,7 +4713,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #248]
 br x16
-.word 751
+.word 793
 	.no_dead_strip plt_System_ArgumentNullException__ctor_string
 plt_System_ArgumentNullException__ctor_string:
 _p_2:
@@ -4635,7 +4721,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #256]
 br x16
-.word 759
+.word 801
 	.no_dead_strip plt_System_InvalidOperationException__ctor_string
 plt_System_InvalidOperationException__ctor_string:
 _p_3:
@@ -4643,7 +4729,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #264]
 br x16
-.word 762
+.word 804
 	.no_dead_strip plt__rgctx_fetch_0
 plt__rgctx_fetch_0:
 _p_4:
@@ -4651,7 +4737,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #272]
 br x16
-.word 787
+.word 829
 	.no_dead_strip plt_System_Linq_Enumerable_TryGetFirst_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
 plt_System_Linq_Enumerable_TryGetFirst_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_:
 _p_5:
@@ -4659,7 +4745,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #280]
 br x16
-.word 805
+.word 847
 	.no_dead_strip plt_System_Linq_Error_NoElements
 plt_System_Linq_Error_NoElements:
 _p_6:
@@ -4667,7 +4753,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #288]
 br x16
-.word 819
+.word 861
 	.no_dead_strip plt__jit_icall_mono_arch_throw_exception
 plt__jit_icall_mono_arch_throw_exception:
 _p_7:
@@ -4675,7 +4761,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #296]
 br x16
-.word 824
+.word 866
 	.no_dead_strip plt__rgctx_fetch_1
 plt__rgctx_fetch_1:
 _p_8:
@@ -4683,7 +4769,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #304]
 br x16
-.word 855
+.word 897
 	.no_dead_strip plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr
 plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr:
 _p_9:
@@ -4691,7 +4777,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #312]
 br x16
-.word 863
+.word 905
 	.no_dead_strip plt__rgctx_fetch_2
 plt__rgctx_fetch_2:
 _p_10:
@@ -4699,7 +4785,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #320]
 br x16
-.word 871
+.word 913
 	.no_dead_strip plt__rgctx_fetch_3
 plt__rgctx_fetch_3:
 _p_11:
@@ -4707,7 +4793,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #328]
 br x16
-.word 895
+.word 937
 	.no_dead_strip plt__rgctx_fetch_4
 plt__rgctx_fetch_4:
 _p_12:
@@ -4715,7 +4801,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #336]
 br x16
-.word 909
+.word 951
 	.no_dead_strip plt__rgctx_fetch_5
 plt__rgctx_fetch_5:
 _p_13:
@@ -4723,7 +4809,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #344]
 br x16
-.word 928
+.word 970
 	.no_dead_strip plt__rgctx_fetch_6
 plt__rgctx_fetch_6:
 _p_14:
@@ -4731,7 +4817,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #352]
 br x16
-.word 953
+.word 995
 	.no_dead_strip plt__rgctx_fetch_7
 plt__rgctx_fetch_7:
 _p_15:
@@ -4739,7 +4825,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #360]
 br x16
-.word 978
+.word 1020
 	.no_dead_strip plt__jit_icall_ves_icall_thread_finish_async_abort
 plt__jit_icall_ves_icall_thread_finish_async_abort:
 _p_16:
@@ -4747,7 +4833,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #368]
 br x16
-.word 997
+.word 1039
 	.no_dead_strip plt__jit_icall_mono_helper_ldstr
 plt__jit_icall_mono_helper_ldstr:
 _p_17:
@@ -4755,7 +4841,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #376]
 br x16
-.word 1000
+.word 1042
 	.no_dead_strip plt_System_Linq_Error_ArgumentNull_string
 plt_System_Linq_Error_ArgumentNull_string:
 _p_18:
@@ -4763,7 +4849,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #384]
 br x16
-.word 1003
+.word 1045
 	.no_dead_strip plt__rgctx_fetch_8
 plt__rgctx_fetch_8:
 _p_19:
@@ -4771,7 +4857,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #392]
 br x16
-.word 1031
+.word 1073
 	.no_dead_strip plt_System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
 plt_System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_:
 _p_20:
@@ -4779,7 +4865,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #400]
 br x16
-.word 1049
+.word 1091
 	.no_dead_strip plt__rgctx_fetch_9
 plt__rgctx_fetch_9:
 _p_21:
@@ -4787,79 +4873,79 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #408]
 br x16
-.word 1092
-	.no_dead_strip plt__rgctx_fetch_10
-plt__rgctx_fetch_10:
+.word 1128
+	.no_dead_strip plt_System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool__0
+plt_System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool__0:
 _p_22:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #416]
 br x16
-.word 1100
-	.no_dead_strip plt__rgctx_fetch_11
-plt__rgctx_fetch_11:
+.word 1146
+	.no_dead_strip plt__rgctx_fetch_10
+plt__rgctx_fetch_10:
 _p_23:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #424]
 br x16
-.word 1124
-	.no_dead_strip plt__rgctx_fetch_12
-plt__rgctx_fetch_12:
+.word 1189
+	.no_dead_strip plt__rgctx_fetch_11
+plt__rgctx_fetch_11:
 _p_24:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #432]
 br x16
-.word 1138
-	.no_dead_strip plt__rgctx_fetch_13
-plt__rgctx_fetch_13:
+.word 1197
+	.no_dead_strip plt__rgctx_fetch_12
+plt__rgctx_fetch_12:
 _p_25:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #440]
 br x16
-.word 1157
-	.no_dead_strip plt__rgctx_fetch_14
-plt__rgctx_fetch_14:
+.word 1221
+	.no_dead_strip plt__rgctx_fetch_13
+plt__rgctx_fetch_13:
 _p_26:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #448]
 br x16
-.word 1182
-	.no_dead_strip plt__rgctx_fetch_15
-plt__rgctx_fetch_15:
+.word 1235
+	.no_dead_strip plt__rgctx_fetch_14
+plt__rgctx_fetch_14:
 _p_27:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #456]
 br x16
-.word 1207
-	.no_dead_strip plt__rgctx_fetch_16
-plt__rgctx_fetch_16:
+.word 1254
+	.no_dead_strip plt__rgctx_fetch_15
+plt__rgctx_fetch_15:
 _p_28:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #464]
 br x16
-.word 1255
-	.no_dead_strip plt__rgctx_fetch_17
-plt__rgctx_fetch_17:
+.word 1279
+	.no_dead_strip plt__rgctx_fetch_16
+plt__rgctx_fetch_16:
 _p_29:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #472]
 br x16
-.word 1263
-	.no_dead_strip plt_System_Collections_Generic_EnumerableHelpers_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
-plt_System_Collections_Generic_EnumerableHelpers_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF:
+.word 1304
+	.no_dead_strip plt__rgctx_fetch_17
+plt__rgctx_fetch_17:
 _p_30:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #480]
 br x16
-.word 1281
+.word 1352
 	.no_dead_strip plt__rgctx_fetch_18
 plt__rgctx_fetch_18:
 _p_31:
@@ -4867,55 +4953,55 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #488]
 br x16
-.word 1295
-	.no_dead_strip plt__rgctx_fetch_19
-plt__rgctx_fetch_19:
+.word 1360
+	.no_dead_strip plt_System_Collections_Generic_EnumerableHelpers_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+plt_System_Collections_Generic_EnumerableHelpers_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF:
 _p_32:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #496]
 br x16
-.word 1342
-	.no_dead_strip plt__rgctx_fetch_20
-plt__rgctx_fetch_20:
+.word 1378
+	.no_dead_strip plt__rgctx_fetch_19
+plt__rgctx_fetch_19:
 _p_33:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #504]
 br x16
-.word 1356
-	.no_dead_strip plt__jit_icall_mono_generic_class_init
-plt__jit_icall_mono_generic_class_init:
+.word 1392
+	.no_dead_strip plt__rgctx_fetch_20
+plt__rgctx_fetch_20:
 _p_34:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #512]
 br x16
-.word 1364
-	.no_dead_strip plt_System_Collections_Generic_List_1_TSource_REF__ctor_System_Collections_Generic_IEnumerable_1_TSource_REF
-plt_System_Collections_Generic_List_1_TSource_REF__ctor_System_Collections_Generic_IEnumerable_1_TSource_REF:
+.word 1439
+	.no_dead_strip plt__rgctx_fetch_21
+plt__rgctx_fetch_21:
 _p_35:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #520]
 br x16
-.word 1367
-	.no_dead_strip plt__rgctx_fetch_21
-plt__rgctx_fetch_21:
+.word 1453
+	.no_dead_strip plt__jit_icall_mono_generic_class_init
+plt__jit_icall_mono_generic_class_init:
 _p_36:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #528]
 br x16
-.word 1382
-	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
-plt__jit_icall_mono_arch_throw_corlib_exception:
+.word 1461
+	.no_dead_strip plt_System_Collections_Generic_List_1_TSource_REF__ctor_System_Collections_Generic_IEnumerable_1_TSource_REF
+plt_System_Collections_Generic_List_1_TSource_REF__ctor_System_Collections_Generic_IEnumerable_1_TSource_REF:
 _p_37:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #536]
 br x16
-.word 1400
+.word 1464
 	.no_dead_strip plt__rgctx_fetch_22
 plt__rgctx_fetch_22:
 _p_38:
@@ -4923,151 +5009,151 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #544]
 br x16
-.word 1418
-	.no_dead_strip plt_System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
-plt_System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int:
+.word 1479
+	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
+plt__jit_icall_mono_arch_throw_corlib_exception:
 _p_39:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #552]
 br x16
-.word 1426
-	.no_dead_strip plt_System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
-plt_System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF:
+.word 1497
+	.no_dead_strip plt__rgctx_fetch_23
+plt__rgctx_fetch_23:
 _p_40:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #560]
 br x16
-.word 1440
-	.no_dead_strip plt__rgctx_fetch_23
-plt__rgctx_fetch_23:
+.word 1515
+	.no_dead_strip plt_System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
+plt_System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int:
 _p_41:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #568]
 br x16
-.word 1454
-	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
-plt_wrapper_alloc_object_AllocVector_intptr_intptr:
+.word 1523
+	.no_dead_strip plt_System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
+plt_System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF:
 _p_42:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #576]
 br x16
-.word 1464
-	.no_dead_strip plt_System_Array_Copy_System_Array_int_System_Array_int_int
-plt_System_Array_Copy_System_Array_int_System_Array_int_int:
+.word 1537
+	.no_dead_strip plt__rgctx_fetch_24
+plt__rgctx_fetch_24:
 _p_43:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #584]
 br x16
-.word 1472
-	.no_dead_strip plt__rgctx_fetch_24
-plt__rgctx_fetch_24:
+.word 1551
+	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
+plt_wrapper_alloc_object_AllocVector_intptr_intptr:
 _p_44:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #592]
 br x16
-.word 1504
-	.no_dead_strip plt__rgctx_fetch_25
-plt__rgctx_fetch_25:
+.word 1561
+	.no_dead_strip plt_System_Array_Copy_System_Array_int_System_Array_int_int
+plt_System_Array_Copy_System_Array_int_System_Array_int_int:
 _p_45:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #600]
 br x16
-.word 1512
-	.no_dead_strip plt__rgctx_fetch_26
-plt__rgctx_fetch_26:
+.word 1569
+	.no_dead_strip plt__rgctx_fetch_25
+plt__rgctx_fetch_25:
 _p_46:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #608]
 br x16
-.word 1531
-	.no_dead_strip plt__rgctx_fetch_27
-plt__rgctx_fetch_27:
+.word 1601
+	.no_dead_strip plt__rgctx_fetch_26
+plt__rgctx_fetch_26:
 _p_47:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #616]
 br x16
-.word 1556
-	.no_dead_strip plt__rgctx_fetch_28
-plt__rgctx_fetch_28:
+.word 1609
+	.no_dead_strip plt__rgctx_fetch_27
+plt__rgctx_fetch_27:
 _p_48:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #624]
 br x16
-.word 1564
-	.no_dead_strip plt__rgctx_fetch_29
-plt__rgctx_fetch_29:
+.word 1628
+	.no_dead_strip plt__rgctx_fetch_28
+plt__rgctx_fetch_28:
 _p_49:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #632]
 br x16
-.word 1572
-	.no_dead_strip plt__rgctx_fetch_30
-plt__rgctx_fetch_30:
+.word 1653
+	.no_dead_strip plt__rgctx_fetch_29
+plt__rgctx_fetch_29:
 _p_50:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #640]
 br x16
-.word 1582
-	.no_dead_strip plt__rgctx_fetch_31
-plt__rgctx_fetch_31:
+.word 1661
+	.no_dead_strip plt__rgctx_fetch_30
+plt__rgctx_fetch_30:
 _p_51:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #648]
 br x16
-.word 1607
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool:
+.word 1669
+	.no_dead_strip plt__rgctx_fetch_31
+plt__rgctx_fetch_31:
 _p_52:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #656]
 br x16
-.word 1615
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF:
+.word 1679
+	.no_dead_strip plt__rgctx_fetch_32
+plt__rgctx_fetch_32:
 _p_53:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #664]
 br x16
-.word 1629
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray:
+.word 1704
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool:
 _p_54:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #672]
 br x16
-.word 1643
-	.no_dead_strip plt__rgctx_fetch_32
-plt__rgctx_fetch_32:
+.word 1712
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF:
 _p_55:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #680]
 br x16
-.word 1673
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int:
+.word 1726
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray:
 _p_56:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #688]
 br x16
-.word 1681
+.word 1740
 	.no_dead_strip plt__rgctx_fetch_33
 plt__rgctx_fetch_33:
 _p_57:
@@ -5075,79 +5161,79 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #696]
 br x16
-.word 1695
-	.no_dead_strip plt__rgctx_fetch_34
-plt__rgctx_fetch_34:
+.word 1770
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int:
 _p_58:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #704]
 br x16
-.word 1720
-	.no_dead_strip plt__rgctx_fetch_35
-plt__rgctx_fetch_35:
+.word 1778
+	.no_dead_strip plt__rgctx_fetch_34
+plt__rgctx_fetch_34:
 _p_59:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #712]
 br x16
-.word 1728
-	.no_dead_strip plt__rgctx_fetch_36
-plt__rgctx_fetch_36:
+.word 1792
+	.no_dead_strip plt__rgctx_fetch_35
+plt__rgctx_fetch_35:
 _p_60:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #720]
 br x16
-.word 1742
-	.no_dead_strip plt__rgctx_fetch_37
-plt__rgctx_fetch_37:
+.word 1817
+	.no_dead_strip plt__rgctx_fetch_36
+plt__rgctx_fetch_36:
 _p_61:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #728]
 br x16
-.word 1767
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_:
+.word 1825
+	.no_dead_strip plt__rgctx_fetch_37
+plt__rgctx_fetch_37:
 _p_62:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #736]
 br x16
-.word 1786
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer:
+.word 1839
+	.no_dead_strip plt__rgctx_fetch_38
+plt__rgctx_fetch_38:
 _p_63:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #744]
 br x16
-.word 1800
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int:
+.word 1864
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_:
 _p_64:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #752]
 br x16
-.word 1814
-	.no_dead_strip plt__rgctx_fetch_38
-plt__rgctx_fetch_38:
+.word 1883
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer:
 _p_65:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #760]
 br x16
-.word 1840
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___:
+.word 1897
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int:
 _p_66:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #768]
 br x16
-.word 1848
+.word 1911
 	.no_dead_strip plt__rgctx_fetch_39
 plt__rgctx_fetch_39:
 _p_67:
@@ -5155,391 +5241,391 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #776]
 br x16
-.word 1862
-	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
-plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int:
+.word 1937
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___:
 _p_68:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #784]
 br x16
-.word 1872
-	.no_dead_strip plt_System_Collections_Generic_ArrayBuilder_1_T_REF___Add_T_REF__
-plt_System_Collections_Generic_ArrayBuilder_1_T_REF___Add_T_REF__:
+.word 1945
+	.no_dead_strip plt__rgctx_fetch_40
+plt__rgctx_fetch_40:
 _p_69:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #792]
 br x16
-.word 1886
-	.no_dead_strip plt__rgctx_fetch_40
-plt__rgctx_fetch_40:
+.word 1959
+	.no_dead_strip plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
+plt_System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int:
 _p_70:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #800]
 br x16
-.word 1913
-	.no_dead_strip plt__rgctx_fetch_41
-plt__rgctx_fetch_41:
+.word 1969
+	.no_dead_strip plt_System_Collections_Generic_ArrayBuilder_1_T_REF___Add_T_REF__
+plt_System_Collections_Generic_ArrayBuilder_1_T_REF___Add_T_REF__:
 _p_71:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #808]
 br x16
-.word 1940
-	.no_dead_strip plt__rgctx_fetch_42
-plt__rgctx_fetch_42:
+.word 1983
+	.no_dead_strip plt__rgctx_fetch_41
+plt__rgctx_fetch_41:
 _p_72:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #816]
 br x16
-.word 1958
-	.no_dead_strip plt__rgctx_fetch_43
-plt__rgctx_fetch_43:
+.word 2010
+	.no_dead_strip plt__rgctx_fetch_42
+plt__rgctx_fetch_42:
 _p_73:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #824]
 br x16
-.word 1993
-	.no_dead_strip plt__rgctx_fetch_44
-plt__rgctx_fetch_44:
+.word 2037
+	.no_dead_strip plt__rgctx_fetch_43
+plt__rgctx_fetch_43:
 _p_74:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #832]
 br x16
-.word 2013
-	.no_dead_strip plt__rgctx_fetch_45
-plt__rgctx_fetch_45:
+.word 2055
+	.no_dead_strip plt__rgctx_fetch_44
+plt__rgctx_fetch_44:
 _p_75:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #840]
 br x16
-.word 2066
-	.no_dead_strip plt__rgctx_fetch_46
-plt__rgctx_fetch_46:
+.word 2090
+	.no_dead_strip plt__rgctx_fetch_45
+plt__rgctx_fetch_45:
 _p_76:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #848]
 br x16
-.word 2074
-	.no_dead_strip plt__rgctx_fetch_47
-plt__rgctx_fetch_47:
+.word 2110
+	.no_dead_strip plt__rgctx_fetch_46
+plt__rgctx_fetch_46:
 _p_77:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #856]
 br x16
-.word 2092
-	.no_dead_strip plt__rgctx_fetch_48
-plt__rgctx_fetch_48:
+.word 2163
+	.no_dead_strip plt__rgctx_fetch_47
+plt__rgctx_fetch_47:
 _p_78:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #864]
 br x16
-.word 2120
-	.no_dead_strip plt__rgctx_fetch_49
-plt__rgctx_fetch_49:
+.word 2171
+	.no_dead_strip plt__rgctx_fetch_48
+plt__rgctx_fetch_48:
 _p_79:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #872]
 br x16
-.word 2134
-	.no_dead_strip plt__rgctx_fetch_50
-plt__rgctx_fetch_50:
+.word 2189
+	.no_dead_strip plt__rgctx_fetch_49
+plt__rgctx_fetch_49:
 _p_80:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #880]
 br x16
-.word 2148
-	.no_dead_strip plt__rgctx_fetch_51
-plt__rgctx_fetch_51:
+.word 2217
+	.no_dead_strip plt__rgctx_fetch_50
+plt__rgctx_fetch_50:
 _p_81:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #888]
 br x16
-.word 2167
-	.no_dead_strip plt__rgctx_fetch_52
-plt__rgctx_fetch_52:
+.word 2231
+	.no_dead_strip plt__rgctx_fetch_51
+plt__rgctx_fetch_51:
 _p_82:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #896]
 br x16
-.word 2191
-	.no_dead_strip plt__rgctx_fetch_53
-plt__rgctx_fetch_53:
+.word 2245
+	.no_dead_strip plt__rgctx_fetch_52
+plt__rgctx_fetch_52:
 _p_83:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #904]
 br x16
-.word 2210
-	.no_dead_strip plt__rgctx_fetch_54
-plt__rgctx_fetch_54:
+.word 2264
+	.no_dead_strip plt__rgctx_fetch_53
+plt__rgctx_fetch_53:
 _p_84:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #912]
 br x16
-.word 2244
-	.no_dead_strip plt__rgctx_fetch_55
-plt__rgctx_fetch_55:
+.word 2288
+	.no_dead_strip plt__rgctx_fetch_54
+plt__rgctx_fetch_54:
 _p_85:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #920]
 br x16
-.word 2263
-	.no_dead_strip plt__rgctx_fetch_56
-plt__rgctx_fetch_56:
+.word 2307
+	.no_dead_strip plt__rgctx_fetch_55
+plt__rgctx_fetch_55:
 _p_86:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #928]
 br x16
-.word 2300
-	.no_dead_strip plt__rgctx_fetch_57
-plt__rgctx_fetch_57:
+.word 2341
+	.no_dead_strip plt__rgctx_fetch_56
+plt__rgctx_fetch_56:
 _p_87:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #936]
 br x16
-.word 2319
-	.no_dead_strip plt__rgctx_fetch_58
-plt__rgctx_fetch_58:
+.word 2360
+	.no_dead_strip plt__rgctx_fetch_57
+plt__rgctx_fetch_57:
 _p_88:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #944]
 br x16
-.word 2359
-	.no_dead_strip plt__rgctx_fetch_59
-plt__rgctx_fetch_59:
+.word 2397
+	.no_dead_strip plt__rgctx_fetch_58
+plt__rgctx_fetch_58:
 _p_89:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #952]
 br x16
-.word 2390
-	.no_dead_strip plt__rgctx_fetch_60
-plt__rgctx_fetch_60:
+.word 2416
+	.no_dead_strip plt__rgctx_fetch_59
+plt__rgctx_fetch_59:
 _p_90:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #960]
 br x16
-.word 2408
-	.no_dead_strip plt__rgctx_fetch_61
-plt__rgctx_fetch_61:
+.word 2456
+	.no_dead_strip plt__rgctx_fetch_60
+plt__rgctx_fetch_60:
 _p_91:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #968]
 br x16
-.word 2445
-	.no_dead_strip plt__rgctx_fetch_62
-plt__rgctx_fetch_62:
+.word 2487
+	.no_dead_strip plt__rgctx_fetch_61
+plt__rgctx_fetch_61:
 _p_92:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #976]
 br x16
-.word 2466
-	.no_dead_strip plt__rgctx_fetch_63
-plt__rgctx_fetch_63:
+.word 2505
+	.no_dead_strip plt__rgctx_fetch_62
+plt__rgctx_fetch_62:
 _p_93:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #984]
 br x16
-.word 2523
-	.no_dead_strip plt__rgctx_fetch_64
-plt__rgctx_fetch_64:
+.word 2542
+	.no_dead_strip plt__rgctx_fetch_63
+plt__rgctx_fetch_63:
 _p_94:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #992]
 br x16
-.word 2531
-	.no_dead_strip plt__rgctx_fetch_65
-plt__rgctx_fetch_65:
+.word 2563
+	.no_dead_strip plt__rgctx_fetch_64
+plt__rgctx_fetch_64:
 _p_95:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1000]
 br x16
-.word 2549
-	.no_dead_strip plt__rgctx_fetch_66
-plt__rgctx_fetch_66:
+.word 2590
+	.no_dead_strip plt__rgctx_fetch_65
+plt__rgctx_fetch_65:
 _p_96:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1008]
 br x16
-.word 2577
-	.no_dead_strip plt__rgctx_fetch_67
-plt__rgctx_fetch_67:
+.word 2608
+	.no_dead_strip plt__rgctx_fetch_66
+plt__rgctx_fetch_66:
 _p_97:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1016]
 br x16
-.word 2591
-	.no_dead_strip plt__rgctx_fetch_68
-plt__rgctx_fetch_68:
+.word 2645
+	.no_dead_strip plt__rgctx_fetch_67
+plt__rgctx_fetch_67:
 _p_98:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1024]
 br x16
-.word 2605
-	.no_dead_strip plt__rgctx_fetch_69
-plt__rgctx_fetch_69:
+.word 2666
+	.no_dead_strip plt__rgctx_fetch_68
+plt__rgctx_fetch_68:
 _p_99:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1032]
 br x16
-.word 2624
-	.no_dead_strip plt__rgctx_fetch_70
-plt__rgctx_fetch_70:
+.word 2723
+	.no_dead_strip plt__rgctx_fetch_69
+plt__rgctx_fetch_69:
 _p_100:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1040]
 br x16
-.word 2648
-	.no_dead_strip plt__rgctx_fetch_71
-plt__rgctx_fetch_71:
+.word 2731
+	.no_dead_strip plt__rgctx_fetch_70
+plt__rgctx_fetch_70:
 _p_101:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1048]
 br x16
-.word 2667
-	.no_dead_strip plt__rgctx_fetch_72
-plt__rgctx_fetch_72:
+.word 2749
+	.no_dead_strip plt__rgctx_fetch_71
+plt__rgctx_fetch_71:
 _p_102:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1056]
 br x16
-.word 2701
-	.no_dead_strip plt__rgctx_fetch_73
-plt__rgctx_fetch_73:
+.word 2777
+	.no_dead_strip plt__rgctx_fetch_72
+plt__rgctx_fetch_72:
 _p_103:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1064]
 br x16
-.word 2720
-	.no_dead_strip plt__rgctx_fetch_74
-plt__rgctx_fetch_74:
+.word 2791
+	.no_dead_strip plt__rgctx_fetch_73
+plt__rgctx_fetch_73:
 _p_104:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1072]
 br x16
-.word 2757
-	.no_dead_strip plt__rgctx_fetch_75
-plt__rgctx_fetch_75:
+.word 2805
+	.no_dead_strip plt__rgctx_fetch_74
+plt__rgctx_fetch_74:
 _p_105:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1080]
 br x16
-.word 2776
-	.no_dead_strip plt__rgctx_fetch_76
-plt__rgctx_fetch_76:
+.word 2824
+	.no_dead_strip plt__rgctx_fetch_75
+plt__rgctx_fetch_75:
 _p_106:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1088]
 br x16
-.word 2816
-	.no_dead_strip plt__rgctx_fetch_77
-plt__rgctx_fetch_77:
+.word 2848
+	.no_dead_strip plt__rgctx_fetch_76
+plt__rgctx_fetch_76:
 _p_107:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1096]
 br x16
-.word 2837
-	.no_dead_strip plt__rgctx_fetch_78
-plt__rgctx_fetch_78:
+.word 2867
+	.no_dead_strip plt__rgctx_fetch_77
+plt__rgctx_fetch_77:
 _p_108:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1104]
 br x16
-.word 2845
-	.no_dead_strip plt__rgctx_fetch_79
-plt__rgctx_fetch_79:
+.word 2901
+	.no_dead_strip plt__rgctx_fetch_78
+plt__rgctx_fetch_78:
 _p_109:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1112]
 br x16
-.word 2863
-	.no_dead_strip plt__rgctx_fetch_80
-plt__rgctx_fetch_80:
+.word 2920
+	.no_dead_strip plt__rgctx_fetch_79
+plt__rgctx_fetch_79:
 _p_110:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1120]
 br x16
-.word 2898
-	.no_dead_strip plt__rgctx_fetch_81
-plt__rgctx_fetch_81:
+.word 2957
+	.no_dead_strip plt__rgctx_fetch_80
+plt__rgctx_fetch_80:
 _p_111:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1128]
 br x16
-.word 2916
-	.no_dead_strip plt__rgctx_fetch_82
-plt__rgctx_fetch_82:
+.word 2976
+	.no_dead_strip plt__rgctx_fetch_81
+plt__rgctx_fetch_81:
 _p_112:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1136]
 br x16
-.word 2955
-	.no_dead_strip plt__rgctx_fetch_83
-plt__rgctx_fetch_83:
+.word 3016
+	.no_dead_strip plt__rgctx_fetch_82
+plt__rgctx_fetch_82:
 _p_113:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1144]
 br x16
-.word 2976
-	.no_dead_strip plt__rgctx_fetch_84
-plt__rgctx_fetch_84:
+.word 3037
+	.no_dead_strip plt__rgctx_fetch_83
+plt__rgctx_fetch_83:
 _p_114:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1152]
 br x16
-.word 2990
-	.no_dead_strip plt_wrapper_alloc_object_Alloc_intptr
-plt_wrapper_alloc_object_Alloc_intptr:
+.word 3045
+	.no_dead_strip plt__rgctx_fetch_84
+plt__rgctx_fetch_84:
 _p_115:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1160]
 br x16
-.word 2998
+.word 3063
 	.no_dead_strip plt__rgctx_fetch_85
 plt__rgctx_fetch_85:
 _p_116:
@@ -5547,7 +5633,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1168]
 br x16
-.word 3006
+.word 3098
 	.no_dead_strip plt__rgctx_fetch_86
 plt__rgctx_fetch_86:
 _p_117:
@@ -5555,7 +5641,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1176]
 br x16
-.word 3038
+.word 3116
 	.no_dead_strip plt__rgctx_fetch_87
 plt__rgctx_fetch_87:
 _p_118:
@@ -5563,7 +5649,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1184]
 br x16
-.word 3056
+.word 3155
 	.no_dead_strip plt__rgctx_fetch_88
 plt__rgctx_fetch_88:
 _p_119:
@@ -5571,7 +5657,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1192]
 br x16
-.word 3086
+.word 3176
 	.no_dead_strip plt__rgctx_fetch_89
 plt__rgctx_fetch_89:
 _p_120:
@@ -5579,87 +5665,87 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1200]
 br x16
-.word 3112
-	.no_dead_strip plt__rgctx_fetch_90
-plt__rgctx_fetch_90:
+.word 3190
+	.no_dead_strip plt_wrapper_alloc_object_Alloc_intptr
+plt_wrapper_alloc_object_Alloc_intptr:
 _p_121:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1208]
 br x16
-.word 3138
-	.no_dead_strip plt__rgctx_fetch_91
-plt__rgctx_fetch_91:
+.word 3198
+	.no_dead_strip plt__rgctx_fetch_90
+plt__rgctx_fetch_90:
 _p_122:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1216]
 br x16
-.word 3180
-	.no_dead_strip plt__rgctx_fetch_92
-plt__rgctx_fetch_92:
+.word 3206
+	.no_dead_strip plt__rgctx_fetch_91
+plt__rgctx_fetch_91:
 _p_123:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1224]
 br x16
-.word 3188
-	.no_dead_strip plt__rgctx_fetch_93
-plt__rgctx_fetch_93:
+.word 3238
+	.no_dead_strip plt__rgctx_fetch_92
+plt__rgctx_fetch_92:
 _p_124:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1232]
 br x16
-.word 3214
-	.no_dead_strip plt__rgctx_fetch_94
-plt__rgctx_fetch_94:
+.word 3256
+	.no_dead_strip plt__rgctx_fetch_93
+plt__rgctx_fetch_93:
 _p_125:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1240]
 br x16
-.word 3222
-	.no_dead_strip plt__rgctx_fetch_95
-plt__rgctx_fetch_95:
+.word 3286
+	.no_dead_strip plt__rgctx_fetch_94
+plt__rgctx_fetch_94:
 _p_126:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1248]
 br x16
-.word 3245
-	.no_dead_strip plt__rgctx_fetch_96
-plt__rgctx_fetch_96:
+.word 3312
+	.no_dead_strip plt__rgctx_fetch_95
+plt__rgctx_fetch_95:
 _p_127:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1256]
 br x16
-.word 3269
-	.no_dead_strip plt__rgctx_fetch_97
-plt__rgctx_fetch_97:
+.word 3338
+	.no_dead_strip plt__rgctx_fetch_96
+plt__rgctx_fetch_96:
 _p_128:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1264]
 br x16
-.word 3296
-	.no_dead_strip plt__rgctx_fetch_98
-plt__rgctx_fetch_98:
+.word 3380
+	.no_dead_strip plt__rgctx_fetch_97
+plt__rgctx_fetch_97:
 _p_129:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1272]
 br x16
-.word 3339
-	.no_dead_strip plt_System_Math_Max_int_int
-plt_System_Math_Max_int_int:
+.word 3388
+	.no_dead_strip plt__rgctx_fetch_98
+plt__rgctx_fetch_98:
 _p_130:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1280]
 br x16
-.word 3370
+.word 3414
 	.no_dead_strip plt__rgctx_fetch_99
 plt__rgctx_fetch_99:
 _p_131:
@@ -5667,7 +5753,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1288]
 br x16
-.word 3373
+.word 3422
 	.no_dead_strip plt__rgctx_fetch_100
 plt__rgctx_fetch_100:
 _p_132:
@@ -5675,7 +5761,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1296]
 br x16
-.word 3402
+.word 3445
 	.no_dead_strip plt__rgctx_fetch_101
 plt__rgctx_fetch_101:
 _p_133:
@@ -5683,7 +5769,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1304]
 br x16
-.word 3435
+.word 3469
 	.no_dead_strip plt__rgctx_fetch_102
 plt__rgctx_fetch_102:
 _p_134:
@@ -5691,7 +5777,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1312]
 br x16
-.word 3443
+.word 3496
 	.no_dead_strip plt__rgctx_fetch_103
 plt__rgctx_fetch_103:
 _p_135:
@@ -5699,223 +5785,223 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1320]
 br x16
-.word 3462
-	.no_dead_strip plt__rgctx_fetch_104
-plt__rgctx_fetch_104:
+.word 3539
+	.no_dead_strip plt_System_Math_Max_int_int
+plt_System_Math_Max_int_int:
 _p_136:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1328]
 br x16
-.word 3486
-	.no_dead_strip plt__rgctx_fetch_105
-plt__rgctx_fetch_105:
+.word 3570
+	.no_dead_strip plt__rgctx_fetch_104
+plt__rgctx_fetch_104:
 _p_137:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1336]
 br x16
-.word 3505
-	.no_dead_strip plt__rgctx_fetch_106
-plt__rgctx_fetch_106:
+.word 3573
+	.no_dead_strip plt__rgctx_fetch_105
+plt__rgctx_fetch_105:
 _p_138:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1344]
 br x16
-.word 3533
-	.no_dead_strip plt__rgctx_fetch_107
-plt__rgctx_fetch_107:
+.word 3602
+	.no_dead_strip plt__rgctx_fetch_106
+plt__rgctx_fetch_106:
 _p_139:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1352]
 br x16
-.word 3543
-	.no_dead_strip plt__rgctx_fetch_108
-plt__rgctx_fetch_108:
+.word 3635
+	.no_dead_strip plt__rgctx_fetch_107
+plt__rgctx_fetch_107:
 _p_140:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1360]
 br x16
-.word 3562
-	.no_dead_strip plt__rgctx_fetch_109
-plt__rgctx_fetch_109:
+.word 3643
+	.no_dead_strip plt__rgctx_fetch_108
+plt__rgctx_fetch_108:
 _p_141:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1368]
 br x16
-.word 3591
-	.no_dead_strip plt__rgctx_fetch_110
-plt__rgctx_fetch_110:
+.word 3662
+	.no_dead_strip plt__rgctx_fetch_109
+plt__rgctx_fetch_109:
 _p_142:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1376]
 br x16
-.word 3599
-	.no_dead_strip plt__rgctx_fetch_111
-plt__rgctx_fetch_111:
+.word 3686
+	.no_dead_strip plt__rgctx_fetch_110
+plt__rgctx_fetch_110:
 _p_143:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1384]
 br x16
-.word 3623
-	.no_dead_strip plt__rgctx_fetch_112
-plt__rgctx_fetch_112:
+.word 3705
+	.no_dead_strip plt__rgctx_fetch_111
+plt__rgctx_fetch_111:
 _p_144:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1392]
 br x16
-.word 3654
-	.no_dead_strip plt__rgctx_fetch_113
-plt__rgctx_fetch_113:
+.word 3733
+	.no_dead_strip plt__rgctx_fetch_112
+plt__rgctx_fetch_112:
 _p_145:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1400]
 br x16
-.word 3680
-	.no_dead_strip plt__rgctx_fetch_114
-plt__rgctx_fetch_114:
+.word 3743
+	.no_dead_strip plt__rgctx_fetch_113
+plt__rgctx_fetch_113:
 _p_146:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1408]
 br x16
-.word 3701
-	.no_dead_strip plt__rgctx_fetch_115
-plt__rgctx_fetch_115:
+.word 3762
+	.no_dead_strip plt__rgctx_fetch_114
+plt__rgctx_fetch_114:
 _p_147:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1416]
 br x16
-.word 3709
-	.no_dead_strip plt__rgctx_fetch_116
-plt__rgctx_fetch_116:
+.word 3791
+	.no_dead_strip plt__rgctx_fetch_115
+plt__rgctx_fetch_115:
 _p_148:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1424]
 br x16
-.word 3733
-	.no_dead_strip plt__rgctx_fetch_117
-plt__rgctx_fetch_117:
+.word 3799
+	.no_dead_strip plt__rgctx_fetch_116
+plt__rgctx_fetch_116:
 _p_149:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1432]
 br x16
-.word 3777
-	.no_dead_strip plt__rgctx_fetch_118
-plt__rgctx_fetch_118:
+.word 3823
+	.no_dead_strip plt__rgctx_fetch_117
+plt__rgctx_fetch_117:
 _p_150:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1440]
 br x16
-.word 3796
-	.no_dead_strip plt__rgctx_fetch_119
-plt__rgctx_fetch_119:
+.word 3854
+	.no_dead_strip plt__rgctx_fetch_118
+plt__rgctx_fetch_118:
 _p_151:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1448]
 br x16
-.word 3824
-	.no_dead_strip plt__rgctx_fetch_120
-plt__rgctx_fetch_120:
+.word 3880
+	.no_dead_strip plt__rgctx_fetch_119
+plt__rgctx_fetch_119:
 _p_152:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1456]
 br x16
-.word 3886
-	.no_dead_strip plt__rgctx_fetch_121
-plt__rgctx_fetch_121:
+.word 3901
+	.no_dead_strip plt__rgctx_fetch_120
+plt__rgctx_fetch_120:
 _p_153:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1464]
 br x16
-.word 3905
-	.no_dead_strip plt__rgctx_fetch_122
-plt__rgctx_fetch_122:
+.word 3909
+	.no_dead_strip plt__rgctx_fetch_121
+plt__rgctx_fetch_121:
 _p_154:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1472]
 br x16
-.word 3942
-	.no_dead_strip plt__rgctx_fetch_123
-plt__rgctx_fetch_123:
+.word 3933
+	.no_dead_strip plt__rgctx_fetch_122
+plt__rgctx_fetch_122:
 _p_155:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1480]
 br x16
-.word 3961
-	.no_dead_strip plt__rgctx_fetch_124
-plt__rgctx_fetch_124:
+.word 3977
+	.no_dead_strip plt__rgctx_fetch_123
+plt__rgctx_fetch_123:
 _p_156:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1488]
 br x16
-.word 3988
-	.no_dead_strip plt__rgctx_fetch_125
-plt__rgctx_fetch_125:
+.word 3996
+	.no_dead_strip plt__rgctx_fetch_124
+plt__rgctx_fetch_124:
 _p_157:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1496]
 br x16
-.word 4022
-	.no_dead_strip plt__rgctx_fetch_126
-plt__rgctx_fetch_126:
+.word 4024
+	.no_dead_strip plt__rgctx_fetch_125
+plt__rgctx_fetch_125:
 _p_158:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1504]
 br x16
-.word 4030
-	.no_dead_strip plt__rgctx_fetch_127
-plt__rgctx_fetch_127:
+.word 4086
+	.no_dead_strip plt__rgctx_fetch_126
+plt__rgctx_fetch_126:
 _p_159:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1512]
 br x16
-.word 4078
-	.no_dead_strip plt__rgctx_fetch_128
-plt__rgctx_fetch_128:
+.word 4105
+	.no_dead_strip plt__rgctx_fetch_127
+plt__rgctx_fetch_127:
 _p_160:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1520]
 br x16
-.word 4101
-	.no_dead_strip plt__rgctx_fetch_129
-plt__rgctx_fetch_129:
+.word 4142
+	.no_dead_strip plt__rgctx_fetch_128
+plt__rgctx_fetch_128:
 _p_161:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1528]
 br x16
-.word 4122
-	.no_dead_strip plt_System_Math_Min_int_int
-plt_System_Math_Min_int_int:
+.word 4161
+	.no_dead_strip plt__rgctx_fetch_129
+plt__rgctx_fetch_129:
 _p_162:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1536]
 br x16
-.word 4149
+.word 4188
 	.no_dead_strip plt__rgctx_fetch_130
 plt__rgctx_fetch_130:
 _p_163:
@@ -5923,7 +6009,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1544]
 br x16
-.word 4152
+.word 4222
 	.no_dead_strip plt__rgctx_fetch_131
 plt__rgctx_fetch_131:
 _p_164:
@@ -5931,7 +6017,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1552]
 br x16
-.word 4200
+.word 4230
 	.no_dead_strip plt__rgctx_fetch_132
 plt__rgctx_fetch_132:
 _p_165:
@@ -5939,7 +6025,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1560]
 br x16
-.word 4208
+.word 4278
 	.no_dead_strip plt__rgctx_fetch_133
 plt__rgctx_fetch_133:
 _p_166:
@@ -5947,7 +6033,7 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1568]
 br x16
-.word 4231
+.word 4301
 	.no_dead_strip plt__rgctx_fetch_134
 plt__rgctx_fetch_134:
 _p_167:
@@ -5955,163 +6041,211 @@ adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1576]
 br x16
-.word 4258
-	.no_dead_strip plt__rgctx_fetch_135
-plt__rgctx_fetch_135:
+.word 4322
+	.no_dead_strip plt_System_Math_Min_int_int
+plt_System_Math_Min_int_int:
 _p_168:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1584]
 br x16
-.word 4284
-	.no_dead_strip plt__rgctx_fetch_136
-plt__rgctx_fetch_136:
+.word 4349
+	.no_dead_strip plt__rgctx_fetch_135
+plt__rgctx_fetch_135:
 _p_169:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1592]
 br x16
-.word 4312
-	.no_dead_strip plt__rgctx_fetch_137
-plt__rgctx_fetch_137:
+.word 4352
+	.no_dead_strip plt__rgctx_fetch_136
+plt__rgctx_fetch_136:
 _p_170:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1600]
 br x16
-.word 4322
-	.no_dead_strip plt__rgctx_fetch_138
-plt__rgctx_fetch_138:
+.word 4400
+	.no_dead_strip plt__rgctx_fetch_137
+plt__rgctx_fetch_137:
 _p_171:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1608]
 br x16
-.word 4351
-	.no_dead_strip plt__rgctx_fetch_139
-plt__rgctx_fetch_139:
+.word 4408
+	.no_dead_strip plt__rgctx_fetch_138
+plt__rgctx_fetch_138:
 _p_172:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1616]
 br x16
-.word 4382
-	.no_dead_strip plt__rgctx_fetch_140
-plt__rgctx_fetch_140:
+.word 4431
+	.no_dead_strip plt__rgctx_fetch_139
+plt__rgctx_fetch_139:
 _p_173:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1624]
 br x16
-.word 4433
-	.no_dead_strip plt__rgctx_fetch_141
-plt__rgctx_fetch_141:
+.word 4458
+	.no_dead_strip plt__rgctx_fetch_140
+plt__rgctx_fetch_140:
 _p_174:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1632]
 br x16
-.word 4465
-	.no_dead_strip plt__rgctx_fetch_142
-plt__rgctx_fetch_142:
+.word 4484
+	.no_dead_strip plt__rgctx_fetch_141
+plt__rgctx_fetch_141:
 _p_175:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1640]
 br x16
-.word 4472
-	.no_dead_strip plt__rgctx_fetch_143
-plt__rgctx_fetch_143:
+.word 4512
+	.no_dead_strip plt__rgctx_fetch_142
+plt__rgctx_fetch_142:
 _p_176:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1648]
 br x16
-.word 4489
-	.no_dead_strip plt__rgctx_fetch_144
-plt__rgctx_fetch_144:
+.word 4522
+	.no_dead_strip plt__rgctx_fetch_143
+plt__rgctx_fetch_143:
 _p_177:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1656]
 br x16
-.word 4495
-	.no_dead_strip plt__rgctx_fetch_145
-plt__rgctx_fetch_145:
+.word 4551
+	.no_dead_strip plt__rgctx_fetch_144
+plt__rgctx_fetch_144:
 _p_178:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1664]
 br x16
-.word 4501
-	.no_dead_strip plt__rgctx_fetch_146
-plt__rgctx_fetch_146:
+.word 4582
+	.no_dead_strip plt__rgctx_fetch_145
+plt__rgctx_fetch_145:
 _p_179:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1672]
 br x16
-.word 4509
-	.no_dead_strip plt_System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
-plt_System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF:
+.word 4633
+	.no_dead_strip plt__rgctx_fetch_146
+plt__rgctx_fetch_146:
 _p_180:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1680]
 br x16
-.word 4526
-	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument
-plt_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument:
+.word 4665
+	.no_dead_strip plt__rgctx_fetch_147
+plt__rgctx_fetch_147:
 _p_181:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1688]
 br x16
-.word 4539
-	.no_dead_strip plt__rgctx_fetch_147
-plt__rgctx_fetch_147:
+.word 4672
+	.no_dead_strip plt__rgctx_fetch_148
+plt__rgctx_fetch_148:
 _p_182:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1696]
 br x16
-.word 4547
-	.no_dead_strip plt__rgctx_fetch_148
-plt__rgctx_fetch_148:
+.word 4689
+	.no_dead_strip plt__rgctx_fetch_149
+plt__rgctx_fetch_149:
 _p_183:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1704]
 br x16
-.word 4569
-	.no_dead_strip plt_System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
-plt_System_Collections_Generic_List_1_T_REF_EnsureCapacity_int:
+.word 4695
+	.no_dead_strip plt__rgctx_fetch_150
+plt__rgctx_fetch_150:
 _p_184:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1712]
 br x16
-.word 4586
-	.no_dead_strip plt_System_Collections_Generic_List_1_T_REF_set_Capacity_int
-plt_System_Collections_Generic_List_1_T_REF_set_Capacity_int:
+.word 4701
+	.no_dead_strip plt__rgctx_fetch_151
+plt__rgctx_fetch_151:
 _p_185:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1720]
 br x16
-.word 4599
-	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource
-plt_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource:
+.word 4709
+	.no_dead_strip plt_System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
+plt_System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF:
 _p_186:
 adrp x16, mono_aot_System_Core_got@PAGE+0
 add x16, x16, mono_aot_System_Core_got@PAGEOFF
 ldr x16, [x16, #1728]
 br x16
-.word 4612
+.word 4726
+	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument
+plt_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument:
+_p_187:
+adrp x16, mono_aot_System_Core_got@PAGE+0
+add x16, x16, mono_aot_System_Core_got@PAGEOFF
+ldr x16, [x16, #1736]
+br x16
+.word 4739
+	.no_dead_strip plt__rgctx_fetch_152
+plt__rgctx_fetch_152:
+_p_188:
+adrp x16, mono_aot_System_Core_got@PAGE+0
+add x16, x16, mono_aot_System_Core_got@PAGEOFF
+ldr x16, [x16, #1744]
+br x16
+.word 4747
+	.no_dead_strip plt__rgctx_fetch_153
+plt__rgctx_fetch_153:
+_p_189:
+adrp x16, mono_aot_System_Core_got@PAGE+0
+add x16, x16, mono_aot_System_Core_got@PAGEOFF
+ldr x16, [x16, #1752]
+br x16
+.word 4769
+	.no_dead_strip plt_System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
+plt_System_Collections_Generic_List_1_T_REF_EnsureCapacity_int:
+_p_190:
+adrp x16, mono_aot_System_Core_got@PAGE+0
+add x16, x16, mono_aot_System_Core_got@PAGEOFF
+ldr x16, [x16, #1760]
+br x16
+.word 4786
+	.no_dead_strip plt_System_Collections_Generic_List_1_T_REF_set_Capacity_int
+plt_System_Collections_Generic_List_1_T_REF_set_Capacity_int:
+_p_191:
+adrp x16, mono_aot_System_Core_got@PAGE+0
+add x16, x16, mono_aot_System_Core_got@PAGEOFF
+ldr x16, [x16, #1768]
+br x16
+.word 4799
+	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource
+plt_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource:
+_p_192:
+adrp x16, mono_aot_System_Core_got@PAGE+0
+add x16, x16, mono_aot_System_Core_got@PAGEOFF
+ldr x16, [x16, #1776]
+br x16
+.word 4812
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_System_Core_got, 1736
+.lcomm mono_aot_System_Core_got, 1784
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -6229,14 +6363,14 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 30,1736,187,59,0,98,387000831,0
-	.long 6115,128,8,8,8,9,8388607,0
-	.long 4,25,7904,0,0,1776,1584,1296
-	.long 0,1440,1552,1384,0,1048,104,1768
+	.long 30,1784,193,61,0,98,387000831,0
+	.long 6358,128,8,8,8,9,8388607,0
+	.long 4,25,8168,0,0,1800,1608,1320
+	.long 0,1464,1576,1408,0,1064,104,1792
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 92,66,108,173,98,95,137,251,226,52,105,167,150,2,68,241
+	.byte 235,51,5,154,235,74,137,127,24,28,227,221,119,147,167,159
 	.globl _mono_aot_module_System_Core_info
 	.align 3
 _mono_aot_module_System_Core_info:
@@ -6656,27 +6790,85 @@ LTDIE_9_REFERENCE:
 	.byte 14
 LDIFF_SYM58=LTDIE_9 - Ldebug_info_start
 	.long LDIFF_SYM58
+	.byte 2
+	.asciz "System.Linq.Enumerable:LastOrDefault<TSource_REF>"
+	.asciz "System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF"
+
+	.byte 3,34
+	.quad System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+	.quad Lme_5
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM59=LTDIE_9_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM59
+	.byte 2,141,16,11
+	.asciz "V_0"
+
+LDIFF_SYM60=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM60
+	.byte 2,141,32,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM61=Lfde5_end - Lfde5_start
+	.long LDIFF_SYM61
+Lfde5_start:
+
+	.long 0
+	.align 3
+	.quad System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+
+LDIFF_SYM62=Lme_5 - System_Linq_Enumerable_LastOrDefault_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+	.long LDIFF_SYM62
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
+	.align 3
+Lfde5_end:
+
+.section __DWARF, __debug_info,regular,debug
 LTDIE_10:
 
 	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM63=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM63
+LTDIE_10_POINTER:
+
+	.byte 13
+LDIFF_SYM64=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM64
+LTDIE_10_REFERENCE:
+
+	.byte 14
+LDIFF_SYM65=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM65
+LTDIE_11:
+
+	.byte 17
 	.asciz "System_Linq_IPartition`1"
 
 	.byte 16,7
 	.asciz "System_Linq_IPartition`1"
 
-LDIFF_SYM59=LTDIE_10 - Ldebug_info_start
-	.long LDIFF_SYM59
-LTDIE_10_POINTER:
+LDIFF_SYM66=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM66
+LTDIE_11_POINTER:
 
 	.byte 13
-LDIFF_SYM60=LTDIE_10 - Ldebug_info_start
-	.long LDIFF_SYM60
-LTDIE_10_REFERENCE:
+LDIFF_SYM67=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM67
+LTDIE_11_REFERENCE:
 
 	.byte 14
-LDIFF_SYM61=LTDIE_10 - Ldebug_info_start
-	.long LDIFF_SYM61
-LTDIE_11:
+LDIFF_SYM68=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM68
+LTDIE_12:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IList`1"
@@ -6684,47 +6876,47 @@ LTDIE_11:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IList`1"
 
-LDIFF_SYM62=LTDIE_11 - Ldebug_info_start
-	.long LDIFF_SYM62
-LTDIE_11_POINTER:
+LDIFF_SYM69=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM69
+LTDIE_12_POINTER:
 
 	.byte 13
-LDIFF_SYM63=LTDIE_11 - Ldebug_info_start
-	.long LDIFF_SYM63
-LTDIE_11_REFERENCE:
+LDIFF_SYM70=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM70
+LTDIE_12_REFERENCE:
 
 	.byte 14
-LDIFF_SYM64=LTDIE_11 - Ldebug_info_start
-	.long LDIFF_SYM64
-LTDIE_12:
+LDIFF_SYM71=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM71
+LTDIE_13:
 
 	.byte 5
 	.asciz "System_Int32"
 
 	.byte 20,16
-LDIFF_SYM65=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM65
+LDIFF_SYM72=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM72
 	.byte 2,35,0,6
 	.asciz "m_value"
 
-LDIFF_SYM66=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM66
+LDIFF_SYM73=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM73
 	.byte 2,35,16,0,7
 	.asciz "System_Int32"
 
-LDIFF_SYM67=LTDIE_12 - Ldebug_info_start
-	.long LDIFF_SYM67
-LTDIE_12_POINTER:
+LDIFF_SYM74=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM74
+LTDIE_13_POINTER:
 
 	.byte 13
-LDIFF_SYM68=LTDIE_12 - Ldebug_info_start
-	.long LDIFF_SYM68
-LTDIE_12_REFERENCE:
+LDIFF_SYM75=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM75
+LTDIE_13_REFERENCE:
 
 	.byte 14
-LDIFF_SYM69=LTDIE_12 - Ldebug_info_start
-	.long LDIFF_SYM69
-LTDIE_13:
+LDIFF_SYM76=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM76
+LTDIE_14:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerator`1"
@@ -6732,176 +6924,118 @@ LTDIE_13:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM70=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM70
-LTDIE_13_POINTER:
+LDIFF_SYM77=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM77
+LTDIE_14_POINTER:
 
 	.byte 13
-LDIFF_SYM71=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM71
-LTDIE_13_REFERENCE:
+LDIFF_SYM78=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM78
+LTDIE_14_REFERENCE:
 
 	.byte 14
-LDIFF_SYM72=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM72
+LDIFF_SYM79=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM79
 	.byte 2
 	.asciz "System.Linq.Enumerable:TryGetLast<TSource_REF>"
 	.asciz "System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_"
 
 	.byte 3,41
 	.quad System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
-	.quad Lme_5
-
-	.byte 2,118,16,3
-	.asciz "param0"
-
-LDIFF_SYM73=LTDIE_9_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM73
-	.byte 1,105,3
-	.asciz "param1"
-
-LDIFF_SYM74=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM74
-	.byte 1,106,11
-	.asciz "partition"
-
-LDIFF_SYM75=LTDIE_10_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM75
-	.byte 1,104,11
-	.asciz "list"
-
-LDIFF_SYM76=LTDIE_11_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM76
-	.byte 1,104,11
-	.asciz "count"
-
-LDIFF_SYM77=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM77
-	.byte 1,105,11
-	.asciz "e"
-
-LDIFF_SYM78=LTDIE_13_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM78
-	.byte 2,141,48,11
-	.asciz "result"
-
-LDIFF_SYM79=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM79
-	.byte 1,105,11
-	.asciz "V_5"
-
-LDIFF_SYM80=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM80
-	.byte 1,106,11
-	.asciz "V_6"
-
-LDIFF_SYM81=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM81
-	.byte 0,0
-
-.section __DWARF, __debug_frame,regular,debug
-
-LDIFF_SYM82=Lfde5_end - Lfde5_start
-	.long LDIFF_SYM82
-Lfde5_start:
-
-	.long 0
-	.align 3
-	.quad System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
-
-LDIFF_SYM83=Lme_5 - System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
-	.long LDIFF_SYM83
-	.long 0
-	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9,68,154,8
-	.align 3
-Lfde5_end:
-
-.section __DWARF, __debug_info,regular,debug
-LTDIE_14:
-
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-LDIFF_SYM84=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM84
-LTDIE_14_POINTER:
-
-	.byte 13
-LDIFF_SYM85=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM85
-LTDIE_14_REFERENCE:
-
-	.byte 14
-LDIFF_SYM86=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM86
-LTDIE_15:
-
-	.byte 17
-	.asciz "System_Linq_IIListProvider`1"
-
-	.byte 16,7
-	.asciz "System_Linq_IIListProvider`1"
-
-LDIFF_SYM87=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM87
-LTDIE_15_POINTER:
-
-	.byte 13
-LDIFF_SYM88=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM88
-LTDIE_15_REFERENCE:
-
-	.byte 14
-LDIFF_SYM89=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM89
-	.byte 2
-	.asciz "System.Linq.Enumerable:ToArray<TSource_REF>"
-	.asciz "System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF"
-
-	.byte 4,13
-	.quad System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
 	.quad Lme_6
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM90=LTDIE_14_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM90
-	.byte 2,141,24,11
-	.asciz "arrayProvider"
+LDIFF_SYM80=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM80
+	.byte 1,105,3
+	.asciz "param1"
 
-LDIFF_SYM91=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM91
-	.byte 1,105,0
+LDIFF_SYM81=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM81
+	.byte 1,106,11
+	.asciz "partition"
+
+LDIFF_SYM82=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM82
+	.byte 1,104,11
+	.asciz "list"
+
+LDIFF_SYM83=LTDIE_12_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM83
+	.byte 1,104,11
+	.asciz "count"
+
+LDIFF_SYM84=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM84
+	.byte 1,105,11
+	.asciz "e"
+
+LDIFF_SYM85=LTDIE_14_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM85
+	.byte 2,141,48,11
+	.asciz "result"
+
+LDIFF_SYM86=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM86
+	.byte 1,105,11
+	.asciz "V_5"
+
+LDIFF_SYM87=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM87
+	.byte 1,106,11
+	.asciz "V_6"
+
+LDIFF_SYM88=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM88
+	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM92=Lfde6_end - Lfde6_start
-	.long LDIFF_SYM92
+LDIFF_SYM89=Lfde6_end - Lfde6_start
+	.long LDIFF_SYM89
 Lfde6_start:
 
 	.long 0
 	.align 3
-	.quad System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+	.quad System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
 
-LDIFF_SYM93=Lme_6 - System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
-	.long LDIFF_SYM93
+LDIFF_SYM90=Lme_6 - System_Linq_Enumerable_TryGetLast_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF_bool_
+	.long LDIFF_SYM90
 	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9,68,154,8
 	.align 3
 Lfde6_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_16:
+LTDIE_15:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerable`1"
 
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM91=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM91
+LTDIE_15_POINTER:
+
+	.byte 13
+LDIFF_SYM92=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM92
+LTDIE_15_REFERENCE:
+
+	.byte 14
+LDIFF_SYM93=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM93
+LTDIE_16:
+
+	.byte 17
+	.asciz "System_Linq_IIListProvider`1"
+
+	.byte 16,7
+	.asciz "System_Linq_IIListProvider`1"
 
 LDIFF_SYM94=LTDIE_16 - Ldebug_info_start
 	.long LDIFF_SYM94
@@ -6915,7 +7049,65 @@ LTDIE_16_REFERENCE:
 	.byte 14
 LDIFF_SYM96=LTDIE_16 - Ldebug_info_start
 	.long LDIFF_SYM96
+	.byte 2
+	.asciz "System.Linq.Enumerable:ToArray<TSource_REF>"
+	.asciz "System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF"
+
+	.byte 4,13
+	.quad System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+	.quad Lme_7
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM97=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM97
+	.byte 2,141,24,11
+	.asciz "arrayProvider"
+
+LDIFF_SYM98=LTDIE_16_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM98
+	.byte 1,105,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM99=Lfde7_end - Lfde7_start
+	.long LDIFF_SYM99
+Lfde7_start:
+
+	.long 0
+	.align 3
+	.quad System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+
+LDIFF_SYM100=Lme_7 - System_Linq_Enumerable_ToArray_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+	.long LDIFF_SYM100
+	.long 0
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
+	.align 3
+Lfde7_end:
+
+.section __DWARF, __debug_info,regular,debug
 LTDIE_17:
+
+	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM101=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM101
+LTDIE_17_POINTER:
+
+	.byte 13
+LDIFF_SYM102=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM102
+LTDIE_17_REFERENCE:
+
+	.byte 14
+LDIFF_SYM103=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM103
+LTDIE_18:
 
 	.byte 17
 	.asciz "System_Linq_IIListProvider`1"
@@ -6923,120 +7115,120 @@ LTDIE_17:
 	.byte 16,7
 	.asciz "System_Linq_IIListProvider`1"
 
-LDIFF_SYM97=LTDIE_17 - Ldebug_info_start
-	.long LDIFF_SYM97
-LTDIE_17_POINTER:
+LDIFF_SYM104=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM104
+LTDIE_18_POINTER:
 
 	.byte 13
-LDIFF_SYM98=LTDIE_17 - Ldebug_info_start
-	.long LDIFF_SYM98
-LTDIE_17_REFERENCE:
+LDIFF_SYM105=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM105
+LTDIE_18_REFERENCE:
 
 	.byte 14
-LDIFF_SYM99=LTDIE_17 - Ldebug_info_start
-	.long LDIFF_SYM99
+LDIFF_SYM106=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM106
 	.byte 2
 	.asciz "System.Linq.Enumerable:ToList<TSource_REF>"
 	.asciz "System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF"
 
 	.byte 4,25
 	.quad System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
-	.quad Lme_7
+	.quad Lme_8
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM100=LTDIE_16_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM100
+LDIFF_SYM107=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM107
 	.byte 2,141,24,11
 	.asciz "listProvider"
 
-LDIFF_SYM101=LTDIE_17_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM101
+LDIFF_SYM108=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM108
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM102=Lfde7_end - Lfde7_start
-	.long LDIFF_SYM102
-Lfde7_start:
+LDIFF_SYM109=Lfde8_end - Lfde8_start
+	.long LDIFF_SYM109
+Lfde8_start:
 
 	.long 0
 	.align 3
 	.quad System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
 
-LDIFF_SYM103=Lme_7 - System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
-	.long LDIFF_SYM103
+LDIFF_SYM110=Lme_8 - System_Linq_Enumerable_ToList_TSource_REF_System_Collections_Generic_IEnumerable_1_TSource_REF
+	.long LDIFF_SYM110
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
 	.align 3
-Lfde7_end:
+Lfde8_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_18:
+LTDIE_19:
 
 	.byte 5
 	.asciz "System_Collections_Generic_ArrayBuilder`1"
 
 	.byte 32,16
-LDIFF_SYM104=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM104
+LDIFF_SYM111=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM111
 	.byte 2,35,0,6
 	.asciz "_array"
 
-LDIFF_SYM105=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM105
+LDIFF_SYM112=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM112
 	.byte 2,35,16,6
 	.asciz "_count"
 
-LDIFF_SYM106=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM106
+LDIFF_SYM113=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM113
 	.byte 2,35,24,0,7
 	.asciz "System_Collections_Generic_ArrayBuilder`1"
 
-LDIFF_SYM107=LTDIE_18 - Ldebug_info_start
-	.long LDIFF_SYM107
-LTDIE_18_POINTER:
+LDIFF_SYM114=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM114
+LTDIE_19_POINTER:
 
 	.byte 13
-LDIFF_SYM108=LTDIE_18 - Ldebug_info_start
-	.long LDIFF_SYM108
-LTDIE_18_REFERENCE:
+LDIFF_SYM115=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM115
+LTDIE_19_REFERENCE:
 
 	.byte 14
-LDIFF_SYM109=LTDIE_18 - Ldebug_info_start
-	.long LDIFF_SYM109
+LDIFF_SYM116=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM116
 	.byte 2
 	.asciz "System.Collections.Generic.ArrayBuilder`1<T_REF>:get_Capacity"
 	.asciz "System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity"
 
 	.byte 5,38
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity
-	.quad Lme_c
+	.quad Lme_d
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM110=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM110
+LDIFF_SYM117=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM117
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM111=Lfde8_end - Lfde8_start
-	.long LDIFF_SYM111
-Lfde8_start:
+LDIFF_SYM118=Lfde9_end - Lfde9_start
+	.long LDIFF_SYM118
+Lfde9_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity
 
-LDIFF_SYM112=Lme_c - System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity
-	.long LDIFF_SYM112
+LDIFF_SYM119=Lme_d - System_Collections_Generic_ArrayBuilder_1_T_REF_get_Capacity
+	.long LDIFF_SYM119
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29,68,154,2
 	.align 3
-Lfde8_end:
+Lfde9_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7046,31 +7238,31 @@ Lfde8_end:
 
 	.byte 5,43
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_get_Count
-	.quad Lme_d
+	.quad Lme_e
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM113=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM113
+LDIFF_SYM120=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM120
 	.byte 2,141,16,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM114=Lfde9_end - Lfde9_start
-	.long LDIFF_SYM114
-Lfde9_start:
+LDIFF_SYM121=Lfde10_end - Lfde10_start
+	.long LDIFF_SYM121
+Lfde10_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_get_Count
 
-LDIFF_SYM115=Lme_d - System_Collections_Generic_ArrayBuilder_1_T_REF_get_Count
-	.long LDIFF_SYM115
+LDIFF_SYM122=Lme_e - System_Collections_Generic_ArrayBuilder_1_T_REF_get_Count
+	.long LDIFF_SYM122
 	.long 0
 	.byte 12,31,0,68,14,32,157,4,158,3,68,13,29
 	.align 3
-Lfde9_end:
+Lfde10_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7080,36 +7272,36 @@ Lfde9_end:
 
 	.byte 5,54
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_get_Item_int
-	.quad Lme_e
+	.quad Lme_f
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM116=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM116
+LDIFF_SYM123=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM123
 	.byte 2,141,16,3
 	.asciz "param0"
 
-LDIFF_SYM117=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM117
+LDIFF_SYM124=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM124
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM118=Lfde10_end - Lfde10_start
-	.long LDIFF_SYM118
-Lfde10_start:
+LDIFF_SYM125=Lfde11_end - Lfde11_start
+	.long LDIFF_SYM125
+Lfde11_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_get_Item_int
 
-LDIFF_SYM119=Lme_e - System_Collections_Generic_ArrayBuilder_1_T_REF_get_Item_int
-	.long LDIFF_SYM119
+LDIFF_SYM126=Lme_f - System_Collections_Generic_ArrayBuilder_1_T_REF_get_Item_int
+	.long LDIFF_SYM126
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
-Lfde10_end:
+Lfde11_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7119,36 +7311,36 @@ Lfde10_end:
 
 	.byte 5,69
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_Add_T_REF
-	.quad Lme_f
+	.quad Lme_10
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM120=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM120
+LDIFF_SYM127=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM127
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM121=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM121
+LDIFF_SYM128=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM128
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM122=Lfde11_end - Lfde11_start
-	.long LDIFF_SYM122
-Lfde11_start:
+LDIFF_SYM129=Lfde12_end - Lfde12_start
+	.long LDIFF_SYM129
+Lfde12_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_Add_T_REF
 
-LDIFF_SYM123=Lme_f - System_Collections_Generic_ArrayBuilder_1_T_REF_Add_T_REF
-	.long LDIFF_SYM123
+LDIFF_SYM130=Lme_10 - System_Collections_Generic_ArrayBuilder_1_T_REF_Add_T_REF
+	.long LDIFF_SYM130
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,68,153,7
 	.align 3
-Lfde11_end:
+Lfde12_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7158,78 +7350,24 @@ Lfde11_end:
 
 	.byte 5,140,1
 	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
-	.quad Lme_10
-
-	.byte 2,118,16,3
-	.asciz "this"
-
-LDIFF_SYM124=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM124
-	.byte 1,105,3
-	.asciz "param0"
-
-LDIFF_SYM125=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM125
-	.byte 2,141,24,11
-	.asciz "V_0"
-
-LDIFF_SYM126=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM126
-	.byte 0,0
-
-.section __DWARF, __debug_frame,regular,debug
-
-LDIFF_SYM127=Lfde12_end - Lfde12_start
-	.long LDIFF_SYM127
-Lfde12_start:
-
-	.long 0
-	.align 3
-	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
-
-LDIFF_SYM128=Lme_10 - System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
-	.long LDIFF_SYM128
-	.long 0
-	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
-	.align 3
-Lfde12_end:
-
-.section __DWARF, __debug_info,regular,debug
-
-	.byte 2
-	.asciz "System.Collections.Generic.ArrayBuilder`1<T_REF>:EnsureCapacity"
-	.asciz "System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int"
-
-	.byte 5,147,1
-	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
 	.quad Lme_11
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM129=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM129
+LDIFF_SYM131=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM131
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM130=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM130
-	.byte 1,106,11
-	.asciz "capacity"
-
-LDIFF_SYM131=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM131
-	.byte 1,103,11
-	.asciz "nextCapacity"
-
 LDIFF_SYM132=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM132
-	.byte 1,102,11
-	.asciz "next"
+	.byte 2,141,24,11
+	.asciz "V_0"
 
-LDIFF_SYM133=LDIE_SZARRAY - Ldebug_info_start
+LDIFF_SYM133=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM133
-	.byte 1,106,0
+	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
@@ -7239,198 +7377,252 @@ Lfde13_start:
 
 	.long 0
 	.align 3
-	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
+	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
 
-LDIFF_SYM135=Lme_11 - System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
+LDIFF_SYM135=Lme_11 - System_Collections_Generic_ArrayBuilder_1_T_REF_UncheckedAdd_T_REF
 	.long LDIFF_SYM135
 	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,153,3,68,154,2
+	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
 	.align 3
 Lfde13_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_19:
 
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
+	.byte 2
+	.asciz "System.Collections.Generic.ArrayBuilder`1<T_REF>:EnsureCapacity"
+	.asciz "System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int"
 
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
+	.byte 5,147,1
+	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
+	.quad Lme_12
 
-LDIFF_SYM136=LTDIE_19 - Ldebug_info_start
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM136=LDIE_I - Ldebug_info_start
 	.long LDIFF_SYM136
-LTDIE_19_POINTER:
+	.byte 1,105,3
+	.asciz "param0"
 
-	.byte 13
-LDIFF_SYM137=LTDIE_19 - Ldebug_info_start
+LDIFF_SYM137=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM137
-LTDIE_19_REFERENCE:
+	.byte 1,106,11
+	.asciz "capacity"
 
-	.byte 14
-LDIFF_SYM138=LTDIE_19 - Ldebug_info_start
+LDIFF_SYM138=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM138
+	.byte 1,103,11
+	.asciz "nextCapacity"
+
+LDIFF_SYM139=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM139
+	.byte 1,102,11
+	.asciz "next"
+
+LDIFF_SYM140=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM140
+	.byte 1,106,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM141=Lfde14_end - Lfde14_start
+	.long LDIFF_SYM141
+Lfde14_start:
+
+	.long 0
+	.align 3
+	.quad System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
+
+LDIFF_SYM142=Lme_12 - System_Collections_Generic_ArrayBuilder_1_T_REF_EnsureCapacity_int
+	.long LDIFF_SYM142
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,150,6,151,5,68,152,4,153,3,68,154,2
+	.align 3
+Lfde14_end:
+
+.section __DWARF, __debug_info,regular,debug
 LTDIE_20:
 
 	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM143=LTDIE_20 - Ldebug_info_start
+	.long LDIFF_SYM143
+LTDIE_20_POINTER:
+
+	.byte 13
+LDIFF_SYM144=LTDIE_20 - Ldebug_info_start
+	.long LDIFF_SYM144
+LTDIE_20_REFERENCE:
+
+	.byte 14
+LDIFF_SYM145=LTDIE_20 - Ldebug_info_start
+	.long LDIFF_SYM145
+LTDIE_21:
+
+	.byte 17
 	.asciz "System_Collections_Generic_ICollection`1"
 
 	.byte 16,7
 	.asciz "System_Collections_Generic_ICollection`1"
 
-LDIFF_SYM139=LTDIE_20 - Ldebug_info_start
-	.long LDIFF_SYM139
-LTDIE_20_POINTER:
+LDIFF_SYM146=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM146
+LTDIE_21_POINTER:
 
 	.byte 13
-LDIFF_SYM140=LTDIE_20 - Ldebug_info_start
-	.long LDIFF_SYM140
-LTDIE_20_REFERENCE:
+LDIFF_SYM147=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM147
+LTDIE_21_REFERENCE:
 
 	.byte 14
-LDIFF_SYM141=LTDIE_20 - Ldebug_info_start
-	.long LDIFF_SYM141
+LDIFF_SYM148=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM148
 	.byte 2
 	.asciz "System.Collections.Generic.EnumerableHelpers:ToArray<T_REF>"
 	.asciz "System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Generic_IEnumerable_1_T_REF"
 
 	.byte 6,70
 	.quad System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Generic_IEnumerable_1_T_REF
-	.quad Lme_12
+	.quad Lme_13
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM142=LTDIE_19_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM142
+LDIFF_SYM149=LTDIE_20_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM149
 	.byte 1,106,11
 	.asciz "collection"
 
-LDIFF_SYM143=LTDIE_20_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM143
+LDIFF_SYM150=LTDIE_21_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM150
 	.byte 1,105,11
 	.asciz "builder"
 
-LDIFF_SYM144=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM144
+LDIFF_SYM151=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM151
 	.byte 2,141,40,11
 	.asciz "count"
 
-LDIFF_SYM145=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM145
+LDIFF_SYM152=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM152
 	.byte 1,106,11
 	.asciz "result"
 
-LDIFF_SYM146=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM146
+LDIFF_SYM153=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM153
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM147=Lfde14_end - Lfde14_start
-	.long LDIFF_SYM147
-Lfde14_start:
+LDIFF_SYM154=Lfde15_end - Lfde15_start
+	.long LDIFF_SYM154
+Lfde15_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Generic_IEnumerable_1_T_REF
 
-LDIFF_SYM148=Lme_12 - System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Generic_IEnumerable_1_T_REF
-	.long LDIFF_SYM148
+LDIFF_SYM155=Lme_13 - System_Collections_Generic_EnumerableHelpers_ToArray_T_REF_System_Collections_Generic_IEnumerable_1_T_REF
+	.long LDIFF_SYM155
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,153,10,154,9
 	.align 3
-Lfde14_end:
+Lfde15_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_21:
+LTDIE_22:
 
 	.byte 5
 	.asciz "System_Collections_Generic_LargeArrayBuilder`1"
 
 	.byte 64,16
-LDIFF_SYM149=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM149
+LDIFF_SYM156=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM156
 	.byte 2,35,0,6
 	.asciz "_maxCapacity"
 
-LDIFF_SYM150=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM150
+LDIFF_SYM157=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM157
 	.byte 2,35,16,6
 	.asciz "_first"
 
-LDIFF_SYM151=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM151
+LDIFF_SYM158=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM158
 	.byte 2,35,24,6
 	.asciz "_buffers"
 
-LDIFF_SYM152=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM152
+LDIFF_SYM159=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM159
 	.byte 2,35,32,6
 	.asciz "_current"
 
-LDIFF_SYM153=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM153
+LDIFF_SYM160=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM160
 	.byte 2,35,48,6
 	.asciz "_index"
 
-LDIFF_SYM154=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM154
+LDIFF_SYM161=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM161
 	.byte 2,35,56,6
 	.asciz "_count"
 
-LDIFF_SYM155=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM155
+LDIFF_SYM162=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM162
 	.byte 2,35,60,0,7
 	.asciz "System_Collections_Generic_LargeArrayBuilder`1"
 
-LDIFF_SYM156=LTDIE_21 - Ldebug_info_start
-	.long LDIFF_SYM156
-LTDIE_21_POINTER:
+LDIFF_SYM163=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM163
+LTDIE_22_POINTER:
 
 	.byte 13
-LDIFF_SYM157=LTDIE_21 - Ldebug_info_start
-	.long LDIFF_SYM157
-LTDIE_21_REFERENCE:
+LDIFF_SYM164=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM164
+LTDIE_22_REFERENCE:
 
 	.byte 14
-LDIFF_SYM158=LTDIE_21 - Ldebug_info_start
-	.long LDIFF_SYM158
+LDIFF_SYM165=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM165
 	.byte 2
 	.asciz "System.Collections.Generic.LargeArrayBuilder`1<T_REF>:.ctor"
 	.asciz "System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool"
 
 	.byte 7,86
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
-	.quad Lme_13
+	.quad Lme_14
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM159=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM159
+LDIFF_SYM166=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM166
 	.byte 2,141,16,3
 	.asciz "param0"
 
-LDIFF_SYM160=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM160
+LDIFF_SYM167=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM167
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM161=Lfde15_end - Lfde15_start
-	.long LDIFF_SYM161
-Lfde15_start:
+LDIFF_SYM168=Lfde16_end - Lfde16_start
+	.long LDIFF_SYM168
+Lfde16_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
 
-LDIFF_SYM162=Lme_13 - System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
-	.long LDIFF_SYM162
+LDIFF_SYM169=Lme_14 - System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_bool
+	.long LDIFF_SYM169
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
 	.align 3
-Lfde15_end:
+Lfde16_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7440,139 +7632,139 @@ Lfde15_end:
 
 	.byte 7,101
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
-	.quad Lme_14
+	.quad Lme_15
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM163=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM163
+LDIFF_SYM170=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM170
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM164=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM164
+LDIFF_SYM171=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM171
 	.byte 2,141,24,11
 	.asciz "V_0"
 
-LDIFF_SYM165=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM165
+LDIFF_SYM172=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM172
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM166=Lfde16_end - Lfde16_start
-	.long LDIFF_SYM166
-Lfde16_start:
+LDIFF_SYM173=Lfde17_end - Lfde17_start
+	.long LDIFF_SYM173
+Lfde17_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
 
-LDIFF_SYM167=Lme_14 - System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
-	.long LDIFF_SYM167
+LDIFF_SYM174=Lme_15 - System_Collections_Generic_LargeArrayBuilder_1_T_REF__ctor_int
+	.long LDIFF_SYM174
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
 	.align 3
-Lfde16_end:
+Lfde17_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_22:
-
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-LDIFF_SYM168=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM168
-LTDIE_22_POINTER:
-
-	.byte 13
-LDIFF_SYM169=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM169
-LTDIE_22_REFERENCE:
-
-	.byte 14
-LDIFF_SYM170=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM170
 LTDIE_23:
 
 	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM175=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM175
+LTDIE_23_POINTER:
+
+	.byte 13
+LDIFF_SYM176=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM176
+LTDIE_23_REFERENCE:
+
+	.byte 14
+LDIFF_SYM177=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM177
+LTDIE_24:
+
+	.byte 17
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM171=LTDIE_23 - Ldebug_info_start
-	.long LDIFF_SYM171
-LTDIE_23_POINTER:
+LDIFF_SYM178=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM178
+LTDIE_24_POINTER:
 
 	.byte 13
-LDIFF_SYM172=LTDIE_23 - Ldebug_info_start
-	.long LDIFF_SYM172
-LTDIE_23_REFERENCE:
+LDIFF_SYM179=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM179
+LTDIE_24_REFERENCE:
 
 	.byte 14
-LDIFF_SYM173=LTDIE_23 - Ldebug_info_start
-	.long LDIFF_SYM173
+LDIFF_SYM180=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM180
 	.byte 2
 	.asciz "System.Collections.Generic.LargeArrayBuilder`1<T_REF>:AddRange"
 	.asciz "System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF"
 
 	.byte 7,164,1
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
-	.quad Lme_15
+	.quad Lme_16
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM174=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM174
+LDIFF_SYM181=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM181
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM175=LTDIE_22_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM175
+LDIFF_SYM182=LTDIE_23_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM182
 	.byte 1,106,11
 	.asciz "enumerator"
 
-LDIFF_SYM176=LTDIE_23_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM176
+LDIFF_SYM183=LTDIE_24_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM183
 	.byte 2,141,40,11
 	.asciz "destination"
 
-LDIFF_SYM177=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM177
+LDIFF_SYM184=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM184
 	.byte 2,141,48,11
 	.asciz "index"
 
-LDIFF_SYM178=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM178
+LDIFF_SYM185=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM185
 	.byte 2,141,56,11
 	.asciz "item"
 
-LDIFF_SYM179=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM179
+LDIFF_SYM186=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM186
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM180=Lfde17_end - Lfde17_start
-	.long LDIFF_SYM180
-Lfde17_start:
+LDIFF_SYM187=Lfde18_end - Lfde18_start
+	.long LDIFF_SYM187
+Lfde18_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
 
-LDIFF_SYM181=Lme_15 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
-	.long LDIFF_SYM181
+LDIFF_SYM188=Lme_16 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddRange_System_Collections_Generic_IEnumerable_1_T_REF
+	.long LDIFF_SYM188
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,153,12,154,11
 	.align 3
-Lfde17_end:
+Lfde18_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7582,46 +7774,46 @@ Lfde17_end:
 
 	.byte 7,198,1
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
-	.quad Lme_16
+	.quad Lme_17
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM182=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM182
+LDIFF_SYM189=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM189
 	.byte 1,103,3
 	.asciz "param0"
 
-LDIFF_SYM183=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM183
+LDIFF_SYM190=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM190
 	.byte 2,141,32,3
 	.asciz "param1"
 
-LDIFF_SYM184=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM184
+LDIFF_SYM191=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM191
 	.byte 2,141,40,3
 	.asciz "param2"
 
-LDIFF_SYM185=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM185
+LDIFF_SYM192=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM192
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM186=Lfde18_end - Lfde18_start
-	.long LDIFF_SYM186
-Lfde18_start:
+LDIFF_SYM193=Lfde19_end - Lfde19_start
+	.long LDIFF_SYM193
+Lfde19_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
 
-LDIFF_SYM187=Lme_16 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
-	.long LDIFF_SYM187
+LDIFF_SYM194=Lme_17 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_AddWithBufferAllocation_T_REF_T_REF____int_
+	.long LDIFF_SYM194
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,68,154,7
 	.align 3
-Lfde18_end:
+Lfde19_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7631,62 +7823,62 @@ Lfde18_end:
 
 	.byte 7,218,1
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
-	.quad Lme_17
+	.quad Lme_18
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM188=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM188
+LDIFF_SYM195=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM195
 	.byte 1,103,3
 	.asciz "param0"
 
-LDIFF_SYM189=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM189
+LDIFF_SYM196=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM196
 	.byte 1,104,3
 	.asciz "param1"
 
-LDIFF_SYM190=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM190
+LDIFF_SYM197=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM197
 	.byte 1,105,3
 	.asciz "param2"
 
-LDIFF_SYM191=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM191
+LDIFF_SYM198=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM198
 	.byte 1,106,11
 	.asciz "i"
 
-LDIFF_SYM192=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM192
+LDIFF_SYM199=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM199
 	.byte 1,102,11
 	.asciz "buffer"
 
-LDIFF_SYM193=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM193
+LDIFF_SYM200=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM200
 	.byte 1,101,11
 	.asciz "toCopy"
 
-LDIFF_SYM194=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM194
+LDIFF_SYM201=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM201
 	.byte 1,100,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM195=Lfde19_end - Lfde19_start
-	.long LDIFF_SYM195
-Lfde19_start:
+LDIFF_SYM202=Lfde20_end - Lfde20_start
+	.long LDIFF_SYM202
+Lfde20_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
 
-LDIFF_SYM196=Lme_17 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
-	.long LDIFF_SYM196
+LDIFF_SYM203=Lme_18 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_CopyTo_T_REF___int_int
+	.long LDIFF_SYM203
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,147,10,148,9,68,149,8,150,7,68,151,6,152,5,68,153,4,154
 	.byte 3
 	.align 3
-Lfde19_end:
+Lfde20_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7696,36 +7888,36 @@ Lfde19_end:
 
 	.byte 7,193,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
-	.quad Lme_18
+	.quad Lme_19
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM197=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM197
+LDIFF_SYM204=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM204
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM198=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM198
+LDIFF_SYM205=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM205
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM199=Lfde20_end - Lfde20_start
-	.long LDIFF_SYM199
-Lfde20_start:
+LDIFF_SYM206=Lfde21_end - Lfde21_start
+	.long LDIFF_SYM206
+Lfde21_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
 
-LDIFF_SYM200=Lme_18 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
-	.long LDIFF_SYM200
+LDIFF_SYM207=Lme_19 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_GetBuffer_int
+	.long LDIFF_SYM207
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
 	.align 3
-Lfde20_end:
+Lfde21_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7735,36 +7927,36 @@ Lfde20_end:
 
 	.byte 7,214,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
-	.quad Lme_19
+	.quad Lme_1a
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM201=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM201
+LDIFF_SYM208=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM208
 	.byte 1,106,11
 	.asciz "array"
 
-LDIFF_SYM202=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM202
+LDIFF_SYM209=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM209
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM203=Lfde21_end - Lfde21_start
-	.long LDIFF_SYM203
-Lfde21_start:
+LDIFF_SYM210=Lfde22_end - Lfde22_start
+	.long LDIFF_SYM210
+Lfde22_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
 
-LDIFF_SYM204=Lme_19 - System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
-	.long LDIFF_SYM204
+LDIFF_SYM211=Lme_1a - System_Collections_Generic_LargeArrayBuilder_1_T_REF_ToArray
+	.long LDIFF_SYM211
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,154,8
 	.align 3
-Lfde21_end:
+Lfde22_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7774,36 +7966,36 @@ Lfde21_end:
 
 	.byte 7,232,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
-	.quad Lme_1a
+	.quad Lme_1b
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM205=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM205
+LDIFF_SYM212=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM212
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM206=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM206
+LDIFF_SYM213=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM213
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM207=Lfde22_end - Lfde22_start
-	.long LDIFF_SYM207
-Lfde22_start:
+LDIFF_SYM214=Lfde23_end - Lfde23_start
+	.long LDIFF_SYM214
+Lfde23_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
 
-LDIFF_SYM208=Lme_1a - System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
-	.long LDIFF_SYM208
+LDIFF_SYM215=Lme_1b - System_Collections_Generic_LargeArrayBuilder_1_T_REF_TryMove_T_REF___
+	.long LDIFF_SYM215
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
 	.align 3
-Lfde22_end:
+Lfde23_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -7813,82 +8005,24 @@ Lfde22_end:
 
 	.byte 7,249,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
-	.quad Lme_1b
+	.quad Lme_1c
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM209=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM209
+LDIFF_SYM216=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM216
 	.byte 1,106,11
 	.asciz "nextCapacity"
 
-LDIFF_SYM210=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM210
+LDIFF_SYM217=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM217
 	.byte 1,104,11
 	.asciz "nextCapacity"
 
-LDIFF_SYM211=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM211
-	.byte 1,105,0
-
-.section __DWARF, __debug_frame,regular,debug
-
-LDIFF_SYM212=Lfde23_end - Lfde23_start
-	.long LDIFF_SYM212
-Lfde23_start:
-
-	.long 0
-	.align 3
-	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
-
-LDIFF_SYM213=Lme_1b - System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
-	.long LDIFF_SYM213
-	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
-	.align 3
-Lfde23_end:
-
-.section __DWARF, __debug_info,regular,debug
-LTDIE_24:
-
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-LDIFF_SYM214=LTDIE_24 - Ldebug_info_start
-	.long LDIFF_SYM214
-LTDIE_24_POINTER:
-
-	.byte 13
-LDIFF_SYM215=LTDIE_24 - Ldebug_info_start
-	.long LDIFF_SYM215
-LTDIE_24_REFERENCE:
-
-	.byte 14
-LDIFF_SYM216=LTDIE_24 - Ldebug_info_start
-	.long LDIFF_SYM216
-	.byte 2
-	.asciz "System.Linq.Enumerable:First<TSource_GSHAREDVT>"
-	.asciz "System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
-
-	.byte 2,13
-	.quad System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
-	.quad Lme_1d
-
-	.byte 2,118,16,3
-	.asciz "param0"
-
-LDIFF_SYM217=LTDIE_24_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM217
-	.byte 2,141,40,11
-	.asciz "found"
-
-LDIFF_SYM218=LDIE_BOOLEAN - Ldebug_info_start
+LDIFF_SYM218=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM218
-	.byte 2,141,56,0
+	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
@@ -7898,12 +8032,12 @@ Lfde24_start:
 
 	.long 0
 	.align 3
-	.quad System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.quad System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
 
-LDIFF_SYM220=Lme_1d - System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+LDIFF_SYM220=Lme_1c - System_Collections_Generic_LargeArrayBuilder_1_T_REF_AllocateBuffer
 	.long LDIFF_SYM220
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,152,6,153,5,68,154,4
 	.align 3
 Lfde24_end:
 
@@ -7928,47 +8062,105 @@ LTDIE_25_REFERENCE:
 	.byte 14
 LDIFF_SYM223=LTDIE_25 - Ldebug_info_start
 	.long LDIFF_SYM223
+	.byte 2
+	.asciz "System.Linq.Enumerable:First<TSource_GSHAREDVT>"
+	.asciz "System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
+
+	.byte 2,13
+	.quad System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.quad Lme_1e
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM224=LTDIE_25_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM224
+	.byte 2,141,40,11
+	.asciz "found"
+
+LDIFF_SYM225=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM225
+	.byte 2,141,56,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM226=Lfde25_end - Lfde25_start
+	.long LDIFF_SYM226
+Lfde25_start:
+
+	.long 0
+	.align 3
+	.quad System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+
+LDIFF_SYM227=Lme_1e - System_Linq_Enumerable_First_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.long LDIFF_SYM227
+	.long 0
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7
+	.align 3
+Lfde25_end:
+
+.section __DWARF, __debug_info,regular,debug
 LTDIE_26:
 
 	.byte 17
-	.asciz "System_Linq_IPartition`1"
+	.asciz "System_Collections_Generic_IEnumerable`1"
 
 	.byte 16,7
-	.asciz "System_Linq_IPartition`1"
+	.asciz "System_Collections_Generic_IEnumerable`1"
 
-LDIFF_SYM224=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM224
+LDIFF_SYM228=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM228
 LTDIE_26_POINTER:
 
 	.byte 13
-LDIFF_SYM225=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM225
+LDIFF_SYM229=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM229
 LTDIE_26_REFERENCE:
 
 	.byte 14
-LDIFF_SYM226=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM226
+LDIFF_SYM230=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM230
 LTDIE_27:
 
 	.byte 17
+	.asciz "System_Linq_IPartition`1"
+
+	.byte 16,7
+	.asciz "System_Linq_IPartition`1"
+
+LDIFF_SYM231=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM231
+LTDIE_27_POINTER:
+
+	.byte 13
+LDIFF_SYM232=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM232
+LTDIE_27_REFERENCE:
+
+	.byte 14
+LDIFF_SYM233=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM233
+LTDIE_28:
+
+	.byte 17
 	.asciz "System_Collections_Generic_IList`1"
 
 	.byte 16,7
 	.asciz "System_Collections_Generic_IList`1"
 
-LDIFF_SYM227=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM227
-LTDIE_27_POINTER:
+LDIFF_SYM234=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM234
+LTDIE_28_POINTER:
 
 	.byte 13
-LDIFF_SYM228=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM228
-LTDIE_27_REFERENCE:
+LDIFF_SYM235=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM235
+LTDIE_28_REFERENCE:
 
 	.byte 14
-LDIFF_SYM229=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM229
-LTDIE_28:
+LDIFF_SYM236=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM236
+LTDIE_29:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerator`1"
@@ -7976,120 +8168,62 @@ LTDIE_28:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM230=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM230
-LTDIE_28_POINTER:
+LDIFF_SYM237=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM237
+LTDIE_29_POINTER:
 
 	.byte 13
-LDIFF_SYM231=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM231
-LTDIE_28_REFERENCE:
+LDIFF_SYM238=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM238
+LTDIE_29_REFERENCE:
 
 	.byte 14
-LDIFF_SYM232=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM232
+LDIFF_SYM239=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM239
 	.byte 2
 	.asciz "System.Linq.Enumerable:TryGetFirst<TSource_GSHAREDVT>"
 	.asciz "System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_"
 
 	.byte 2,41
 	.quad System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
-	.quad Lme_1e
-
-	.byte 2,118,16,3
-	.asciz "param0"
-
-LDIFF_SYM233=LTDIE_25_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM233
-	.byte 1,105,3
-	.asciz "param1"
-
-LDIFF_SYM234=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM234
-	.byte 1,106,11
-	.asciz "partition"
-
-LDIFF_SYM235=LTDIE_26_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM235
-	.byte 1,102,11
-	.asciz "list"
-
-LDIFF_SYM236=LTDIE_27_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM236
-	.byte 1,102,11
-	.asciz "e"
-
-LDIFF_SYM237=LTDIE_28_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM237
-	.byte 3,141,200,0,11
-	.asciz "V_3"
-
-LDIFF_SYM238=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM238
-	.byte 1,80,11
-	.asciz "V_4"
-
-LDIFF_SYM239=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM239
-	.byte 1,80,0
-
-.section __DWARF, __debug_frame,regular,debug
-
-LDIFF_SYM240=Lfde25_end - Lfde25_start
-	.long LDIFF_SYM240
-Lfde25_start:
-
-	.long 0
-	.align 3
-	.quad System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
-
-LDIFF_SYM241=Lme_1e - System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
-	.long LDIFF_SYM241
-	.long 0
-	.byte 12,31,0,68,14,144,1,157,18,158,17,68,13,29,68,150,16,151,15,68,152,14,153,13,68,154,12
-	.align 3
-Lfde25_end:
-
-.section __DWARF, __debug_info,regular,debug
-LTDIE_29:
-
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-LDIFF_SYM242=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM242
-LTDIE_29_POINTER:
-
-	.byte 13
-LDIFF_SYM243=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM243
-LTDIE_29_REFERENCE:
-
-	.byte 14
-LDIFF_SYM244=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM244
-	.byte 2
-	.asciz "System.Linq.Enumerable:Last<TSource_GSHAREDVT>"
-	.asciz "System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
-
-	.byte 3,13
-	.quad System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
 	.quad Lme_1f
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM245=LTDIE_29_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM245
-	.byte 2,141,40,11
-	.asciz "found"
+LDIFF_SYM240=LTDIE_26_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM240
+	.byte 1,105,3
+	.asciz "param1"
 
-LDIFF_SYM246=LDIE_BOOLEAN - Ldebug_info_start
+LDIFF_SYM241=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM241
+	.byte 1,106,11
+	.asciz "partition"
+
+LDIFF_SYM242=LTDIE_27_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM242
+	.byte 1,102,11
+	.asciz "list"
+
+LDIFF_SYM243=LTDIE_28_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM243
+	.byte 1,102,11
+	.asciz "e"
+
+LDIFF_SYM244=LTDIE_29_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM244
+	.byte 3,141,200,0,11
+	.asciz "V_3"
+
+LDIFF_SYM245=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM245
+	.byte 1,80,11
+	.asciz "V_4"
+
+LDIFF_SYM246=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM246
-	.byte 2,141,56,0
+	.byte 1,80,0
 
 .section __DWARF, __debug_frame,regular,debug
 
@@ -8099,12 +8233,12 @@ Lfde26_start:
 
 	.long 0
 	.align 3
-	.quad System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.quad System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
 
-LDIFF_SYM248=Lme_1f - System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+LDIFF_SYM248=Lme_1f - System_Linq_Enumerable_TryGetFirst_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
 	.long LDIFF_SYM248
 	.long 0
-	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7
+	.byte 12,31,0,68,14,144,1,157,18,158,17,68,13,29,68,150,16,151,15,68,152,14,153,13,68,154,12
 	.align 3
 Lfde26_end:
 
@@ -8129,47 +8263,163 @@ LTDIE_30_REFERENCE:
 	.byte 14
 LDIFF_SYM251=LTDIE_30 - Ldebug_info_start
 	.long LDIFF_SYM251
+	.byte 2
+	.asciz "System.Linq.Enumerable:Last<TSource_GSHAREDVT>"
+	.asciz "System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
+
+	.byte 3,13
+	.quad System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.quad Lme_20
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM252=LTDIE_30_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM252
+	.byte 2,141,40,11
+	.asciz "found"
+
+LDIFF_SYM253=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM253
+	.byte 2,141,56,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM254=Lfde27_end - Lfde27_start
+	.long LDIFF_SYM254
+Lfde27_start:
+
+	.long 0
+	.align 3
+	.quad System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+
+LDIFF_SYM255=Lme_20 - System_Linq_Enumerable_Last_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.long LDIFF_SYM255
+	.long 0
+	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7
+	.align 3
+Lfde27_end:
+
+.section __DWARF, __debug_info,regular,debug
 LTDIE_31:
 
 	.byte 17
-	.asciz "System_Linq_IPartition`1"
+	.asciz "System_Collections_Generic_IEnumerable`1"
 
 	.byte 16,7
-	.asciz "System_Linq_IPartition`1"
+	.asciz "System_Collections_Generic_IEnumerable`1"
 
-LDIFF_SYM252=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM252
+LDIFF_SYM256=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM256
 LTDIE_31_POINTER:
 
 	.byte 13
-LDIFF_SYM253=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM253
+LDIFF_SYM257=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM257
 LTDIE_31_REFERENCE:
 
 	.byte 14
-LDIFF_SYM254=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM254
+LDIFF_SYM258=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM258
+	.byte 2
+	.asciz "System.Linq.Enumerable:LastOrDefault<TSource_GSHAREDVT>"
+	.asciz "System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
+
+	.byte 3,34
+	.quad System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.quad Lme_21
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM259=LTDIE_31_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM259
+	.byte 2,141,40,11
+	.asciz "V_0"
+
+LDIFF_SYM260=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM260
+	.byte 2,141,56,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM261=Lfde28_end - Lfde28_start
+	.long LDIFF_SYM261
+Lfde28_start:
+
+	.long 0
+	.align 3
+	.quad System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+
+LDIFF_SYM262=Lme_21 - System_Linq_Enumerable_LastOrDefault_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.long LDIFF_SYM262
+	.long 0
+	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9
+	.align 3
+Lfde28_end:
+
+.section __DWARF, __debug_info,regular,debug
 LTDIE_32:
 
 	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM263=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM263
+LTDIE_32_POINTER:
+
+	.byte 13
+LDIFF_SYM264=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM264
+LTDIE_32_REFERENCE:
+
+	.byte 14
+LDIFF_SYM265=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM265
+LTDIE_33:
+
+	.byte 17
+	.asciz "System_Linq_IPartition`1"
+
+	.byte 16,7
+	.asciz "System_Linq_IPartition`1"
+
+LDIFF_SYM266=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM266
+LTDIE_33_POINTER:
+
+	.byte 13
+LDIFF_SYM267=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM267
+LTDIE_33_REFERENCE:
+
+	.byte 14
+LDIFF_SYM268=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM268
+LTDIE_34:
+
+	.byte 17
 	.asciz "System_Collections_Generic_IList`1"
 
 	.byte 16,7
 	.asciz "System_Collections_Generic_IList`1"
 
-LDIFF_SYM255=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM255
-LTDIE_32_POINTER:
+LDIFF_SYM269=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM269
+LTDIE_34_POINTER:
 
 	.byte 13
-LDIFF_SYM256=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM256
-LTDIE_32_REFERENCE:
+LDIFF_SYM270=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM270
+LTDIE_34_REFERENCE:
 
 	.byte 14
-LDIFF_SYM257=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM257
-LTDIE_33:
+LDIFF_SYM271=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM271
+LTDIE_35:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerator`1"
@@ -8177,167 +8427,89 @@ LTDIE_33:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM258=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM258
-LTDIE_33_POINTER:
+LDIFF_SYM272=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM272
+LTDIE_35_POINTER:
 
 	.byte 13
-LDIFF_SYM259=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM259
-LTDIE_33_REFERENCE:
+LDIFF_SYM273=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM273
+LTDIE_35_REFERENCE:
 
 	.byte 14
-LDIFF_SYM260=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM260
+LDIFF_SYM274=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM274
 	.byte 2
 	.asciz "System.Linq.Enumerable:TryGetLast<TSource_GSHAREDVT>"
 	.asciz "System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_"
 
 	.byte 3,41
 	.quad System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
-	.quad Lme_20
+	.quad Lme_22
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM261=LTDIE_30_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM261
+LDIFF_SYM275=LTDIE_32_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM275
 	.byte 1,105,3
 	.asciz "param1"
 
-LDIFF_SYM262=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM262
+LDIFF_SYM276=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM276
 	.byte 1,106,11
 	.asciz "partition"
 
-LDIFF_SYM263=LTDIE_31_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM263
+LDIFF_SYM277=LTDIE_33_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM277
 	.byte 1,102,11
 	.asciz "list"
 
-LDIFF_SYM264=LTDIE_32_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM264
+LDIFF_SYM278=LTDIE_34_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM278
 	.byte 1,102,11
 	.asciz "count"
 
-LDIFF_SYM265=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM265
+LDIFF_SYM279=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM279
 	.byte 1,105,11
 	.asciz "e"
 
-LDIFF_SYM266=LTDIE_33_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM266
+LDIFF_SYM280=LTDIE_35_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM280
 	.byte 3,141,200,0,11
 	.asciz "result"
 
-LDIFF_SYM267=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM267
+LDIFF_SYM281=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM281
 	.byte 1,80,11
 	.asciz "V_5"
 
-LDIFF_SYM268=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM268
+LDIFF_SYM282=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM282
 	.byte 1,80,11
 	.asciz "V_6"
 
-LDIFF_SYM269=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM269
+LDIFF_SYM283=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM283
 	.byte 1,80,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM270=Lfde27_end - Lfde27_start
-	.long LDIFF_SYM270
-Lfde27_start:
+LDIFF_SYM284=Lfde29_end - Lfde29_start
+	.long LDIFF_SYM284
+Lfde29_start:
 
 	.long 0
 	.align 3
 	.quad System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
 
-LDIFF_SYM271=Lme_20 - System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
-	.long LDIFF_SYM271
+LDIFF_SYM285=Lme_22 - System_Linq_Enumerable_TryGetLast_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT_bool_
+	.long LDIFF_SYM285
 	.long 0
 	.byte 12,31,0,68,14,144,1,157,18,158,17,68,13,29,68,150,16,151,15,68,152,14,153,13,68,154,12
 	.align 3
-Lfde27_end:
-
-.section __DWARF, __debug_info,regular,debug
-LTDIE_34:
-
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-LDIFF_SYM272=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM272
-LTDIE_34_POINTER:
-
-	.byte 13
-LDIFF_SYM273=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM273
-LTDIE_34_REFERENCE:
-
-	.byte 14
-LDIFF_SYM274=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM274
-LTDIE_35:
-
-	.byte 17
-	.asciz "System_Linq_IIListProvider`1"
-
-	.byte 16,7
-	.asciz "System_Linq_IIListProvider`1"
-
-LDIFF_SYM275=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM275
-LTDIE_35_POINTER:
-
-	.byte 13
-LDIFF_SYM276=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM276
-LTDIE_35_REFERENCE:
-
-	.byte 14
-LDIFF_SYM277=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM277
-	.byte 2
-	.asciz "System.Linq.Enumerable:ToArray<TSource_GSHAREDVT>"
-	.asciz "System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
-
-	.byte 4,13
-	.quad System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
-	.quad Lme_21
-
-	.byte 2,118,16,3
-	.asciz "param0"
-
-LDIFF_SYM278=LTDIE_34_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM278
-	.byte 2,141,24,11
-	.asciz "arrayProvider"
-
-LDIFF_SYM279=LTDIE_35_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM279
-	.byte 1,105,0
-
-.section __DWARF, __debug_frame,regular,debug
-
-LDIFF_SYM280=Lfde28_end - Lfde28_start
-	.long LDIFF_SYM280
-Lfde28_start:
-
-	.long 0
-	.align 3
-	.quad System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
-
-LDIFF_SYM281=Lme_21 - System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
-	.long LDIFF_SYM281
-	.long 0
-	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
-	.align 3
-Lfde28_end:
+Lfde29_end:
 
 .section __DWARF, __debug_info,regular,debug
 LTDIE_36:
@@ -8348,18 +8520,18 @@ LTDIE_36:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerable`1"
 
-LDIFF_SYM282=LTDIE_36 - Ldebug_info_start
-	.long LDIFF_SYM282
+LDIFF_SYM286=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM286
 LTDIE_36_POINTER:
 
 	.byte 13
-LDIFF_SYM283=LTDIE_36 - Ldebug_info_start
-	.long LDIFF_SYM283
+LDIFF_SYM287=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM287
 LTDIE_36_REFERENCE:
 
 	.byte 14
-LDIFF_SYM284=LTDIE_36 - Ldebug_info_start
-	.long LDIFF_SYM284
+LDIFF_SYM288=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM288
 LTDIE_37:
 
 	.byte 17
@@ -8368,120 +8540,198 @@ LTDIE_37:
 	.byte 16,7
 	.asciz "System_Linq_IIListProvider`1"
 
-LDIFF_SYM285=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM285
+LDIFF_SYM289=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM289
 LTDIE_37_POINTER:
 
 	.byte 13
-LDIFF_SYM286=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM286
+LDIFF_SYM290=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM290
 LTDIE_37_REFERENCE:
 
 	.byte 14
-LDIFF_SYM287=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM287
+LDIFF_SYM291=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM291
+	.byte 2
+	.asciz "System.Linq.Enumerable:ToArray<TSource_GSHAREDVT>"
+	.asciz "System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
+
+	.byte 4,13
+	.quad System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.quad Lme_23
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM292=LTDIE_36_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM292
+	.byte 2,141,24,11
+	.asciz "arrayProvider"
+
+LDIFF_SYM293=LTDIE_37_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM293
+	.byte 1,105,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM294=Lfde30_end - Lfde30_start
+	.long LDIFF_SYM294
+Lfde30_start:
+
+	.long 0
+	.align 3
+	.quad System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+
+LDIFF_SYM295=Lme_23 - System_Linq_Enumerable_ToArray_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.long LDIFF_SYM295
+	.long 0
+	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
+	.align 3
+Lfde30_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_38:
+
+	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM296=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM296
+LTDIE_38_POINTER:
+
+	.byte 13
+LDIFF_SYM297=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM297
+LTDIE_38_REFERENCE:
+
+	.byte 14
+LDIFF_SYM298=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM298
+LTDIE_39:
+
+	.byte 17
+	.asciz "System_Linq_IIListProvider`1"
+
+	.byte 16,7
+	.asciz "System_Linq_IIListProvider`1"
+
+LDIFF_SYM299=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM299
+LTDIE_39_POINTER:
+
+	.byte 13
+LDIFF_SYM300=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM300
+LTDIE_39_REFERENCE:
+
+	.byte 14
+LDIFF_SYM301=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM301
 	.byte 2
 	.asciz "System.Linq.Enumerable:ToList<TSource_GSHAREDVT>"
 	.asciz "System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT"
 
 	.byte 4,25
 	.quad System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
-	.quad Lme_22
+	.quad Lme_24
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM288=LTDIE_36_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM288
+LDIFF_SYM302=LTDIE_38_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM302
 	.byte 2,141,24,11
 	.asciz "listProvider"
 
-LDIFF_SYM289=LTDIE_37_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM289
+LDIFF_SYM303=LTDIE_39_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM303
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM290=Lfde29_end - Lfde29_start
-	.long LDIFF_SYM290
-Lfde29_start:
+LDIFF_SYM304=Lfde31_end - Lfde31_start
+	.long LDIFF_SYM304
+Lfde31_start:
 
 	.long 0
 	.align 3
 	.quad System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
 
-LDIFF_SYM291=Lme_22 - System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
-	.long LDIFF_SYM291
+LDIFF_SYM305=Lme_24 - System_Linq_Enumerable_ToList_TSource_GSHAREDVT_System_Collections_Generic_IEnumerable_1_TSource_GSHAREDVT
+	.long LDIFF_SYM305
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29,68,153,6
 	.align 3
-Lfde29_end:
+Lfde31_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_38:
+LTDIE_40:
 
 	.byte 5
 	.asciz "System_Collections_Generic_ArrayBuilder`1"
 
 	.byte 32,16
-LDIFF_SYM292=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM292
+LDIFF_SYM306=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM306
 	.byte 2,35,0,6
 	.asciz "_array"
 
-LDIFF_SYM293=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM293
+LDIFF_SYM307=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM307
 	.byte 2,35,16,6
 	.asciz "_count"
 
-LDIFF_SYM294=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM294
+LDIFF_SYM308=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM308
 	.byte 2,35,24,0,7
 	.asciz "System_Collections_Generic_ArrayBuilder`1"
 
-LDIFF_SYM295=LTDIE_38 - Ldebug_info_start
-	.long LDIFF_SYM295
-LTDIE_38_POINTER:
+LDIFF_SYM309=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM309
+LTDIE_40_POINTER:
 
 	.byte 13
-LDIFF_SYM296=LTDIE_38 - Ldebug_info_start
-	.long LDIFF_SYM296
-LTDIE_38_REFERENCE:
+LDIFF_SYM310=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM310
+LTDIE_40_REFERENCE:
 
 	.byte 14
-LDIFF_SYM297=LTDIE_38 - Ldebug_info_start
-	.long LDIFF_SYM297
+LDIFF_SYM311=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM311
 	.byte 2
 	.asciz "System.Collections.Generic.ArrayBuilder`1<T_GSHAREDVT>:get_Capacity"
 	.asciz "System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity"
 
 	.byte 5,38
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity
-	.quad Lme_27
+	.quad Lme_29
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM298=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM298
+LDIFF_SYM312=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM312
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM299=Lfde30_end - Lfde30_start
-	.long LDIFF_SYM299
-Lfde30_start:
+LDIFF_SYM313=Lfde32_end - Lfde32_start
+	.long LDIFF_SYM313
+Lfde32_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity
 
-LDIFF_SYM300=Lme_27 - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity
-	.long LDIFF_SYM300
+LDIFF_SYM314=Lme_29 - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Capacity
+	.long LDIFF_SYM314
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4,154,3
 	.align 3
-Lfde30_end:
+Lfde32_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -8491,31 +8741,31 @@ Lfde30_end:
 
 	.byte 5,43
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Count
-	.quad Lme_28
+	.quad Lme_2a
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM301=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM301
+LDIFF_SYM315=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM315
 	.byte 2,141,24,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM302=Lfde31_end - Lfde31_start
-	.long LDIFF_SYM302
-Lfde31_start:
+LDIFF_SYM316=Lfde33_end - Lfde33_start
+	.long LDIFF_SYM316
+Lfde33_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Count
 
-LDIFF_SYM303=Lme_28 - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Count
-	.long LDIFF_SYM303
+LDIFF_SYM317=Lme_2a - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Count
+	.long LDIFF_SYM317
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,153,4
 	.align 3
-Lfde31_end:
+Lfde33_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -8525,36 +8775,36 @@ Lfde31_end:
 
 	.byte 5,54
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Item_int
-	.quad Lme_29
+	.quad Lme_2b
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM304=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM304
+LDIFF_SYM318=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM318
 	.byte 2,141,40,3
 	.asciz "param0"
 
-LDIFF_SYM305=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM305
+LDIFF_SYM319=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM319
 	.byte 2,141,48,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM306=Lfde32_end - Lfde32_start
-	.long LDIFF_SYM306
-Lfde32_start:
+LDIFF_SYM320=Lfde34_end - Lfde34_start
+	.long LDIFF_SYM320
+Lfde34_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Item_int
 
-LDIFF_SYM307=Lme_29 - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Item_int
-	.long LDIFF_SYM307
+LDIFF_SYM321=Lme_2b - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_get_Item_int
+	.long LDIFF_SYM321
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,151,8,152,7
 	.align 3
-Lfde32_end:
+Lfde34_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -8564,36 +8814,36 @@ Lfde32_end:
 
 	.byte 5,69
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_Add_T_GSHAREDVT
-	.quad Lme_2a
+	.quad Lme_2c
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM308=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM308
+LDIFF_SYM322=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM322
 	.byte 1,106,3
 	.asciz "param0"
 
-LDIFF_SYM309=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM309
+LDIFF_SYM323=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM323
 	.byte 1,80,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM310=Lfde33_end - Lfde33_start
-	.long LDIFF_SYM310
-Lfde33_start:
+LDIFF_SYM324=Lfde35_end - Lfde35_start
+	.long LDIFF_SYM324
+Lfde35_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_Add_T_GSHAREDVT
 
-LDIFF_SYM311=Lme_2a - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_Add_T_GSHAREDVT
-	.long LDIFF_SYM311
+LDIFF_SYM325=Lme_2c - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_Add_T_GSHAREDVT
+	.long LDIFF_SYM325
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7
 	.align 3
-Lfde33_end:
+Lfde35_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -8603,41 +8853,41 @@ Lfde33_end:
 
 	.byte 5,140,1
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_UncheckedAdd_T_GSHAREDVT
-	.quad Lme_2b
+	.quad Lme_2d
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM312=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM312
+LDIFF_SYM326=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM326
 	.byte 1,106,3
 	.asciz "param0"
 
-LDIFF_SYM313=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM313
+LDIFF_SYM327=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM327
 	.byte 1,80,11
 	.asciz "V_0"
 
-LDIFF_SYM314=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM314
+LDIFF_SYM328=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM328
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM315=Lfde34_end - Lfde34_start
-	.long LDIFF_SYM315
-Lfde34_start:
+LDIFF_SYM329=Lfde36_end - Lfde36_start
+	.long LDIFF_SYM329
+Lfde36_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_UncheckedAdd_T_GSHAREDVT
 
-LDIFF_SYM316=Lme_2b - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_UncheckedAdd_T_GSHAREDVT
-	.long LDIFF_SYM316
+LDIFF_SYM330=Lme_2d - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_UncheckedAdd_T_GSHAREDVT
+	.long LDIFF_SYM330
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7
 	.align 3
-Lfde34_end:
+Lfde36_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -8647,54 +8897,54 @@ Lfde34_end:
 
 	.byte 5,147,1
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_EnsureCapacity_int
-	.quad Lme_2c
+	.quad Lme_2e
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM317=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM317
+LDIFF_SYM331=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM331
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM318=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM318
+LDIFF_SYM332=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM332
 	.byte 1,106,11
 	.asciz "capacity"
 
-LDIFF_SYM319=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM319
+LDIFF_SYM333=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM333
 	.byte 1,103,11
 	.asciz "nextCapacity"
 
-LDIFF_SYM320=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM320
+LDIFF_SYM334=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM334
 	.byte 1,101,11
 	.asciz "next"
 
-LDIFF_SYM321=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM321
+LDIFF_SYM335=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM335
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM322=Lfde35_end - Lfde35_start
-	.long LDIFF_SYM322
-Lfde35_start:
+LDIFF_SYM336=Lfde37_end - Lfde37_start
+	.long LDIFF_SYM336
+Lfde37_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_EnsureCapacity_int
 
-LDIFF_SYM323=Lme_2c - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_EnsureCapacity_int
-	.long LDIFF_SYM323
+LDIFF_SYM337=Lme_2e - System_Collections_Generic_ArrayBuilder_1_T_GSHAREDVT_EnsureCapacity_int
+	.long LDIFF_SYM337
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,149,10,150,9,68,151,8,152,7,68,153,6,154,5
 	.align 3
-Lfde35_end:
+Lfde37_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_39:
+LTDIE_41:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerable`1"
@@ -8702,19 +8952,19 @@ LTDIE_39:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerable`1"
 
-LDIFF_SYM324=LTDIE_39 - Ldebug_info_start
-	.long LDIFF_SYM324
-LTDIE_39_POINTER:
+LDIFF_SYM338=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM338
+LTDIE_41_POINTER:
 
 	.byte 13
-LDIFF_SYM325=LTDIE_39 - Ldebug_info_start
-	.long LDIFF_SYM325
-LTDIE_39_REFERENCE:
+LDIFF_SYM339=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM339
+LTDIE_41_REFERENCE:
 
 	.byte 14
-LDIFF_SYM326=LTDIE_39 - Ldebug_info_start
-	.long LDIFF_SYM326
-LTDIE_40:
+LDIFF_SYM340=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM340
+LTDIE_42:
 
 	.byte 17
 	.asciz "System_Collections_Generic_ICollection`1"
@@ -8722,160 +8972,160 @@ LTDIE_40:
 	.byte 16,7
 	.asciz "System_Collections_Generic_ICollection`1"
 
-LDIFF_SYM327=LTDIE_40 - Ldebug_info_start
-	.long LDIFF_SYM327
-LTDIE_40_POINTER:
+LDIFF_SYM341=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM341
+LTDIE_42_POINTER:
 
 	.byte 13
-LDIFF_SYM328=LTDIE_40 - Ldebug_info_start
-	.long LDIFF_SYM328
-LTDIE_40_REFERENCE:
+LDIFF_SYM342=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM342
+LTDIE_42_REFERENCE:
 
 	.byte 14
-LDIFF_SYM329=LTDIE_40 - Ldebug_info_start
-	.long LDIFF_SYM329
+LDIFF_SYM343=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM343
 	.byte 2
 	.asciz "System.Collections.Generic.EnumerableHelpers:ToArray<T_GSHAREDVT>"
 	.asciz "System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT"
 
 	.byte 6,70
 	.quad System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
-	.quad Lme_2d
+	.quad Lme_2f
 
 	.byte 2,118,16,3
 	.asciz "param0"
 
-LDIFF_SYM330=LTDIE_39_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM330
+LDIFF_SYM344=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM344
 	.byte 1,106,11
 	.asciz "collection"
 
-LDIFF_SYM331=LTDIE_40_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM331
+LDIFF_SYM345=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM345
 	.byte 1,103,11
 	.asciz "builder"
 
-LDIFF_SYM332=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM332
+LDIFF_SYM346=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM346
 	.byte 1,80,11
 	.asciz "count"
 
-LDIFF_SYM333=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM333
+LDIFF_SYM347=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM347
 	.byte 1,106,11
 	.asciz "result"
 
-LDIFF_SYM334=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM334
+LDIFF_SYM348=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM348
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM335=Lfde36_end - Lfde36_start
-	.long LDIFF_SYM335
-Lfde36_start:
+LDIFF_SYM349=Lfde38_end - Lfde38_start
+	.long LDIFF_SYM349
+Lfde38_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
 
-LDIFF_SYM336=Lme_2d - System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
-	.long LDIFF_SYM336
+LDIFF_SYM350=Lme_2f - System_Collections_Generic_EnumerableHelpers_ToArray_T_GSHAREDVT_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
+	.long LDIFF_SYM350
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,151,10,152,9,68,153,8,154,7
 	.align 3
-Lfde36_end:
+Lfde38_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_41:
+LTDIE_43:
 
 	.byte 5
 	.asciz "System_Collections_Generic_LargeArrayBuilder`1"
 
 	.byte 64,16
-LDIFF_SYM337=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM337
+LDIFF_SYM351=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM351
 	.byte 2,35,0,6
 	.asciz "_maxCapacity"
 
-LDIFF_SYM338=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM338
+LDIFF_SYM352=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM352
 	.byte 2,35,16,6
 	.asciz "_first"
 
-LDIFF_SYM339=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM339
+LDIFF_SYM353=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM353
 	.byte 2,35,24,6
 	.asciz "_buffers"
 
-LDIFF_SYM340=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM340
+LDIFF_SYM354=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM354
 	.byte 2,35,32,6
 	.asciz "_current"
 
-LDIFF_SYM341=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM341
+LDIFF_SYM355=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM355
 	.byte 2,35,48,6
 	.asciz "_index"
 
-LDIFF_SYM342=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM342
+LDIFF_SYM356=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM356
 	.byte 2,35,56,6
 	.asciz "_count"
 
-LDIFF_SYM343=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM343
+LDIFF_SYM357=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM357
 	.byte 2,35,60,0,7
 	.asciz "System_Collections_Generic_LargeArrayBuilder`1"
 
-LDIFF_SYM344=LTDIE_41 - Ldebug_info_start
-	.long LDIFF_SYM344
-LTDIE_41_POINTER:
+LDIFF_SYM358=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM358
+LTDIE_43_POINTER:
 
 	.byte 13
-LDIFF_SYM345=LTDIE_41 - Ldebug_info_start
-	.long LDIFF_SYM345
-LTDIE_41_REFERENCE:
+LDIFF_SYM359=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM359
+LTDIE_43_REFERENCE:
 
 	.byte 14
-LDIFF_SYM346=LTDIE_41 - Ldebug_info_start
-	.long LDIFF_SYM346
+LDIFF_SYM360=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM360
 	.byte 2
 	.asciz "System.Collections.Generic.LargeArrayBuilder`1<T_GSHAREDVT>:.ctor"
 	.asciz "System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool"
 
 	.byte 7,86
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool
-	.quad Lme_2e
+	.quad Lme_30
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM347=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM347
+LDIFF_SYM361=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM361
 	.byte 2,141,16,3
 	.asciz "param0"
 
-LDIFF_SYM348=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM348
+LDIFF_SYM362=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM362
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM349=Lfde37_end - Lfde37_start
-	.long LDIFF_SYM349
-Lfde37_start:
+LDIFF_SYM363=Lfde39_end - Lfde39_start
+	.long LDIFF_SYM363
+Lfde39_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool
 
-LDIFF_SYM350=Lme_2e - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool
-	.long LDIFF_SYM350
+LDIFF_SYM364=Lme_30 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_bool
+	.long LDIFF_SYM364
 	.long 0
 	.byte 12,31,0,68,14,64,157,8,158,7,68,13,29
 	.align 3
-Lfde37_end:
+Lfde39_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -8885,44 +9135,44 @@ Lfde37_end:
 
 	.byte 7,101
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_int
-	.quad Lme_2f
+	.quad Lme_31
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM351=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM351
+LDIFF_SYM365=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM365
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM352=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM352
+LDIFF_SYM366=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM366
 	.byte 2,141,32,11
 	.asciz "V_0"
 
-LDIFF_SYM353=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM353
+LDIFF_SYM367=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM367
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM354=Lfde38_end - Lfde38_start
-	.long LDIFF_SYM354
-Lfde38_start:
+LDIFF_SYM368=Lfde40_end - Lfde40_start
+	.long LDIFF_SYM368
+Lfde40_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_int
 
-LDIFF_SYM355=Lme_2f - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_int
-	.long LDIFF_SYM355
+LDIFF_SYM369=Lme_31 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT__ctor_int
+	.long LDIFF_SYM369
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9
 	.align 3
-Lfde38_end:
+Lfde40_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_42:
+LTDIE_44:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerable`1"
@@ -8930,19 +9180,19 @@ LTDIE_42:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerable`1"
 
-LDIFF_SYM356=LTDIE_42 - Ldebug_info_start
-	.long LDIFF_SYM356
-LTDIE_42_POINTER:
+LDIFF_SYM370=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM370
+LTDIE_44_POINTER:
 
 	.byte 13
-LDIFF_SYM357=LTDIE_42 - Ldebug_info_start
-	.long LDIFF_SYM357
-LTDIE_42_REFERENCE:
+LDIFF_SYM371=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM371
+LTDIE_44_REFERENCE:
 
 	.byte 14
-LDIFF_SYM358=LTDIE_42 - Ldebug_info_start
-	.long LDIFF_SYM358
-LTDIE_43:
+LDIFF_SYM372=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM372
+LTDIE_45:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerator`1"
@@ -8950,74 +9200,74 @@ LTDIE_43:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM359=LTDIE_43 - Ldebug_info_start
-	.long LDIFF_SYM359
-LTDIE_43_POINTER:
+LDIFF_SYM373=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM373
+LTDIE_45_POINTER:
 
 	.byte 13
-LDIFF_SYM360=LTDIE_43 - Ldebug_info_start
-	.long LDIFF_SYM360
-LTDIE_43_REFERENCE:
+LDIFF_SYM374=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM374
+LTDIE_45_REFERENCE:
 
 	.byte 14
-LDIFF_SYM361=LTDIE_43 - Ldebug_info_start
-	.long LDIFF_SYM361
+LDIFF_SYM375=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM375
 	.byte 2
 	.asciz "System.Collections.Generic.LargeArrayBuilder`1<T_GSHAREDVT>:AddRange"
 	.asciz "System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT"
 
 	.byte 7,164,1
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
-	.quad Lme_30
+	.quad Lme_32
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM362=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM362
+LDIFF_SYM376=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM376
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM363=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM363
+LDIFF_SYM377=LTDIE_44_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM377
 	.byte 2,141,40,11
 	.asciz "enumerator"
 
-LDIFF_SYM364=LTDIE_43_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM364
+LDIFF_SYM378=LTDIE_45_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM378
 	.byte 2,141,56,11
 	.asciz "destination"
 
-LDIFF_SYM365=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM365
+LDIFF_SYM379=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM379
 	.byte 3,141,192,0,11
 	.asciz "index"
 
-LDIFF_SYM366=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM366
+LDIFF_SYM380=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM380
 	.byte 3,141,200,0,11
 	.asciz "item"
 
-LDIFF_SYM367=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM367
+LDIFF_SYM381=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM381
 	.byte 1,80,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM368=Lfde39_end - Lfde39_start
-	.long LDIFF_SYM368
-Lfde39_start:
+LDIFF_SYM382=Lfde41_end - Lfde41_start
+	.long LDIFF_SYM382
+Lfde41_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
 
-LDIFF_SYM369=Lme_30 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
-	.long LDIFF_SYM369
+LDIFF_SYM383=Lme_32 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddRange_System_Collections_Generic_IEnumerable_1_T_GSHAREDVT
+	.long LDIFF_SYM383
 	.long 0
 	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,151,14,152,13,68,153,12
 	.align 3
-Lfde39_end:
+Lfde41_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9027,46 +9277,46 @@ Lfde39_end:
 
 	.byte 7,198,1
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddWithBufferAllocation_T_GSHAREDVT_T_GSHAREDVT____int_
-	.quad Lme_31
+	.quad Lme_33
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM370=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM370
+LDIFF_SYM384=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM384
 	.byte 1,104,3
 	.asciz "param0"
 
-LDIFF_SYM371=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM371
+LDIFF_SYM385=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM385
 	.byte 1,80,3
 	.asciz "param1"
 
-LDIFF_SYM372=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM372
+LDIFF_SYM386=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM386
 	.byte 2,141,48,3
 	.asciz "param2"
 
-LDIFF_SYM373=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM373
+LDIFF_SYM387=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM387
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM374=Lfde40_end - Lfde40_start
-	.long LDIFF_SYM374
-Lfde40_start:
+LDIFF_SYM388=Lfde42_end - Lfde42_start
+	.long LDIFF_SYM388
+Lfde42_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddWithBufferAllocation_T_GSHAREDVT_T_GSHAREDVT____int_
 
-LDIFF_SYM375=Lme_31 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddWithBufferAllocation_T_GSHAREDVT_T_GSHAREDVT____int_
-	.long LDIFF_SYM375
+LDIFF_SYM389=Lme_33 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AddWithBufferAllocation_T_GSHAREDVT_T_GSHAREDVT____int_
+	.long LDIFF_SYM389
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,151,12,152,11,68,154,10
 	.align 3
-Lfde40_end:
+Lfde42_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9076,61 +9326,61 @@ Lfde40_end:
 
 	.byte 7,218,1
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_CopyTo_T_GSHAREDVT___int_int
-	.quad Lme_32
+	.quad Lme_34
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM376=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM376
+LDIFF_SYM390=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM390
 	.byte 1,103,3
 	.asciz "param0"
 
-LDIFF_SYM377=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM377
+LDIFF_SYM391=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM391
 	.byte 1,104,3
 	.asciz "param1"
 
-LDIFF_SYM378=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM378
+LDIFF_SYM392=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM392
 	.byte 1,105,3
 	.asciz "param2"
 
-LDIFF_SYM379=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM379
+LDIFF_SYM393=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM393
 	.byte 1,106,11
 	.asciz "i"
 
-LDIFF_SYM380=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM380
+LDIFF_SYM394=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM394
 	.byte 1,102,11
 	.asciz "buffer"
 
-LDIFF_SYM381=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM381
+LDIFF_SYM395=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM395
 	.byte 1,101,11
 	.asciz "toCopy"
 
-LDIFF_SYM382=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM382
+LDIFF_SYM396=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM396
 	.byte 1,100,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM383=Lfde41_end - Lfde41_start
-	.long LDIFF_SYM383
-Lfde41_start:
+LDIFF_SYM397=Lfde43_end - Lfde43_start
+	.long LDIFF_SYM397
+Lfde43_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_CopyTo_T_GSHAREDVT___int_int
 
-LDIFF_SYM384=Lme_32 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_CopyTo_T_GSHAREDVT___int_int
-	.long LDIFF_SYM384
+LDIFF_SYM398=Lme_34 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_CopyTo_T_GSHAREDVT___int_int
+	.long LDIFF_SYM398
 	.long 0
 	.byte 12,31,0,68,14,112,157,14,158,13,68,13,29,68,148,12,149,11,68,150,10,151,9,68,152,8,153,7,68,154,6
 	.align 3
-Lfde41_end:
+Lfde43_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9140,36 +9390,36 @@ Lfde41_end:
 
 	.byte 7,193,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_GetBuffer_int
-	.quad Lme_33
+	.quad Lme_35
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM385=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM385
+LDIFF_SYM399=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM399
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM386=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM386
+LDIFF_SYM400=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM400
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM387=Lfde42_end - Lfde42_start
-	.long LDIFF_SYM387
-Lfde42_start:
+LDIFF_SYM401=Lfde44_end - Lfde44_start
+	.long LDIFF_SYM401
+Lfde44_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_GetBuffer_int
 
-LDIFF_SYM388=Lme_33 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_GetBuffer_int
-	.long LDIFF_SYM388
+LDIFF_SYM402=Lme_35 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_GetBuffer_int
+	.long LDIFF_SYM402
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9
 	.align 3
-Lfde42_end:
+Lfde44_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9179,36 +9429,36 @@ Lfde42_end:
 
 	.byte 7,214,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_ToArray
-	.quad Lme_34
+	.quad Lme_36
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM389=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM389
+LDIFF_SYM403=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM403
 	.byte 1,106,11
 	.asciz "array"
 
-LDIFF_SYM390=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM390
+LDIFF_SYM404=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM404
 	.byte 2,141,48,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM391=Lfde43_end - Lfde43_start
-	.long LDIFF_SYM391
-Lfde43_start:
+LDIFF_SYM405=Lfde45_end - Lfde45_start
+	.long LDIFF_SYM405
+Lfde45_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_ToArray
 
-LDIFF_SYM392=Lme_34 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_ToArray
-	.long LDIFF_SYM392
+LDIFF_SYM406=Lme_36 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_ToArray
+	.long LDIFF_SYM406
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,153,10,154,9
 	.align 3
-Lfde43_end:
+Lfde45_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9218,36 +9468,36 @@ Lfde43_end:
 
 	.byte 7,232,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_TryMove_T_GSHAREDVT___
-	.quad Lme_35
+	.quad Lme_37
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM393=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM393
+LDIFF_SYM407=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM407
 	.byte 1,105,3
 	.asciz "param0"
 
-LDIFF_SYM394=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM394
+LDIFF_SYM408=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM408
 	.byte 2,141,32,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM395=Lfde44_end - Lfde44_start
-	.long LDIFF_SYM395
-Lfde44_start:
+LDIFF_SYM409=Lfde46_end - Lfde46_start
+	.long LDIFF_SYM409
+Lfde46_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_TryMove_T_GSHAREDVT___
 
-LDIFF_SYM396=Lme_35 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_TryMove_T_GSHAREDVT___
-	.long LDIFF_SYM396
+LDIFF_SYM410=Lme_37 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_TryMove_T_GSHAREDVT___
+	.long LDIFF_SYM410
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,152,8,153,7
 	.align 3
-Lfde44_end:
+Lfde46_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9257,170 +9507,170 @@ Lfde44_end:
 
 	.byte 7,249,2
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AllocateBuffer
-	.quad Lme_36
+	.quad Lme_38
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM397=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM397
+LDIFF_SYM411=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM411
 	.byte 1,106,11
 	.asciz "nextCapacity"
 
-LDIFF_SYM398=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM398
+LDIFF_SYM412=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM412
 	.byte 1,104,11
 	.asciz "nextCapacity"
 
-LDIFF_SYM399=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM399
+LDIFF_SYM413=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM413
 	.byte 1,104,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM400=Lfde45_end - Lfde45_start
-	.long LDIFF_SYM400
-Lfde45_start:
+LDIFF_SYM414=Lfde47_end - Lfde47_start
+	.long LDIFF_SYM414
+Lfde47_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AllocateBuffer
 
-LDIFF_SYM401=Lme_36 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AllocateBuffer
-	.long LDIFF_SYM401
+LDIFF_SYM415=Lme_38 - System_Collections_Generic_LargeArrayBuilder_1_T_GSHAREDVT_AllocateBuffer
+	.long LDIFF_SYM415
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,152,10,153,9,68,154,8
 	.align 3
-Lfde45_end:
+Lfde47_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_44:
+LTDIE_46:
 
 	.byte 5
 	.asciz "System_Collections_Generic_List`1"
 
 	.byte 32,16
-LDIFF_SYM402=LTDIE_3 - Ldebug_info_start
-	.long LDIFF_SYM402
+LDIFF_SYM416=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM416
 	.byte 2,35,0,6
 	.asciz "_items"
 
-LDIFF_SYM403=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM403
+LDIFF_SYM417=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM417
 	.byte 2,35,16,6
 	.asciz "_size"
 
-LDIFF_SYM404=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM404
+LDIFF_SYM418=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM418
 	.byte 2,35,24,6
 	.asciz "_version"
 
-LDIFF_SYM405=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM405
+LDIFF_SYM419=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM419
 	.byte 2,35,28,0,7
 	.asciz "System_Collections_Generic_List`1"
 
-LDIFF_SYM406=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM406
-LTDIE_44_POINTER:
-
-	.byte 13
-LDIFF_SYM407=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM407
-LTDIE_44_REFERENCE:
-
-	.byte 14
-LDIFF_SYM408=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM408
-LTDIE_45:
-
-	.byte 17
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_IEnumerable`1"
-
-LDIFF_SYM409=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM409
-LTDIE_45_POINTER:
-
-	.byte 13
-LDIFF_SYM410=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM410
-LTDIE_45_REFERENCE:
-
-	.byte 14
-LDIFF_SYM411=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM411
-LTDIE_46:
-
-	.byte 17
-	.asciz "System_Collections_Generic_ICollection`1"
-
-	.byte 16,7
-	.asciz "System_Collections_Generic_ICollection`1"
-
-LDIFF_SYM412=LTDIE_46 - Ldebug_info_start
-	.long LDIFF_SYM412
+LDIFF_SYM420=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM420
 LTDIE_46_POINTER:
 
 	.byte 13
-LDIFF_SYM413=LTDIE_46 - Ldebug_info_start
-	.long LDIFF_SYM413
+LDIFF_SYM421=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM421
 LTDIE_46_REFERENCE:
 
 	.byte 14
-LDIFF_SYM414=LTDIE_46 - Ldebug_info_start
-	.long LDIFF_SYM414
+LDIFF_SYM422=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM422
+LTDIE_47:
+
+	.byte 17
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_IEnumerable`1"
+
+LDIFF_SYM423=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM423
+LTDIE_47_POINTER:
+
+	.byte 13
+LDIFF_SYM424=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM424
+LTDIE_47_REFERENCE:
+
+	.byte 14
+LDIFF_SYM425=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM425
+LTDIE_48:
+
+	.byte 17
+	.asciz "System_Collections_Generic_ICollection`1"
+
+	.byte 16,7
+	.asciz "System_Collections_Generic_ICollection`1"
+
+LDIFF_SYM426=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM426
+LTDIE_48_POINTER:
+
+	.byte 13
+LDIFF_SYM427=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM427
+LTDIE_48_REFERENCE:
+
+	.byte 14
+LDIFF_SYM428=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM428
 	.byte 2
 	.asciz "System.Collections.Generic.List`1<T_REF>:.ctor"
 	.asciz "System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumerable_1_T_REF"
 
 	.byte 8,64
 	.quad System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumerable_1_T_REF
-	.quad Lme_37
+	.quad Lme_39
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM415=LTDIE_44_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM415
+LDIFF_SYM429=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM429
 	.byte 2,141,32,3
 	.asciz "param0"
 
-LDIFF_SYM416=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM416
+LDIFF_SYM430=LTDIE_47_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM430
 	.byte 1,106,11
 	.asciz "c"
 
-LDIFF_SYM417=LTDIE_46_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM417
+LDIFF_SYM431=LTDIE_48_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM431
 	.byte 1,105,11
 	.asciz "count"
 
-LDIFF_SYM418=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM418
+LDIFF_SYM432=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM432
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM419=Lfde46_end - Lfde46_start
-	.long LDIFF_SYM419
-Lfde46_start:
+LDIFF_SYM433=Lfde48_end - Lfde48_start
+	.long LDIFF_SYM433
+Lfde48_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumerable_1_T_REF
 
-LDIFF_SYM420=Lme_37 - System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumerable_1_T_REF
-	.long LDIFF_SYM420
+LDIFF_SYM434=Lme_39 - System_Collections_Generic_List_1_T_REF__ctor_System_Collections_Generic_IEnumerable_1_T_REF
+	.long LDIFF_SYM434
 	.long 0
 	.byte 12,31,0,68,14,80,157,10,158,9,68,13,29,68,153,8,154,7
 	.align 3
-Lfde46_end:
+Lfde48_end:
 
 .section __DWARF, __debug_info,regular,debug
-LTDIE_47:
+LTDIE_49:
 
 	.byte 17
 	.asciz "System_Collections_Generic_IEnumerator`1"
@@ -9428,69 +9678,69 @@ LTDIE_47:
 	.byte 16,7
 	.asciz "System_Collections_Generic_IEnumerator`1"
 
-LDIFF_SYM421=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM421
-LTDIE_47_POINTER:
+LDIFF_SYM435=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM435
+LTDIE_49_POINTER:
 
 	.byte 13
-LDIFF_SYM422=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM422
-LTDIE_47_REFERENCE:
+LDIFF_SYM436=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM436
+LTDIE_49_REFERENCE:
 
 	.byte 14
-LDIFF_SYM423=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM423
+LDIFF_SYM437=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM437
 	.byte 2
 	.asciz "System.Collections.Generic.List`1<T_REF>:AddEnumerable"
 	.asciz "System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF"
 
 	.byte 8,208,8
 	.quad System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
-	.quad Lme_38
+	.quad Lme_3a
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM424=LTDIE_44_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM424
+LDIFF_SYM438=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM438
 	.byte 2,141,32,3
 	.asciz "param0"
 
-LDIFF_SYM425=LTDIE_45_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM425
+LDIFF_SYM439=LTDIE_47_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM439
 	.byte 1,106,11
 	.asciz "en"
 
-LDIFF_SYM426=LTDIE_47_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM426
+LDIFF_SYM440=LTDIE_49_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM440
 	.byte 2,141,40,11
 	.asciz "current"
 
-LDIFF_SYM427=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM427
+LDIFF_SYM441=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM441
 	.byte 1,106,11
 	.asciz "V_2"
 
-LDIFF_SYM428=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM428
+LDIFF_SYM442=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM442
 	.byte 1,105,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM429=Lfde47_end - Lfde47_start
-	.long LDIFF_SYM429
-Lfde47_start:
+LDIFF_SYM443=Lfde49_end - Lfde49_start
+	.long LDIFF_SYM443
+Lfde49_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
 
-LDIFF_SYM430=Lme_38 - System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
-	.long LDIFF_SYM430
+LDIFF_SYM444=Lme_3a - System_Collections_Generic_List_1_T_REF_AddEnumerable_System_Collections_Generic_IEnumerable_1_T_REF
+	.long LDIFF_SYM444
 	.long 0
 	.byte 12,31,0,68,14,96,157,12,158,11,68,13,29,68,153,10,154,9
 	.align 3
-Lfde47_end:
+Lfde49_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9500,41 +9750,41 @@ Lfde47_end:
 
 	.byte 8,159,3
 	.quad System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
-	.quad Lme_39
+	.quad Lme_3b
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM431=LTDIE_44_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM431
+LDIFF_SYM445=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM445
 	.byte 2,141,32,3
 	.asciz "param0"
 
-LDIFF_SYM432=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM432
+LDIFF_SYM446=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM446
 	.byte 2,141,40,11
 	.asciz "newCapacity"
 
-LDIFF_SYM433=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM433
+LDIFF_SYM447=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM447
 	.byte 1,104,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM434=Lfde48_end - Lfde48_start
-	.long LDIFF_SYM434
-Lfde48_start:
+LDIFF_SYM448=Lfde50_end - Lfde50_start
+	.long LDIFF_SYM448
+Lfde50_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
 
-LDIFF_SYM435=Lme_39 - System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
-	.long LDIFF_SYM435
+LDIFF_SYM449=Lme_3b - System_Collections_Generic_List_1_T_REF_EnsureCapacity_int
+	.long LDIFF_SYM449
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,152,4,153,3
 	.align 3
-Lfde48_end:
+Lfde50_end:
 
 .section __DWARF, __debug_info,regular,debug
 
@@ -9544,41 +9794,41 @@ Lfde48_end:
 
 	.byte 8,103
 	.quad System_Collections_Generic_List_1_T_REF_set_Capacity_int
-	.quad Lme_3a
+	.quad Lme_3c
 
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM436=LTDIE_44_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM436
+LDIFF_SYM450=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM450
 	.byte 2,141,24,3
 	.asciz "param0"
 
-LDIFF_SYM437=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM437
+LDIFF_SYM451=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM451
 	.byte 1,106,11
 	.asciz "newItems"
 
-LDIFF_SYM438=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM438
+LDIFF_SYM452=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM452
 	.byte 1,106,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM439=Lfde49_end - Lfde49_start
-	.long LDIFF_SYM439
-Lfde49_start:
+LDIFF_SYM453=Lfde51_end - Lfde51_start
+	.long LDIFF_SYM453
+Lfde51_start:
 
 	.long 0
 	.align 3
 	.quad System_Collections_Generic_List_1_T_REF_set_Capacity_int
 
-LDIFF_SYM440=Lme_3a - System_Collections_Generic_List_1_T_REF_set_Capacity_int
-	.long LDIFF_SYM440
+LDIFF_SYM454=Lme_3c - System_Collections_Generic_List_1_T_REF_set_Capacity_int
+	.long LDIFF_SYM454
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29,68,154,4
 	.align 3
-Lfde49_end:
+Lfde51_end:
 
 .section __DWARF, __debug_info,regular,debug
 
