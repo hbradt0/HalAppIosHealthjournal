@@ -201,8 +201,6 @@ namespace Hello_MultiScreen_iPhone
             EditImportantButton.AddTarget(ButtonEditImportantClick, UIControlEvent.TouchUpInside);
             QuickExercisedButton.AddTarget(ButtonQuickClick, UIControlEvent.TouchUpInside);
 
-          
-
             //Add to view
             scrollView.Add(ButtonDateClick);
             scrollView.AddSubview(textViewWrite);
@@ -514,21 +512,22 @@ namespace Hello_MultiScreen_iPhone
                     { 
                         text = text + "Consumed Energy (Apple Fitness): " + consumedEnergy + " Joules";
                     }
-                    if (!text.EndsWith("\n") && healthQuantifier1 != "")
+                    if (!text.EndsWith("\n") && healthQuantifier1 != "" && text !="")
                         text = text + "\n";
                     GetTimeExercised();
                     if(healthQuantifier1!="")
                         text = text + "Energy Time (Apple Fitness): " + healthQuantifier1 + " Minutes";
-                    if (!text.EndsWith("\n") && healthQuantifier2!="")
+                    if (!text.EndsWith("\n") && healthQuantifier2!="" && text != "")
                         text = text + "\n";
                     GetCCBurned();
                     if(healthQuantifier2!="")
                         text = text + "Calories Burned (Apple Fitness): " + healthQuantifier2 + " Kcal";
-                    if (!text.EndsWith("\n") && healthQuantifier3!="")
+                    if (!text.EndsWith("\n") && healthQuantifier3!="" && text != "")
                         text = text + "\n";
                     GetCCBurned2();
                     if (healthQuantifier3 != "")
-                        text = text + "Distance walked mile(Apple Fitness): " + healthQuantifier3 + " Miles"; 
+                        text = text + "Distance walked mile(Apple Fitness): " + healthQuantifier3 + " Miles";
+
                     if (text == "")
                         text = "I exercised today - cardio/strength!";
                 }

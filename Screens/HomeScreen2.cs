@@ -628,7 +628,7 @@ namespace Hello_MultiScreen_iPhone
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
             listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
             buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, QuickHealthyButton.Frame.Bottom + 30, 50, 50);
-            scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom+30, 100, 30);
+            scratchpad.Frame = new CGRect(ResponsiveWidthRight, listView.Frame.Bottom+15, 100, 30);
 
             int expandipad = 60;
             int expandipad2 = 100;

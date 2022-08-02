@@ -49,7 +49,7 @@ namespace Hello_MultiScreen_iPhone
                 var embedCode = UrlToEmbedCode(url);
                 var defaultWidth = scrollView.Bounds.Width;
                 string iFrame = "<div class=\"resp-container\"><iframe class=\"resp-iframe\" id=\"" + _FrameId + "\"  width=\"" + defaultWidth + "\" src=\"" + url + "\" frameborder =\"0\" allowfullscreen ></iframe></div>";
-            iFrame = embedCode;
+                iFrame = embedCode;
                 string html =
                     @"
                 <!DOCTYPE html>
@@ -80,8 +80,6 @@ namespace Hello_MultiScreen_iPhone
             
         }
 
-
-
         private void VideoWebView_LoadFinished(object sender, EventArgs e)
         {
             var sFinalWidth = _videoWebView.EvaluateJavascript("document.getElementById(\"" + _FrameId + "\").width");
@@ -95,6 +93,7 @@ namespace Hello_MultiScreen_iPhone
 
             _videoWebView.LoadFinished -= VideoWebView_LoadFinished;
         }
+
         public void ViewDidLoad1()
         {
 
@@ -119,14 +118,11 @@ namespace Hello_MultiScreen_iPhone
             _videoWebView.LoadError += _videoWebView_LoadError;
 
        
-            StartLoad();
+            //StartLoad();
 
-           
             scrollView.AddSubview(_videoWebView);
            
             View.AddSubview(scrollView);
-
-
 
         }
 
