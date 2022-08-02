@@ -110,7 +110,11 @@ namespace Hello_MultiScreen_iPhone
                 BackgroundColor = HomeScreen.color,
                 AutoresizingMask = UIViewAutoresizing.FlexibleHeight
             };
-            _loadRetry = 3;
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+            { scrollView = new UIScrollView();
+                scrollView.BackgroundColor = HomeScreen.color;
+            }
+                _loadRetry = 3;
 
             _videoWebView = new UIWebView(new CGRect(0, 0, 0, 0));
 

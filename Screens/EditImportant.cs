@@ -7,6 +7,7 @@ using CoreGraphics;
 using EmailReader;
 using Google.MobileAds;
 using HealthKit;
+using System.Text.RegularExpressions;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -373,7 +374,7 @@ namespace Hello_MultiScreen_iPhone
                                 text = "";
                             String txt = "";
                             if (urlfield.Text != "")
-                                text = text + "Video: " + urlfield.Text;
+                                text = text + "\nVideo: " + urlfield.Text;
                             String total = text;
                             
                             if (total.Last() != '\n')
@@ -392,16 +393,43 @@ namespace Hello_MultiScreen_iPhone
         //Back to home view
         void urlbuttonclick(object sender, EventArgs eventArgs)
         {
-            //back to home screen
-            if (urlfield.Text != "" && urlfield.Text.ToLower().Contains("youtube.com") && !urlfield.Text.Contains("\n"))
-                
-            {
-                EditVideo.url = urlfield.Text;
-                Xamarin.Essentials.Preferences.Set("url", EditVideo.url);
-                if (this.videoscreen == null) { this.videoscreen = new EditVideo(); }
-                this.NavigationController.PushViewController(this.videoscreen, true);
-            }
+            String text = urlfield.Text.Replace("\n", "");
+             text = text.Replace(" ", "");
+
+            var YoutubeVideoRegex = new Regex(@"youtu(?:\.be|be\.com)/(?:(.*)v(/|=)|(.*/)?)([a-zA-Z0-9-_]+)", RegexOptions.IgnoreCase);
+                if (!string.IsNullOrEmpty(text))
+                {
+                    var youtubeMatch = YoutubeVideoRegex.Match(text);
+
+                    if (youtubeMatch.Success)
+                    {
+                        EditVideo.url = text;
+                        Xamarin.Essentials.Preferences.Set("url", EditVideo.url);
+                        if (this.videoscreen == null) { this.videoscreen = new EditVideo(); }
+                        this.NavigationController.PushViewController(this.videoscreen, true);
+                    }
+                    else
+                {
+                    var Confirm = new UIAlertView("URL incorrect", "Please use a valid youtube url", null, "Cancel", "Ok");
+                    Confirm.Show();
+                    Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                    {
+                        if (es.ButtonIndex == 0)
+                        {
+                            //Do nothing
+                        }
+                        else
+                        {
+                            
+                            //Do nothing
+                        }
+                    };
+                }
+
+                }
+            
         }
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
@@ -444,8 +472,13 @@ namespace Hello_MultiScreen_iPhone
             //IMPORTANT
 
             urllabel.Frame = new CGRect(ResponsiveWidthLeft, Button3.Frame.Bottom + 20, 100, 30);
-            urlfield.Frame = new CGRect(urllabel.Frame.Right+10, Button3.Frame.Bottom + 20, 180, 30);
+            urlfield.Frame = new CGRect(urllabel.Frame.Right+10, Button3.Frame.Bottom + 20, 200, 30);
             urlbutton.Frame = new CGRect(ResponsiveWidthRight, urlfield.Frame.Bottom + 20, 100, 30);
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
+            {
+                urlbutton.Frame = new CGRect(ResponsiveWidthRight, urlfield.Frame.Top, 100, 30);
+                urlfield.Frame = new CGRect(urllabel.Frame.Right + 10, Button3.Frame.Bottom + 20, 300, 30);
+            }
 
             this.NavigationController.NavigationBar.BarTintColor = UIColor.SystemBlue;
             this.NavigationController.NavigationBar.TintColor = UIColor.White;
