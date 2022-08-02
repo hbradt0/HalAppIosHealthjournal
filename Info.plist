@@ -18,7 +18,7 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon-2.appiconset</string>
 	<key>CFBundleDisplayName</key>
-	<string>Health Journal</string>
+	<string>PHitness</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Screens/HomeScreen</string>
 	<key>UIMainNibFile</key>
@@ -30,9 +30,9 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow device to access Photo</string>
 	<key>CFBundleShortVersionString</key>
-	<string>50</string>
+	<string>51</string>
 	<key>CFBundleVersion</key>
-	<string>50</string>
+	<string>51</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict/>
 	<key>UIRequiresFullScreen</key>
