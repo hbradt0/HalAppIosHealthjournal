@@ -8,6 +8,7 @@ using EmailReader;
 using Google.MobileAds;
 using HealthKit;
 using System.Text.RegularExpressions;
+using Plugin.Connectivity;
 
 namespace Hello_MultiScreen_iPhone
 {
@@ -393,11 +394,11 @@ namespace Hello_MultiScreen_iPhone
         //Back to home view
         void urlbuttonclick(object sender, EventArgs eventArgs)
         {
-            String text = urlfield.Text.Replace("\n", "");
-             text = text.Replace(" ", "");
-
-            var YoutubeVideoRegex = new Regex(@"youtu(?:\.be|be\.com)/(?:(.*)v(/|=)|(.*/)?)([a-zA-Z0-9-_]+)", RegexOptions.IgnoreCase);
-                if (!string.IsNullOrEmpty(text))
+                String text = urlfield.Text.Replace("\n", "");
+                text = text.Replace(" ", "");
+                var isConnected = CrossConnectivity.Current.IsConnected;
+                var YoutubeVideoRegex = new Regex(@"youtu(?:\.be|be\.com)/(?:(.*)v(/|=)|(.*/)?)([a-zA-Z0-9-_]+)", RegexOptions.IgnoreCase);
+                if (!string.IsNullOrEmpty(text) && isConnected)
                 {
                     var youtubeMatch = YoutubeVideoRegex.Match(text);
 

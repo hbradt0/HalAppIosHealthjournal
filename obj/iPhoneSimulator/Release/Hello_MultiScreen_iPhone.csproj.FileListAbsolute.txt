@@ -43,3 +43,9 @@
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Xamarin.Essentials.pdb
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Xamarin.Essentials.xml
 /Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.csproj.AssemblyReference.cache
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Plugin.Connectivity.Abstractions.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Plugin.Connectivity.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Plugin.Connectivity.Abstractions.pdb
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Plugin.Connectivity.Abstractions.xml
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Plugin.Connectivity.pdb
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Plugin.Connectivity.xml

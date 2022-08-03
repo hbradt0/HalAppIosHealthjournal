@@ -11,5 +11,11 @@ RemoveDynamicRegistrar:false
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Drawing.Common.dll
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Google.MobileAds.dll
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Firebase.Core.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Plugin.Connectivity.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Plugin.Connectivity.Abstractions.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Runtime.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.ComponentModel.Composition.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Threading.Tasks.dll
+/Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Threading.dll
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Xamarin.Essentials.dll
 /Users/psargent/phillbookAppDiet/bin/iPhoneSimulator/Release/Hello_MultiScreen_iPhone.app:/Users/psargent/phillbookAppDiet/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/OpenTK-1.0.dll

@@ -48,27 +48,20 @@ namespace Hello_MultiScreen_iPhone
         {
                 var embedCode = UrlToEmbedCode(url);
                 var defaultWidth = scrollView.Bounds.Width;
-                string iFrame = "<div class=\"resp-container\"><iframe class=\"resp-iframe\" id=\"" + _FrameId + "\"  width=\"" + defaultWidth + "\" src=\"" + url + "\" frameborder =\"0\" allowfullscreen ></iframe></div>";
-                iFrame = embedCode;
+                string iFrame = embedCode;
                 string html =
                     @"
                 <!DOCTYPE html>
                 <html>
                   <head>
                    <style>
-                     .resp-container {
-                        position: relative;
-                        overflow: hidden;
-                        padding-top: 56.25%;
-                        height:0;
-                    }
                     .resp-iframe {
                         position: absolute;
                         top: 0;
                         left: 0;
                         border: 0;
-                        height:100%;
-                        width:100%;
+                        height:75%;
+                        width:75%;
                     }
                    </style>
                   </head>
@@ -151,10 +144,10 @@ namespace Hello_MultiScreen_iPhone
             return null;
         }
 
-        const string youtubeEmbedFormat = "<iframe type=\"text/html\" class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/{0}\"></iframe>";
 
          string getYoutubeEmbedCode(string youtubeId)
         {
+             string youtubeEmbedFormat = "<iframe type=\"text/html\" width = \"" + scrollView.Bounds.Width + "\" class=\"resp-iframe\" src=\"https://www.youtube.com/embed/{0}\" allowfullscreen></iframe>";
             return string.Format(youtubeEmbedFormat, youtubeId);
         }
 

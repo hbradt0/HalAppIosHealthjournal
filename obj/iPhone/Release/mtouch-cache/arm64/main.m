@@ -15,6 +15,8 @@ extern void *mono_aot_module_System_Core_info;
 extern void *mono_aot_module_System_Drawing_Common_info;
 extern void *mono_aot_module_Google_MobileAds_info;
 extern void *mono_aot_module_Firebase_Core_info;
+extern void *mono_aot_module_Plugin_Connectivity_info;
+extern void *mono_aot_module_Plugin_Connectivity_Abstractions_info;
 extern void *mono_aot_module_Xamarin_Essentials_info;
 extern void *mono_aot_module_OpenTK_1_0_info;
 
@@ -28,6 +30,8 @@ void xamarin_register_modules_impl ()
 	mono_aot_register_module (mono_aot_module_System_Drawing_Common_info);
 	mono_aot_register_module (mono_aot_module_Google_MobileAds_info);
 	mono_aot_register_module (mono_aot_module_Firebase_Core_info);
+	mono_aot_register_module (mono_aot_module_Plugin_Connectivity_info);
+	mono_aot_register_module (mono_aot_module_Plugin_Connectivity_Abstractions_info);
 	mono_aot_register_module (mono_aot_module_Xamarin_Essentials_info);
 	mono_aot_register_module (mono_aot_module_OpenTK_1_0_info);
 

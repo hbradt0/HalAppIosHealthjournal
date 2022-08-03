@@ -174,7 +174,7 @@ ldr x2, [x16, #16]
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2800f60
+.word 0xd2800fa0
 .word 0xaa1103e1
 bl _p_2
 
@@ -261,7 +261,7 @@ ldr x1, [x16, #208]
 .word 0x910003bf
 .word 0xa8c37bfd
 .word 0xd65f03c0
-.word 0xd2800fe0
+.word 0xd2801020
 .word 0xaa1103e1
 bl _p_2
 
@@ -458,13 +458,13 @@ ldr x1, [x16, #304]
 .word 0x910003bf
 .word 0xa8c57bfd
 .word 0xd65f03c0
-.word 0xd28011c0
+.word 0xd2801280
 .word 0xaa1103e1
 bl _p_2
 .word 0xd2800960
 .word 0xaa1103e1
 bl _p_2
-.word 0xd2800fe0
+.word 0xd2801020
 .word 0xaa1103e1
 bl _p_2
 
@@ -2811,7 +2811,7 @@ bl _p_48
 .word 0xaa0003f7
 .word 0xb5ffff20
 .word 0x17ffffc7
-.word 0xd2800f60
+.word 0xd2800fa0
 .word 0xaa1103e1
 bl _p_2
 
@@ -2989,7 +2989,7 @@ bl _p_48
 .word 0xb900001e
 .word 0xaa1a03e0
 bl _p_47
-.word 0xd2800fe0
+.word 0xd2801020
 .word 0xaa1103e1
 bl _p_2
 
@@ -3064,7 +3064,7 @@ bl _p_48
 .word 0xaa0003f7
 .word 0xb5ffff20
 .word 0x17ffffcf
-.word 0xd2800f60
+.word 0xd2800fa0
 .word 0xaa1103e1
 bl _p_2
 
@@ -3143,7 +3143,7 @@ bl _p_48
 .word 0xaa0003f8
 .word 0xb5ffff20
 .word 0x17ffffca
-.word 0xd2800f60
+.word 0xd2800fa0
 .word 0xaa1103e1
 bl _p_2
 
@@ -5510,7 +5510,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 212,168,52,235,142,233,88,96,21,251,218,214,103,101,165,66
+	.byte 112,90,135,114,181,152,145,6,138,232,15,212,138,90,77,139
 	.globl _mono_aot_module_Firebase_Core_info
 	.align 3
 _mono_aot_module_Firebase_Core_info:
