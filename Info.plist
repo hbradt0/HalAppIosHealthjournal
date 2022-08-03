@@ -24,15 +24,15 @@
 	<key>UIMainNibFile</key>
 	<string>HomeScreen</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Allow device to access Camera</string>
+	<string>The app allows a user to take a picture for before/after weight loss/body change comparisons.</string>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>Allow device to access Media</string>
+	<string>The app allows a user to use media for before/after weight loss/body change comparisons.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow device to access Photo</string>
+	<string>The app allows a user to use photos taken for before/after weight loss/body change comparisons.</string>
 	<key>CFBundleShortVersionString</key>
-	<string>52</string>
+	<string>53</string>
 	<key>CFBundleVersion</key>
-	<string>52</string>
+	<string>53</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict/>
 	<key>UIRequiresFullScreen</key>
@@ -203,8 +203,8 @@
 		<string>armv7</string>
 	</array>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>The apps need access to your Health Usage Update</string>
+	<string>The app needs access to your Health Usage Update to track your health/fitness.</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>The apps need access to your Health Usage Share</string>
+	<string>The app needs access to your Health Usage Share to track your health/fitness.</string>
 </dict>
 </plist>

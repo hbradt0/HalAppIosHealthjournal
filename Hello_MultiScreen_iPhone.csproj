@@ -121,6 +121,8 @@
     <None Include="GoogleService-Info.plist" />
     <None Include="Entitlements.plist" />
     <InterfaceDefinition Include="Screens\EditVideo.xib" />
+    <None Include="Info %28copy%29.plist" />
+    <None Include="Info %28another copy%29.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
