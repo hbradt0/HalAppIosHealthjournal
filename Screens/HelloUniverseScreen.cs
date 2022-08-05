@@ -33,6 +33,8 @@ namespace Hello_MultiScreen_iPhone
         public UIButton EditJournalButton;
         public UIButton EditImportantButton;
         public UIButton QuickExercisedButton;
+        public UIButton QuickExercisedButtonQuestion;
+
         String healthQuantifier1;
         String healthQuantifier2;
         String healthQuantifier3;
@@ -46,6 +48,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
         EditJournalScreen editJournalScreen;
+        HelloWorldScreen helloWorldScreen;
         EditImportant editImportantScreen;
 
         private NSObject keyBoardWillShow;
@@ -106,7 +109,14 @@ namespace Hello_MultiScreen_iPhone
             QuickExercisedButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             QuickExercisedButton.BackgroundColor = HomeScreen.buttoncolor;
             QuickExercisedButton.SetTitle("I Exercised", UIControlState.Normal);
+            QuickExercisedButton.AccessibilityLabel = "This app interfaces with Health App/HealthKit to get the distanced walked, calories burned, etc. and report to the user using the I Exercised button.";
 
+            QuickExercisedButtonQuestion = new UIButton(UIButtonType.System);
+            QuickExercisedButtonQuestion.SetTitleColor(UIColor.White, UIControlState.Normal);
+            QuickExercisedButtonQuestion.SetTitle("?", UIControlState.Normal);
+            UIImage img3 = new UIImage();
+            img3 = UIImage.FromFile("heart.jpg");
+            QuickExercisedButtonQuestion.SetBackgroundImage(img3,UIControlState.Normal);
 
             EditJournalButton.SetTitleColor(UIColor.White, UIControlState.Normal);
             EditJournalButton.BackgroundColor = UIColor.SystemBlue;
@@ -200,6 +210,7 @@ namespace Hello_MultiScreen_iPhone
             EditJournalButton.AddTarget(ButtonEditJournalClick, UIControlEvent.TouchUpInside);
             EditImportantButton.AddTarget(ButtonEditImportantClick, UIControlEvent.TouchUpInside);
             QuickExercisedButton.AddTarget(ButtonQuickClick, UIControlEvent.TouchUpInside);
+            QuickExercisedButtonQuestion.AddTarget(ButtonQuickClickQuestion, UIControlEvent.TouchUpInside);
 
             //Add to view
             scrollView.Add(ButtonDateClick);
@@ -209,6 +220,7 @@ namespace Hello_MultiScreen_iPhone
 
             scrollView.Add(ButtonDelete1Line);
             scrollView.Add(dateTimeText);
+            scrollView.Add(QuickExercisedButtonQuestion);
             scrollView.AddSubview(editTextWrite);
             scrollView.Add(EditJournalButton);
             scrollView.Add(QuickExercisedButton);
@@ -231,6 +243,7 @@ namespace Hello_MultiScreen_iPhone
             EditJournalButton.Layer.CornerRadius = 10;
             EditImportantButton.Layer.CornerRadius = 10;
             QuickExercisedButton.Layer.CornerRadius = 10;
+            QuickExercisedButtonQuestion.Layer.CornerRadius = 10;
         }
 
         public void borderFunction()
@@ -379,6 +392,14 @@ namespace Hello_MultiScreen_iPhone
             if (this.editJournalScreen == null) { this.editJournalScreen = new EditJournalScreen(); }
             this.NavigationController.PushViewController(this.editJournalScreen, true);
         }
+
+        private void ButtonQuickClickQuestion(object sender, EventArgs eventArgs)
+        {
+            //back to home screen
+            if (this.helloWorldScreen == null) { this.helloWorldScreen = new HelloWorldScreen(); }
+            this.NavigationController.PushViewController(this.helloWorldScreen, true);
+        }
+        
 
         private void ButtonEditImportantClick(object sender, EventArgs eventArgs)
         {
@@ -831,7 +852,8 @@ namespace Hello_MultiScreen_iPhone
                 scrollView.Frame = new CGRect(0, 0, View.Frame.Width + 200, View.Frame.Height);
 
             dateTimeText.Hidden = false;
-            QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, 550, 100, 30);
+            QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, 550, 80, 30);
+            QuickExercisedButtonQuestion.Frame = new CGRect(QuickExercisedButton.Frame.Right+5, 550, 30, 30);
             EditJournalButton.Frame = new CGRect(ResponsiveWidthLeft, 545, 100, 30);
             EditImportantButton.Frame = new CGRect(ResponsiveWidthLeft, 600, 100, 30);
             dateTimeText.Frame = new CGRect(ResponsiveWidthRight - 25, 600, 100, 30);
@@ -860,7 +882,8 @@ namespace Hello_MultiScreen_iPhone
                     ResponsiveWidthLeft, 488 + expandipad2, 100, 30);
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);
                 dateTimeText.Frame = new CGRect(ResponsiveWidthRight - 25, 600+expandipad3, 100, 30);
-                QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, 550 + expandipad3, 100, 30);
+                QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, 550 + expandipad3, 80, 30);
+                QuickExercisedButtonQuestion.Frame = new CGRect(QuickExercisedButton.Frame.Right + 5, 550 + expandipad3, 30, 30);
                 ButtonDateClick.Frame = new CGRect(dateTimeText.Frame.Right, dateTimeText.Frame.Y, 30, 30);
 
             }
@@ -878,7 +901,8 @@ namespace Hello_MultiScreen_iPhone
                 ButtonDelete1Line.Frame = new CGRect(
                     ResponsiveWidthLeft, editTextWrite.Frame.Bottom + 30, 100, 30);
 
-                QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
+                QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 80, 30);
+                QuickExercisedButtonQuestion.Frame = new CGRect(QuickExercisedButton.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 EditJournalButton.Frame = new CGRect(ResponsiveWidthLeft, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
                 EditImportantButton.Frame = new CGRect(ResponsiveWidthLeft, EditJournalButton.Frame.Bottom + 30, 100, 30);
                 dateTimeText.Frame = new CGRect(ResponsiveWidthRight - 25, EditJournalButton.Frame.Bottom + 30, 100, 30);
@@ -898,7 +922,8 @@ namespace Hello_MultiScreen_iPhone
                 ButtonDelete1Line.Frame = new CGRect(
                     ResponsiveWidthLeft, editTextWrite.Frame.Bottom + 30, 100, 30);
 
-                QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
+                QuickExercisedButton.Frame = new CGRect(ResponsiveWidthRight, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 80, 30);
+                QuickExercisedButtonQuestion.Frame = new CGRect(QuickExercisedButton.Frame.Right+5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 EditJournalButton.Frame = new CGRect(ResponsiveWidthLeft, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 100, 30);
                 EditImportantButton.Frame = new CGRect(ResponsiveWidthLeft, EditJournalButton.Frame.Bottom + 30, 100, 30);
                 textViewWrite.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 340 + expandipad);

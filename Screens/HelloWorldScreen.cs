@@ -17,6 +17,7 @@ namespace Hello_MultiScreen_iPhone
         public UITextView textView2;
         public UITextField editTextWrite;
         public UITextView textViewWrite;
+        public UIImageView healthAppPicture;
 
         public UIButton Button1;
         public UIButton Button3;
@@ -31,6 +32,7 @@ namespace Hello_MultiScreen_iPhone
         public UIView View2;
         public UIView View3;
         public UIScrollView scrollView;//ps
+        public UITextView helpView;
 
         public UITextView readInfo;
         HomeScreen homeScreen; //MAY NEED TO BE COMMENTED OUT
@@ -93,11 +95,21 @@ namespace Hello_MultiScreen_iPhone
 
             booktextView.Text = "Enter your email to begin your story!";
             booktextView.BackgroundColor = UIColor.FromRGB(252, 251, 244);
-            booktextView.TextColor = UIColor.Purple;
+            booktextView.TextColor = UIColor.Black;
             booktextView.UserInteractionEnabled = true;
             booktextView.ScrollEnabled = true;
 
-            
+            helpView = new UITextView();
+            helpView.Text = "This app interfaces with Health App/HealthKit to get the distanced walked, calories burned, active calories, and report to the user using the I Exercised button. These settings can be changed under Health App -> Source -> pHitness.";
+            helpView.BackgroundColor = UIColor.FromRGB(252, 251, 244);
+            helpView.TextColor = UIColor.Black;
+            helpView.UserInteractionEnabled = false;
+            helpView.ScrollEnabled = true;
+
+            healthAppPicture = new UIImageView();
+            UIImage img3 = new UIImage();
+            img3 = UIImage.FromFile("heart.jpg");
+            healthAppPicture.Image = img3;
 
             //exit keyboard 
             var g = new UITapGestureRecognizer(() => View.EndEditing(true));
@@ -133,9 +145,11 @@ namespace Hello_MultiScreen_iPhone
             Button3.AddTarget(Button3Click, UIControlEvent.TouchUpInside);
             ButtonShare.AddTarget(ShareButtonClick, UIControlEvent.TouchUpInside);
 
+            scrollView.AddSubview(helpView);
             scrollView.Add(CloudLoginButton);
             scrollView.AddSubview(booktextView);
             scrollView.Add(ButtonShare);
+            scrollView.Add(healthAppPicture);
             scrollView.Add(Button3);
             View.AddSubview(scrollView);//ps
 
@@ -236,6 +250,7 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
 
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
+
             var v = NSBundle.MainBundle.PathForResource("Halbook3", "txt");
             var text1 = EmailFileRead.ReadText(v);
             booktextView.Text = text1;
@@ -247,7 +262,11 @@ namespace Hello_MultiScreen_iPhone
             booktextView.Frame = new CGRect(ResponsiveWidthLeft, View.Frame.Top + 30, ResponsiveSizeX, 410);
 
             ButtonShare.Frame = new CGRect(ResponsiveWidthLeft, booktextView.Frame.Bottom + 10, 35, 35);
-           
+
+            helpView.Frame = new CGRect(ResponsiveWidthLeft, ButtonShare.Frame.Bottom + 20, 250, 100);
+
+            healthAppPicture.Frame = new CGRect(helpView.Frame.Right, ButtonShare.Frame.Bottom + 20, 80, 100);
+
             if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1300)
                 booktextView.Font = UIFont.SystemFontOfSize(14);
 

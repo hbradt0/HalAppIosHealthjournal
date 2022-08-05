@@ -123,6 +123,10 @@
     <InterfaceDefinition Include="Screens\EditVideo.xib" />
     <None Include="Info %28copy%29.plist" />
     <None Include="Info %28another copy%29.plist" />
+    <None Include="Info %283rd copy%29.plist" />
+    <None Include="Info %284th copy%29.plist" />
+    <None Include="Info %285th copy%29.plist" />
+    <None Include="Info %286th copy%29.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmailFileRead.cs" />
@@ -209,6 +213,7 @@
     <BundleResource Include="Resources\MainTitlePic1.png" />
     <BundleResource Include="Resources\bg.jpeg" />
     <BundleResource Include="Resources\bg.jpg" />
+    <BundleResource Include="Resources\heart.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />
