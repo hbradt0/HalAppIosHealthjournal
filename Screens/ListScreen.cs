@@ -11,6 +11,7 @@ namespace Hello_MultiScreen_iPhone
 {
 	public partial class ListScreen : UIViewController
 	{
+        public UIDatePicker dateTimeText;
         public UITextView textView;
         public UITextView booktextView;
         public UITextView textView2;
@@ -27,6 +28,7 @@ namespace Hello_MultiScreen_iPhone
         public UIButton ButtonyourstoryscreenUpload;
         public UIButton ButtonDelete;
         public UIButton ButtonShare;
+        public UIButton CopyList;
 
         public UIImageView imageView;
         public UIView View1;
@@ -102,6 +104,7 @@ namespace Hello_MultiScreen_iPhone
             list = (EmailFileRead.ReadAllLines(v));
             editTextDate = new UITextField();
             ShareTodo = new UIButton(UIButtonType.System);
+            CopyList = new UIButton(UIButtonType.System);
 
             UIScrollView scrollView2 = new UIScrollView();
 
@@ -121,6 +124,24 @@ namespace Hello_MultiScreen_iPhone
             ButtonyourstoryscreenUpload.SetTitle("Submit", UIControlState.Normal);
             ButtonDelete.SetTitle("Start Over", UIControlState.Normal);
             ButtonDelete1Line.SetTitle("Delete Previous line", UIControlState.Normal);
+            CopyList.SetTitleColor(UIColor.Black, UIControlState.Normal);
+            CopyList.BackgroundColor = UIColor.SystemBlue;//UIColor.FromRGB(100, 149, 237);
+            CopyList.SetTitle("Copy", UIControlState.Normal);
+            CopyList.SetBackgroundImage(UIImage.FromBundle("copy.jpg"), UIControlState.Normal);
+
+            dateTimeText = new UIDatePicker();
+            dateTimeText.Hidden = true;
+            //dateTimeText.BackgroundColor = HomeScreen.color;
+            dateTimeText.TintColor = UIColor.SystemBlue;
+            dateTimeText.AccessibilityHint = "Today's date";
+            var calendar = new NSCalendar(NSCalendarType.Gregorian);
+            var currentDate = NSDate.Now;
+            var components = new NSDateComponents();
+            components.Year = -60;
+            NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
+            dateTimeText.MinimumDate = minDate;
+            dateTimeText.Mode = UIDatePickerMode.Date;
+            dateTimeText.MaximumDate = currentDate;
 
             ShareTodo.SetBackgroundImage(UIImage.FromBundle("mailicon.png"), UIControlState.Normal);
             editTextDate.BackgroundColor = UIColor.White;
@@ -128,6 +149,7 @@ namespace Hello_MultiScreen_iPhone
             editTextDate.AccessibilityHint = "0 (days)";
             editTextDate.Text = "0";
 
+            
             //exit keyboard
             editTextDate.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
             editTextWrite.ShouldReturn = (textField) => { textField.ResignFirstResponder(); return true; };
@@ -135,13 +157,7 @@ namespace Hello_MultiScreen_iPhone
             editTextWrite.AccessibilityHint = "Write Here";
             editTextWrite.BackgroundColor = UIColor.FromRGB(252, 251, 244);
             editTextWrite.KeyboardType = UIKeyboardType.ASCIICapable;
-            editTextWrite.ReturnKeyType = UIReturnKeyType.Done;
-
-            var calendar = new NSCalendar(NSCalendarType.Gregorian);
-            var currentDate = NSDate.Now;
-            var components = new NSDateComponents();
-            components.Year = -60;
-            NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
+            editTextWrite.ReturnKeyType = UIReturnKeyType.Done;         
             
             textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
             textViewWrite.UserInteractionEnabled = true;
@@ -151,7 +167,6 @@ namespace Hello_MultiScreen_iPhone
                 NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
                 this.textViewWrite.ScrollRangeToVisible(range);
             }
-
             //ScrollView
             scrollView = new UIScrollView
             {
@@ -176,13 +191,17 @@ namespace Hello_MultiScreen_iPhone
             buttonAdd = new UIButton();
             buttonAdd.BackgroundColor = UIColor.SystemBlue;
             buttonAdd.SetTitleColor(UIColor.White, UIControlState.Normal);
-            buttonAdd.SetTitle("Add", UIControlState.Normal);
+            //buttonAdd.SetTitle("Add", UIControlState.Normal);
+            buttonAdd.SetBackgroundImage(UIImage.FromBundle("plus.jpg"), UIControlState.Normal);
 
             ButtonyourstoryscreenUpload.AddTarget(ButtonyourstoryscreenUploadClick, UIControlEvent.TouchUpInside);
             ButtonDelete.AddTarget(ButtonDeleteClick, UIControlEvent.TouchUpInside);
             ButtonDelete1Line.AddTarget(ButtonDelete1LineClick, UIControlEvent.TouchUpInside);
             ShareTodo.AddTarget(ButtonShareClick, UIControlEvent.TouchUpInside);
             buttonAdd.AddTarget(ButtonAddFiles, UIControlEvent.TouchUpInside);
+            CopyList.AddTarget(ButtonDateClickEvent, UIControlEvent.TouchUpInside);
+            buttonAdd.Layer.CornerRadius = 10;
+            CopyList.Layer.CornerRadius = 10;
 
             listView = new UITableView();
             listView.Source = new TableSource(list);
@@ -192,6 +211,8 @@ namespace Hello_MultiScreen_iPhone
             scrollView.Add(listView);
 
             //Add to view
+            scrollView.Add(dateTimeText);
+            scrollView.Add(CopyList);
             scrollView.AddSubview(textViewWrite);
             scrollView.Add(ButtonyourstoryscreenUpload);
             scrollView.Add(sta);
@@ -217,6 +238,8 @@ namespace Hello_MultiScreen_iPhone
             Buttonbackyourstory.Layer.CornerRadius = 10;
             ButtonDelete.Layer.CornerRadius = 10;
             ButtonDelete1Line.Layer.CornerRadius = 10;
+
+
         }
 
         public void borderFunction()
@@ -386,6 +409,30 @@ namespace Hello_MultiScreen_iPhone
 
         }
 
+        //Share at click upon date
+        private void ButtonDateClickEvent(object sender, EventArgs eventArgs)
+        {
+            UIApplication.SharedApplication.KeyWindow.EndEditing(true);
+            keyboardOpen = false;
+            DateTime myDate = (DateTime)dateTimeText.Date;
+            myDate = myDate.ToLocalTime();
+            String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate,EmailFileRead.fileName3);
+            if (txt2 != null && txt2 != "")
+            {
+                txt2 = txt2.Substring(12);
+                if (txt2.EndsWith("\n"))
+                    txt2 = txt2.Remove(txt2.Length - 1);
+                EmailFileRead.WriteText(txt2, EmailFileRead.fileName3);
+                textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
+                if (this.textViewWrite.Text.Length > 0)
+                {
+                    NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                    this.textViewWrite.ScrollRangeToVisible(range);
+                }
+            }
+
+        }
+
         //Upload to todo list (submit)
         private void ButtonyourstoryscreenUploadClick(object sender, EventArgs eventArgs)
         {
@@ -497,6 +544,8 @@ namespace Hello_MultiScreen_iPhone
             ResponsiveWidthLeft = View.Frame.Width / 12;
             ResponsiveSizeX = View.Frame.Width - ResponsiveWidthLeft * 2;
             ResponsiveWidthRight = View.Frame.Width - ResponsiveWidthLeft * 2 - 65;
+            dateTimeText.Hidden = false;
+
 
             editTextDate.Frame = new CGRect(ResponsiveWidthLeft + 10, 500, 30, 30);
             Buttonbackyourstory.Frame = new CGRect(ResponsiveWidthRight, 25, 70, 30);
@@ -508,7 +557,9 @@ namespace Hello_MultiScreen_iPhone
             sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
             ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500, 30, 30);
             listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
-            buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
+            buttonAdd.Frame = new CGRect(listView.Frame.Right + 10, listView.Frame.Top, 30, 30);
+            dateTimeText.Frame = new CGRect(buttonAdd.Frame.Left - 30, buttonAdd.Frame.Bottom + 30, 100, 30);
+            CopyList.Frame = new CGRect(dateTimeText.Frame.Right-65, dateTimeText.Frame.Bottom + 5, 60, 30);
 
             int expandipad = 60;
             int expandipad2 = 100;
@@ -526,9 +577,11 @@ namespace Hello_MultiScreen_iPhone
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
-                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 10, listView.Frame.Top, 30, 30);
                 textViewWrite.Font = UIFont.SystemFontOfSize(14);
                 editTextWrite.Font = UIFont.SystemFontOfSize(14);
+                dateTimeText.Frame = new CGRect(ResponsiveWidthRight - 30, ButtonDelete.Frame.Bottom + 30, 100, 30);
+                CopyList.Frame = new CGRect(dateTimeText.Frame.Right +5, dateTimeText.Frame.Top, 40, 30);
 
             }
             if (View.Frame.Height >= 850)
@@ -545,11 +598,13 @@ namespace Hello_MultiScreen_iPhone
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, 500 + expandipad2, 30, 30);
                 listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + expandipad2, 250, 150);
-                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 10, listView.Frame.Top, 30, 30);
+                dateTimeText.Frame = new CGRect(buttonAdd.Frame.Left - 30, buttonAdd.Frame.Bottom + 30, 100, 30);
+                CopyList.Frame = new CGRect(dateTimeText.Frame.Right-65, dateTimeText.Frame.Bottom + 5, 60, 30);
 
             }
 
-            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad && View.Frame.Height >= 1194)
+            if (UIKit.UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Pad || View.Frame.Height >= 1194)
             {
                 expandipad = 150;
                 ResponsiveWidthRight = editTextWrite.Frame.Right - 100;
@@ -565,7 +620,9 @@ namespace Hello_MultiScreen_iPhone
                 sta.Frame = new CGRect(editTextDate.Frame.Right, editTextDate.Frame.Top, 75, editTextDate.Frame.Height);
                 ShareTodo.Frame = new CGRect(sta.Frame.Right + 5, ButtonyourstoryscreenUpload.Frame.Bottom + 30, 30, 30);
                 listView.Frame = new CGRect(ResponsiveWidthLeft, editTextDate.Frame.Bottom + 30, 250, 150);
-                buttonAdd.Frame = new CGRect(listView.Frame.Right + 20, listView.Frame.Top, 50, 50);
+                buttonAdd.Frame = new CGRect(listView.Frame.Right + 10, listView.Frame.Top, 30, 30);
+                dateTimeText.Frame = new CGRect(ResponsiveWidthRight - 30, ButtonDelete.Frame.Bottom + 30, 100, 30);
+                CopyList.Frame = new CGRect(dateTimeText.Frame.Right+5, dateTimeText.Frame.Top, 40, 30);
 
             }
             borderFunction();
@@ -602,11 +659,12 @@ namespace Hello_MultiScreen_iPhone
             var cell = new UITableViewCell(UITableViewCellStyle.Default, "");
             cell.BackgroundColor = UIColor.White;//UIColor.FromRGB(100, 149, 237);
             string item = list[indexPath.Row];
-            cell.TintColor = UIColor.LightGray;
+            cell.TintColor = UIColor.Cyan;
             cell.TextLabel.TextColor = UIColor.Black;
             cell.TextLabel.Text = item;
             return cell;
         }
+
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {

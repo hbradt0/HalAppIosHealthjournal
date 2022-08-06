@@ -7103,7 +7103,7 @@ bl _p_137
 .word 0xa8cc7bfd
 .word 0xd65f03c0
 .loc 18 1227 0
-.word 0xd2877bc0
+.word 0xd2878780
 bl _p_138
 .word 0xf9005fa0
 .word 0xf9400320
@@ -7137,7 +7137,7 @@ bl _p_16
 .word 0xf9405fa0
 bl _p_139
 .word 0xf9005ba0
-.word 0xd2878340
+.word 0xd2878f00
 bl _p_138
 .word 0xaa0003e2
 .word 0xf9405ba1
@@ -7522,7 +7522,7 @@ ldr x15, [x16, #784]
 .word 0xa8ca7bfd
 .word 0xd65f03c0
 .loc 18 1264 0
-.word 0xd2877bc0
+.word 0xd2878780
 bl _p_138
 .word 0xf9004ba0
 .word 0xf9400300
@@ -7556,7 +7556,7 @@ bl _p_16
 .word 0xf9404ba0
 bl _p_139
 .word 0xf9003ba0
-.word 0xd2878340
+.word 0xd2878f00
 bl _p_138
 .word 0xaa0003e2
 .word 0xf9403ba1
@@ -12724,7 +12724,7 @@ _mono_aot_file_info:
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
-	.byte 152,55,192,51,58,153,225,255,217,162,77,145,69,92,22,178
+	.byte 129,119,158,162,152,218,223,163,205,108,238,40,76,82,86,170
 	.globl _mono_aot_module_Xamarin_Essentials_info
 	.align 3
 _mono_aot_module_Xamarin_Essentials_info:

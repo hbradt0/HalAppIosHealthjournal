@@ -214,6 +214,8 @@
     <BundleResource Include="Resources\bg.jpeg" />
     <BundleResource Include="Resources\bg.jpg" />
     <BundleResource Include="Resources\heart.jpg" />
+    <BundleResource Include="Resources\copy.jpg" />
+    <BundleResource Include="Resources\plus.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\" />

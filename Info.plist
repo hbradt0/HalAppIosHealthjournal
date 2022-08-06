@@ -30,9 +30,9 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The app allows a user to use photos taken for before/after weight loss/body change comparisons.</string>
 	<key>CFBundleShortVersionString</key>
-	<string>55</string>
+	<string>56</string>
 	<key>CFBundleVersion</key>
-	<string>55</string>
+	<string>56</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict/>
 	<key>UIRequiresFullScreen</key>
