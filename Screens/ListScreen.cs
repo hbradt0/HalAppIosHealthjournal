@@ -417,17 +417,37 @@ namespace Hello_MultiScreen_iPhone
             DateTime myDate = (DateTime)dateTimeText.Date;
             myDate = myDate.ToLocalTime();
             String txt2 = EmailReader.EmailFileRead.ReadFileFromDateToNextDay(myDate,EmailFileRead.fileName3);
-            if (txt2 != null && txt2 != "")
+            if (txt2 != null && txt2 != "" && !txt2.Contains(DateTime.Now.ToString("MM/dd/yyyy")))
             {
-                txt2 = txt2.Substring(12);
-                if (txt2.EndsWith("\n"))
-                    txt2 = txt2.Remove(txt2.Length - 1);
-                EmailFileRead.WriteText(txt2, EmailFileRead.fileName3);
-                textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
-                if (this.textViewWrite.Text.Length > 0)
+                if (EmailFileRead.FileSizeWarning(EmailFileRead.fileName3))
                 {
-                    NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
-                    this.textViewWrite.ScrollRangeToVisible(range);
+                    var Confirm = new UIAlertView("Confirmation", "File is too big, please send", null, "Cancel", "Yes");
+                    Confirm.Show();
+                    Confirm.Clicked += (object senders, UIButtonEventArgs es) =>
+                    {
+                        if (es.ButtonIndex == 0)
+                        {
+                            //Do nothing
+                        }
+                        else
+                        {
+                            //Do nothing
+                        }
+                    };
+
+                }
+                else
+                {
+                    txt2 = txt2.Substring(12);
+                    if (txt2.EndsWith("\n"))
+                        txt2 = txt2.Remove(txt2.Length - 1);
+                    EmailFileRead.WriteText(txt2, EmailFileRead.fileName3);
+                    textViewWrite.Text = EmailFileRead.ReadText(EmailFileRead.fileName3);
+                    if (this.textViewWrite.Text.Length > 0)
+                    {
+                        NSRange range = new NSRange(0, this.textViewWrite.Text.Length);
+                        this.textViewWrite.ScrollRangeToVisible(range);
+                    }
                 }
             }
 

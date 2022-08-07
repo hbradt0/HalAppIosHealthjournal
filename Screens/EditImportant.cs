@@ -374,7 +374,7 @@ namespace Hello_MultiScreen_iPhone
                             if (booktextView.Text == String.Empty)
                                 text = "";
                             String txt = "";
-                            if (urlfield.Text != "")
+                            if (urlfield.Text != "" && !EmailFileRead.ReadText(EmailFileRead.fileName4).Contains(urlfield.Text))
                                 text = text + "\nVideo: " + urlfield.Text;
                             String total = text;
                             
